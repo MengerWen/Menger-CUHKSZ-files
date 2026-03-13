@@ -20,4 +20,5 @@
 2. 力扣
 3. GRE
 4. B站[交易课程](https://www.bilibili.com/video/BV1A86sB3EQb/?spm_id_from=333.1387.upload.video_card.click&vd_source=3e56e0212688ab8d623a809b9ab497f6)
+	- 看完之后，找个有空的月给[B站up主来去由心](https://space.bilibili.com/11430504?spm_id_from=333.788.upinfo.head.click)充电，看完他的全部视频
 5. 谈恋爱教程
