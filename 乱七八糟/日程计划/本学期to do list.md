@@ -2,7 +2,9 @@
 
 1. 投简历，找暑期实习❗❗❗
 2. 托福❗❗
-3. **量化相关**：
+3. FTE4312 Project
+4. MFE5340 Final Project
+5. **量化相关**：
 	1. 上课
 	2. 伯克利补课：Deep Learning, IEOR 221, DeFi, 区块链
 	3. 欧阳飞雪 workshop 讲义
@@ -16,10 +18,10 @@
 1. 书：
 	- 绿皮书
 	- Heard on the Street
-	- （Offer帮很多资料）
+	- （[Offer 帮](https://offerbang.io/)很多资料）
 	- 市场微观结构
 2. 力扣
 3. GRE
 4. B站[交易课程](https://www.bilibili.com/video/BV1A86sB3EQb/?spm_id_from=333.1387.upload.video_card.click&vd_source=3e56e0212688ab8d623a809b9ab497f6)
-	- 看完之后，找个有空的月给[B站up主来去由心](https://space.bilibili.com/11430504?spm_id_from=333.788.upinfo.head.click)充电，看完他的全部视频
+	- 看完之后，找个有空的月给 [B站up主来去由心](https://space.bilibili.com/11430504?spm_id_from=333.788.upinfo.head.click)充电，看完他的全部视频
 5. 谈恋爱教程
