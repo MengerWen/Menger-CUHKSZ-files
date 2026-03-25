@@ -9,7 +9,7 @@
 5. **量化相关**：
     1. 上课
     2. 伯克利补课：Deep Learning, IEOR 221, DeFi, 区块链
-    3. [欧阳飞雪 workshop 讲义](<file:///D:/MG/!%20CUHKSZ/FEC/量化投资_欧阳飞雪>)
+    3. [欧阳飞雪 workshop 讲义](file:///D:/MG/!%20CUHKSZ/FEC/%E9%87%8F%E5%8C%96%E6%8A%投%E8%B5%84_%E6%AC%A7%E9%98%B3%E9%A3%9E%E9%9B%AA)
     4. 学 Python（尤其是 Pandas）
     5. 看完《因子投资》
     6. 看完 [《Machine Learning for Factor Investing》](https://www.mlfactor.com/index.html)
@@ -19,7 +19,7 @@
 
 1. 书：
     - 绿皮书
-    - [《Heard on the Street》](<file:///D:/MG/！Internship/Offer帮/Offer帮%20Quant公开课学习包/Heard%20on%20the%20Street.pdf>)
+    - [《Heard on the Street》](file:///D:/MG/%EF%BC%81Internship/Offer%E5%B8%AE/Offer%E5%B8%AE%20Quant%E5%BC%80%E8%AF%BE%E5%AD%A6%E4%B9%A0%E5%8C%85/Heard%20on%20the%20Street.pdf)
     - （[Offer 帮](https://offerbang.io/)很多资料）
     - 市场微观结构
 2. 力扣
@@ -31,7 +31,8 @@
 # April daily schedule
 
 9:30am 一定要开始；（算）到 12:30am（？）
-$\implies 24_{\text{总}} - 9_{\text{睡觉}} - 2_{\text{闲杂时间}} - 1_{\text{跑步}} = 12h_{\text{学习时间！}}$
+
+$$\implies 24_{\text{总}} - 9_{\text{睡觉}} - 2_{\text{闲杂时间}} - 1_{\text{跑步}} = 12h_{\text{学习时间！}}$$
 
 - **白天**：
     - 托福❗ `直到 15:00pm`
@@ -40,13 +41,13 @@ $\implies 24_{\text{总}} - 9_{\text{睡觉}} - 2_{\text{闲杂时间}} - 1_{\te
     - 绿皮书 `直到 19:00pm`
     - *吃晚饭*
     - 自由学习 `直到 22:00pm`
-        重要程度排序：
-        - 课内范围 + 完成作业
-        - Python + Pandas（[欧阳飞雪 workshop 讲义](<file:///D:/MG/!%20CUHKSZ/FEC/量化投资_欧阳飞雪>)）
-        - 伯克利补课
-        - [《Machine Learning for Factor Investing》](https://www.mlfactor.com/index.html)
-        - 《因子投资》
-        - [《Heard on the Street》](<file:///D:/MG/！Internship/Offer帮/Offer帮%20Quant公开课学习包/Heard%20on%20the%20Street.pdf>)
+        - 重要程度排序：
+            - 课内范围 + 完成作业
+            - Python + Pandas（[欧阳飞雪 workshop 讲义](file:///D:/MG/!%20CUHKSZ/FEC/%E9%87%8F%E5%8C%96%E6%8A%投%E8%B5%84_%E6%AC%A7%E9%98%B3%E9%A3%9E%E9%9B%AA)）
+            - 伯克利补课
+            - [《Machine Learning for Factor Investing》](https://www.mlfactor.com/index.html)
+            - 《因子投资》
+            - [《Heard on the Street》](file:///D:/MG/%EF%BC%81Internship/Offer%E5%B8%AE/Offer%E5%B8%AE%20Quant%E5%BC%80%E8%AF%BE%E5%AD%A6%E4%B9%A0%E5%8C%85/Heard%20on%20the%20Street.pdf)
 - **回到寝室后**：
     - B站[交易课程](https://www.bilibili.com/video/BV1A86sB3EQb/?spm_id_from=333.1387.upload.video_card.click&vd_source=3e56e0212688ab8d623a809b9ab497f6)
     - [B站up主来去由心](https://space.bilibili.com/11430504?spm_id_from=333.788.upinfo.head.click)
