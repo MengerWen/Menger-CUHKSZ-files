@@ -4,6 +4,8 @@
 2. 托福❗❗
 3. FTE4312 Project
 4. MFE5340 Final Project
+	- 其实这门课的东西基本上没怎么学懂过。。
+	- 包括 MFM5220。。
 5. **量化相关**：
 	1. 上课
 	2. 伯克利补课：Deep Learning, IEOR 221, DeFi, 区块链
