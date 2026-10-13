@@ -1,0 +1,77 @@
+--------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4\Q3_4_3.log
+  log type:  text
+ opened on:  10 Dec 2024, 16:01:33
+
+. do "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4\Q3_4_3.do"
+
+. * Set the working directory where your file is located
+. cd "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4"
+D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4
+
+. 
+. * Import the CSV file into Stata
+. import delimited DID_Example.csv, clear
+(encoding automatically selected: ISO-8859-2)
+(15 vars, 820 obs)
+
+. 
+. * Replace "NA" with missing values
+. replace empl = "" if empl == "NA"
+(18 real changes made)
+
+. replace soda = "" if soda == "NA"
+(30 real changes made)
+
+. replace fries = "" if fries == "NA"
+(45 real changes made)
+
+. 
+. * Convert string variables to numeric where applicable
+. destring empl, replace
+empl: all characters numeric; replaced as double
+(18 missing values generated)
+
+. destring soda, replace
+soda: all characters numeric; replaced as double
+(30 missing values generated)
+
+. destring fries, replace
+fries: all characters numeric; replaced as double
+(45 missing values generated)
+
+. 
+. * Generate the interaction term for difference-in-differences
+. gen treatmentgroup = treatment * group
+
+. 
+. * Run the regression model with control variables
+. reg empl treatment group treatmentgroup fries
+
+      Source |       SS           df       MS      Number of obs   =       761
+-------------+----------------------------------   F(4, 756)       =      3.67
+       Model |  954.870661         4  238.717665   Prob > F        =    0.0057
+    Residual |  49138.3008       756  64.9977524   R-squared       =    0.0191
+-------------+----------------------------------   Adj R-squared   =    0.0139
+       Total |  50093.1715       760  65.9120677   Root MSE        =    8.0621
+
+--------------------------------------------------------------------------------
+          empl | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+---------------+----------------------------------------------------------------
+     treatment |  -2.823965    1.33166    -2.12   0.034    -5.438155   -.2097754
+         group |  -3.599658   1.071276    -3.36   0.001    -5.702688   -1.496629
+treatmentgroup |   3.566757   1.481293     2.41   0.016     .6588212    6.474694
+         fries |   7.365167   2.908898     2.53   0.012      1.65469    13.07564
+         _cons |   4.239513   2.617994     1.62   0.106    -.8998884    9.378914
+--------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. log close
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4\Q3_4_3.log
+  log type:  text
+ closed on:  10 Dec 2024, 16:01:54
+--------------------------------------------------------------------------------------------------------

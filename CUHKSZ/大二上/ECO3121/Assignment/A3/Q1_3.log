@@ -1,0 +1,202 @@
+--------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3\Q1_3.log
+  log type:  text
+ opened on:  26 Nov 2024, 13:15:24
+
+. do "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3\Q1_3.do"
+
+. * Set the working directory where the datasets are located
+. cd "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3"
+D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3
+
+. 
+. * Step 1: Load and clean the household data
+. use aghousehold.dta, clear
+
+. 
+. * Limit the sample to households in the year 2001
+. keep if year == 2001
+(38,832 observations deleted)
+
+. 
+. * Generate yield (output per unit of land)
+. gen yield = hx95_nh125 / hx95_nh112
+(1,268 missing values generated)
+
+. 
+. * Generate fertilizer application per unit of land
+. gen fertilizer = nh6_3 / hx95_nh112
+(1,268 missing values generated)
+
+. 
+. * Generate a binary variable for migration decision
+. gen migrate = (h95_nh269 > 0)
+
+. 
+. * Generate the natural log of yield and fertilizer
+. gen ln_yield = log(yield + 1)
+(1,268 missing values generated)
+
+. gen ln_fertilizer = log(fertilizer + 1)
+(1,268 missing values generated)
+
+. 
+. * Save the cleaned household data
+. save cleaned_aghousehold.dta, replace
+(file cleaned_aghousehold.dta not found)
+file cleaned_aghousehold.dta saved
+
+. 
+. * Step 2: Load and clean the rainfall data
+. use village_rainfall.dta, clear
+
+. 
+. * Save the cleaned rainfall data
+. save cleaned_village_rainfall.dta, replace
+(file cleaned_village_rainfall.dta not found)
+file cleaned_village_rainfall.dta saved
+
+. 
+. * Step 3: Merge the two datasets on village ID (vl_id)
+. use cleaned_aghousehold.dta, clear
+
+. merge m:1 vl_id using cleaned_village_rainfall.dta
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           373
+        from master                         0  (_merge==1)
+        from using                        373  (_merge==2)
+
+    Matched                             5,468  (_merge==3)
+    -----------------------------------------
+
+. 
+. * Step 4: First stage regression for IV relevance
+. * Generate the natural log of average rainfall
+. gen ln_av_rain = log(av_rain)
+(448 missing values generated)
+
+. 
+. * Run the first stage regression: ln_yield on ln_av_rain
+. reg ln_yield ln_av_rain
+
+      Source |       SS           df       MS      Number of obs   =     4,003
+-------------+----------------------------------   F(1, 4001)      =    560.65
+       Model |  182.285667         1  182.285667   Prob > F        =    0.0000
+    Residual |  1300.86357     4,001  .325134609   R-squared       =    0.1229
+-------------+----------------------------------   Adj R-squared   =    0.1227
+       Total |  1483.14924     4,002  .370602008   Root MSE        =    .57021
+
+------------------------------------------------------------------------------
+    ln_yield | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+  ln_av_rain |   .4644991   .0196173    23.68   0.000     .4260382      .50296
+       _cons |   2.526537   .1365663    18.50   0.000     2.258791    2.794284
+------------------------------------------------------------------------------
+
+. 
+. * Output interpretation
+. display "First Stage Regression Model:"
+First Stage Regression Model:
+
+. display "ln_yield = β0 + β1*ln_av_rain + ε"
+ln_yield = β0 + β1*ln_av_rain + ε
+
+. display "Interpretation: The coefficient of ln_av_rain indicates the effect of average rainfall on yie
+> ld. Statistical significance is determined by the p-value (p < 0.05 indicates significance)."
+Interpretation: The coefficient of ln_av_rain indicates the effect of average rainfall on yield. Statist
+> ical significance is determined by the p-value (p < 0.05 indicates significance).
+
+. 
+. * Step 5: Second stage IV regression (manually, two-step approach)
+. * First step: Predict ln_yield using ln_av_rain
+. predict ln_yield_hat, xb
+(448 missing values generated)
+
+. 
+. * Second step: Use ln_yield_hat as an instrument for ln_yield in the migration regression
+. reg migrate ln_yield_hat
+
+      Source |       SS           df       MS      Number of obs   =     5,028
+-------------+----------------------------------   F(1, 5026)      =    120.84
+       Model |  29.3359038         1  29.3359038   Prob > F        =    0.0000
+    Residual |  1220.17881     5,026  .242773341   R-squared       =    0.0235
+-------------+----------------------------------   Adj R-squared   =    0.0233
+       Total |  1249.51472     5,027  .248560716   Root MSE        =    .49272
+
+------------------------------------------------------------------------------
+     migrate | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+ln_yield_hat |   .3687228   .0335429    10.99   0.000     .3029641    .4344815
+       _cons |  -1.665501   .1936115    -8.60   0.000    -2.045064   -1.285938
+------------------------------------------------------------------------------
+
+. 
+. * Output interpretation for the second stage regression
+. display "Second Stage Regression Model:"
+Second Stage Regression Model:
+
+. display "migrate = β0 + β1*ln_yield_hat + ε"
+migrate = β0 + β1*ln_yield_hat + ε
+
+. display "Interpretation: The coefficient of ln_yield_hat indicates the causal effect of agricultural y
+> ield on household migration decisions."
+Interpretation: The coefficient of ln_yield_hat indicates the causal effect of agricultural yield on hou
+> sehold migration decisions.
+
+. 
+. * Step 6: Use ivregress 2sls to directly estimate the IV model
+. ivregress 2sls migrate (ln_yield = ln_av_rain)
+
+Instrumental variables 2SLS regression            Number of obs   =      4,003
+                                                  Wald chi2(1)    =     111.36
+                                                  Prob > chi2     =     0.0000
+                                                  R-squared       =          .
+                                                  Root MSE        =     .54961
+
+------------------------------------------------------------------------------
+     migrate | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    ln_yield |   .4295868   .0407081    10.55   0.000     .3498003    .5093732
+       _cons |  -2.012801    .234359    -8.59   0.000    -2.472136   -1.553466
+------------------------------------------------------------------------------
+Endogenous: ln_yield
+Exogenous:  ln_av_rain
+
+. 
+. * Compare results with the manual 2-stage regression
+. display "Comparison of coefficients and standard errors:"
+Comparison of coefficients and standard errors:
+
+. display "Check if the results from 'ivregress 2sls' match those from the manual 2-stage estimation."
+Check if the results from 'ivregress 2sls' match those from the manual 2-stage estimation.
+
+. 
+. * Step 7: Discussion of differences in IV and OLS results
+. display "Comparison with OLS (Question 2):"
+Comparison with OLS (Question 2):
+
+. display "The IV estimate captures the causal effect of yield on migration decisions, addressing endoge
+> neity. Differences between OLS and IV estimates highlight potential bias in OLS."
+The IV estimate captures the causal effect of yield on migration decisions, addressing endogeneity. Diff
+> erences between OLS and IV estimates highlight potential bias in OLS.
+
+. display "Comparison with Question 3:"
+Comparison with Question 3:
+
+. display "The difference between IV and OLS estimates aligns with expectations if biases (e.g., measure
+> ment error or reverse causality) were present in the OLS model."
+The difference between IV and OLS estimates aligns with expectations if biases (e.g., measurement error 
+> or reverse causality) were present in the OLS model.
+
+. 
+end of do-file
+
+. log close
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3\Q1_3.log
+  log type:  text
+ closed on:  26 Nov 2024, 13:15:45
+--------------------------------------------------------------------------------------------------------

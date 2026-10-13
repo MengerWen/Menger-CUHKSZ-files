@@ -1,0 +1,127 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A1\A1_Q2.log
+  log type:  text
+ opened on:   5 Oct 2024, 23:02:28
+
+. do "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A1\A1_Q2.do"
+
+. * Load the data from the provided path
+. use "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A1\inpresdata.dta", clear
+
+. 
+. * Step 2: Running the Simple Linear Regression: wage on years of education
+. reg wage yeduc
+
+      Source |       SS           df       MS      Number of obs   =    61,136
+-------------+----------------------------------   F(1, 61134)     =   8530.77
+       Model |  3.1880e+14         1  3.1880e+14   Prob > F        =    0.0000
+    Residual |  2.2846e+15    61,134  3.7371e+10   R-squared       =    0.1225
+-------------+----------------------------------   Adj R-squared   =    0.1224
+       Total |  2.6034e+15    61,135  4.2585e+10   Root MSE        =    1.9e+05
+
+------------------------------------------------------------------------------
+        wage | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+       yeduc |   17910.03   193.9109    92.36   0.000     17529.96    18290.09
+       _cons |   57405.06   2004.897    28.63   0.000     53475.45    61334.66
+------------------------------------------------------------------------------
+
+. 
+. * Step 4: Compute fitted values and residuals
+. predict fitted_wage
+(option xb assumed; fitted values)
+(1 missing value generated)
+
+. predict residuals, residuals
+(91,854 missing values generated)
+
+. 
+. * Verify if residuals sum to zero
+. summ residuals
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+   residuals |     61,136   -.0007623    193313.4  -362695.6   1.00e+07
+
+. 
+. * Step 5: Predicted wage for 10 years of education
+. display _b[_cons] + _b[yeduc]*10
+236505.32
+
+. 
+. * Step 7: Exploring alternative functional forms
+. 
+. * Log-Linear Model: log(wage) on education
+. gen log_wage = log(wage)
+(91,854 missing values generated)
+
+. reg log_wage yeduc
+
+      Source |       SS           df       MS      Number of obs   =    61,136
+-------------+----------------------------------   F(1, 61134)     =  14789.87
+       Model |  5317.65528         1  5317.65528   Prob > F        =    0.0000
+    Residual |  21980.5554    61,134  .359547149   R-squared       =    0.1948
+-------------+----------------------------------   Adj R-squared   =    0.1948
+       Total |  27298.2107    61,135  .446523442   Root MSE        =    .59962
+
+------------------------------------------------------------------------------
+    log_wage | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+       yeduc |    .073147   .0006015   121.61   0.000     .0719681    .0743259
+       _cons |   11.41769   .0062188  1836.01   0.000      11.4055    11.42988
+------------------------------------------------------------------------------
+
+. 
+. * Linear-Log Model: wage on log(education)
+. gen log_educ = log(yeduc)
+(7,496 missing values generated)
+
+. reg wage log_educ
+
+      Source |       SS           df       MS      Number of obs   =    59,859
+-------------+----------------------------------   F(1, 59857)     =   6024.88
+       Model |  2.3599e+14         1  2.3599e+14   Prob > F        =    0.0000
+    Residual |  2.3445e+15    59,857  3.9168e+10   R-squared       =    0.0914
+-------------+----------------------------------   Adj R-squared   =    0.0914
+       Total |  2.5805e+15    59,858  4.3110e+10   Root MSE        =    2.0e+05
+
+------------------------------------------------------------------------------
+        wage | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    log_educ |   128514.6   1655.687    77.62   0.000     125269.5    131759.8
+       _cons |   -49308.2   3690.619   -13.36   0.000    -56541.83   -42074.58
+------------------------------------------------------------------------------
+
+. 
+. * Log-Log Model: log(wage) on log(education)
+. reg log_wage log_educ
+
+      Source |       SS           df       MS      Number of obs   =    59,859
+-------------+----------------------------------   F(1, 59857)     =  11335.32
+       Model |  4179.58056         1  4179.58056   Prob > F        =    0.0000
+    Residual |  22070.5917    59,857  .368721982   R-squared       =    0.1592
+-------------+----------------------------------   Adj R-squared   =    0.1592
+       Total |  26250.1723    59,858  .438540751   Root MSE        =    .60722
+
+------------------------------------------------------------------------------
+    log_wage | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    log_educ |   .5408492   .0050799   106.47   0.000     .5308925    .5508059
+       _cons |   10.95083   .0113235   967.09   0.000     10.92864    10.97302
+------------------------------------------------------------------------------
+
+. 
+. * Step 8: Plot residuals vs fitted values to check for assumption SLR.4
+. rvfplot
+
+. 
+end of do-file
+
+. log close
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignme
+> nt\A1\A1_Q2.log
+  log type:  text
+ closed on:   5 Oct 2024, 23:03:31
+------------------------------------------------------

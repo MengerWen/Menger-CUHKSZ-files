@@ -1,0 +1,189 @@
+--------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3\Q1_5.log
+  log type:  text
+ opened on:  26 Nov 2024, 17:54:09
+
+. do "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3\Q1_5.do"
+
+. * Set the directory for the datasets
+. cd "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3"
+D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3
+
+. 
+. * Load the household data
+. use aghousehold.dta, clear
+
+. 
+. * Question 1: Limit the sample to households in the year 2001
+. keep if year == 2001
+(38,832 observations deleted)
+
+. 
+. * Generate the variables 'yield' and 'fertilizer'
+. gen yield = hx95_nh125 / hx95_nh112
+(1,268 missing values generated)
+
+. gen fertilizer = nh6_3 / hx95_nh112
+(1,268 missing values generated)
+
+. 
+. * Generate a binary variable for migration decision
+. gen migrate = (h95_nh269 > 0)
+
+. 
+. * Generate natural log variables for yield and fertilizer
+. * (log + 1 transformation to smooth zero values)
+. gen ln_yield = log(yield + 1)
+(1,268 missing values generated)
+
+. gen ln_fertilizer = log(fertilizer + 1)
+(1,268 missing values generated)
+
+. 
+. * Save the cleaned household data for merging
+. save cleaned_aghousehold.dta, replace
+(file cleaned_aghousehold.dta not found)
+file cleaned_aghousehold.dta saved
+
+. 
+. * Load the rainfall data
+. use village_rainfall.dta, clear
+
+. 
+. * Save the cleaned rainfall data
+. save cleaned_village_rainfall.dta, replace
+(file cleaned_village_rainfall.dta not found)
+file cleaned_village_rainfall.dta saved
+
+. 
+. * Merge the two datasets on village ID (vl_id)
+. use cleaned_aghousehold.dta, clear
+
+. merge m:1 vl_id using cleaned_village_rainfall.dta
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           373
+        from master                         0  (_merge==1)
+        from using                        373  (_merge==2)
+
+    Matched                             5,468  (_merge==3)
+    -----------------------------------------
+
+. 
+. * Question 2: Run a linear probability model of household migration decision on ln_yield
+. reg migrate ln_yield
+
+      Source |       SS           df       MS      Number of obs   =     4,200
+-------------+----------------------------------   F(1, 4198)      =     14.88
+       Model |  3.68868145         1  3.68868145   Prob > F        =    0.0001
+    Residual |  1040.44251     4,198  .247842427   R-squared       =    0.0035
+-------------+----------------------------------   Adj R-squared   =    0.0033
+       Total |  1044.13119     4,199   .24866187   Root MSE        =    .49784
+
+------------------------------------------------------------------------------
+     migrate | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    ln_yield |   .0495398   .0128412     3.86   0.000     .0243642    .0747155
+       _cons |   .1773844   .0743338     2.39   0.017     .0316509    .3231179
+------------------------------------------------------------------------------
+
+. 
+. * Question 4: First stage regression for IV relevance
+. * Generate the natural log of average rainfall
+. gen ln_av_rain = log(av_rain)
+(448 missing values generated)
+
+. 
+. * Make sure the 2SLS is operate on the same, valid dataset
+. drop if missing(ln_yield, ln_av_rain, migrate)
+(1,838 observations deleted)
+
+. 
+. * Run the first stage regression: ln_yield on ln_av_rain
+. reg ln_yield ln_av_rain
+
+      Source |       SS           df       MS      Number of obs   =     4,003
+-------------+----------------------------------   F(1, 4001)      =    560.65
+       Model |  182.285667         1  182.285667   Prob > F        =    0.0000
+    Residual |  1300.86357     4,001  .325134609   R-squared       =    0.1229
+-------------+----------------------------------   Adj R-squared   =    0.1227
+       Total |  1483.14924     4,002  .370602008   Root MSE        =    .57021
+
+------------------------------------------------------------------------------
+    ln_yield | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+  ln_av_rain |   .4644991   .0196173    23.68   0.000     .4260382      .50296
+       _cons |   2.526537   .1365663    18.50   0.000     2.258791    2.794284
+------------------------------------------------------------------------------
+
+. 
+. * Question 5: Second stage IV regression (manually, two-step approach)
+. * First step: Predict ln_yield using ln_av_rain
+. predict ln_yield_hat, xb
+
+. 
+. * Check whether all the data are valid
+. summ ln_yield_hat
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+ln_yield_hat |      4,003    5.753103    .2134213   5.320964     6.0853
+
+. list if missing(ln_yield_hat)
+
+. 
+. * Second step: Use ln_yield_hat as an instrument for ln_yield in the migration regression
+. reg migrate ln_yield_hat
+
+      Source |       SS           df       MS      Number of obs   =     4,003
+-------------+----------------------------------   F(1, 4001)      =    140.16
+       Model |  33.6398682         1  33.6398682   Prob > F        =    0.0000
+    Residual |  960.267701     4,001  .240006924   R-squared       =    0.0338
+-------------+----------------------------------   Adj R-squared   =    0.0336
+       Total |  993.907569     4,002  .248352716   Root MSE        =    .48991
+
+------------------------------------------------------------------------------
+     migrate | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+ln_yield_hat |   .4295868   .0362857    11.84   0.000     .3584465     .500727
+       _cons |  -2.012801    .208899    -9.64   0.000    -2.422359   -1.603243
+------------------------------------------------------------------------------
+
+. 
+. * Caompare to the first & second stage of the 2SLS
+. count if !missing(ln_yield, ln_av_rain, migrate)
+  4,003
+
+. count if !missing(ln_yield_hat, migrate)
+  4,003
+
+. 
+. * Question 6: Use ivregress 2sls to directly estimate the IV model
+. ivregress 2sls migrate (ln_yield = ln_av_rain)
+
+Instrumental variables 2SLS regression            Number of obs   =      4,003
+                                                  Wald chi2(1)    =     111.36
+                                                  Prob > chi2     =     0.0000
+                                                  R-squared       =          .
+                                                  Root MSE        =     .54961
+
+------------------------------------------------------------------------------
+     migrate | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    ln_yield |   .4295868   .0407081    10.55   0.000     .3498003    .5093732
+       _cons |  -2.012801    .234359    -8.59   0.000    -2.472136   -1.553466
+------------------------------------------------------------------------------
+Endogenous: ln_yield
+Exogenous:  ln_av_rain
+
+. 
+end of do-file
+
+. log close
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A3\Q1_5.log
+  log type:  text
+ closed on:  26 Nov 2024, 17:54:26
+--------------------------------------------------------------------------------------------------------

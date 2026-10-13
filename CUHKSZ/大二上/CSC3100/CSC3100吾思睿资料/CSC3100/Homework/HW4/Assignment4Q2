@@ -1,0 +1,88 @@
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 100005, M = 500005;
+const int inf = 1e9;
+int n, m, K, n1, n2, a[105];
+priority_queue<int> Q1, Q2;
+void query_median() {
+    for (int i = 1; i <= 2*K; i++) {
+        printf("%d ", a[i]);
+    }
+    puts("");
+}
+void adjust_heaps() {
+    int t = (n+1)/2 - K;
+    while (n1 > t) {
+        int w = Q1.top();
+        Q1.pop();
+        Q2.push(-a[2*K]);
+        for (int i = 2*K; i > 1; i--) {
+            a[i] = a[i-1];
+        }
+        a[1] = w;
+        n1--;
+        n2++;
+    }
+    while (n1 < t) {
+        int w = -Q2.top();
+        Q2.pop();
+        Q1.push(a[1]);
+        for (int i = 1; i < 2*K; i++) {
+            a[i] = a[i+1];
+        }
+        a[2*K] = w;
+        n1++;
+        n2--;
+    }
+}
+void ins(int w) {
+    n ++;
+    int median = a[K];
+    if (w < a[1]) {
+        Q1.push(w);
+        n1++;
+    } else {
+        for (int i = 1; i <= 2*K; ++i) {
+            if (a[i] < w) continue;
+            swap(a[i], w);
+        }
+        Q2.push(-w);
+        n2++;
+    }
+    adjust_heaps();
+}
+void del_median(int p) {
+    n--;
+    n1--;
+    int w = Q1.top();
+    Q1.pop();
+    for (int i = p; i > 1; i--) {
+        a[i] = a[i-1];
+    }
+    a[1] = w;
+    adjust_heaps();
+}
+int main() {
+    scanf("%d%d", &m, &K);
+    for (int i = 1; i <= 2*K; i++) {
+        scanf("%d", &a[i]);
+    }
+    sort(a+1, a+2*K+1);
+    n = 2*K;
+    n1 = 0;
+    n2 = 0;
+    for (int i = 1; i <= m; ++i) {
+        int o, w, p;
+        scanf("%d", &o);
+        if (o == 1) {
+            scanf("%d", &w);
+            ins(w);
+        } else if (o == 2) {
+            query_median();
+        } else if (o == 3) {
+            scanf("%d", &p);
+            del_median(p);
+        }
+    }
+    return 0;
+}

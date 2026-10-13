@@ -1,0 +1,46 @@
+#Submitted by 120090531
+class My_node:
+
+    def __init__(self, char):
+        self.char = char
+        self.children = {}
+        self.count = '0'
+
+class tree(object):
+
+    def __init__(self):
+        self.root = My_node("")
+
+    def insert(self, word):
+        node = self.root
+        for char in word:
+            if char in node.children:
+                node.children[char].count += '0'
+                node = node.children[char]
+            else:
+                node.children[char] = My_node(char)
+                node = node.children[char]
+    
+
+    def prefixstart(self,x):
+        node = self.root
+        for char in x:
+            if char not in node.children:
+                print(0)
+                return
+            else:    
+                node= node.children[char]
+        return len(node.count)
+
+def main():
+    t=tree()
+    n=int(input())
+    for i in range(n):
+        t.insert(input())
+    p=int(input())
+    for i in range(p):
+        x=t.prefixstart(input())
+        if x!=None:
+            print(x)
+
+main()

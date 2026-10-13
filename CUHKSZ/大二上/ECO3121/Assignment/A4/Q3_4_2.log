@@ -1,0 +1,37 @@
+--------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4\Q3_4_2.log
+  log type:  text
+ opened on:  10 Dec 2024, 15:57:21
+
+. do "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4\Q3_4_2.do"
+
+. * Set the working directory where your file is located
+. cd "D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4"
+D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4
+
+. 
+. * Import the CSV file into Stata
+. import delimited DID_Example.csv, clear
+(encoding automatically selected: ISO-8859-2)
+(15 vars, 820 obs)
+
+. 
+. * Replace "NA" with missing values
+. foreach var in ID Treatment Group Empl C.Owned Hours.Opening Soda Fries Chain SouthJ CentralJ NorthJ P
+> A1 PA2 Shore {
+  2.     replace `var' = . if `var' == "NA"
+  3. }
+variable ID not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. log close
+      name:  <unnamed>
+       log:  D:\MG\！CUHKSZ\~！大二上\ECO3121\Assignment\A4\Q3_4_2.log
+  log type:  text
+ closed on:  10 Dec 2024, 15:57:57
+--------------------------------------------------------------------------------------------------------

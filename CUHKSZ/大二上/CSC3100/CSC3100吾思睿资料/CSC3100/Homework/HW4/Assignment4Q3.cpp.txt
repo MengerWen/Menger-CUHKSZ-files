@@ -1,0 +1,30 @@
+//This code is written by TA BiaolinWen
+#include<bits/stdc++.h>
+using namespace std;
+int n;
+long long a[2005],key[2005];
+long long M;
+long long ans;bool vis[2005];
+void Prim(){
+	key[0] = -1;
+    for(int i=1,x=0;i<=n;i++,x=0){
+        for(int j=1;j<=n;j++)if(!vis[j])
+            if(key[j]>key[x])x=j;
+        vis[x]=true;
+        for(int y=1;y<=n;y++)
+            if(!vis[y])key[y]=max(key[y],(a[x]*a[y])%M);
+    }
+}
+int main(){
+    scanf("%d%lld",&n,&M);
+    for(int i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);
+        key[i] = -1;
+        
+    }
+    Prim();
+    ans = 0;
+    for(int i=1;i<=n;i++)ans+=(long long)key[i];
+    printf("%lld",ans);
+}

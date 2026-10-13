@@ -1,0 +1,74 @@
+#Submitted by  121090817
+class Vertex():
+    def __init__(self,popularity,key=0,pre = None):
+        self.popularity = popularity
+        self.key = key
+        self.pre = pre
+
+class MaxHeap(object):
+ 
+    def __init__(self):
+        self._data = []
+        self._count = len(self._data)
+ 
+    def size(self):
+        return self._count
+ 
+    def add(self, item):
+        if self._count >= len(self._data):
+            self._data.append(item)
+        else:
+            self._data[self._count] = item
+ 
+        self._count += 1
+        self._shiftup(self._count-1)
+ 
+    def pop(self):
+        if self._count > 0:
+            ret = self._data[0]
+            self._data[0] = self._data[self._count-1]
+            self._count -= 1
+            self._shiftDown(0)
+            return ret
+        
+    def _shiftup(self, index):
+        parent = (index-1)//2
+        while index > 0 and self._data[parent].key < self._data[index].key:
+            self._data[parent], self._data[index] = self._data[index], self._data[parent]
+            index = parent
+            parent = (index-1)//2
+ 
+    def _shiftDown(self, index):
+        j = 2*index + 1
+        while j < self._count :
+            if j+1 < self._count and self._data[j+1].key > self._data[j].key:
+                j += 1
+            if self._data[index].key >= self._data[j].key:
+                break
+            self._data[index], self._data[j] = self._data[j], self._data[index]
+            index = j
+            j = 2*index + 1
+
+    def increaseKey(self,index,value):
+        self._data[index].key = value
+        self._shiftup(index)
+
+firstLine = input().split()
+secondLine = input().split()
+n = int(firstLine[0])
+M = int(firstLine[1])
+Q = MaxHeap()
+for i in range(n):
+    Q.add(Vertex(int(secondLine[i])))
+
+result = 0
+while Q._count != 0:
+    u = Q.pop()
+    result += u.key
+    for i in range(Q._count):
+        v = Q._data[i]
+        w = (u.popularity * v.popularity) % M
+        if w > v.key:
+            v.pre = u
+            Q.increaseKey(i,w)
+print(result)

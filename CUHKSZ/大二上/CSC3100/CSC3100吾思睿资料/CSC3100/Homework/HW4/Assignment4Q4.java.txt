@@ -1,0 +1,106 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+class Node {
+
+    public Node[] next;
+    public boolean tail;
+    public int count;
+
+    public Node() {
+        next = new Node[26];
+    }
+
+    public void setChar(char ch, Node node) {
+        next[ch - 'a'] = node;
+        count++;
+    }
+
+    public Node getChar(char ch) {
+        count++;
+        return next[ch - 'a'];
+    }
+
+    public boolean hasChar(char ch) {
+        return next[ch - 'a'] != null;
+    }
+
+    public void wordEnd() {
+        tail = true;
+        count++;
+    }
+
+    public boolean isWordEnd() {
+        return tail;
+    }
+}
+
+public class A4_P4_121040081 {
+
+    static Node root = new Node();
+
+    public static void main(String[] args) throws IOException {
+        int n,q;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        n = Integer.parseInt(reader.readLine());
+        for(int i = 0; i < n; i++) {
+            addWord(reader.readLine());
+        }
+        q = Integer.parseInt(reader.readLine());
+        for(int i = 0; i < q; i++) {
+            queryWord(reader.readLine());
+        }
+        reader.close();
+    }
+
+    private static void addWord(String word) {
+        Node temp = root;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if (!temp.hasChar(ch)) {
+                temp.setChar(ch, new Node());
+                temp.count--;
+            }
+            temp = temp.getChar(ch);
+        }
+        temp.wordEnd();
+    }
+
+    private static Node hasPrefix(String pref) {
+        Node node = root;
+        int prefSize = pref.length();
+        for (int i = 0; i < prefSize; i++){
+            if (node.hasChar(pref.charAt(i))) {
+                node = node.next[pref.charAt(i)-'a'];
+            }
+            else {
+                return null;
+            }
+        }
+        return node;
+    }
+    
+    private static void queryWord(String pref) {
+        Node node = hasPrefix(pref);
+        int count = 0;
+        if(node != null) {
+            count = node.count;
+        }
+        System.out.println(count);
+    }
+
+    // private static int queryWordHelper(Node node) {
+    //     int count = 0;
+    //     if(node.tail) {
+    //         count ++;
+    //     }
+    //     for(Node nodes : node.next){
+    //         if(nodes != null) {
+    //             count += queryWordHelper(nodes);
+    //         }
+    //     }
+    //     return count;
+    // }
+}
