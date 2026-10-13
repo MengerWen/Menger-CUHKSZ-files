@@ -1,0 +1,361 @@
+portfolio,model_key,model_label,date,actual_pct,forecast_pct,forecast_error_pct
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-02-29,-0.6731,-1.7500810201915378,1.0769810201915377
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-03-31,7.5493,0.3480853255502345,7.201214674449766
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-04-30,2.7559,2.205055959316655,0.5508440406833448
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-05-31,2.2931,1.4296623274073972,0.8634376725926027
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-06-30,0.2938,1.1318319527391325,-0.8380319527391324
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-07-31,6.981,0.8651204783072276,6.115879521692772
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-08-31,1.2935,1.9359987890993975,-0.6424987890993974
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-09-30,3.2016,1.1828015763767987,2.0187984236232013
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-10-31,-8.1414,1.2675781750175605,-9.40897817501756
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-11-30,8.953,-0.49481882017226275,9.447818820172262
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2016-12-31,-0.3821,2.0136634634948747,-2.3957634634948746
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-01-31,1.9581,1.0790231858346175,0.8790768141653824
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-02-28,3.0169,0.9805120060038719,2.0363879939961285
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-03-31,2.2672,1.3484627640040439,0.918737235995956
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-04-30,1.803,1.228665561136848,0.5743344388631519
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-05-31,-0.8601,1.1128596970459321,-1.972959697045932
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-06-30,4.7675,0.6746684263437392,4.092831573656261
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-07-31,0.7563,1.5358000690560791,-0.7795000690560792
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-08-31,-0.6075,1.0632299711153201,-1.6707299711153203
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-09-30,5.3898,0.6537830571104257,4.736016942889575
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-10-31,0.4238,1.659332673411147,-1.2355326734111471
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-11-30,2.689,1.0242097586153638,1.6647902413846363
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2017-12-31,0.8669,1.180537912100148,-0.313637912100148
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-01-31,3.103,1.0124020922326116,2.0905979077673886
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-02-28,-3.0365,1.3015614870160057,-4.338061487016006
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-03-31,1.3871,0.375877470944324,1.011222529055676
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-04-30,1.1463,0.9051592517526919,0.24114074824730825
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-05-31,7.9043,1.066920217758569,6.837379782241431
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-06-30,2.8647,2.1100933341962755,0.7546066658037245
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-07-31,1.3884,1.4735829683028783,-0.08518296830287819
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-08-31,5.6017,1.0084019093087628,4.5932980906912375
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-09-30,-1.8739,1.732333052581917,-3.606233052581917
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-10-31,-13.2357,0.6421405742213239,-13.877840574221324
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-11-30,0.9163,-1.497273217479902,2.413573217479902
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2018-12-31,-11.9577,0.6331728294625338,-12.590872829462535
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-01-31,12.6604,-0.9559038091630924,13.616303809163092
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-02-28,6.4012,2.4489615781380643,3.952238421861936
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-03-31,-0.6607,2.3584201413461323,-3.019120141346132
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-04-30,2.3072,0.7019264397340363,1.6052735602659636
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-05-31,-6.9642,1.0686631570785288,-8.032863157078529
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-06-30,8.1167,-0.23646847799166604,8.353168477991666
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-07-31,-0.7943,1.864735464482008,-2.659035464482008
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-08-31,-4.1881,1.0066646079910724,-5.194764607991073
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-09-30,-2.4877,-0.005135512782035168,-2.4825644872179646
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-10-31,4.3906,0.28436547104059284,4.1062345289594075
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-11-30,6.055,1.4866226437630372,4.5683773562369625
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2019-12-31,2.7477,1.922856414307354,0.8248435856926459
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-01-31,-1.8451,1.3502363831525914,-3.1953363831525916
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-02-29,-6.1476,0.5039940378986826,-6.651594037898683
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-03-31,-18.5028,-0.2745808941577079,-18.228219105842292
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-04-30,17.9699,-2.3843886832389583,20.354288683238956
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-05-31,11.2881,3.1672548615497846,8.120845138450216
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-06-30,5.4202,3.2575538083962705,2.16264619160373
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-07-31,1.7817,1.7250766955945538,0.05662330440544627
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-08-31,7.2731,1.0938730000162558,6.179226999983745
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-09-30,-0.4846,1.9654526387928075,-2.4500526387928074
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-10-31,0.608,0.9053072679068825,-0.29730726790688256
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-11-30,23.1461,0.805471174258067,22.340628825741934
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2020-12-31,12.9246,4.516489733664614,8.408110266335385
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-01-31,5.489,3.483220386554705,2.005779613445295
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-02-28,5.6735,1.7628887345428337,3.910611265457166
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-03-31,-2.6063,1.752942084837641,-4.359242084837641
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-04-30,2.6085,0.5129172306055646,2.095582769394435
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-05-31,-1.5731,1.1291615586262522,-2.702261558626252
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-06-30,5.592,0.687312764913381,4.904687235086619
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-07-31,-5.5779,1.6678609250110776,-7.245760925011077
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-08-31,2.6342,0.10527000798213138,2.5289299920178685
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-09-30,-4.4644,1.039167865937551,-5.503567865937551
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-10-31,3.1679,0.2619460472887467,2.9059539527112532
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-11-30,-7.0826,1.1830114031500978,-8.265611403150098
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2021-12-31,0.0187,-0.15966213200995316,0.17836213200995316
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-01-31,-13.3011,0.5856191336271257,-13.886719133627125
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-02-28,-0.0121,-1.2197929151389597,1.2076929151389597
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-03-31,2.0387,0.40571557382765244,1.6329844261723476
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-04-30,-13.4866,1.3173089838837655,-14.803908983883765
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-05-31,-4.3363,-1.28973611350004,-3.0465638864999596
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-06-30,-4.3706,-0.3217799352822087,-4.048820064717791
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-07-31,13.5064,0.15342625233309204,13.352973747666907
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-08-31,0.4112,2.8827959085266683,-2.4715959085266683
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-09-30,-9.3717,1.3269290420883268,-10.698629042088328
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-10-31,7.1574,-0.8569627988421689,8.01436279884217
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-11-30,-0.6547,1.6790001317619119,-2.333700131761912
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2022-12-31,-5.97,1.0259205596862904,-6.99592055968629
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-01-31,13.8577,-0.25005794169449935,14.1077579416945
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-02-28,-2.5005,2.8191371086503425,-5.319637108650342
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-03-31,-3.5646,0.8651318260110511,-4.429731826011051
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-04-30,-1.3034,0.029781040322111152,-1.3331810403221112
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-05-31,0.8977,0.5467502183967274,0.3509497816032726
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-06-30,7.5243,0.9587343722741071,6.565565627725893
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-07-31,5.129,2.0075688161048406,3.121431183895159
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-08-31,-7.7642,1.7864514949029289,-9.55065149490293
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-09-30,-6.7617,-0.35049144952536315,-6.411208550474637
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-10-31,-9.1222,-0.48998493845275026,-8.63221506154725
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-11-30,9.7655,-0.712229549773523,10.477729549773523
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2023-12-31,12.2783,2.1630419732383173,10.115258026761683
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-01-31,-4.1109,3.054599188696254,-7.165499188696254
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-02-29,6.516,0.32862888175963867,6.187371118240361
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-03-31,1.0832,1.5931615539982702,-0.5099615539982703
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-04-30,-8.007,1.1851234310752314,-9.192123431075231
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-05-31,5.6481,-0.4749181701261921,6.123018170126192
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-06-30,-0.6883,1.490484342740949,-2.1787843427409492
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-07-31,8.5701,0.9151245359369569,7.654975464063043
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-08-31,0.151,2.0448537782175378,-1.8938537782175378
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-09-30,1.6545,1.042314653402672,0.6121853465973282
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-10-31,-0.1031,0.9801855695482019,-1.083285569548202
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-11-30,14.3703,0.8373104725246446,13.532989527475356
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2024-12-31,-6.9456,3.000729216096364,-9.946329216096364
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-01-31,1.8676,0.11483289479999925,1.7527671052000007
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-02-28,-7.574,0.7778175451271172,-8.351817545127117
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-03-31,-7.8676,-0.19711873942342184,-7.670481260576579
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-04-30,-1.1558,-0.598140507336495,-0.5576594926635049
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-05-31,6.3267,0.5075519677368461,5.819148032263154
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-06-30,6.4912,1.820282239860495,4.670917760139505
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-07-31,1.7806,1.95968836102791,-0.17908836102791015
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-08-31,5.8316,1.1697970141465859,4.661802985853414
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-09-30,0.9128,1.6754794283756789,-0.7626794283756789
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-10-31,3.0727,1.0863635812807377,1.9863364187192625
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-11-30,-0.0397,1.2430987830828848,-1.2827987830828849
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2025-12-31,-0.1047,0.879674333145383,-0.984374333145383
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,2026-01-31,1.5104,0.7657556964791982,0.7446443035208018
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-02-29,-0.6731,-1.2521983223479163,0.5790983223479163
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-03-31,7.5493,-0.16227847988049637,7.711578479880496
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-04-30,2.7559,2.928921390642058,-0.17302139064205813
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-05-31,2.2931,2.099031428519222,0.19406857148077794
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-06-30,0.2938,0.995761904428785,-0.701961904428785
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-07-31,6.981,0.6426856452251288,6.338314354774871
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-08-31,1.2935,1.730426428045497,-0.436926428045497
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-09-30,3.2016,1.8419347135428286,1.3596652864571714
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-10-31,-8.1414,0.7601335520260408,-8.901533552026041
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-11-30,8.953,1.0731382941037255,7.879861705896274
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2016-12-31,-0.3821,2.3456680981734923,-2.727768098173492
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-01-31,1.9581,1.8165591727148527,0.14154082728514727
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-02-28,3.0169,0.794008250560434,2.222891749439566
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-03-31,2.2672,1.91090857367758,0.35629142632241995
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-04-30,1.803,0.585179252122745,1.217820747877255
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-05-31,-0.8601,0.9406443947204266,-1.8007443947204265
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-06-30,4.7675,0.8065065526232407,3.9609934473767594
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-07-31,0.7563,1.5588182300701972,-0.8025182300701972
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-08-31,-0.6075,1.603409633716716,-2.210909633716716
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-09-30,5.3898,0.620488613181556,4.769311386818444
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-10-31,0.4238,1.4767345606363653,-1.0529345606363654
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-11-30,2.689,1.7783051869072146,0.9106948130927854
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2017-12-31,0.8669,1.417722021796515,-0.550822021796515
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-01-31,3.103,1.4017621944068683,1.7012378055931319
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-02-28,-3.0365,2.021230811684938,-5.057730811684938
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-03-31,1.3871,-0.11815152660796002,1.50525152660796
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-04-30,1.1463,-0.004875829029216794,1.151175829029217
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-05-31,7.9043,1.2606031325962122,6.643696867403788
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-06-30,2.8647,0.8481111488008981,2.016588851199102
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-07-31,1.3884,1.3719516653191404,0.01644833468085971
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-08-31,5.6017,1.8666564699440371,3.735043530055963
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-09-30,-1.8739,0.9758302990277766,-2.8497302990277764
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-10-31,-13.2357,1.0330850898612485,-14.268785089861248
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-11-30,0.9163,-0.617433447587286,1.5337334475872861
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2018-12-31,-11.9577,0.49620706692576066,-12.453907066925762
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-01-31,12.6604,-1.3777644702219698,14.038164470221968
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-02-28,6.4012,2.2700504674638324,4.131149532536168
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-03-31,-0.6607,2.1390063979265346,-2.7997063979265344
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-04-30,2.3072,0.7691473805098097,1.5380526194901902
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-05-31,-6.9642,1.9056932092301475,-8.869893209230147
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-06-30,8.1167,-0.9063679767540315,9.023067976754032
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-07-31,-0.7943,2.103414151358408,-2.897714151358408
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-08-31,-4.1881,1.6964876675927443,-5.884587667592744
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-09-30,-2.4877,-0.6838489777792923,-1.8038510222207074
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-10-31,4.3906,1.5486052185759798,2.8419947814240203
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-11-30,6.055,1.1227106251886503,4.932289374811349
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2019-12-31,2.7477,1.8660736393558057,0.8816263606441943
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-01-31,-1.8451,1.787363798399497,-3.632463798399497
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-02-29,-6.1476,0.042194072884884526,-6.189794072884884
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-03-31,-18.5028,-1.4276431295677166,-17.075156870432284
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-04-30,17.9699,-4.465448742764329,22.435348742764326
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-05-31,11.2881,3.6944461988535826,7.593653801146417
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-06-30,5.4202,3.1623722161386203,2.25782778386138
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-07-31,1.7817,1.3329568774811695,0.44874312251883053
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-08-31,7.2731,1.8731167638758457,5.399983236124155
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-09-30,-0.4846,2.0622668465693623,-2.5468668465693622
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-10-31,0.608,0.6293826081711597,-0.021382608171159667
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-11-30,23.1461,0.6328831859623546,22.513216814037644
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2020-12-31,12.9246,4.959717229737045,7.964882770262955
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-01-31,5.489,3.2750295046685824,2.2139704953314174
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-02-28,5.6735,1.2926619077533232,4.380838092246677
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-03-31,-2.6063,3.12587401714831,-5.73217401714831
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-04-30,2.6085,2.17567189230936,0.43282810769063973
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-05-31,-1.5731,1.5423570930830692,-3.1154570930830694
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-06-30,5.592,1.858985069391966,3.7330149306080336
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-07-31,-5.5779,0.21573990288912614,-5.793639902889126
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-08-31,2.6342,0.9667604365573335,1.6674395634426664
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-09-30,-4.4644,1.2451460287364915,-5.709546028736492
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-10-31,3.1679,0.910509585111988,2.257390414888012
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-11-30,-7.0826,1.7500782093043208,-8.832678209304321
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2021-12-31,0.0187,-0.18478639553350695,0.20348639553350695
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-01-31,-13.3011,1.5073016022145254,-14.808401602214525
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-02-28,-0.0121,1.5959244883025452,-1.6080244883025452
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-03-31,2.0387,-0.28384311877278257,2.3225431187727823
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-04-30,-13.4866,1.618687076474778,-15.105287076474777
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-05-31,-4.3363,-0.41794810352866607,-3.9183518964713335
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-06-30,-4.3706,0.9285059747169546,-5.299105974716954
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-07-31,13.5064,-1.6959850446481068,15.202385044648107
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-08-31,0.4112,2.6192400449555113,-2.2080400449555113
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-09-30,-9.3717,1.5810942128134475,-10.952794212813448
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-10-31,7.1574,-1.2296936006980903,8.38709360069809
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-11-30,-0.6547,3.091050447357868,-3.745750447357868
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2022-12-31,-5.97,1.7410569907511104,-7.711056990751111
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-01-31,13.8577,-0.5802850151009913,14.43798501510099
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-02-28,-2.5005,1.6469730091944625,-4.147473009194463
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-03-31,-3.5646,0.803498188535991,-4.368098188535991
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-04-30,-1.3034,-0.6878801766424516,-0.6155198233575483
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-05-31,0.8977,1.084360314775764,-0.18666031477576384
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-06-30,7.5243,-0.7596650518619563,8.283965051861957
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-07-31,5.129,2.147457595254297,2.9815424047457024
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-08-31,-7.7642,2.192604561541587,-9.956804561541587
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-09-30,-6.7617,-0.564844269996102,-6.196855730003898
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-10-31,-9.1222,-0.419551337652311,-8.702648662347688
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-11-30,9.7655,-0.6873621035602508,10.45286210356025
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2023-12-31,12.2783,2.5029626577376844,9.775337342262315
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-01-31,-4.1109,3.001802482160697,-7.112702482160697
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-02-29,6.516,0.6656150522819001,5.8503849477181
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-03-31,1.0832,1.061027165489738,0.022172834510261863
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-04-30,-8.007,2.303203844685474,-10.310203844685473
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-05-31,5.6481,-0.8681415741235632,6.516241574123564
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-06-30,-0.6883,1.1183548960884342,-1.806654896088434
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-07-31,8.5701,1.0324283203501943,7.537671679649806
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-08-31,0.151,1.577484575465398,-1.426484575465398
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-09-30,1.6545,1.5202230871230769,0.13427691287692323
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-10-31,-0.1031,0.4483040786969823,-0.5514040786969823
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-11-30,14.3703,1.0259805044035213,13.34431949559648
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2024-12-31,-6.9456,2.5914422761678053,-9.537042276167805
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-01-31,1.8676,0.04524549043681936,1.8223545095631806
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-02-28,-7.574,1.204947218610986,-8.778947218610986
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-03-31,-7.8676,1.1178328155553494,-8.985432815555349
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-04-30,-1.1558,-0.5799040845627661,-0.5758959154372338
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-05-31,6.3267,-0.20298004903137812,6.529680049031378
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-06-30,6.4912,1.6022968907766346,4.8889031092233655
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-07-31,1.7806,1.9442508010925295,-0.1636508010925295
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-08-31,5.8316,1.0069309888397664,4.824669011160234
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-09-30,0.9128,1.6160883054646435,-0.7032883054646436
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-10-31,3.0727,1.3642188959895345,1.7084811040104657
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-11-30,-0.0397,0.8731678191142733,-0.9128678191142733
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2025-12-31,-0.1047,1.2764480938758134,-1.3811480938758134
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,2026-01-31,1.5104,1.0644552324107286,0.4459447675892714
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-02-29,-0.6731,-1.2877936379998403,0.6146936379998402
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-03-31,7.5493,0.1621395302720572,7.3871604697279425
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-04-30,2.7559,2.3586548221529924,0.39724517784700764
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-05-31,2.2931,1.3222925047492744,0.9708074952507255
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-06-30,0.2938,1.0180149546112274,-0.7242149546112273
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-07-31,6.981,0.6928589342345859,6.288141065765414
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-08-31,1.2935,1.2692856545642712,0.024214345435728868
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-09-30,3.2016,1.2092545590767827,1.9923454409232173
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-10-31,-8.1414,0.8122989676698467,-8.953698967669848
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-11-30,8.953,1.0615620261705487,7.891437973829451
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2016-12-31,-0.3821,2.000433165074327,-2.3825331650743267
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-01-31,1.9581,1.2857883336422784,0.6723116663577215
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-02-28,3.0169,1.237046500051072,1.7798534999489282
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-03-31,2.2672,1.5679731311659992,0.6992268688340006
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-04-30,1.803,0.41191114308173127,1.3910888569182687
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-05-31,-0.8601,0.233588098178501,-1.093688098178501
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-06-30,4.7675,0.5079641570701767,4.259535842929823
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-07-31,0.7563,1.1188545119228337,-0.3625545119228337
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-08-31,-0.6075,0.8089791338352299,-1.4164791338352298
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-09-30,5.3898,0.7142275145687762,4.675572485431224
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-10-31,0.4238,0.7252307793831676,-0.3014307793831676
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-11-30,2.689,1.461162426723524,1.2278375732764761
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2017-12-31,0.8669,0.8461406227787771,0.020759377221222897
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-01-31,3.103,0.4106653162910274,2.6923346837089728
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-02-28,-3.0365,2.044481167778997,-5.080981167778997
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-03-31,1.3871,-0.29218190011983936,1.6792819001198394
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-04-30,1.1463,-0.5963267178408937,1.7426267178408938
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-05-31,7.9043,0.09574916465823691,7.808550835341763
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-06-30,2.8647,-0.07042499433654825,2.9351249943365483
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-07-31,1.3884,0.1054259164116047,1.2829740835883954
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-08-31,5.6017,1.2632218583882562,4.338478141611744
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-09-30,-1.8739,0.5850125941449491,-2.458912594144949
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-10-31,-13.2357,0.0973947165058604,-13.33309471650586
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-11-30,0.9163,-1.0348771330520776,1.9511771330520777
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2018-12-31,-11.9577,1.3093444710036835,-13.267044471003684
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-01-31,12.6604,-1.6330976601078078,14.293497660107807
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-02-28,6.4012,2.608548661172044,3.792651338827956
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-03-31,-0.6607,1.5598726297127712,-2.220572629712771
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-04-30,2.3072,0.9135584259423268,1.393641574057673
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-05-31,-6.9642,2.217225821090487,-9.181425821090487
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-06-30,8.1167,-0.3817130902812593,8.49841309028126
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-07-31,-0.7943,2.4720641429901695,-3.2663641429901693
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-08-31,-4.1881,1.6763098942406103,-5.864409894240611
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-09-30,-2.4877,0.39875499446155516,-2.886454994461555
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-10-31,4.3906,1.4189910514870192,2.971608948512981
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-11-30,6.055,1.6008788705553165,4.454121129444683
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2019-12-31,2.7477,1.8689937828782028,0.8787062171217972
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-01-31,-1.8451,1.200812094282984,-3.045912094282984
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-02-29,-6.1476,0.1961529649965854,-6.343752964996585
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-03-31,-18.5028,-1.5920037230211292,-16.91079627697887
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-04-30,17.9699,-3.387382174457599,21.3572821744576
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-05-31,11.2881,4.185539303866847,7.102560696133153
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-06-30,5.4202,2.2194264662924326,3.200773533707568
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-07-31,1.7817,1.2341754440399768,0.5475245559600233
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-08-31,7.2731,2.37150861488999,4.90159138511001
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-09-30,-0.4846,2.4777614942456694,-2.9623614942456693
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-10-31,0.608,1.1720442908653461,-0.5640442908653461
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-11-30,23.1461,0.863440996626565,22.282659003373436
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2020-12-31,12.9246,5.271096273571828,7.653503726428172
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-01-31,5.489,2.783463232894121,2.7055367671058788
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-02-28,5.6735,1.7789755181957503,3.8945244818042495
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-03-31,-2.6063,2.799301427134523,-5.405601427134523
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-04-30,2.6085,2.470021678404194,0.13847832159580564
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-05-31,-1.5731,1.800336109737657,-3.373436109737657
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-06-30,5.592,1.9760708946647032,3.6159291053352964
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-07-31,-5.5779,0.20942487087812367,-5.787324870878123
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-08-31,2.6342,0.24697715233895678,2.387222847661043
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-09-30,-4.4644,1.8152756337786293,-6.27967563377863
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-10-31,3.1679,0.07232297236263463,3.0955770276373653
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-11-30,-7.0826,1.9973403904505034,-9.079940390450503
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2021-12-31,0.0187,-0.3337700079932162,0.3524700079932162
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-01-31,-13.3011,1.8876715628852025,-15.188771562885202
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-02-28,-0.0121,0.6490104008257731,-0.6611104008257731
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-03-31,2.0387,0.2087766803702209,1.829923319629779
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-04-30,-13.4866,1.0313976590224598,-14.517997659022459
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-05-31,-4.3363,-0.9742031364985877,-3.362096863501412
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-06-30,-4.3706,1.086678982082347,-5.457278982082347
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-07-31,13.5064,-1.9417120548683187,15.448112054868318
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-08-31,0.4112,2.4620096784660745,-2.0508096784660745
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-09-30,-9.3717,0.3911211441622484,-9.762821144162249
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-10-31,7.1574,-0.5111304757647195,7.66853047576472
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-11-30,-0.6547,3.8564260184469408,-4.511126018446941
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2022-12-31,-5.97,2.2864469250636574,-8.256446925063656
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-01-31,13.8577,-0.026200004296836,13.883900004296835
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-02-28,-2.5005,2.637774703279888,-5.1382747032798886
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-03-31,-3.5646,-0.11360307807765935,-3.4509969219223406
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-04-30,-1.3034,0.030710361208775794,-1.3341103612087757
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-05-31,0.8977,1.4820604197969764,-0.5843604197969764
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-06-30,7.5243,-0.27797770175017433,7.8022777017501745
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-07-31,5.129,2.15872120537891,2.9702787946210893
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-08-31,-7.7642,2.1925876839989655,-9.956787683998964
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-09-30,-6.7617,0.24583419830109676,-7.007534198301097
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-10-31,-9.1222,0.28992415822843043,-9.41212415822843
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-11-30,9.7655,0.08445751887569308,9.681042481124306
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2023-12-31,12.2783,3.071674464233703,9.206625535766296
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-01-31,-4.1109,2.682353001030094,-6.793253001030094
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-02-29,6.516,0.33227102429273714,6.183728975707263
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-03-31,1.0832,1.9469335464253845,-0.8637335464253846
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-04-30,-8.007,2.329890019122132,-10.336890019122132
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-05-31,5.6481,-0.41895899220057586,6.067058992200576
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-06-30,-0.6883,1.5468429868961202,-2.23514298689612
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-07-31,8.5701,1.2115728264045629,7.358527173595437
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-08-31,0.151,1.8861134914364754,-1.7351134914364754
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-09-30,1.6545,1.2291678242117712,0.4253321757882289
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-10-31,-0.1031,0.3176397473263002,-0.42073974732630015
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-11-30,14.3703,0.9666799826430648,13.403620017356936
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2024-12-31,-6.9456,2.019315770749074,-8.964915770749073
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-01-31,1.8676,-0.47491781316938386,2.342517813169384
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-02-28,-7.574,1.415817771485564,-8.989817771485564
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-03-31,-7.8676,0.943447193984781,-8.81104719398478
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-04-30,-1.1558,-0.01911281796853359,-1.1366871820314663
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-05-31,6.3267,0.5276044938888234,5.799095506111176
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-06-30,6.4912,1.4026753991483751,5.088524600851625
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-07-31,1.7806,1.5893972010191746,0.19120279898082537
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-08-31,5.8316,0.9501183784554286,4.881481621544571
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-09-30,0.9128,1.5182247027908886,-0.6054247027908887
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-10-31,3.0727,1.2990202881924091,1.773679711807591
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-11-30,-0.0397,1.064596945050841,-1.104296945050841
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2025-12-31,-0.1047,0.8965068074485067,-1.0012068074485068
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,2026-01-31,1.5104,0.6029470135529067,0.9074529864470933

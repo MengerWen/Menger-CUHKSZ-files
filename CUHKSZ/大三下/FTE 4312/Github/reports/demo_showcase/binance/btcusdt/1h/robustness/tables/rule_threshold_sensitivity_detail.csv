@@ -1,0 +1,4 @@
+artifact_label,artifact_scope,threshold_label,strategy_name,cumulative_return,sharpe_ratio,mark_to_market_max_drawdown,trade_count
+SHOWCASE,Showcase results,conservative,transformer_encoder,0.09399990714548001,1.4835919506740218,-0.025593123126590792,73
+SHOWCASE,Showcase results,base,transformer_encoder,0.10199990714548002,1.583591950674022,-0.029593123126590792,97
+SHOWCASE,Showcase results,opportunistic,transformer_encoder,0.10799990714548002,1.5235919506740219,-0.03559312312659079,116

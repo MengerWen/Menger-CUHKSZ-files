@@ -1,0 +1,7 @@
+feature,perp_return,spot_return,funding_rate_bps,spread_bps,perp_volume,spot_volume
+perp_return,1.0,0.999,-0.0063,-0.0092,-0.0342,-0.0101
+spot_return,0.999,1.0,-0.0088,-0.0199,-0.0339,-0.0099
+funding_rate_bps,-0.0063,-0.0088,1.0,0.1697,0.0101,-0.0018
+spread_bps,-0.0092,-0.0199,0.1697,1.0,-0.0136,-0.0138
+perp_volume,-0.0342,-0.0339,0.0101,-0.0136,1.0,0.7363
+spot_volume,-0.0101,-0.0099,-0.0018,-0.0138,0.7363,1.0

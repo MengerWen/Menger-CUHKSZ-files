@@ -1,0 +1,130 @@
+{
+  "input": {
+    "dataset_path": "data/processed/supervised/binance/btcusdt/1h/btcusdt_supervised_dataset.parquet",
+    "manifest_path": "data/processed/supervised/binance/btcusdt/1h/btcusdt_supervised_manifest.json",
+    "provider": "binance",
+    "symbol": "BTCUSDT",
+    "venue": "binance",
+    "frequency": "1h"
+  },
+  "target": {
+    "task": "regression",
+    "column": "target_future_net_return_bps_24h",
+    "classification_column": "target_is_profitable_24h",
+    "regression_column": "target_future_net_return_bps_24h",
+    "timestamp_column": "timestamp",
+    "split_column": "split",
+    "ready_column": "supervised_ready",
+    "probability_threshold": 0.5,
+    "trade_threshold_bps": 0.0
+  },
+  "feature_selection": {
+    "include_columns": [],
+    "exclude_columns": [
+      "timestamp",
+      "symbol",
+      "venue",
+      "frequency",
+      "split",
+      "feature_ready",
+      "supervised_ready"
+    ],
+    "exclude_prefixes": [
+      "target_"
+    ],
+    "max_missing_fraction": 0.25,
+    "drop_constant_features": true
+  },
+  "sequence": {
+    "lookback_steps": 4,
+    "allow_cross_split_context": true
+  },
+  "model": {
+    "name": "gru",
+    "hidden_size": 8,
+    "num_layers": 1,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "tcn_hidden_channels": 64,
+    "tcn_num_blocks": 4,
+    "tcn_kernel_size": 3,
+    "tcn_dilation_base": 2,
+    "tcn_use_residual": true,
+    "transformer_d_model": 8,
+    "transformer_nhead": 2,
+    "transformer_num_layers": 1,
+    "transformer_dim_feedforward": 16,
+    "transformer_pooling": "last"
+  },
+  "preprocessing": {
+    "scaler": "standard",
+    "winsorize_lower_quantile": null,
+    "winsorize_upper_quantile": null
+  },
+  "threshold_search": {
+    "enabled": true,
+    "objective": "avg_signal_return_bps",
+    "probability_grid": [],
+    "regression_threshold_grid_bps": [],
+    "top_quantile": 0.1,
+    "allow_degenerate_fallback": false
+  },
+  "tuning": {
+    "enabled": false,
+    "mode": "expanding",
+    "n_splits": 2,
+    "gap": 0,
+    "min_train_size": 2000,
+    "rolling_window_size": null,
+    "max_candidates": 8,
+    "trial_epochs": 3,
+    "metric": "validation_avg_signal_return_bps",
+    "lookback_steps": [],
+    "hidden_size": [],
+    "num_layers": [],
+    "dropout": [],
+    "learning_rate": [],
+    "weight_decay": [],
+    "batch_size": []
+  },
+  "prediction": {
+    "mode": "static",
+    "refit_every_n_periods": 168,
+    "rolling_window_size": null,
+    "expanding_window_start": 2000,
+    "use_validation_history_for_test": true
+  },
+  "interpretability": {
+    "enabled": true,
+    "ablation_splits": [
+      "validation"
+    ],
+    "calibration_bins": 10,
+    "max_feature_groups": null
+  },
+  "training": {
+    "batch_size": 4,
+    "epochs": 1,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "seed": 42,
+    "device": "cpu",
+    "num_workers": 0,
+    "clip_grad_norm": 1.0,
+    "early_stopping_patience": 1,
+    "deterministic": true,
+    "use_balanced_classification_loss": true,
+    "selection_metric": "validation_avg_signal_return_bps",
+    "allow_degenerate_fallback": false,
+    "regression_loss": "huber",
+    "huber_delta": 1.0,
+    "internal_validation_fraction": 0.15
+  },
+  "output": {
+    "model_dir": "tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models",
+    "run_name": "gru_unit",
+    "write_csv": true,
+    "write_markdown_report": true
+  },
+  "notes": {}
+}

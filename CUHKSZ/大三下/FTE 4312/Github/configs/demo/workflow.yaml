@@ -1,0 +1,71 @@
+commands:
+  fetch_data_config_path: configs/data/default.yaml
+  report_data_quality_config_path: configs/reports/data_quality.yaml
+  features_config_path: configs/features/default.yaml
+  labels_config_path: configs/labels/default.yaml
+  baseline_config_path: configs/models/baseline.yaml
+  deep_learning_config_path: configs/models/lstm.yaml
+  deep_learning_comparison_config_path: configs/experiments/dl/regression_all.yaml
+  signals_config_path: configs/signals/default.yaml
+  backtest_config_path: configs/backtests/default.yaml
+  integration_config_path: configs/integration/default.yaml
+  demo_snapshot_config_path: configs/demo/default.yaml
+
+stages:
+  fetch_data:
+    enabled: true
+    optional: false
+  report_data_quality:
+    enabled: true
+    optional: false
+  build_features:
+    enabled: true
+    optional: false
+  build_labels:
+    enabled: true
+    optional: false
+  train_baseline:
+    enabled: true
+    optional: false
+  train_deep_learning:
+    enabled: true
+    optional: true
+  compare_deep_learning:
+    enabled: true
+    optional: true
+  generate_baseline_signals:
+    enabled: true
+    optional: false
+  generate_deep_learning_signals:
+    enabled: true
+    optional: true
+  backtest:
+    enabled: true
+    optional: false
+  sync_vault:
+    enabled: true
+    optional: false
+  export_demo_snapshot:
+    enabled: true
+    optional: false
+
+execution:
+  continue_on_optional_failure: true
+
+frontend:
+  frontend_dir: frontend
+  public_snapshot_path: frontend/public/demo/demo_snapshot.json
+  dashboard_url: http://127.0.0.1:5173
+  dev_command: npm run dev
+  build_command: npm run build
+
+output:
+  output_dir: data/artifacts/demo/workflow
+  run_name: full_demo_default
+  log_level: INFO
+  write_json: true
+  write_markdown_report: true
+
+notes:
+  purpose: Produce one reproducible runnable path for demos, slides, and final presentation rehearsals.
+  default_vault_mode: The integration stage reuses configs/integration/default.yaml, which stays in dry-run mode until VAULT_ADDRESS, PRIVATE_KEY, and broadcast settings are updated.

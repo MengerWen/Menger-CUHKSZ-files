@@ -1,0 +1,267 @@
+# Project Status
+
+## Last Updated
+
+2026-04-12
+
+## 1. What Was Added or Changed
+
+- Hardened the report-sync chain for Section 3 and conclusions:
+  - refactored `src/fma4200_project/univariate_modeling.py` so the canonical Section 3 and its appendix are written by shared functions that support both the univariate and predictive stages
+  - removed the duplicate Section 3 writers from `src/fma4200_project/predictive_modeling.py` and replaced them with calls to the shared Section 3 writers
+  - updated `src/fma4200_project/final_report_builder.py` so `report/final_report.md` now consumes the canonical Section 3 source file and conclusion source file instead of maintaining a parallel hardcoded Section 3 narrative
+  - added `report/guidance_lecture_mapping.md` to map `Guidance.md`, the lecture slides, the code files, the saved outputs, and the final-report sections
+  - updated `README.md` and `environment_used.md` to document the new source-of-truth chain and the canonical `arch`/distribution-fitting setup for Section 3
+- Upgraded Section 3 to use canonical `arch`-based volatility modeling and richer distribution diagnostics:
+  - replaced the old hand-coded Gaussian GARCH(1,1) workflow in `src/fma4200_project/univariate_modeling.py`
+  - expanded the marginal-fit stage to MLE-based Normal, Student-t, and NIG comparisons with KS goodness-of-fit checks, Shapiro-Wilk tests, and recommended-fit diagnostic plots
+  - expanded the volatility stage to compare Gaussian, Student-t, Skewed Student-t, and GED GARCH(1,1) models under a multi-criterion selection rule
+  - updated `src/fma4200_project/final_report_builder.py` so the generated main report stays synchronized with the revised Section 3 logic
+  - regenerated `report/sections/03_individual_returns_modeling.md`, `report/sections/appendix_individual_returns_modeling.md`, and `report/final_report.md`
+- Added the requested reproducible project structure:
+  - `src/fma4200_project/`
+  - `scripts/`
+  - `data/processed/`
+  - `output/figures/`
+  - `output/tables/`
+  - `output/models/`
+  - `report/sections/`
+  - `logs/`
+- Added reusable source files:
+  - `src/fma4200_project/config.py`
+  - `src/fma4200_project/environment.py`
+  - `src/fma4200_project/data_pipeline.py`
+- Added runnable scripts:
+  - `scripts/check_environment.py`
+  - `scripts/clean_data.py`
+  - `scripts/run_pipeline.py`
+  - `scripts/build_project_baseline.py` as a backward-compatible wrapper around the cleaning step
+- Added project-facing documentation:
+  - `README.md`
+  - `environment_used.md`
+  - `report/sections/02_data_source_and_processing.md`
+- Added cleaned data artifacts:
+  - `data/processed/monthly_portfolio_returns_clean.csv`
+  - `data/processed/monthly_portfolio_returns_decimal.csv`
+  - `data/processed/data_dictionary.csv`
+- Added saved sanity-check outputs:
+  - `output/tables/date_coverage_check.csv`
+  - `output/tables/duplicate_check.csv`
+  - `output/tables/missingness_check.csv`
+  - `output/tables/descriptive_statistics_pct.csv`
+  - `output/tables/descriptive_statistics_decimal.csv`
+  - `output/tables/sanity_checks_summary.csv`
+- Added baseline figures and logs:
+  - `output/figures/monthly_returns_overview.png`
+  - `output/figures/cumulative_growth_of_1.png`
+  - `logs/environment_check.txt`
+  - `logs/pipeline_run.log`
+- Added report-writing groundwork:
+  - `report/outline.md`
+  - `report/sections/01_introduction.md`
+  - `report/sections/02_data_source_processing.md`
+  - `report/references.md`
+- Extended the reproducible pipeline with additional report-facing outputs:
+  - `output/tables/portfolio_summary_snapshot.csv`
+  - `output/tables/portfolio_correlation_matrix.csv`
+  - `output/figures/portfolio_correlation_heatmap.png`
+  - `report/sections/_02_data_snapshot_autogen.md`
+- Completed a verified literature groundwork pass with 12 academic references plus the Kenneth French data-source entry recorded in `report/references.md`.
+- Added the Section 3 univariate-modeling pipeline:
+  - `src/fma4200_project/univariate_modeling.py`
+  - `scripts/run_individual_modeling.py`
+  - updated `scripts/run_pipeline.py` so the top-level pipeline now runs both cleaning and individual-return modeling
+- Added Section 3 report outputs:
+  - `report/sections/03_individual_returns_modeling.md`
+  - `report/sections/appendix_individual_returns_modeling.md`
+- Added combined modeling summary tables:
+  - `output/tables/individual_returns/portfolio_statistical_test_summary.csv`
+  - `output/tables/individual_returns/portfolio_model_comparison_summary.csv`
+  - `output/tables/individual_returns/portfolio_garch_summary.csv`
+- Added per-portfolio diagnostics, model tables, and text summaries under:
+  - `output/figures/individual_returns/`
+  - `output/tables/individual_returns/`
+  - `output/models/individual_returns/`
+- Added the predictive-modeling extension:
+  - `src/fma4200_project/predictive_modeling.py`
+  - `scripts/run_predictive_modeling.py`
+  - updated `scripts/run_pipeline.py` so the top-level pipeline now runs cleaning, univariate modeling, and predictive modeling
+- Added authoritative exogenous data and derived predictor artifacts:
+  - `data/processed/fama_french_3f_monthly.csv`
+  - `data/processed/predictor_dataset_monthly.csv`
+  - `data/processed/predictor_source_summary.csv`
+- Added predictive-modeling outputs under:
+  - `output/figures/predictive_individual_returns/`
+  - `output/tables/predictive_individual_returns/`
+  - `output/models/predictive_individual_returns/`
+- Added combined predictive summary tables:
+  - `output/tables/predictive_individual_returns/predictive_model_summary.csv`
+  - `output/tables/predictive_individual_returns/predictive_forecast_metrics.csv`
+  - `output/tables/predictive_individual_returns/predictive_forecasts.csv`
+- Updated the Section 3 report files so they now include the predictive-modeling stage:
+  - `report/sections/03_individual_returns_modeling.md`
+  - `report/sections/appendix_individual_returns_modeling.md`
+- Added the Section 4 trading-strategies pipeline:
+  - `src/fma4200_project/trading_strategies.py`
+  - `scripts/run_trading_strategies.py`
+  - updated `scripts/run_pipeline.py` so the top-level pipeline now runs cleaning, univariate modeling, predictive modeling, and trading strategies
+- Added Section 4 data and backtest artifacts:
+  - `data/processed/portfolio_wealth_indices.csv`
+  - `output/tables/trading_strategies/var_lag_selection.csv`
+  - `output/tables/trading_strategies/var_diagnostics.csv`
+  - `output/tables/trading_strategies/var_stability_roots.csv`
+  - `output/tables/trading_strategies/cointegration_integration_order_tests.csv`
+  - `output/tables/trading_strategies/cointegration_summary.csv`
+  - `output/tables/trading_strategies/cointegration_vectors.csv`
+  - `output/tables/trading_strategies/stat_arb_backtest.csv`
+  - `output/tables/trading_strategies/stat_arb_signals.csv`
+  - `output/tables/trading_strategies/strategy_returns.csv`
+  - `output/tables/trading_strategies/strategy_metrics.csv`
+  - `output/tables/trading_strategies/strategy_weights.csv`
+  - `output/tables/trading_strategies/efficient_frontier_points.csv`
+- Added Section 4 figures and model notes:
+  - `output/figures/trading_strategies/`
+  - `output/models/trading_strategies/var_summary.txt`
+  - `output/models/trading_strategies/vecm_summary.txt`
+  - `output/models/trading_strategies/strategy_rules.md`
+- Added the Section 4 report draft:
+  - `report/sections/04_trading_strategies.md`
+- Added the final integrated report build:
+  - `src/fma4200_project/final_report_builder.py`
+  - `scripts/build_final_report.py`
+  - updated `scripts/run_pipeline.py` so the top-level pipeline now builds the final report package after the analytical stages
+- Added final report outputs:
+  - `report/sections/05_conclusions.md`
+  - `report/final_report.md`
+  - `report/final_report.ipynb`
+  - `report/final_report.html`
+  - `report/final_appendices.md`
+  - `report/export_notes.md`
+  - `logs/final_report.log`
+- Added the strict audit and submission-preparation workflow:
+  - `src/fma4200_project/submission_audit.py`
+  - `scripts/audit_and_prepare_submission.py`
+  - `report/rubric_checklist.md`
+  - `report/audit_report.md`
+  - `report/references_verification.md`
+  - `SUBMISSION_RUNBOOK.md`
+  - `submission_ready/`
+  - `submission_ready.zip`
+  - `submission_ready_manifest.txt`
+- Improved the final-report packaging:
+  - cleaned `report/references.md` into a submission-style bibliography,
+  - moved verification URLs into `report/references_verification.md`,
+  - fixed the hardcoded rolling cointegration-rank share in the report builder,
+  - and preserved the generated PDF through the audited submission workflow.
+- Refreshed the audited submission bundle after the Section 3 upgrade:
+  - reran `scripts/audit_and_prepare_submission.py`
+  - synchronized `submission_ready/` and `submission_ready.zip` with the current `arch`-based Section 3 code, report text, and outputs
+  - confirmed the archived copy no longer contains stale `scipy.optimize` or hand-rolled GARCH references
+- Refreshed the audited submission bundle after the report-sync refactor:
+  - regenerated `report/final_report.md`, `report/final_report.html`, `report/final_report.pdf`, and `report/guidance_lecture_mapping.md`
+  - synchronized `submission_ready/` and `submission_ready.zip` with the canonical Section 3 source files and the new guidance-to-lecture mapping note
+  - confirmed the archived `submission_ready/report/final_report.md` now matches the upgraded Section 3 structure with MLE distribution tables and `arch`-based volatility-model comparisons
+
+## 2. What Ran Successfully
+
+- Verified the required interpreter can import the packages actually used in this step:
+  - `numpy 1.26.4`
+  - `pandas 2.2.2`
+  - `matplotlib 3.9.2`
+  - `scipy 1.13.1`
+  - `statsmodels 0.14.2`
+  - `arch 8.0.0`
+  - `pandas_datareader 0.10.0`
+  - `cvxpy 1.6.6`
+  - `sklearn 1.5.1`
+- Ran successfully:
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\check_environment.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\clean_data.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\run_individual_modeling.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\run_predictive_modeling.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\run_trading_strategies.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\build_final_report.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\audit_and_prepare_submission.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\run_pipeline.py'`
+- Re-ran after the Section 3 synchronization refactor:
+  - `& 'd:\MG\anaconda3\python.exe' -m py_compile 'src\fma4200_project\univariate_modeling.py' 'src\fma4200_project\predictive_modeling.py' 'src\fma4200_project\final_report_builder.py' 'src\fma4200_project\submission_audit.py' 'src\fma4200_project\config.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\run_predictive_modeling.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\build_final_report.py'`
+  - `& 'd:\MG\anaconda3\python.exe' 'scripts\audit_and_prepare_submission.py'`
+- Confirmed the cleaned monthly sample spans `1926-07-31` to `2026-01-31`.
+- Confirmed the cleaned dataset contains `1195` monthly observations and `6` value-weighted portfolio return columns.
+- Confirmed duplicate-date rows: `0`.
+- Confirmed missing values after sentinel conversion: `0`.
+- Saved date coverage, duplicate check, missingness check, and descriptive statistics tables under `output/tables/`.
+- Saved a data dictionary documenting the percent and decimal return conventions.
+- Saved a report-ready summary snapshot and correlation matrix under `output/tables/`.
+- Saved a report-ready correlation heatmap under `output/figures/`.
+- Modeled all `6` portfolios individually and saved per-series time-series plots, histogram-density plots, QQ plots, ACF/PACF plots, residual diagnostics, volatility-clustering diagnostics, ARIMA candidate comparisons, selected-model parameter tables, and GARCH summaries.
+- Confirmed `arch 8.0.0` imports successfully in the required interpreter and is now the canonical Section 3 volatility engine.
+- Confirmed the upgraded Section 3 diagnostics now include richer descriptive statistics, Jarque-Bera and Shapiro-Wilk tests, MLE-based Normal/Student-t/NIG comparisons, KS goodness-of-fit checks, and recommended-fit diagnostic plots for all six portfolios.
+- Confirmed the current preferred marginal-fit counts are `Student-t: 5` and `NIG: 1`, with every preferred fit materially outperforming the Gaussian benchmark on AIC.
+- Confirmed the current preferred `arch`-based volatility-model counts are `Student-t GARCH(1,1): 4` and `Skewed Student-t GARCH(1,1): 2`, based on combined AIC/BIC and standardized-residual diagnostics rather than a single metric.
+- Downloaded and cached the authoritative monthly Fama-French factors once, then verified later reruns use the cached local file.
+- Built a reproducible monthly predictor panel with lagged Fama-French factors, size and value spreads, rolling volatility, rolling momentum, and a drawdown proxy.
+- Estimated predictive ARIMAX and predictive-regression models for all `6` portfolios and saved per-portfolio parameter tables, forecast paths, forecast-comparison figures, and written interpretations.
+- Verified the predictive-modeling stage on a 120-month expanding-window one-step-ahead forecast design.
+- Confirmed the preferred predictive extension beats the benchmark RMSE in `2` of `6` portfolios in the current run, with the strongest gains in:
+  - `big_hibm_vwret_pct`: `+5.00%` RMSE improvement versus the benchmark
+  - `me2_bm2_vwret_pct`: `+2.90%` RMSE improvement versus the benchmark
+- Confirmed the most common preferred predictive family in the current run is the predictive regression with lagged factors and internal signals.
+- Completed a full Section 4 trading-strategies run in the required interpreter.
+- Fitted a multivariate VAR to the six monthly return series and selected `VAR(1)` by BIC. The fitted system is stable, while multivariate whiteness and normality diagnostics are both rejected.
+- Verified the integration-order logic needed for cointegration:
+  - all `6/6` raw return series are classified as stationary,
+  - all `6/6` log-wealth level series are classified as nonstationary, and
+  - all `6/6` first differences of log wealth are classified as stationary.
+- Selected a Johansen trace-test cointegration rank of `1` on the full-sample log-wealth representation, and saved the associated vector/loadings table.
+- Backtested a cointegration-based statistical-arbitrage strategy with documented entry/exit rules, turnover tracking, and 10 bps one-way transaction costs. In the current common out-of-sample sample, the stat-arb strategy is weak:
+  - annualized net return: `-0.11%`
+  - annualized net volatility: `1.42%`
+  - net Sharpe: `-0.077`
+  - max drawdown: `-18.83%`
+- Backtested the rolling mean-variance strategies against the equally weighted benchmark over the common out-of-sample period:
+  - Equal Weight: annualized net return `12.24%`, net Sharpe `0.743`
+  - Plug-In Mean-Variance: annualized net return `13.42%`, net Sharpe `0.873`
+  - Improved Plug-In Mean-Variance: annualized net return `12.63%`, net Sharpe `0.815`
+- Confirmed the improved plug-in strategy materially reduces trading intensity:
+  - baseline plug-in average turnover: `0.0438`
+  - improved plug-in average turnover: `0.0034`
+- Built the final integrated report package successfully:
+  - Markdown source at `report/final_report.md`
+  - notebook source at `report/final_report.ipynb`
+  - HTML export at `report/final_report.html`
+  - PDF report at `report/final_report.pdf`
+  - appendix file at `report/final_appendices.md`
+  - conclusion section draft at `report/sections/05_conclusions.md`
+- Completed a strict rubric audit and generated:
+  - `report/rubric_checklist.md`
+  - `report/audit_report.md`
+  - `report/guidance_lecture_mapping.md`
+  - `SUBMISSION_RUNBOOK.md`
+  - `submission_ready/`
+  - `submission_ready.zip`
+- Confirmed the audit prep step finds `0` broken local Markdown links across the core report-facing files.
+- Confirmed the refreshed `submission_ready/` bundle no longer contains stale hand-rolled GARCH language after the Section 3 synchronization pass.
+- Confirmed the current report main body has `3030` words and the generated PDF has a page-object heuristic count of `16`, which is comfortably below the `25`-page assignment limit.
+
+## 3. What Remains
+
+- No material grading blockers remain.
+- Optional: if a future rerun does not refresh `report/final_report.pdf` automatically, regenerate it from `report/final_report.html` with the browser method noted in `report/export_notes.md`.
+
+## 4. Blockers or Assumptions
+
+- Assumed the correct starting point is the monthly value-weighted return section in `Data.csv`, since that matches the assignment brief.
+- Assumed the canonical cleaned dataset should keep the six return columns in **percent** units and save a separate decimal companion dataset for analysis that requires decimal returns.
+- The authoritative exogenous predictor source in the current run is the cached monthly Fama-French factor file created through `pandas_datareader`; future reruns can use that local cache even if live download is unavailable.
+- If future steps require additional internet-based inputs beyond the cached factors and access is unavailable, those steps will need a documented offline fallback.
+- An earlier `outputs/` folder from the initial baseline still exists, but the canonical pipeline created in this step writes to `output/`.
+- The manually written report sections in `report/sections/` are now separate from the auto-generated `_02_data_snapshot_autogen.md` file so future pipeline reruns do not overwrite the narrative draft.
+- The active project files now rely on `arch` for the canonical Section 3 volatility implementation, and the audited `submission_ready/` bundle should be refreshed whenever the live report or modeling outputs change.
+- The predictive out-of-sample evaluation now uses monthly expanding-window refits for one-step-ahead forecasts. This is computationally heavier than a fixed-parameter walk-forward update, but it is stable with the available toolchain and avoids relying on fragile `statsmodels` state-append behavior.
+- The full-sample Johansen result supports one cointegration relation on log wealth, but the rolling rank is not stable across history. The saved stat-arb backtest should therefore be interpreted as an honest empirical result rather than evidence of a robust production strategy.
+- The current plug-in mean-variance strategy uses no-short-sale constraints for numerical stability and practical interpretability. The improved variant further adds Ledoit-Wolf shrinkage, weight bounds, and a turnover penalty.
+- `nbformat` and `nbconvert` are available and were used to generate the notebook and HTML report sources. The PDF export path now depends on a detected local Chromium-based browser rather than on LaTeX or Pandoc, and the exact environment behavior is recorded in `report/export_notes.md`.
+- Legacy draft files and the older `outputs/` folder still remain in the project root for traceability, but the audited `submission_ready/` bundle excludes them so they do not contaminate the final Blackboard upload.

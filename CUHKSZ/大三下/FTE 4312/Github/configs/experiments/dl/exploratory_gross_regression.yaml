@@ -1,0 +1,155 @@
+experiment_name: exploratory_gross_regression
+description: >-
+  Compare all supported sequence models on the 24-hour gross opportunity
+  regression target. This showcase track keeps the strict post-cost experiment
+  untouched and asks a different question: can DL rank raw gross opportunities
+  even when strict net alpha remains absent?
+
+runner:
+  train_if_missing: true
+  force_retrain_all: false
+  fail_fast: true
+
+ranking:
+  validation_metric: pearson_corr
+  test_metric: pearson_corr
+  strategy_metric: top_quantile_avg_return_bps
+  strategy_split: test
+
+output:
+  output_dir: data/artifacts/models/exploratory_dl_comparisons
+  run_name: exploratory_gross_regression
+  write_csv: true
+  write_markdown_report: true
+  write_plots: true
+
+runs:
+  - name: lstm_gross
+    config_path: configs/models/lstm.yaml
+    overrides:
+      input:
+        dataset_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_dataset.parquet
+        manifest_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_manifest.json
+      target:
+        task: regression
+        column: target_future_short_perp_long_spot_gross_return_bps_24h
+        classification_column: target_best_direction_is_short_perp_long_spot_24h
+        regression_column: target_future_short_perp_long_spot_gross_return_bps_24h
+        ready_column: exploratory_ready
+        trade_threshold_bps: 0.0
+      feature_selection:
+        exclude_columns:
+          - timestamp
+          - symbol
+          - venue
+          - frequency
+          - split
+          - feature_ready
+          - supervised_ready
+          - exploratory_ready
+      threshold_search:
+        objective: avg_signal_return_bps
+        regression_threshold_grid_bps: [-2.0, -1.0, 0.0, 1.0, 2.0, 3.0]
+      training:
+        selection_metric: validation_avg_signal_return_bps
+      output:
+        model_dir: data/artifacts/models/exploratory_dl
+        run_name: lstm_gross_regression_24h_exploratory
+  - name: gru_gross
+    config_path: configs/models/gru.yaml
+    overrides:
+      input:
+        dataset_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_dataset.parquet
+        manifest_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_manifest.json
+      target:
+        task: regression
+        column: target_future_short_perp_long_spot_gross_return_bps_24h
+        classification_column: target_best_direction_is_short_perp_long_spot_24h
+        regression_column: target_future_short_perp_long_spot_gross_return_bps_24h
+        ready_column: exploratory_ready
+        trade_threshold_bps: 0.0
+      feature_selection:
+        exclude_columns:
+          - timestamp
+          - symbol
+          - venue
+          - frequency
+          - split
+          - feature_ready
+          - supervised_ready
+          - exploratory_ready
+      threshold_search:
+        objective: avg_signal_return_bps
+        regression_threshold_grid_bps: [-2.0, -1.0, 0.0, 1.0, 2.0, 3.0]
+      training:
+        selection_metric: validation_avg_signal_return_bps
+      output:
+        model_dir: data/artifacts/models/exploratory_dl
+        run_name: gru_gross_regression_24h_exploratory
+  - name: tcn_gross
+    config_path: configs/models/tcn.yaml
+    overrides:
+      input:
+        dataset_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_dataset.parquet
+        manifest_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_manifest.json
+      target:
+        task: regression
+        column: target_future_short_perp_long_spot_gross_return_bps_24h
+        classification_column: target_best_direction_is_short_perp_long_spot_24h
+        regression_column: target_future_short_perp_long_spot_gross_return_bps_24h
+        ready_column: exploratory_ready
+        trade_threshold_bps: 0.0
+      feature_selection:
+        exclude_columns:
+          - timestamp
+          - symbol
+          - venue
+          - frequency
+          - split
+          - feature_ready
+          - supervised_ready
+          - exploratory_ready
+      threshold_search:
+        objective: avg_signal_return_bps
+        regression_threshold_grid_bps: [-2.0, -1.0, 0.0, 1.0, 2.0, 3.0]
+      training:
+        selection_metric: validation_avg_signal_return_bps
+      output:
+        model_dir: data/artifacts/models/exploratory_dl
+        run_name: tcn_gross_regression_24h_exploratory
+  - name: transformer_gross
+    config_path: configs/models/transformer.yaml
+    overrides:
+      input:
+        dataset_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_dataset.parquet
+        manifest_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_manifest.json
+      target:
+        task: regression
+        column: target_future_short_perp_long_spot_gross_return_bps_24h
+        classification_column: target_best_direction_is_short_perp_long_spot_24h
+        regression_column: target_future_short_perp_long_spot_gross_return_bps_24h
+        ready_column: exploratory_ready
+        trade_threshold_bps: 0.0
+      feature_selection:
+        exclude_columns:
+          - timestamp
+          - symbol
+          - venue
+          - frequency
+          - split
+          - feature_ready
+          - supervised_ready
+          - exploratory_ready
+      threshold_search:
+        objective: avg_signal_return_bps
+        regression_threshold_grid_bps: [-2.0, -1.0, 0.0, 1.0, 2.0, 3.0]
+      training:
+        selection_metric: validation_avg_signal_return_bps
+      output:
+        model_dir: data/artifacts/models/exploratory_dl
+        run_name: transformer_gross_regression_24h_exploratory
+
+notes:
+  intent: >-
+    This exploratory bundle isolates the gross-return ranking question without
+    rewriting the strict post-cost claim.

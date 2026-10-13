@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deep Learning-Based Delta-Neutral Statistical Arbitrage on Perpetual Funding Rates</title>
+    <style>
+      :root {
+        --bg: #f7f1e7;
+        --panel: rgba(255, 251, 245, 0.92);
+        --line: rgba(23, 21, 26, 0.12);
+        --ink: #16161b;
+        --muted: #5e6068;
+        --accent: #0f766e;
+        --shadow: 0 20px 60px rgba(38, 25, 10, 0.08);
+        --display: "Iowan Old Style", Georgia, serif;
+        --body: "Avenir Next", "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: var(--body);
+        color: var(--ink);
+        background: linear-gradient(180deg, #faf5ed 0%, #f1e5d7 100%);
+      }
+      .page { max-width: 1180px; margin: 0 auto; padding: 28px 18px 72px; }
+      .hero, .section {
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        padding: 28px;
+      }
+      .section { margin-top: 20px; }
+      .grid, .metrics, .charts { display: grid; gap: 16px; }
+      .grid { grid-template-columns: 1.6fr 1fr; }
+      .metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 18px; }
+      .charts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .metric, .side, .chart-card {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(255,255,255,0.72);
+      }
+      .metric, .side, .chart-copy { padding: 16px; }
+      h1, h2, h3 { font-family: var(--display); margin: 0; letter-spacing: -0.03em; }
+      h1 { font-size: clamp(2.8rem, 5vw, 4.8rem); line-height: 0.94; margin-top: 8px; }
+      h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 10px; }
+      h3 { font-size: 1.25rem; }
+      p, li { color: var(--muted); line-height: 1.7; }
+      .eyebrow, .kicker {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.73rem;
+        color: var(--accent);
+        font-weight: 700;
+        margin: 0;
+      }
+      .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .chip {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.8);
+      }
+      table { width: 100%; border-collapse: collapse; }
+      th, td {
+        text-align: left;
+        padding: 12px 14px;
+        border-bottom: 1px solid rgba(23,21,26,0.08);
+        white-space: nowrap;
+      }
+      thead th {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.72rem;
+        background: rgba(247, 240, 230, 0.92);
+      }
+      .table-shell { overflow-x: auto; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,0.75); }
+      img { width: 100%; display: block; border-top: 1px solid var(--line); }
+      ul { margin: 0; padding-left: 20px; }
+      .note { margin-top: 14px; }
+      @media (max-width: 900px) {
+        .grid, .metrics, .charts { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="grid">
+          <div>
+            <p class="eyebrow">Final Report</p>
+            <h1>Deep Learning-Based Delta-Neutral Statistical Arbitrage on Perpetual Funding Rates</h1>
+            <p>Strict conclusion plus exploratory DL showcase summary.</p>
+            <div class="chips">
+              <span class="chip">FTE 4312 Course Project</span>
+              <span class="chip">Wenjie, Qihang Han, Hongjun Huang</span>
+              <span class="chip">BTCUSDT / binance / 1h</span>
+            </div>
+          </div>
+          <div class="side">
+            <p class="kicker">Verdict</p>
+            <p><strong>No positive post-cost out-of-sample strategy survives the current friction model, but the repository now demonstrates a coherent research-to-vault prototype.</strong></p>
+            <ul><li>The repository preserves a strict post-cost primary conclusion while adding a fully separate exploratory DL showcase track.</li><li>Strict results remain the official answer for tradable post-cost alpha under the current friction model.</li><li>Exploratory results are supplementary and demonstrate learning behavior, ranking ability, and signed opportunity structure.</li></ul>
+          </div>
+        </div>
+        <div class="metrics">
+          <article class="metric"><p class="kicker">Canonical Hours</p><h3>46,152</h3><p>Aligned hourly research rows.</p></article>
+          <article class="metric"><p class="kicker">Funding Events</p><h3>3,092</h3><p>Observed settlements in the sample.</p></article>
+          <article class="metric"><p class="kicker">Best Baseline</p><h3>0.677</h3><p>Elastic-net test Pearson correlation.</p></article>
+          <article class="metric"><p class="kicker">Best Backtest</p><h3>-6.47%</h3><p>spread_zscore_1p5 with $-6,474.85 net PnL.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Dataset</p>
+        <h2>Clean data supports a credible prototype, not an automatic edge</h2>
+        <ul>
+          <li>Coverage ratio: 100.00%</li>
+          <li>Average funding rate: 1.04 bps</li>
+          <li>Funding standard deviation: 1.89 bps</li>
+          <li>Average perp-vs-spot spread: -1.53 bps</li>
+          <li>Mean annualized volatility: 50.86%</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Modeling</p>
+        <h2>Predictive structure exists, but the current decision rules mostly abstain</h2>
+        <div class="table-shell">
+          <table><thead><tr><th>Family</th><th>Model</th><th>Metric</th><th>Score</th><th>RMSE</th><th>Signals</th></tr></thead><tbody><tr><td>Best baseline</td><td>elastic_net_regression</td><td>pearson_corr</td><td>0.677</td><td>1.269</td><td>0</td></tr><tr><td>Best deep learning</td><td>transformer_encoder</td><td>pearson_corr</td><td>0.646</td><td>1.209</td><td>0</td></tr></tbody></table>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Backtest</p>
+        <h2>Explicit costs are the main reason the current strategy set fails</h2>
+        <div class="table-shell">
+          <table><thead><tr><th>Strategy</th><th>Source</th><th>Split</th><th>Status</th><th>Trades</th><th>Cum Return</th><th>MTM Drawdown</th><th>MTM Sharpe</th><th>Net PnL</th><th>Reason</th></tr></thead><tbody><tr><td>spread_zscore_1p5</td><td>rule_based</td><td>test</td><td>completed</td><td>200</td><td>-6.47%</td><td>-6.47%</td><td>-14.072</td><td>$-6,474.85</td><td></td></tr><tr><td>combined_funding_spread</td><td>rule_based</td><td>test</td><td>no_tradable_signals</td><td>0</td><td>0.00%</td><td>n/a</td><td>n/a</td><td>$0.00</td><td>test: signal_count == 0 for split &#x27;test&#x27;.</td></tr><tr><td>elastic_net_regression</td><td>baseline_linear</td><td>test</td><td>no_tradable_signals</td><td>0</td><td>0.00%</td><td>n/a</td><td>n/a</td><td>$0.00</td><td>validation: signal_count == 0 for split &#x27;validation&#x27;.; test: signal_count == 0 for split &#x27;test&#x27;.</td></tr><tr><td>funding_threshold_2bps</td><td>rule_based</td><td>test</td><td>no_tradable_signals</td><td>0</td><td>0.00%</td><td>n/a</td><td>n/a</td><td>$0.00</td><td>test: signal_count == 0 for split &#x27;test&#x27;.</td></tr><tr><td>logistic_l1</td><td>baseline_linear</td><td>test</td><td>no_tradable_signals</td><td>0</td><td>0.00%</td><td>n/a</td><td>n/a</td><td>$0.00</td><td>test: signal_count == 0 for split &#x27;test&#x27;.</td></tr></tbody></table>
+        </div>
+        <p class="note">Primary split: test. Assumptions remain explicit and prototype-scoped.</p>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Robustness</p>
+        <h2>Family comparisons should be read together with trade counts</h2>
+        <div class="table-shell">
+          <table><thead><tr><th>Family</th><th>Representative Strategy</th><th>Trades</th><th>Cum Return</th><th>Sharpe</th><th>Net PnL</th></tr></thead><tbody><tr><td>Simple ML Baseline</td><td>elastic_net_regression</td><td>0</td><td>0.00%</td><td>nan</td><td>$0.00</td></tr><tr><td>Deep Learning</td><td>transformer_encoder</td><td>0</td><td>0.00%</td><td>nan</td><td>$0.00</td></tr><tr><td>Rule-Based Baseline</td><td>spread_zscore_1p5</td><td>200</td><td>-6.47%</td><td>-14.072</td><td>$-6,474.85</td></tr></tbody></table>
+        </div>
+        
+      </section>
+
+      
+      <section class="section">
+        <p class="eyebrow">Exploratory</p>
+        <h2>Supplementary DL showcase results stay separate from the strict conclusion</h2>
+        <p>Exploratory DL results are supplementary showcase results designed to demonstrate model learning behavior, ranking ability, and alternative opportunity definitions. They do not replace the strict post-cost primary conclusion.</p>
+        <div class="table-shell">
+          <table><thead><tr><th>Strategy</th><th>Model</th><th>Target</th><th>Signal Rule</th><th>Split</th><th>Trades</th><th>Cum Return</th><th>MTM Sharpe</th><th>Net PnL</th><th>Status</th><th>Reason</th></tr></thead><tbody><tr><td>lstm_gross__rolling_top_decile_abs</td><td>lstm</td><td>gross_opportunity_regression</td><td>rolling_top_decile_abs</td><td>test</td><td>578</td><td>-18.79%</td><td>-24.180</td><td>$-18,791.33</td><td>completed</td><td>None</td></tr></tbody></table>
+        </div>
+      </section>
+        
+
+      <section class="section">
+        <p class="eyebrow">Vault</p>
+        <h2>The on-chain layer mirrors accounting and state, not live exchange execution</h2>
+        <ul>
+          <li>Selected strategy: spread_zscore_1p5</li>
+          <li>Strategy state: idle</li>
+          <li>Suggested direction: flat</li>
+          <li>Reported NAV assets: 93,525,146,215</li>
+          <li>Summary PnL: $-6,474.85</li>
+          <li>Prepared contract calls: 2</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Figures</p>
+        <h2>Charts copied directly from the artifact pipeline</h2>
+        <div class="charts">
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">data</p>
+            <h3>Funding Rate Regime Map</h3>
+            <p>Hourly funding history shows persistent positive funding with episodic spikes and reversals.</p>
+          </div>
+          <img src="assets/funding_rate_time_series.png" alt="Funding Rate Regime Map" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">data</p>
+            <h3>Perpetual vs Spot Spread</h3>
+            <p>Basis dislocations stay small on average but widen during stress and short-lived directional bursts.</p>
+          </div>
+          <img src="assets/perp_vs_spot_spread.png" alt="Perpetual vs Spot Spread" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">backtest</p>
+            <h3>Cumulative Returns by Strategy</h3>
+            <p>The explicit delta-neutral backtest makes the ranking between rule-based, baseline ML, and learned models easy to explain.</p>
+          </div>
+          <img src="assets/cumulative_returns.png" alt="Cumulative Returns by Strategy" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">backtest</p>
+            <h3>Drawdown Profile</h3>
+            <p>Even prototype strategies need a clear view of path dependence and downside depth.</p>
+          </div>
+          <img src="assets/drawdowns.png" alt="Drawdown Profile" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">robustness</p>
+            <h3>Robustness Family Comparison</h3>
+            <p>Rule-based, simple ML, and deep learning outputs are compared under one shared evaluation lens.</p>
+          </div>
+          <img src="assets/family_comparison.png" alt="Robustness Family Comparison" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">models</p>
+            <h3>Deep Learning Model Zoo</h3>
+            <p>Phase 2 compares LSTM, GRU, TCN, and TransformerEncoder under one shared regression task.</p>
+          </div>
+          <img src="assets/test_metric_comparison.png" alt="Deep Learning Model Zoo" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">models</p>
+            <h3>Deep Learning Strategy Lens</h3>
+            <p>The same sequence models are ranked again using a trading-oriented signal-return metric.</p>
+          </div>
+          <img src="assets/strategy_metric_comparison.png" alt="Deep Learning Strategy Lens" />
+        </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Conclusion</p>
+        <h2>What this project contributes</h2>
+        <div class="grid">
+          <div class="side">
+            <p class="kicker">Contributions</p>
+            <ul><li>A reproducible strict pipeline from market data to backtest, vault accounting, and final reporting.</li><li>A separate exploratory DL track with gross-opportunity and direction-aware targets, independent signals, independent backtests, and frontend-ready diagnostics.</li></ul>
+          </div>
+          <div class="side">
+            <p class="kicker">Limitations</p>
+            <ul><li>Exploratory showcase outputs are not the primary investment conclusion and should not be read as strict tradable alpha evidence.</li><li>Both tracks still operate on a single Binance BTCUSDT hourly research path.</li></ul>
+            <p class="kicker" style="margin-top:16px;">Future Work</p>
+            <ul><li>Extend the strict and exploratory tracks to multi-symbol or multi-venue settings for richer ranking problems.</li><li>Test more calibration and portfolio-construction logic on top of the exploratory directional outputs.</li></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

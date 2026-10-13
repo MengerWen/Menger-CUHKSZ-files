@@ -1,0 +1,44 @@
+experiment_name: exploratory_showcase
+description: >-
+  Compare sequence models on exploratory gross-opportunity regression and direction-aware classification tasks.
+
+runner:
+  train_if_missing: true
+  force_retrain_all: false
+  fail_fast: true
+
+ranking:
+  validation_metric: pearson_corr
+  test_metric: pearson_corr
+  strategy_metric: top_quantile_avg_return_bps
+  strategy_split: test
+
+output:
+  output_dir: data/artifacts/models/exploratory_dl_comparisons
+  run_name: exploratory_showcase
+  write_csv: true
+  write_markdown_report: true
+  write_plots: true
+
+runs:
+  - name: lstm_gross
+    config_path: configs/models/exploratory_dl/lstm_gross.yaml
+  - name: gru_gross
+    config_path: configs/models/exploratory_dl/gru_gross.yaml
+  - name: tcn_gross
+    config_path: configs/models/exploratory_dl/tcn_gross.yaml
+  - name: transformer_gross
+    config_path: configs/models/exploratory_dl/transformer_gross.yaml
+  - name: lstm_direction
+    config_path: configs/models/exploratory_dl/lstm_direction.yaml
+  - name: gru_direction
+    config_path: configs/models/exploratory_dl/gru_direction.yaml
+  - name: tcn_direction
+    config_path: configs/models/exploratory_dl/tcn_direction.yaml
+  - name: transformer_direction
+    config_path: configs/models/exploratory_dl/transformer_direction.yaml
+
+notes:
+  intent: >-
+    This comparison bundle is purely supplementary. It exists to show what the sequence models learn under
+    exploratory target definitions without overwriting the strict post-cost comparison bundle.

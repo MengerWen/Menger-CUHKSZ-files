@@ -1,0 +1,7 @@
+check,result,detail
+date_coverage,True,1195 rows from 1926-07-31 to 2026-01-31
+duplicate_dates,passed,No duplicate dates were found in the cleaned dataset.
+missing_values,passed,Total missing cells: 0
+raw_unit_convention,monthly returns in percent,The Kenneth French monthly value-weighted section reports returns in percentage points.
+clean_storage_convention,cleaned percent dataset saved with _pct suffix,"Example: 1.0866 means 1.0866%, not 108.66%."
+decimal_conversion,decimal companion dataset saved with _dec suffix and values divided by 100,Example: 1.0866% becomes 0.010866 in the decimal companion file.

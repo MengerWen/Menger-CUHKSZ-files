@@ -1,0 +1,4 @@
+family_label,strategy_name,strategy_label,trade_count,cumulative_return,sharpe_ratio,total_net_pnl_usd,mark_to_market_max_drawdown,artifact_label,artifact_scope
+Deep Learning,transformer_encoder,TransformerEncoder,97,0.10199990714548002,1.583591950674022,10199.990714548001,-0.029593123126590792,SHOWCASE,Showcase results
+Rule-Based Baseline,spread_zscore_1p5,Rule-Based Baseline,94,0.024000355492540093,0.43967050148900266,2400.0355492540093,-0.03260061434599937,SHOWCASE,Showcase results
+Simple ML Baseline,elastic_net_regression,Baseline ML,126,0.04100047114911409,0.730849067729766,4100.047114911409,-0.036442283388096186,SHOWCASE,Showcase results

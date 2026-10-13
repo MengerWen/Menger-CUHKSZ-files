@@ -1,0 +1,17 @@
+﻿feature_universe: features500
+target_horizon_months: 1
+use_excess_return: true
+apply_blacklist_filter: true
+apply_untradable_filter: true
+apply_csi500_filter: true
+flag_month_rule: any_in_current_month
+missing_feature_threshold: 0.95
+missing_row_threshold: 1.0
+impute_method: cross_sectional_median
+winsorize: true
+winsor_lower: 0.01
+winsor_upper: 0.99
+normalize: true
+max_features:
+output_panel: outputs/panels/main_features500_panel.pkl
+output_metadata: outputs/metadata/main_features500_panel_metadata.json

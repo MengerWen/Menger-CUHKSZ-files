@@ -1,0 +1,76 @@
+input:
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+  runs:
+    - name: lstm_gross
+      prediction_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/lstm_gross_regression_24h_exploratory/dl_predictions.parquet
+      manifest_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/lstm_gross_regression_24h_exploratory/dl_manifest.json
+      target_type: gross_opportunity_regression
+      task: regression
+    - name: gru_gross
+      prediction_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/gru_gross_regression_24h_exploratory/dl_predictions.parquet
+      manifest_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/gru_gross_regression_24h_exploratory/dl_manifest.json
+      target_type: gross_opportunity_regression
+      task: regression
+    - name: tcn_gross
+      prediction_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/tcn_gross_regression_24h_exploratory/dl_predictions.parquet
+      manifest_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/tcn_gross_regression_24h_exploratory/dl_manifest.json
+      target_type: gross_opportunity_regression
+      task: regression
+    - name: transformer_gross
+      prediction_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/transformer_gross_regression_24h_exploratory/dl_predictions.parquet
+      manifest_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/transformer_gross_regression_24h_exploratory/dl_manifest.json
+      target_type: gross_opportunity_regression
+      task: regression
+    - name: lstm_direction
+      prediction_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/lstm_direction_classification_24h_exploratory/dl_predictions.parquet
+      manifest_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/lstm_direction_classification_24h_exploratory/dl_manifest.json
+      target_type: direction_classification
+      task: classification
+    - name: gru_direction
+      prediction_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/gru_direction_classification_24h_exploratory/dl_predictions.parquet
+      manifest_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/gru_direction_classification_24h_exploratory/dl_manifest.json
+      target_type: direction_classification
+      task: classification
+    - name: tcn_direction
+      prediction_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/tcn_direction_classification_24h_exploratory/dl_predictions.parquet
+      manifest_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/tcn_direction_classification_24h_exploratory/dl_manifest.json
+      target_type: direction_classification
+      task: classification
+    - name: transformer_direction
+      prediction_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/transformer_direction_classification_24h_exploratory/dl_predictions.parquet
+      manifest_path: data/artifacts/models/exploratory_dl/binance/btcusdt/1h/transformer_direction_classification_24h_exploratory/dl_manifest.json
+      target_type: direction_classification
+      task: classification
+
+ranking_rule:
+  enabled: true
+  name: rolling_top_decile_abs
+  percentile_threshold: 0.9
+  window_size: 336
+  min_history: 168
+
+threshold_rule:
+  enabled: true
+  name: validation_tuned_balanced_support
+  objective: balanced_avg_return_support
+  candidate_quantiles: [0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95]
+  min_signal_count: 24
+  min_signal_rate: 0.01
+  support_weight: 0.5
+
+output:
+  output_dir: data/artifacts/signals/exploratory_dl
+  artifact_name: signals.parquet
+  manifest_name: signals_manifest.json
+  strategy_catalog_name: strategy_catalog.csv
+  diagnostics_dir_name: diagnostics
+  write_csv: true
+
+notes:
+  disclaimer: >-
+    These signal rules are showcase-only translations of exploratory model
+    scores. They do not replace the strict signal layer used for the primary
+    conclusion.

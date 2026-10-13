@@ -1,0 +1,55 @@
+﻿comparison:
+  label: features500_main_spec_stage7
+  alignment: common_stock_date_intersection
+
+models:
+  - name: mlp_predictor
+    predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+  - name: ipca_style
+    predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+  - name: conditional_autoencoder_style
+    predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+  - name: graph_conditional_latent_factor
+    predictions_path: outputs/predictions/stage5_graph_predictions.pkl
+
+data:
+  panel_path: outputs/panels/main_features500_panel.pkl
+  blacklist_path: data/BLACKLIST.pkl
+  untradable_path: data/UNTRADABLE.pkl
+
+portfolio:
+  long_short_quantile: 0.10
+  long_only_quantile: 0.10
+  weight_schemes:
+    - equal
+    - value
+  filter_blacklist: true
+  filter_untradable: true
+  main_transaction_cost_bps: 10
+  transaction_cost_bps_grid:
+    - 0
+    - 10
+    - 25
+
+strategies:
+  - name: long_short
+    type: long_short
+    selection_mode: quantile
+    quantile: 0.10
+    min_names: 10
+  - name: long_only
+    type: long_only
+    selection_mode: quantile
+    quantile: 0.10
+    min_names: 10
+
+outputs:
+  table_dir: outputs/portfolio/stage7_tables
+  plot_dir: outputs/portfolio/stage7_plots
+  weights_path: outputs/portfolio/stage7_weights.pkl
+  returns_path: outputs/portfolio/stage7_monthly_returns.pkl
+  performance_path: outputs/portfolio/stage7_performance_summary.csv
+  signal_coverage_path: outputs/portfolio/stage7_signal_coverage.csv
+  strategy_coverage_path: outputs/portfolio/stage7_strategy_coverage.csv
+  metadata_path: outputs/metadata/stage7_portfolio_metadata.json
+  report_path: reports/stage7_portfolio_results.md

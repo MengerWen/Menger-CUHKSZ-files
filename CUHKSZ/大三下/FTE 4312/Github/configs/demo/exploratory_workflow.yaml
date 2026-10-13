@@ -1,0 +1,89 @@
+commands:
+  exploratory_dataset_config_path: configs/models/exploratory_dl/dataset.yaml
+  exploratory_deep_learning_comparison_config_path: configs/experiments/dl/exploratory_gross_regression.yaml
+  exploratory_direction_comparison_config_path: configs/experiments/dl/exploratory_direction_classification.yaml
+  exploratory_signals_config_path: configs/signals/exploratory_dl/default.yaml
+  exploratory_backtest_config_path: configs/backtests/exploratory_dl/default.yaml
+  exploratory_report_config_path: configs/reports/exploratory_dl/showcase.yaml
+  demo_snapshot_config_path: configs/demo/exploratory_snapshot.yaml
+
+stages:
+  fetch_data:
+    enabled: false
+    optional: true
+  report_data_quality:
+    enabled: false
+    optional: true
+  build_features:
+    enabled: false
+    optional: true
+  build_labels:
+    enabled: false
+    optional: true
+  build_exploratory_dataset:
+    enabled: true
+    optional: false
+  train_baseline:
+    enabled: false
+    optional: true
+  train_deep_learning:
+    enabled: false
+    optional: true
+  compare_deep_learning:
+    enabled: false
+    optional: true
+  compare_exploratory_deep_learning:
+    enabled: true
+    optional: false
+  compare_exploratory_direction:
+    enabled: true
+    optional: false
+  generate_baseline_signals:
+    enabled: false
+    optional: true
+  generate_deep_learning_signals:
+    enabled: false
+    optional: true
+  generate_exploratory_signals:
+    enabled: true
+    optional: false
+  backtest:
+    enabled: false
+    optional: true
+  backtest_exploratory:
+    enabled: true
+    optional: false
+  sync_vault:
+    enabled: false
+    optional: true
+  report_exploratory:
+    enabled: true
+    optional: false
+  export_demo_snapshot:
+    enabled: true
+    optional: true
+
+execution:
+  continue_on_optional_failure: false
+
+frontend:
+  frontend_dir: frontend
+  public_snapshot_path: frontend/public/demo/exploratory/demo_snapshot.json
+  dashboard_url: http://127.0.0.1:5173
+  dev_command: npm run dev
+  build_command: npm run build
+
+output:
+  output_dir: data/artifacts/demo/workflow
+  run_name: exploratory_dl_showcase
+  log_level: INFO
+  write_json: true
+  write_markdown_report: true
+
+notes:
+  purpose: >-
+    Generate the standalone exploratory DL showcase artifacts without
+    overwriting the strict primary demo outputs.
+  prerequisite: >-
+    This workflow expects the strict upstream market dataset and supervised
+    dataset artifacts to already exist.

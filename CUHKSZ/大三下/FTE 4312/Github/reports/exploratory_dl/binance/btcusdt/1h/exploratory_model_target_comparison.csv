@@ -1,0 +1,13 @@
+track,model_name,task,target_column,status,test_pearson_corr,test_rmse,test_signal_count,test_f1
+strict,lstm,regression,target_future_net_return_bps_24h,warning,0.6385845204255011,1.2389627011597866,0,
+strict,gru,regression,target_future_net_return_bps_24h,warning,0.5703990501718472,1.3603484622479867,0,
+strict,tcn,regression,target_future_net_return_bps_24h,warning,0.4744552739115342,1.7715220755115064,0,
+strict,transformer_encoder,regression,target_future_net_return_bps_24h,warning,0.6460854810538473,1.2086938725795275,0,
+exploratory,lstm,regression,target_future_short_perp_long_spot_gross_return_bps_24h,ok,0.6354025235390345,1.251145839509153,188,
+exploratory,gru,regression,target_future_short_perp_long_spot_gross_return_bps_24h,ok,0.6275865773608456,1.2318000835541112,145,
+exploratory,tcn,regression,target_future_short_perp_long_spot_gross_return_bps_24h,ok,0.6248542787077777,1.2626762625258179,186,
+exploratory,transformer_encoder,regression,target_future_short_perp_long_spot_gross_return_bps_24h,ok,0.6444951708348757,1.2168746474136942,102,
+exploratory,lstm,classification,target_best_direction_is_short_perp_long_spot_24h,ok,,,891,0.2566828675577157
+exploratory,gru,classification,target_best_direction_is_short_perp_long_spot_24h,ok,,,1092,0.30626381724392043
+exploratory,tcn,classification,target_best_direction_is_short_perp_long_spot_24h,ok,,,1017,0.2864381520119225
+exploratory,transformer_encoder,classification,target_best_direction_is_short_perp_long_spot_24h,ok,,,1692,0.431144211238998

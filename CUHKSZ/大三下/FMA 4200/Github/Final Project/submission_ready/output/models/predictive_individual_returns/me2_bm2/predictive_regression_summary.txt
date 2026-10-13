@@ -1,0 +1,35 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             target_pct   R-squared:                       0.034
+Model:                            OLS   Adj. R-squared:                  0.027
+Method:                 Least Squares   F-statistic:                     2.506
+Date:                Sun, 12 Apr 2026   Prob (F-statistic):            0.00766
+Time:                        20:44:47   Log-Likelihood:                -3700.7
+No. Observations:                1183   AIC:                             7421.
+Df Residuals:                    1173   BIC:                             7472.
+Df Model:                           9                                         
+Covariance Type:                  HAC                                         
+================================================================================================
+                                   coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------
+const                            0.6111      0.449      1.361      0.173      -0.269       1.491
+target_lag1_pct                  0.5299      0.293      1.809      0.070      -0.044       1.104
+ff_mkt_rf_lag1_pct              -0.4435      0.274     -1.618      0.106      -0.981       0.094
+ff_smb_lag1_pct                 19.3043     41.715      0.463      0.644     -62.457     101.065
+ff_hml_lag1_pct                -34.2030     28.431     -1.203      0.229     -89.926      21.520
+ff_rf_lag1_pct                  -0.3981      0.650     -0.613      0.540      -1.672       0.875
+value_spread_lag1_pct           34.1888     28.409      1.203      0.229     -21.491      89.869
+size_spread_lag1_pct           -19.2795     41.728     -0.462      0.644    -101.066      62.507
+market_vol_12m_lag1_pct          0.0471      0.084      0.559      0.576      -0.118       0.212
+market_momentum_12m_lag1_pct    -0.0041      0.158     -0.026      0.979      -0.313       0.305
+==============================================================================
+Omnibus:                      324.846   Durbin-Watson:                   1.980
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             7350.983
+Skew:                           0.711   Prob(JB):                         0.00
+Kurtosis:                      15.129   Cond. No.                     4.09e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 12 lags and without small sample correction
+[2] The condition number is large, 4.09e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

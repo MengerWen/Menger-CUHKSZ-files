@@ -1,0 +1,33 @@
+experiment_name: recurrent_regression_only
+description: >-
+  Compare only the recurrent families on the shared 24-hour post-cost
+  regression target.
+
+runner:
+  train_if_missing: true
+  force_retrain_all: false
+  fail_fast: true
+
+ranking:
+  validation_metric: pearson_corr
+  test_metric: pearson_corr
+  strategy_metric: top_quantile_avg_return_bps
+  strategy_split: test
+
+output:
+  output_dir: data/artifacts/models/dl_comparisons
+  run_name: recurrent_regression_only
+  write_csv: true
+  write_markdown_report: true
+  write_plots: true
+
+runs:
+  - name: lstm
+    config_path: configs/models/lstm.yaml
+  - name: gru
+    config_path: configs/models/gru.yaml
+
+notes:
+  intent: >-
+    This bundle isolates the recurrent benchmark family so LSTM and GRU can be
+    compared without the convolutional and attention baselines.

@@ -1,0 +1,30 @@
+input:
+  strict_demo_snapshot_path: data/artifacts/demo/demo_snapshot.json
+  strict_final_report_summary_path: reports/final/binance/btcusdt/1h/summary.json
+  strict_comparison_summary_path: data/artifacts/models/dl_comparisons/binance/btcusdt/1h/sequence_regression_all/comparison_summary.parquet
+  exploratory_dataset_manifest_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_manifest.json
+  exploratory_comparison_manifest_path: data/artifacts/models/exploratory_dl_comparisons/binance/btcusdt/1h/exploratory_gross_regression/comparison_manifest.json
+  exploratory_comparison_summary_path: data/artifacts/models/exploratory_dl_comparisons/binance/btcusdt/1h/exploratory_gross_regression/comparison_summary.parquet
+  exploratory_extra_comparison_summary_paths:
+    - data/artifacts/models/exploratory_dl_comparisons/binance/btcusdt/1h/exploratory_direction_classification/comparison_summary.parquet
+  exploratory_signals_path: data/artifacts/signals/exploratory_dl/binance/btcusdt/1h/exploratory/signals.parquet
+  exploratory_signals_manifest_path: data/artifacts/signals/exploratory_dl/binance/btcusdt/1h/exploratory/signals_manifest.json
+  exploratory_backtest_manifest_path: data/artifacts/backtests/exploratory_dl/binance/btcusdt/1h/exploratory_dl_showcase/backtest_manifest.json
+  exploratory_backtest_leaderboard_path: data/artifacts/backtests/exploratory_dl/binance/btcusdt/1h/exploratory_dl_showcase/leaderboard.parquet
+  exploratory_trade_log_path: data/artifacts/backtests/exploratory_dl/binance/btcusdt/1h/exploratory_dl_showcase/trade_log.parquet
+
+output:
+  output_dir: reports/exploratory_dl
+  frontend_public_dir: frontend/public/demo
+  write_csv: true
+  write_markdown: true
+  write_json_summary: true
+  write_plots: true
+  copy_to_frontend_public: true
+
+notes:
+  disclaimer: >-
+    Exploratory DL results are supplementary showcase results designed to
+    demonstrate model learning behavior, ranking ability, and alternative
+    opportunity definitions. They do not replace the strict post-cost primary
+    conclusion.

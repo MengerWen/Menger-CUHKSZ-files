@@ -1,0 +1,7 @@
+,small_lobm_vwret_pct,me1_bm2_vwret_pct,small_hibm_vwret_pct,big_lobm_vwret_pct,me2_bm2_vwret_pct,big_hibm_vwret_pct
+small_lobm_vwret_pct,1.0,0.947885,0.889279,0.848845,0.817334,0.808268
+me1_bm2_vwret_pct,0.947885,1.0,0.961369,0.841554,0.887004,0.896777
+small_hibm_vwret_pct,0.889279,0.961369,1.0,0.778478,0.874915,0.918141
+big_lobm_vwret_pct,0.848845,0.841554,0.778478,1.0,0.889818,0.821069
+me2_bm2_vwret_pct,0.817334,0.887004,0.874915,0.889818,1.0,0.932464
+big_hibm_vwret_pct,0.808268,0.896777,0.918141,0.821069,0.932464,1.0

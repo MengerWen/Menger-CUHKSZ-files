@@ -1,0 +1,41 @@
+﻿# Stage 4 monthly graph construction for the main features500 specification.
+
+data:
+  panel_path: outputs/panels/main_features500_panel.pkl
+  metadata_path: outputs/metadata/main_features500_panel_metadata.json
+  monthly_returns_path: data/monthly_returns.pkl
+
+graph:
+  # No explicit industry labels were found in the stored dataset, so the main
+  # specification is a dynamic hybrid similarity graph.
+  edge_types:
+    - return_correlation
+    - feature_cosine_knn
+    - feature_euclidean_knn
+  allow_missing_industry: false
+  return_lookback_months: 12
+  min_return_observations: 6
+  include_current_month_return: true
+  k_return: 10
+  k_feature_cosine: 10
+  k_feature_euclidean: 10
+  min_edge_weight: 0.0
+  combine_rule: mean
+  save_pyg: true
+  max_months: null
+
+node_filters:
+  market_cap:
+    enabled: false
+    min_quantile: 0.05
+  liquidity:
+    enabled: false
+    # `amount_21` is available as a cleaned feature in the panel.
+    column: amount_21
+    min_quantile: 0.05
+
+outputs:
+  graph_dir: outputs/graphs/features500_similarity_hybrid
+  stats_path: outputs/graphs/features500_similarity_hybrid_stats.csv
+  manifest_path: outputs/graphs/features500_similarity_hybrid_manifest.csv
+  metadata_path: outputs/metadata/stage4_graph_metadata.json

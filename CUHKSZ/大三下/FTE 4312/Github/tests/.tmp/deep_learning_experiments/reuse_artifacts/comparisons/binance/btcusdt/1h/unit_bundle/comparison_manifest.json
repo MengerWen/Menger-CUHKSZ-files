@@ -1,0 +1,62 @@
+{
+  "experiment_name": "unit_sequence_regression",
+  "description": "unit test bundle",
+  "run_count": 2,
+  "validation_metric": "pearson_corr",
+  "test_metric": "pearson_corr",
+  "strategy_metric": "top_quantile_avg_return_bps",
+  "strategy_split": "test",
+  "best_model_note": "Current default best model under the configured test ranking metric (`pearson_corr`) is `lstm` with score `0.6`.",
+  "comparison_summary_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\comparison_summary.parquet",
+  "comparison_summary_csv_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\comparison_summary.csv",
+  "validation_leaderboard_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\validation_leaderboard.parquet",
+  "validation_leaderboard_csv_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\validation_leaderboard.csv",
+  "test_leaderboard_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\test_leaderboard.parquet",
+  "test_leaderboard_csv_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\test_leaderboard.csv",
+  "strategy_leaderboard_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\strategy_leaderboard.parquet",
+  "strategy_leaderboard_csv_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\strategy_leaderboard.csv",
+  "report_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\comparison_report.md",
+  "figure_paths": [
+    "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\figures\\validation_metric_comparison.png",
+    "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\figures\\test_metric_comparison.png",
+    "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\comparisons\\binance\\btcusdt\\1h\\unit_bundle\\figures\\strategy_metric_comparison.png"
+  ],
+  "runs": [
+    {
+      "run_label": "lstm",
+      "model_name": "lstm",
+      "model_group": "recurrent",
+      "run_name": "lstm_unit",
+      "config_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\configs\\lstm.yaml",
+      "resolved_config_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\configs\\lstm.yaml",
+      "artifact_reused": true,
+      "status": "ok",
+      "reason": null,
+      "degenerate_experiment": false,
+      "degenerate_stage": null,
+      "degenerate_reason": null,
+      "fallback_used": false,
+      "fallback_reason": null,
+      "manifest_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\lstm_unit\\dl_manifest.json",
+      "report_path": "tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\lstm_unit\\training_report.md"
+    },
+    {
+      "run_label": "gru",
+      "model_name": "gru",
+      "model_group": "recurrent",
+      "run_name": "gru_unit",
+      "config_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\configs\\gru.yaml",
+      "resolved_config_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\configs\\gru.yaml",
+      "artifact_reused": true,
+      "status": "ok",
+      "reason": null,
+      "degenerate_experiment": false,
+      "degenerate_stage": null,
+      "degenerate_reason": null,
+      "fallback_used": false,
+      "fallback_reason": null,
+      "manifest_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\gru_unit\\dl_manifest.json",
+      "report_path": "tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\gru_unit\\training_report.md"
+    }
+  ]
+}

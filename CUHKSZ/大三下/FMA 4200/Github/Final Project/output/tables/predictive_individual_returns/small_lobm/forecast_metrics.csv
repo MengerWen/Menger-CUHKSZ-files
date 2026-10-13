@@ -1,0 +1,4 @@
+portfolio,model_key,model_label,rmse,mae,directional_accuracy,n_forecasts
+small_lobm_vwret_pct,benchmark_arima,Benchmark ARIMA,6.652497213895193,4.8812907543181465,0.6083333333333333,120
+small_lobm_vwret_pct,arimax_exog,ARIMAX with lagged Fama-French factors,6.79764716429749,4.908115765818187,0.5416666666666666,120
+small_lobm_vwret_pct,predictive_regression,Predictive regression with lagged factors and internal signals,6.7336601803574245,4.9445965753688315,0.5333333333333333,120

@@ -1,0 +1,65 @@
+# Additive industry-classification extension.
+# This config intentionally writes only under outputs/industry_extension/ and
+# reports/industry_extension_results.md, leaving the original Stage 3-8 outputs
+# unchanged.
+
+data:
+  panel_path: outputs/panels/main_features500_panel.pkl
+  industry_label_path: data/ind_code.pkl
+
+base_configs:
+  stage4_graph_config: configs/graphs_features500.yaml
+  stage5_graph_model_config: configs/graph_model_features500.yaml
+  stage7_portfolio_config: configs/portfolio_features500.yaml
+
+existing_models:
+  - name: mlp_predictor
+    predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+  - name: ipca_style
+    predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+  - name: conditional_autoencoder_style
+    predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+  - name: graph_conditional_latent_factor
+    predictions_path: outputs/predictions/stage5_graph_predictions.pkl
+
+industry_variants:
+  - name: graph_industry_only
+    label: Industry-only graph
+    graph_dir_name: industry_only
+    graph_overrides:
+      graph:
+        edge_types:
+          - industry
+        industry_edge_weight: 1.0
+        industry_min_group_size: 2
+        max_months: null
+    model_overrides: {}
+  - name: graph_industry_hybrid
+    label: Hybrid similarity graph plus industry edges
+    graph_dir_name: hybrid_plus_industry
+    graph_overrides:
+      graph:
+        edge_types:
+          - return_correlation
+          - feature_cosine_knn
+          - feature_euclidean_knn
+          - industry
+        industry_edge_weight: 1.0
+        industry_min_group_size: 2
+        max_months: null
+    model_overrides: {}
+
+portfolio:
+  main_transaction_cost_bps: 10
+
+figures:
+  dpi: 200
+
+smoke:
+  graph_max_months: 112
+  max_oos_months: 2
+
+outputs:
+  root: outputs/industry_extension
+  figure_dir: reports/figures
+  report_path: reports/industry_extension_results.md

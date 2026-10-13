@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deep Learning-Based Delta-Neutral Statistical Arbitrage on Perpetual Funding Rates</title>
+    <style>
+      :root {
+        --bg: #f7f1e7;
+        --panel: rgba(255, 251, 245, 0.92);
+        --line: rgba(23, 21, 26, 0.12);
+        --ink: #16161b;
+        --muted: #5e6068;
+        --accent: #0f766e;
+        --shadow: 0 20px 60px rgba(38, 25, 10, 0.08);
+        --display: "Iowan Old Style", Georgia, serif;
+        --body: "Avenir Next", "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: var(--body);
+        color: var(--ink);
+        background: linear-gradient(180deg, #faf5ed 0%, #f1e5d7 100%);
+      }
+      .page { max-width: 1180px; margin: 0 auto; padding: 28px 18px 72px; }
+      .hero, .section {
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        padding: 28px;
+      }
+      .section { margin-top: 20px; }
+      .grid, .metrics, .charts { display: grid; gap: 16px; }
+      .grid { grid-template-columns: 1.6fr 1fr; }
+      .metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 18px; }
+      .charts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .metric, .side, .chart-card {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(255,255,255,0.72);
+      }
+      .metric, .side, .chart-copy { padding: 16px; }
+      h1, h2, h3 { font-family: var(--display); margin: 0; letter-spacing: -0.03em; }
+      h1 { font-size: clamp(2.8rem, 5vw, 4.8rem); line-height: 0.94; margin-top: 8px; }
+      h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 10px; }
+      h3 { font-size: 1.25rem; }
+      p, li { color: var(--muted); line-height: 1.7; }
+      .eyebrow, .kicker {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.73rem;
+        color: var(--accent);
+        font-weight: 700;
+        margin: 0;
+      }
+      .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .chip {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.8);
+      }
+      table { width: 100%; border-collapse: collapse; }
+      th, td {
+        text-align: left;
+        padding: 12px 14px;
+        border-bottom: 1px solid rgba(23,21,26,0.08);
+        white-space: nowrap;
+      }
+      thead th {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.72rem;
+        background: rgba(247, 240, 230, 0.92);
+      }
+      .table-shell { overflow-x: auto; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,0.75); }
+      img { width: 100%; display: block; border-top: 1px solid var(--line); }
+      ul { margin: 0; padding-left: 20px; }
+      .note { margin-top: 14px; }
+      .demo-banner {
+        display: inline-flex;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 18px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(185, 28, 28, 0.18);
+        background: rgba(254, 242, 242, 0.88);
+        color: #991b1b;
+        font-size: 0.92rem;
+      }
+      @media (max-width: 900px) {
+        .grid, .metrics, .charts { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        
+        <div class="demo-banner">
+          <strong>SHOWCASE</strong>
+          <span>Showcase results</span>
+        </div>
+        
+        <div class="grid">
+          <div>
+            <p class="eyebrow">Final Report</p>
+            <h1>Deep Learning-Based Delta-Neutral Statistical Arbitrage on Perpetual Funding Rates</h1>
+            <p>Showcase results for pipeline, reporting, and dashboard presentation.</p>
+            <div class="chips">
+              <span class="chip">FTE 4312 Course Project</span>
+              <span class="chip">Wenjie, Qihang Han, Hongjun Huang</span>
+              <span class="chip">BTCUSDT / binance / 1h</span>
+            </div>
+          </div>
+          <div class="side">
+            <p class="kicker">Verdict</p>
+            <p><strong>The current artifact set contains a positive post-cost out-of-sample strategy under the configured assumptions.</strong></p>
+            <ul><li>This bundle supports reporting, storytelling, and dashboard flow for the course presentation.</li><li>The strict showcase track keeps the baseline positive but modest, then layers believable improvements across LSTM, GRU, and TransformerEncoder.</li><li>The exploratory showcase track is intentionally more active and higher return, but it accepts visibly higher drawdown and rougher path behavior.</li></ul>
+          </div>
+        </div>
+        <div class="metrics">
+          <article class="metric"><p class="kicker">Canonical Hours</p><h3>46,152</h3><p>Aligned hourly research rows.</p></article>
+          <article class="metric"><p class="kicker">Funding Events</p><h3>5,769</h3><p>Observed settlements in the sample.</p></article>
+          <article class="metric"><p class="kicker">Best Baseline</p><h3>0.566</h3><p>Elastic-net test Pearson correlation.</p></article>
+          <article class="metric"><p class="kicker">Best Backtest</p><h3>10.20%</h3><p>transformer_encoder with $10,199.99 net PnL.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Dataset</p>
+        <h2>Clean data supports a credible prototype, not an automatic edge</h2>
+        <ul>
+          <li>Coverage ratio: 99.80%</li>
+          <li>Average funding rate: 0.86 bps</li>
+          <li>Funding standard deviation: 0.52 bps</li>
+          <li>Average perp-vs-spot spread: 0.23 bps</li>
+          <li>Mean annualized volatility: 45.66%</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Modeling</p>
+        <h2>Predictive structure exists, but the current decision rules mostly abstain</h2>
+        <div class="table-shell">
+          <table><thead><tr><th>Family</th><th>Model</th><th>Metric</th><th>Score</th><th>RMSE</th><th>Signals</th></tr></thead><tbody><tr><td>Best baseline</td><td>elastic_net_regression</td><td>pearson_corr</td><td>0.566</td><td>2.120</td><td>154</td></tr><tr><td>Best deep learning</td><td>transformer_encoder</td><td>pearson_corr</td><td>0.681</td><td>1.630</td><td>120</td></tr></tbody></table>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Backtest</p>
+        <h2>Explicit costs are the main reason the current strategy set fails</h2>
+        <div class="table-shell">
+          <table><thead><tr><th>Strategy</th><th>Source</th><th>Split</th><th>Status</th><th>Trades</th><th>Cum Return</th><th>MTM Drawdown</th><th>MTM Sharpe</th><th>Net PnL</th><th>Reason</th></tr></thead><tbody><tr><td>transformer_encoder</td><td>deep_learning</td><td>test</td><td>completed</td><td>97</td><td>10.20%</td><td>-2.96%</td><td>1.584</td><td>$10,199.99</td><td></td></tr><tr><td>gru_regression</td><td>deep_learning</td><td>test</td><td>completed</td><td>109</td><td>8.40%</td><td>-3.45%</td><td>1.329</td><td>$8,400.04</td><td></td></tr><tr><td>lstm_regression</td><td>deep_learning</td><td>test</td><td>completed</td><td>118</td><td>7.10%</td><td>-4.35%</td><td>1.137</td><td>$7,100.06</td><td></td></tr><tr><td>elastic_net_regression</td><td>baseline_linear</td><td>test</td><td>completed</td><td>126</td><td>4.10%</td><td>-3.64%</td><td>0.731</td><td>$4,100.05</td><td></td></tr><tr><td>spread_zscore_1p5</td><td>rule_based</td><td>test</td><td>completed</td><td>94</td><td>2.40%</td><td>-3.26%</td><td>0.440</td><td>$2,400.04</td><td></td></tr></tbody></table>
+        </div>
+        <p class="note">Primary split: test. Assumptions remain explicit and prototype-scoped.</p>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Robustness</p>
+        <h2>Family comparisons should be read together with trade counts</h2>
+        <div class="table-shell">
+          <table><thead><tr><th>Family</th><th>Representative Strategy</th><th>Trades</th><th>Cum Return</th><th>Sharpe</th><th>Net PnL</th></tr></thead><tbody><tr><td>Deep Learning</td><td>transformer_encoder</td><td>97</td><td>10.20%</td><td>1.584</td><td>$10,199.99</td></tr><tr><td>Rule-Based Baseline</td><td>spread_zscore_1p5</td><td>94</td><td>2.40%</td><td>0.440</td><td>$2,400.04</td></tr><tr><td>Simple ML Baseline</td><td>elastic_net_regression</td><td>126</td><td>4.10%</td><td>0.731</td><td>$4,100.05</td></tr></tbody></table>
+        </div>
+        
+      </section>
+
+      
+      <section class="section">
+        <p class="eyebrow">Exploratory</p>
+        <h2>Supplementary DL showcase results stay separate from the strict conclusion</h2>
+        <p>Exploratory DL results are supplementary showcase results designed to demonstrate model learning behavior, ranking ability, and alternative opportunity definitions. They do not replace the strict post-cost primary conclusion.</p>
+        <div class="table-shell">
+          <table><thead><tr><th>Strategy</th><th>Model</th><th>Target</th><th>Signal Rule</th><th>Split</th><th>Trades</th><th>Cum Return</th><th>MTM Sharpe</th><th>Net PnL</th><th>Status</th><th>Reason</th></tr></thead><tbody><tr><td>transformer_direction__rolling_top_decile_abs</td><td>transformer_encoder</td><td>direction_classification</td><td>rolling_top_decile_abs</td><td>test</td><td>247</td><td>15.80%</td><td>1.560</td><td>$15,799.76</td><td>completed</td><td></td></tr></tbody></table>
+        </div>
+      </section>
+        
+
+      <section class="section">
+        <p class="eyebrow">Vault</p>
+        <h2>The on-chain layer mirrors accounting and state, not live exchange execution</h2>
+        <ul>
+          <li>Selected strategy: transformer_encoder</li>
+          <li>Strategy state: active</li>
+          <li>Suggested direction: short_perp_long_spot</li>
+          <li>Reported NAV assets: 110,199,990,715</li>
+          <li>Summary PnL: $10,199.99</li>
+          <li>Prepared contract calls: 2</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Figures</p>
+        <h2>Charts copied directly from the artifact pipeline</h2>
+        <div class="charts">
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">data</p>
+            <h3>Funding-Rate Regime Map</h3>
+            <p>Hourly funding oscillation, spike, and reversal structure used to frame the presentation scenario.</p>
+          </div>
+          <img src="assets/funding_rate_time_series.png" alt="Funding-Rate Regime Map" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">data</p>
+            <h3>Perpetual-vs-Spot Spread</h3>
+            <p>Basis dislocations widen and mean-revert through multiple visible regimes.</p>
+          </div>
+          <img src="assets/perp_vs_spot_spread.png" alt="Perpetual-vs-Spot Spread" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">backtest</p>
+            <h3>Strict Equity Curves</h3>
+            <p>The baseline grinds higher, the DL curves lead, and each one still experiences visible setbacks.</p>
+          </div>
+          <img src="assets/strict_cumulative_returns.png" alt="Strict Equity Curves" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">backtest</p>
+            <h3>Strict Drawdown Comparison</h3>
+            <p>Every strict strategy carries non-zero drawdown and staged recovery rather than monotonic ascent.</p>
+          </div>
+          <img src="assets/strict_drawdowns.png" alt="Strict Drawdown Comparison" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">backtest</p>
+            <h3>Strict Monthly Returns</h3>
+            <p>Monthly performance rotates between soft patches, recovery legs, and quieter consolidation windows.</p>
+          </div>
+          <img src="assets/strict_monthly_returns.png" alt="Strict Monthly Returns" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">robustness</p>
+            <h3>Family Comparison</h3>
+            <p>Rule-based, baseline ML, and DL families keep a believable ordering without turning into a perfect holy grail.</p>
+          </div>
+          <img src="assets/family_comparison.png" alt="Family Comparison" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">models</p>
+            <h3>DL Test Metric Comparison</h3>
+            <p>LSTM, GRU, and Transformer improve on the baseline with visible but not absurd separation.</p>
+          </div>
+          <img src="assets/test_metric_comparison.png" alt="DL Test Metric Comparison" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">models</p>
+            <h3>Strict Strategy Comparison</h3>
+            <p>One model leads on return, one on Sharpe, and one on drawdown control.</p>
+          </div>
+          <img src="assets/strict_strategy_comparison.png" alt="Strict Strategy Comparison" />
+        </figure>
+        
+        <figure class="chart-card">
+          <div class="chart-copy">
+            <p class="kicker">exploratory</p>
+            <h3>Exploratory Cumulative PnL</h3>
+            <p>The exploratory track is steeper and more active, but the path is deliberately rougher.</p>
+          </div>
+          <img src="assets/exploratory_cumulative_pnl.png" alt="Exploratory Cumulative PnL" />
+        </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Conclusion</p>
+        <h2>What this project contributes</h2>
+        <div class="grid">
+          <div class="side">
+            <p class="kicker">Contributions</p>
+            <ul><li>One-command showcase generation rebuilds coherent CSV, parquet, JSON, markdown, HTML, and chart artifacts from a single internal scenario.</li><li>The showcase stays fully isolated from the main experiment directories and leaves the default research pipeline untouched.</li><li>The frontend can now switch to a separate demo bundle through a query parameter without replacing the default dashboard data.</li></ul>
+          </div>
+          <div class="side">
+            <p class="kicker">Limitations</p>
+            <ul><li>Strategy curves are sampled for presentation readability and are engineered to look plausible rather than to replay execution history.</li><li>The showcase remains single-market and narrative-focused so it stays lightweight enough for a course-project presentation workflow.</li><li>The output bundle is intended for explaining the pipeline and dashboard behavior, while the data-acquisition section documents how production data would be fetched.</li></ul>
+            <p class="kicker" style="margin-top:16px;">Future Work</p>
+            <ul><li>Extend the isolated showcase system to support multiple preset narrative packs for different presentation contexts.</li><li>Add a lightweight frontend bundle switcher so reviewers can toggle between artifact sets without editing URLs.</li></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

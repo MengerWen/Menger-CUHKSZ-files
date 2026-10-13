@@ -1,0 +1,36 @@
+input:
+  source_dataset_path: data/processed/supervised/binance/btcusdt/1h/btcusdt_supervised_dataset.parquet
+  source_manifest_path: data/processed/supervised/binance/btcusdt/1h/btcusdt_supervised_manifest.json
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+
+target:
+  horizon_hours: 24
+  gross_return_column: target_future_gross_return_bps_24h
+  split_column: split
+  ready_column: supervised_ready
+  short_direction_label: short_perp_long_spot
+  long_direction_label: long_perp_short_spot
+  short_direction_gross_column: target_future_short_perp_long_spot_gross_return_bps_24h
+  long_direction_gross_column: target_future_long_perp_short_spot_gross_return_bps_24h
+  signed_opportunity_column: target_future_signed_opportunity_bps_24h
+  absolute_opportunity_column: target_future_absolute_opportunity_bps_24h
+  direction_classification_column: target_best_direction_is_short_perp_long_spot_24h
+  direction_label_column: target_best_direction_label_24h
+
+output:
+  output_dir: data/processed/exploratory_dl
+  artifact_name: btcusdt_exploratory_dataset.parquet
+  manifest_name: btcusdt_exploratory_manifest.json
+  write_csv: true
+
+notes:
+  intent: >-
+    Build a standalone exploratory dataset that reuses the strict supervised
+    sample but adds showcase-only targets for gross opportunity ranking and
+    direction-aware learning.
+  disclaimer: >-
+    These exploratory targets are supplementary and do not replace the strict
+    post-cost primary labels.

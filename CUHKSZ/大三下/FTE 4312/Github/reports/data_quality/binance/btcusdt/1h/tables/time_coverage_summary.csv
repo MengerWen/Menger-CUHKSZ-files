@@ -1,0 +1,2 @@
+start_timestamp,end_timestamp,actual_rows,unique_timestamps,expected_rows_in_observed_range,coverage_ratio,duplicate_timestamps,missing_hours_inside_observed_range,non_standard_gap_count,max_gap_hours,median_gap_hours,funding_event_rows
+2021-01-01T00:00:00+00:00,2026-04-07T23:00:00+00:00,46152,46152,46152,1.0,0,0,0,1.0,1.0,3092

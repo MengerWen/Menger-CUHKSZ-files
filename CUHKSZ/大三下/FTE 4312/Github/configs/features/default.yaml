@@ -1,0 +1,34 @@
+input:
+  dataset_path: data/processed/binance/btcusdt/1h/hourly_market_data.parquet
+  manifest_path: data/processed/binance/btcusdt/1h/manifest.json
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+
+feature_set:
+  rolling_windows:
+    - 8
+    - 24
+    - 72
+    - 168
+  volatility_window: 24
+  zscore_window: 72
+  funding_mean_window: 24
+  basis_mean_window: 24
+  shock_window: 24
+  liquidity_window: 24
+  regime_window: 168
+  funding_interval_hours: 8
+  annualization_factor_hours: 8760
+
+labels:
+  forward_horizon_hours: 8
+  min_expected_edge_bps: 5
+  use_post_cost_target: true
+
+output:
+  processed_dir: data/processed/features
+  artifact_name: btcusdt_feature_set.parquet
+  manifest_name: btcusdt_feature_manifest.json
+  write_csv: true

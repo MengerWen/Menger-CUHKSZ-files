@@ -1,0 +1,51 @@
+﻿# Stage 5 graph-enhanced conditional latent factor model.
+# The default run mirrors the Stage 3 benchmark OOS subset for first-pass comparability.
+
+data:
+  panel_path: outputs/panels/main_features500_panel.pkl
+  metadata_path: outputs/metadata/main_features500_panel_metadata.json
+  target_col: target_excess_return
+
+graphs:
+  manifest_path: outputs/graphs/features500_similarity_hybrid_manifest.csv
+
+model:
+  model_type: gcn        # gcn or gat
+  latent_dim: 3
+  hidden_dim: 64
+  dropout: 0.10
+  gat_heads: 2
+
+oos:
+  scheme: expanding
+  initial_train_months: 96
+  validation_months: 12
+  refit_frequency_months: 12
+  max_oos_months: 24
+  rolling_train_months: 96
+
+training:
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 6
+  patience: 2
+  seed: 20260408
+  device: auto
+
+loss:
+  # reconstruction uses beta_i,t' f_t with train-month latent factor embeddings
+  reconstruction_loss_weight: 1.0
+  # prediction uses beta_i,t' mean(f_train), closer to the OOS forecast rule
+  prediction_loss_weight: 0.25
+  # cross-sectional mean residual penalty within each month
+  pricing_error_weight: 0.05
+  beta_l2_weight: 0.00001
+
+outputs:
+  predictions_path: outputs/predictions/stage5_graph_predictions.pkl
+  exposures_path: outputs/latent/stage5_graph_exposures.pkl
+  factors_path: outputs/latent/stage5_graph_factors.pkl
+  attention_path: outputs/attention/stage5_graph_attention.pkl
+  metrics_path: outputs/metrics/stage5_graph_metrics.csv
+  metadata_path: outputs/metadata/stage5_graph_model_metadata.json
+  save_attention: true

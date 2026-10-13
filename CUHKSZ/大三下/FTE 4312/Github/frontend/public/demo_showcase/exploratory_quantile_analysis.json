@@ -1,0 +1,72 @@
+[
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 0,
+    "row_count": 40,
+    "avg_directional_return_bps": -61.26185514432393,
+    "cumulative_directional_return_bps": -2450.4742057729572
+  },
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 1,
+    "row_count": 39,
+    "avg_directional_return_bps": -38.60890425281684,
+    "cumulative_directional_return_bps": -1505.747265859857
+  },
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 2,
+    "row_count": 39,
+    "avg_directional_return_bps": -26.01923689956728,
+    "cumulative_directional_return_bps": -1014.7502390831239
+  },
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 3,
+    "row_count": 39,
+    "avg_directional_return_bps": -13.993536783414566,
+    "cumulative_directional_return_bps": -545.7479345531681
+  },
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 4,
+    "row_count": 40,
+    "avg_directional_return_bps": -1.5820701326490456,
+    "cumulative_directional_return_bps": -63.28280530596182
+  },
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 5,
+    "row_count": 39,
+    "avg_directional_return_bps": 9.503453529474731,
+    "cumulative_directional_return_bps": 370.63468764951455
+  },
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 6,
+    "row_count": 39,
+    "avg_directional_return_bps": 20.959811609220115,
+    "cumulative_directional_return_bps": 817.4326527595845
+  },
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 7,
+    "row_count": 39,
+    "avg_directional_return_bps": 33.3209378746668,
+    "cumulative_directional_return_bps": 1299.516577112005
+  },
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 8,
+    "row_count": 39,
+    "avg_directional_return_bps": 46.73225273756646,
+    "cumulative_directional_return_bps": 1822.557856765092
+  },
+  {
+    "run_name": "transformer_encoder",
+    "absolute_score_quantile": 9,
+    "row_count": 40,
+    "avg_directional_return_bps": 69.16435774460777,
+    "cumulative_directional_return_bps": 2766.574309784311
+  }
+]

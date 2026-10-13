@@ -1,0 +1,58 @@
+input:
+  signals_path: data/artifacts/signals/binance/btcusdt/1h/baseline/signals.parquet
+  signals_manifest_path: data/artifacts/signals/binance/btcusdt/1h/baseline/signals_manifest.json
+  leaderboard_path: data/artifacts/backtests/binance/btcusdt/1h/baseline_signals_default/leaderboard.parquet
+  leaderboard_manifest_path: data/artifacts/backtests/binance/btcusdt/1h/baseline_signals_default/backtest_manifest.json
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+
+selection:
+  strategy_name: null
+  ranking_metric: total_net_pnl_usd
+  ranking_ascending: false
+  prefer_traded_strategy: true
+  split_preference:
+    - test
+    - validation
+    - train
+  prefer_should_trade: false
+  require_should_trade: false
+  allow_flat_fallback: true
+
+contract:
+  artifact_path: contracts/out/DeltaNeutralVault.sol/DeltaNeutralVault.json
+  rpc_url: http://127.0.0.1:8545
+  rpc_url_env: VITE_RPC_URL
+  vault_address: "0x0000000000000000000000000000000000000000"
+  vault_address_env: VAULT_ADDRESS
+  operator_private_key_env: PRIVATE_KEY
+  chain_id: 31337
+  broadcast: false
+  update_strategy_state: true
+  update_nav: true
+  update_pnl: false
+  gas_limit: 500000
+  gas_price_wei: null
+  wait_for_receipt: true
+
+semantics:
+  base_nav_assets: 100000000000
+  asset_decimals: 6
+  asset_usd_price: 1.0
+  nav_floor_assets: 0
+  flat_strategy_state: idle
+  active_strategy_state: active
+
+output:
+  output_dir: data/artifacts/integration
+  run_name: mock_operator_default
+  write_json: true
+  write_markdown_report: true
+
+notes:
+  assumptions:
+    - This flow is a trusted prototype operator/oracle path.
+    - It reads local strategy artifacts and converts them into mock vault updates.
+    - The default mode is dry-run to keep the local demo safe and repeatable.

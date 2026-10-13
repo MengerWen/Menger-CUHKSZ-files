@@ -1,0 +1,202 @@
+input:
+  dataset_path: data/processed/supervised/binance/btcusdt/1h/btcusdt_supervised_dataset.parquet
+  manifest_path: data/processed/supervised/binance/btcusdt/1h/btcusdt_supervised_manifest.json
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+
+target:
+  timestamp_column: timestamp
+  split_column: split
+  ready_column: supervised_ready
+  classification_column: target_is_profitable_24h
+  regression_column: target_future_net_return_bps_24h
+
+feature_selection:
+  include_columns: []
+  exclude_columns:
+    - timestamp
+    - symbol
+    - venue
+    - frequency
+    - split
+    - feature_ready
+    - supervised_ready
+  exclude_prefixes:
+    - target_
+  max_missing_fraction: 0.25
+  drop_constant_features: true
+
+tuning:
+  enabled: true
+  n_splits: 3
+  gap: 24
+  mode: expanding
+  min_train_size: 4000
+  rolling_window_size: null
+  classification_metric: average_precision
+  regression_metric: neg_rmse
+
+threshold_search:
+  enabled: true
+  objective: avg_signal_return_bps
+  allow_degenerate_fallback: false
+  probability_grid: [0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85]
+  regression_threshold_grid_bps: [-5.0, 0.0, 2.5, 5.0, 7.5, 10.0, 15.0]
+  top_quantile: 0.1
+  rule_search_enabled: true
+
+imputation:
+  remaining_strategy: median
+  forward_fill_columns: []
+  forward_fill_prefixes:
+    - open_interest
+  add_missing_indicators: true
+  indicator_columns: []
+
+prediction:
+  mode: static
+  refit_every_n_periods: 168
+  rolling_window_size: null
+  expanding_window_start: 4000
+  use_validation_history_for_test: true
+
+rules:
+  - name: funding_threshold_2bps
+    kind: funding_threshold
+    funding_column: funding_rate_bps
+    funding_threshold_bps: 2.0
+    funding_threshold_grid_bps: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+  - name: spread_zscore_1p5
+    kind: spread_zscore_threshold
+    spread_column: spread_zscore_72h
+    spread_threshold: 1.5
+    spread_threshold_grid: [0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+  - name: combined_funding_spread
+    kind: combined_threshold
+    funding_column: funding_rate_bps
+    funding_threshold_bps: 1.0
+    funding_threshold_grid_bps: [0.5, 1.0, 1.5, 2.0]
+    spread_column: spread_zscore_72h
+    spread_threshold: 1.5
+    spread_threshold_grid: [1.0, 1.25, 1.5, 1.75]
+    regime_column: positive_funding_regime
+    regime_value: 1
+
+predictive:
+  classification:
+    enabled: true
+    name: logistic_regression
+    estimator: logistic_regression
+    probability_threshold: 0.5
+    probability_threshold_grid: [0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8]
+    standardize: true
+    max_iter: 2000
+    c: 1.0
+    penalty: l2
+    solver: lbfgs
+    l1_ratio: null
+    class_weight: balanced
+    random_state: 42
+    calibration_method: sigmoid
+    calibration_cv_splits: 3
+    calibration_ensemble: true
+    param_grid:
+      c: [0.5, 1.0, 2.0]
+    additional_models:
+      - enabled: true
+        name: logistic_l1
+        estimator: logistic_l1
+        probability_threshold: 0.5
+        probability_threshold_grid: [0.5, 0.55, 0.6, 0.65, 0.7, 0.75]
+        standardize: true
+        max_iter: 2500
+        c: 1.0
+        penalty: l1
+        solver: liblinear
+        l1_ratio: null
+        class_weight: balanced
+        random_state: 42
+        calibration_method: none
+        calibration_cv_splits: 3
+        calibration_ensemble: true
+        param_grid:
+          c: [0.1, 0.5, 1.0]
+      - enabled: false
+        name: logistic_elastic_net
+        estimator: logistic_elastic_net
+        probability_threshold: 0.5
+        probability_threshold_grid: [0.5, 0.55, 0.6, 0.65, 0.7, 0.75]
+        standardize: true
+        max_iter: 3000
+        c: 1.0
+        penalty: elasticnet
+        solver: saga
+        l1_ratio: 0.5
+        class_weight: balanced
+        random_state: 42
+        calibration_method: none
+        calibration_cv_splits: 3
+        calibration_ensemble: true
+        param_grid:
+          c: [0.5, 1.0]
+          l1_ratio: [0.2, 0.5]
+  regression:
+    enabled: true
+    name: ridge_regression
+    estimator: ridge
+    standardize: true
+    alpha: 1.0
+    trade_threshold_bps: 0.0
+    trade_threshold_grid_bps: [-5.0, 0.0, 2.5, 5.0, 7.5, 10.0, 15.0]
+    random_state: 42
+    param_grid:
+      alpha: [0.5, 1.0, 5.0]
+    additional_models:
+      - enabled: true
+        name: elastic_net_regression
+        estimator: elastic_net
+        standardize: true
+        alpha: 1.0
+        l1_ratio: 0.5
+        trade_threshold_bps: 0.0
+        trade_threshold_grid_bps: [-5.0, 0.0, 2.5, 5.0, 7.5, 10.0, 15.0]
+        random_state: 42
+        param_grid:
+          alpha: [0.5, 1.0]
+          l1_ratio: [0.2, 0.5]
+  tree:
+    enabled: false
+    classifier_name: random_forest_classifier
+    regressor_name: random_forest_regressor
+    n_estimators: 200
+    max_depth: 6
+    min_samples_leaf: 50
+    classification_probability_threshold: 0.5
+    classification_probability_threshold_grid: [0.5, 0.55, 0.6, 0.65, 0.7]
+    regression_trade_threshold_bps: 0.0
+    regression_trade_threshold_grid_bps: [-5.0, 0.0, 2.5, 5.0, 7.5, 10.0]
+    random_state: 42
+    classifier_param_grid:
+      n_estimators: [150, 250]
+      max_depth: [4, 6, 8]
+      min_samples_leaf: [20, 50]
+    regressor_param_grid:
+      n_estimators: [150, 250]
+      max_depth: [4, 6, 8]
+      min_samples_leaf: [20, 50]
+    calibration_method: sigmoid
+    calibration_cv_splits: 3
+    calibration_ensemble: true
+
+output:
+  model_dir: data/artifacts/models/baselines
+  run_name: btcusdt_24h_default
+  write_csv: true
+  write_markdown_report: true
+
+notes:
+  rationale: >-
+    Default baselines use the 24-hour post-cost target because it is slightly less sparse than the 8-hour label,
+    while remaining aligned with tradable net-return quality.

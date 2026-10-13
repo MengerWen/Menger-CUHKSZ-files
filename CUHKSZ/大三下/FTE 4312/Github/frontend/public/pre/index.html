@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Presentation page for the funding-rate arbitrage course project."
+    />
+    <title>Funding-Rate Arbitrage Presentation</title>
+    <link rel="stylesheet" href="/pre/presentation.css?v=11" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">FTE 4312 | Final Presentation</p>
+          <h1>Deep Learning-Based Delta-Neutral Statistical Arbitrage on Perpetual Funding Rates</h1>
+          <p class="hero-lede">
+            A blockchain-first presentation of our hybrid prototype: off-chain research generates the
+            strategy view, while an on-chain vault handles deposits, withdrawals, share accounting,
+            strategy state, and NAV or PnL synchronization.
+          </p>
+          <div class="team-row" id="team-row"></div>
+          <div class="hero-actions">
+            <button id="start-ppt-btn" class="action primary" style="cursor: pointer; background-color: #0d6e66; color: white; border: none; padding: 12px 20px; border-radius: 999px; font-weight: bold;">Start PPT mode</button>
+            <a class="action primary" href="/?mode=demo_showcase">Open interactive dashboard</a>
+            <a
+              class="action"
+              href="https://github.com/MengerWen/Deep-Learning-Based-Delta-Neutral-Statistical-Arbitrage-on-Perpetual-Funding-Rates"
+              target="_blank"
+              rel="noreferrer"
+              >Open Github repository</a
+            >
+          </div>
+        </div>
+        <div class="hero-panel">
+          <p class="panel-kicker">Blockchain Project Framing</p>
+          <h2>Off-chain intelligence, on-chain state machine</h2>
+          <p class="panel-text" id="hero-verdict">
+            Loading presentation data for the blockchain project showcase.
+          </p>
+          <div class="summary-badge-row" id="hero-metrics"></div>
+          <div class="status-pill" id="artifact-pill">Loading presentation metadata...</div>
+        </div>
+      </header>
+
+      <main id="presentation-root">
+        <section class="section spotlight-grid">
+          <article class="panel">
+            <div class="section-head compact-head">
+              <p class="section-kicker">Executive Outline</p>
+              <h2>System Architecture & Project Deliverables</h2>
+            </div>
+            <div class="rubric-grid" id="rubric-grid"></div>
+          </article>
+          <article class="panel accent-panel">
+            <div class="section-head compact-head">
+              <p class="section-kicker">Blockchain Scope</p>
+              <h2>Bridging Off-Chain Analytics with On-Chain Vaults</h2>
+            </div>
+            <div class="detail-stack" id="scope-details"></div>
+            <div class="subsection">
+              <h3>Core Value Proposition</h3>
+              <ul class="bullet-list" id="story-points"></ul>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="section-kicker">Problem And Motivation</p>
+            <h2>Why this is a blockchain systems problem, not only a trading idea</h2>
+            <p class="section-intro">
+              While finding statistical alpha is difficult, pooling capital to execute it introduces a major trust boundary. The core infrastructure challenge is ensuring that off-chain trading states and NAV updates remain cryptographically transparent to on-chain depositors without running heavy analytics directly on the EVM.
+            </p>
+          </div>
+          <div class="problem-grid" id="problem-grid"></div>
+        </section>
+
+        <section class="section split-section">
+          <article class="panel">
+            <div class="section-head compact-head">
+              <p class="section-kicker">System Boundary</p>
+              <h2>What stays off-chain</h2>
+            </div>
+            <div class="responsibility-list" id="offchain-boundary"></div>
+          </article>
+          <article class="panel accent-panel">
+            <div class="section-head compact-head">
+              <p class="section-kicker">System Boundary</p>
+              <h2>What moves on-chain</h2>
+            </div>
+            <div class="responsibility-list" id="onchain-boundary"></div>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="section-kicker">Off-Chain Deep Dive</p>
+            <h2>What happens before the contract is touched</h2>
+            <p class="section-intro">
+              This page is specifically about the part the chain does not do: data engineering,
+              modeling, evaluation, and packaging a vault update that is small enough to push on-chain.
+            </p>
+          </div>
+          <div class="deep-dive-grid">
+            <article class="panel" id="offchain-lifecycle"></article>
+            <article class="panel accent-panel" id="offchain-artifacts"></article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="section-kicker">Off-Chain Intelligence</p>
+            <h2>What statistical edge justifies the on-chain vault?</h2>
+            <p class="section-intro">
+              Before pooling capital in a smart contract, the underlying strategy must prove resilient against execution frictions. These analytics serve as the statistical foundation for our oracle updates.
+            </p>
+          </div>
+          <div class="chart-grid" id="chart-grid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="section-kicker">On-Chain Deep Dive</p>
+            <h2>What the vault stores and enforces on-chain</h2>
+            <p class="section-intro">
+              This page focuses on the Solidity contract itself: user actions, updater permissions,
+              persisted state, and the safety controls that make it look like a real vault prototype.
+            </p>
+          </div>
+          <div class="deep-dive-grid">
+            <article class="panel" id="onchain-functions"></article>
+            <article class="panel accent-panel" id="onchain-state"></article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="section-kicker">Boundary Handoff</p>
+            <h2>What crosses from off-chain analytics into on-chain state</h2>
+            <p class="section-intro">
+              The most important boundary is not “everything stays off-chain” or “everything goes
+              on-chain”; it is the exact, explicit payload that crosses between them.
+            </p>
+          </div>
+          <div class="handoff-grid">
+            <article class="panel" id="handoff-fields"></article>
+            <article class="panel" id="handoff-sequence"></article>
+            <article class="panel accent-panel" id="handoff-why"></article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="section-kicker">Implementation Status</p>
+            <h2>How far the implementation has actually gone</h2>
+            <p class="section-intro">
+              This slide is meant to answer the practical question directly: which parts are already
+              implemented, which parts are prototype-level, and which parts are intentionally left out.
+            </p>
+          </div>
+          <div class="implementation-status-grid">
+            <article class="panel" id="implementation-extent"></article>
+            <article class="panel" id="implementation-offchain"></article>
+            <article class="panel" id="implementation-onchain"></article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="section-kicker">Blockchain Evidence</p>
+            <h2>What proves this is more than a report with charts</h2>
+            <p class="section-intro">
+              The quant result stays in the loop, but the presentation emphasis moves to contract
+              capabilities, updater flow, and local validation of the vault mechanics.
+            </p>
+          </div>
+          <div class="results-grid">
+            <article class="panel" id="results-highlight"></article>
+            <article class="panel" id="leaderboard-panel"></article>
+            <article class="panel" id="robustness-panel"></article>
+          </div>
+        </section>
+
+        <section class="section vault-console-section">
+          <div class="section-head">
+            <p class="section-kicker">Live Vault Console</p>
+            <h2>Operate the vault during the presentation</h2>
+            <p class="section-intro">
+              This is a local presentation simulator of the Solidity vault workflow. Use it live to
+              show how deployment, deposits, strategy updates, NAV synchronization, and withdrawals
+              change visible contract-facing state.
+            </p>
+          </div>
+          <div id="vault-live-console"></div>
+        </section>
+
+        <section class="section split-section">
+          <article class="panel">
+            <div class="section-head compact-head">
+              <p class="section-kicker">Chain Demo Flow</p>
+              <h2>Steps to demonstrate the vault locally</h2>
+            </div>
+            <div class="demo-links">
+              <a class="link-card" href="/pre/index.html">
+                <span class="link-label">Presentation Page</span>
+                <strong>System architecture and deliverables</strong>
+              </a>
+              <a class="link-card" href="/?mode=demo_showcase" target="_blank">
+                <span class="link-label">Interactive Dashboard</span>
+                <strong>Live NAV and strategy monitoring</strong>
+              </a>
+              <a class="link-card" href="/demo_showcase/report/" target="_blank">
+                <span class="link-label">Final Report</span>
+                <strong>Complete experiment logs and audit evidence</strong>
+              </a>
+            </div>
+            <div class="timeline" id="activity-timeline"></div>
+          </article>
+          <article class="panel accent-panel">
+            <div class="section-head compact-head">
+              <p class="section-kicker">Vault Demo Story</p>
+              <h2>How the contract records strategy intent and accounting</h2>
+            </div>
+            <div class="detail-stack" id="vault-summary"></div>
+            <div class="callout" id="vault-callout"></div>
+          </article>
+        </section>
+
+        <section class="section split-section">
+          <article class="panel">
+            <div class="section-head compact-head">
+              <p class="section-kicker">Caveats</p>
+              <h2>What the boundaries and limitations of this prototype are</h2>
+            </div>
+            <div class="subsection">
+              <h3>Executive Summary</h3>
+              <ul class="bullet-list" id="executive-summary"></ul>
+            </div>
+            <div class="subsection">
+              <h3>Limitations</h3>
+              <ul class="bullet-list" id="limitations"></ul>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="section-head compact-head">
+              <p class="section-kicker">Next Steps</p>
+              <h2>What we built and where it can go next</h2>
+            </div>
+            <div class="subsection">
+              <h3>Key Contributions</h3>
+              <ul class="bullet-list" id="contributions"></ul>
+            </div>
+            <div class="subsection">
+              <h3>Future Work</h3>
+              <ul class="bullet-list" id="future-work"></ul>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="/pre/presentation.js?v=11"></script>
+  </body>
+</html>

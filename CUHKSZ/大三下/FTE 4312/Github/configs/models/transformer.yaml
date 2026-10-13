@@ -1,0 +1,134 @@
+input:
+  dataset_path: data/processed/supervised/binance/btcusdt/1h/btcusdt_supervised_dataset.parquet
+  manifest_path: data/processed/supervised/binance/btcusdt/1h/btcusdt_supervised_manifest.json
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+
+target:
+  task: regression
+  column: target_future_net_return_bps_24h
+  classification_column: target_is_profitable_24h
+  regression_column: target_future_net_return_bps_24h
+  timestamp_column: timestamp
+  split_column: split
+  ready_column: supervised_ready
+  probability_threshold: 0.5
+  trade_threshold_bps: 0.0
+
+feature_selection:
+  include_columns: []
+  exclude_columns:
+    - timestamp
+    - symbol
+    - venue
+    - frequency
+    - split
+    - feature_ready
+    - supervised_ready
+  exclude_prefixes:
+    - target_
+  max_missing_fraction: 0.25
+  drop_constant_features: true
+
+sequence:
+  lookback_steps: 48
+  allow_cross_split_context: true
+
+model:
+  name: transformer_encoder
+  dropout: 0.1
+  transformer_d_model: 64
+  transformer_nhead: 4
+  transformer_num_layers: 2
+  transformer_dim_feedforward: 128
+  transformer_pooling: last
+
+preprocessing:
+  scaler: robust
+  winsorize_lower_quantile: 0.01
+  winsorize_upper_quantile: 0.99
+
+threshold_search:
+  enabled: true
+  objective: avg_signal_return_bps
+  allow_degenerate_fallback: false
+  probability_grid:
+    - 0.4
+    - 0.5
+    - 0.6
+  regression_threshold_grid_bps:
+    - -5.0
+    - 0.0
+    - 2.5
+    - 5.0
+  top_quantile: 0.1
+
+tuning:
+  enabled: false
+  mode: expanding
+  n_splits: 2
+  gap: 24
+  min_train_size: 3000
+  rolling_window_size:
+  max_candidates: 6
+  trial_epochs: 3
+  metric: validation_avg_signal_return_bps
+  lookback_steps:
+    - 48
+  hidden_size:
+    - 64
+  num_layers:
+    - 2
+  dropout:
+    - 0.1
+  learning_rate:
+    - 0.001
+  weight_decay:
+    - 0.00001
+  batch_size:
+    - 256
+
+prediction:
+  mode: static
+  refit_every_n_periods: 168
+  rolling_window_size:
+  expanding_window_start: 3000
+  use_validation_history_for_test: true
+
+interpretability:
+  enabled: true
+  ablation_splits:
+    - validation
+  calibration_bins: 10
+  max_feature_groups: 6
+
+training:
+  batch_size: 256
+  epochs: 5
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  seed: 42
+  device: auto
+  num_workers: 0
+  clip_grad_norm: 1.0
+  early_stopping_patience: 3
+  deterministic: true
+  use_balanced_classification_loss: true
+  selection_metric: validation_avg_signal_return_bps
+  regression_loss: huber
+  huber_delta: 1.0
+  internal_validation_fraction: 0.15
+  allow_degenerate_fallback: false
+
+output:
+  model_dir: data/artifacts/models/dl
+  run_name: transformer_regression_24h_default
+  write_csv: true
+  write_markdown_report: true
+
+notes:
+  rationale: >-
+    TransformerEncoder is included as a compact attention-based benchmark. It remains intentionally small because
+    hourly funding-arbitrage data is limited and larger transformers would be easier to overfit in this project.

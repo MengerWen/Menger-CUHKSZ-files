@@ -1,0 +1,48 @@
+input:
+  feature_table_path: data/processed/features/binance/btcusdt/1h/btcusdt_feature_set.parquet
+  feature_manifest_path: data/processed/features/binance/btcusdt/1h/btcusdt_feature_manifest.json
+  market_dataset_path: data/processed/binance/btcusdt/1h/hourly_market_data.parquet
+  market_manifest_path: data/processed/binance/btcusdt/1h/manifest.json
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+
+target:
+  direction: short_perp_long_spot
+  holding_windows_hours:
+    - 8
+    - 24
+  primary_horizon_hours: 8
+  execution_delay_bars: 1
+  execution_price_field: open
+  min_expected_edge_bps: 5.0
+  positive_return_threshold_bps: 0.0
+  use_post_cost_target: true
+
+costs:
+  taker_fee_bps: 5.0
+  maker_fee_bps: 2.0
+  slippage_bps: 3.0
+  gas_cost_usd: 2.0
+  position_notional_usd: 10000.0
+  other_friction_bps: 0.0
+  borrow_cost_bps_per_hour: 0.0
+
+split:
+  train_end: "2024-06-30"
+  validation_end: "2025-03-31"
+  test_end: "2026-04-07"
+
+output:
+  output_dir: data/processed/supervised
+  artifact_name: btcusdt_supervised_dataset.parquet
+  label_table_name: btcusdt_label_table.parquet
+  manifest_name: btcusdt_supervised_manifest.json
+  write_csv: true
+  save_split_files: true
+
+notes:
+  assumption: Labels model a delta-neutral short-perp plus long-spot trade, executed one bar after the feature timestamp.
+  execution_note: Entry and exit use the next available bar open from the canonical market dataset to avoid same-bar leakage.
+  cost_note: Net labels subtract estimated fees, slippage, gas, and optional additional friction terms before defining profitability.

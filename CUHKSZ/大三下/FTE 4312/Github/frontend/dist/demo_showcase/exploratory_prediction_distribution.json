@@ -1,0 +1,41 @@
+[
+  {
+    "run_name": "transformer_encoder",
+    "target_type": "direction_classification",
+    "split": "test",
+    "row_count": 393,
+    "signed_score_mean": 0.15596058123079753,
+    "signed_score_std": 0.6830021917415481,
+    "signed_score_min": -2.8,
+    "signed_score_max": 3.1,
+    "predicted_short_rate": 0.63,
+    "artifact_label": "SHOWCASE",
+    "artifact_scope": "Showcase results"
+  },
+  {
+    "run_name": "gru",
+    "target_type": "gross_opportunity_regression",
+    "split": "test",
+    "row_count": 393,
+    "signed_score_mean": 0.1419153031444546,
+    "signed_score_std": 0.6651943287492532,
+    "signed_score_min": -2.8,
+    "signed_score_max": 3.1,
+    "predicted_short_rate": 0.63,
+    "artifact_label": "SHOWCASE",
+    "artifact_scope": "Showcase results"
+  },
+  {
+    "run_name": "lstm",
+    "target_type": "gross_opportunity_regression",
+    "split": "test",
+    "row_count": 393,
+    "signed_score_mean": 0.13382769459805874,
+    "signed_score_std": 0.5528228114977258,
+    "signed_score_min": -2.8,
+    "signed_score_max": 3.1,
+    "predicted_short_rate": 0.63,
+    "artifact_label": "SHOWCASE",
+    "artifact_scope": "Showcase results"
+  }
+]

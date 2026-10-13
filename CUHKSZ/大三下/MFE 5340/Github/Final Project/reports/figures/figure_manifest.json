@@ -1,0 +1,159 @@
+{
+  "config_path": "configs/report_figures.yaml",
+  "inspection": {
+    "stage6_plots": {
+      "path": "outputs/comparison/stage6_plots",
+      "png_count": 4,
+      "examples": [
+        "outputs/comparison/stage6_plots/stage6_monthly_cross_sectional_corr.png",
+        "outputs/comparison/stage6_plots/stage6_monthly_rank_ic.png",
+        "outputs/comparison/stage6_plots/stage6_overall_metric_bars.png",
+        "outputs/comparison/stage6_plots/stage6_prediction_correlation_heatmap.png"
+      ]
+    },
+    "stage7_plots": {
+      "path": "outputs/portfolio/stage7_plots",
+      "png_count": 5,
+      "examples": [
+        "outputs/portfolio/stage7_plots/stage7_cumulative_long_only_equal_10bps.png",
+        "outputs/portfolio/stage7_plots/stage7_cumulative_long_only_value_10bps.png",
+        "outputs/portfolio/stage7_plots/stage7_cumulative_long_short_equal_10bps.png",
+        "outputs/portfolio/stage7_plots/stage7_cumulative_long_short_value_10bps.png",
+        "outputs/portfolio/stage7_plots/stage7_summary_bars_10bps.png"
+      ]
+    },
+    "stage8_plots": {
+      "path": "outputs/stage8/plots",
+      "png_count": 12,
+      "examples": [
+        "outputs/stage8/plots/portfolio_robustness/stage7_cumulative_long_only_equal_10bps.png",
+        "outputs/stage8/plots/portfolio_robustness/stage7_cumulative_long_only_value_10bps.png",
+        "outputs/stage8/plots/portfolio_robustness/stage7_cumulative_long_short_equal_10bps.png",
+        "outputs/stage8/plots/portfolio_robustness/stage7_cumulative_long_short_value_10bps.png",
+        "outputs/stage8/plots/portfolio_robustness/stage7_summary_bars_10bps.png",
+        "outputs/stage8/plots/stage8_feature_exposure_heatmap.png"
+      ]
+    },
+    "reports": {
+      "path": "reports",
+      "png_count": 8,
+      "examples": [
+        "reports/figures/figure_1_sample_coverage.png",
+        "reports/figures/figure_2_graph_overview.png",
+        "reports/figures/figure_3_model_comparison.png",
+        "reports/figures/figure_4_portfolio_cumulative.png",
+        "reports/figures/figure_5_portfolio_summary.png",
+        "reports/figures/figure_6_interpretability.png"
+      ]
+    },
+    "missing_before_this_stage": [
+      "Git-tracked report figure package under reports/figures/",
+      "Data and sample overview figure for stock coverage and raw feature missingness.",
+      "Graph construction overview figure for nodes, combined edges, and edge-layer averages.",
+      "A unified figure guide mapping charts to source files and report interpretation."
+    ]
+  },
+  "figures": [
+    {
+      "id": "figure_1_sample_coverage",
+      "title": "Sample Coverage and Raw Feature Missingness",
+      "classification": "main",
+      "sources": [
+        "outputs/panels/main_features500_panel.pkl",
+        "outputs/metadata/main_features500_panel_metadata.json"
+      ],
+      "interpretation": "The left panel shows the active monthly stock universe in the main-spec panel. The right panel shows which saved raw characteristics were most sparse before cleaning, which helps frame the feature engineering burden behind the benchmark and graph models.",
+      "png": "reports/figures/figure_1_sample_coverage.png",
+      "pdf": "reports/figures/figure_1_sample_coverage.pdf"
+    },
+    {
+      "id": "figure_2_graph_overview",
+      "title": "Graph Construction Overview",
+      "classification": "main",
+      "sources": [
+        "outputs/graphs/features500_similarity_hybrid_manifest.csv",
+        "outputs/graphs/features500_similarity_hybrid_stats.csv"
+      ],
+      "interpretation": "The left panel shows how the monthly graph size evolves over time. The right panel compares the average sparsified edge count contributed by each implemented edge layer, which makes the hybrid graph design concrete.",
+      "png": "reports/figures/figure_2_graph_overview.png",
+      "pdf": "reports/figures/figure_2_graph_overview.pdf"
+    },
+    {
+      "id": "figure_3_model_comparison",
+      "title": "Main Benchmark Comparison",
+      "classification": "main",
+      "sources": [
+        "outputs/stage8/tables/stage8_main_results_table.csv"
+      ],
+      "interpretation": "This figure is the apples-to-apples benchmark comparison on the aligned main-spec OOS sample. It shows that the graph model improves some cross-sectional metrics relative to characteristic-only latent models, but not every metric simultaneously.",
+      "png": "reports/figures/figure_3_model_comparison.png",
+      "pdf": "reports/figures/figure_3_model_comparison.pdf"
+    },
+    {
+      "id": "figure_4_portfolio_cumulative",
+      "title": "Cumulative Portfolio Performance",
+      "classification": "main",
+      "sources": [
+        "outputs/portfolio/stage7_monthly_returns.pkl"
+      ],
+      "interpretation": "These are the investable cumulative return paths on the default main transaction-cost setting. The left panel matches the main long-only result used in the project summary, while the right panel shows whether the graph signal also survives in a market-neutral sorting test.",
+      "png": "reports/figures/figure_4_portfolio_cumulative.png",
+      "pdf": "reports/figures/figure_4_portfolio_cumulative.pdf"
+    },
+    {
+      "id": "figure_5_portfolio_summary",
+      "title": "Portfolio Return and Sharpe Summary",
+      "classification": "main",
+      "sources": [
+        "outputs/portfolio/stage7_performance_summary.csv"
+      ],
+      "interpretation": "This summary figure turns the portfolio backtest into clean cross-model comparisons at the main cost setting. It helps separate whether the graph model wins through higher return, better risk control, or both.",
+      "png": "reports/figures/figure_5_portfolio_summary.png",
+      "pdf": "reports/figures/figure_5_portfolio_summary.pdf"
+    },
+    {
+      "id": "figure_6_interpretability",
+      "title": "Interpretability and Graph Neighborhood Diagnostics",
+      "classification": "main",
+      "sources": [
+        "outputs/stage8/tables/stage8_feature_exposure_top_links.csv",
+        "outputs/stage8/tables/stage8_permutation_importance.csv",
+        "outputs/stage8/tables/stage8_neighbor_edge_mix.csv"
+      ],
+      "interpretation": "The heatmap shows which saved features align most strongly with latent exposures across the implemented conditional models. The permutation chart and edge-mix chart then focus on what seems to matter most for the main graph model and what kind of neighborhood structure its top-ranked names sit in.",
+      "png": "reports/figures/figure_6_interpretability.png",
+      "pdf": "reports/figures/figure_6_interpretability.pdf"
+    },
+    {
+      "id": "figure_7_graph_robustness",
+      "title": "Graph Robustness Checks",
+      "classification": "main",
+      "sources": [
+        "outputs/stage8/tables/stage8_graph_robustness_summary.csv",
+        "outputs/stage8/tables/stage8_graph_robustness_portfolio.csv"
+      ],
+      "interpretation": "This figure keeps the robustness section focused on a small number of strong checks. It shows whether the main hybrid graph remains the best choice once we vary the graph definition, latent dimension, or test-time graph behavior.",
+      "png": "reports/figures/figure_7_graph_robustness.png",
+      "pdf": "reports/figures/figure_7_graph_robustness.pdf"
+    },
+    {
+      "id": "figure_8_gat_attention_exploratory",
+      "title": "Exploratory GAT Attention Summary",
+      "classification": "exploratory",
+      "sources": [
+        "outputs/stage8/tables/stage8_gat_attention_summary.csv"
+      ],
+      "interpretation": "This figure is exploratory because the main Stage 5 result is still a GCN run. It shows which saved edge-type combinations receive the largest average attention weights in the successful GAT robustness run.",
+      "png": "reports/figures/figure_8_gat_attention_exploratory.png",
+      "pdf": "reports/figures/figure_8_gat_attention_exploratory.pdf"
+    }
+  ],
+  "recommended_main_figures": [
+    "figure_1_sample_coverage",
+    "figure_2_graph_overview",
+    "figure_3_model_comparison",
+    "figure_4_portfolio_cumulative",
+    "figure_5_portfolio_summary",
+    "figure_7_graph_robustness"
+  ]
+}

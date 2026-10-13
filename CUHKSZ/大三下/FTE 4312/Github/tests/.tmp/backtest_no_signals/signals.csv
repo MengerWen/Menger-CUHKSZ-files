@@ -1,0 +1,3 @@
+timestamp,asset,source,source_subtype,strategy_name,task,signal_score,predicted_class,expected_return_bps,suggested_direction,confidence,should_trade,split,metadata_json
+2024-01-01 01:00:00+00:00,BTCUSDT,baseline,baseline_linear,elastic_net_regression,regression,-1.0,0,-1.0,flat,,0,validation,{}
+2024-01-01 02:00:00+00:00,BTCUSDT,baseline,baseline_linear,elastic_net_regression,regression,-2.0,0,-2.0,flat,,0,test,{}

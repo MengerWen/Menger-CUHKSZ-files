@@ -1,0 +1,160 @@
+{
+  "artifact_label": "SHOWCASE",
+  "artifact_scope": "Showcase results",
+  "demo_only": true,
+  "ranking_metric": "cumulative_return",
+  "family_comparison": [
+    {
+      "family_label": "Deep Learning",
+      "strategy_name": "transformer_encoder",
+      "strategy_label": "TransformerEncoder",
+      "trade_count": 97,
+      "cumulative_return": 0.10199990714548002,
+      "sharpe_ratio": 1.583591950674022,
+      "total_net_pnl_usd": 10199.990714548001,
+      "mark_to_market_max_drawdown": -0.029593123126590792,
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results"
+    },
+    {
+      "family_label": "Rule-Based Baseline",
+      "strategy_name": "spread_zscore_1p5",
+      "strategy_label": "Rule-Based Baseline",
+      "trade_count": 94,
+      "cumulative_return": 0.024000355492540093,
+      "sharpe_ratio": 0.43967050148900266,
+      "total_net_pnl_usd": 2400.0355492540093,
+      "mark_to_market_max_drawdown": -0.03260061434599937,
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results"
+    },
+    {
+      "family_label": "Simple ML Baseline",
+      "strategy_name": "elastic_net_regression",
+      "strategy_label": "Baseline ML",
+      "trade_count": 126,
+      "cumulative_return": 0.04100047114911409,
+      "sharpe_ratio": 0.730849067729766,
+      "total_net_pnl_usd": 4100.047114911409,
+      "mark_to_market_max_drawdown": -0.036442283388096186,
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results"
+    }
+  ],
+  "cost_sensitivity": [
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "scenario_name": "0.75x_costs",
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.10649990714548002,
+      "sharpe_ratio": 2.0335919506740217,
+      "mark_to_market_max_drawdown": -0.027093123126590794,
+      "total_net_pnl_usd": 10649.990714548001
+    },
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "scenario_name": "1.00x_costs",
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.10199990714548002,
+      "sharpe_ratio": 1.583591950674022,
+      "mark_to_market_max_drawdown": -0.029593123126590792,
+      "total_net_pnl_usd": 10199.990714548001
+    },
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "scenario_name": "1.25x_costs",
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.09749990714548001,
+      "sharpe_ratio": 1.133591950674022,
+      "mark_to_market_max_drawdown": -0.032093123126590795,
+      "total_net_pnl_usd": 9749.990714548001
+    },
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "scenario_name": "1.50x_costs",
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.09299990714548002,
+      "sharpe_ratio": 0.683591950674022,
+      "mark_to_market_max_drawdown": -0.03459312312659079,
+      "total_net_pnl_usd": 9299.990714548001
+    }
+  ],
+  "holding_window_sensitivity": [
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "holding_window_hours": 12,
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.09899990714548002,
+      "sharpe_ratio": 1.5335919506740219,
+      "mark_to_market_max_drawdown": -0.031593123126590794,
+      "trade_count": 109
+    },
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "holding_window_hours": 24,
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.10599990714548002,
+      "sharpe_ratio": 1.663591950674022,
+      "mark_to_market_max_drawdown": -0.029593123126590792,
+      "trade_count": 97
+    },
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "holding_window_hours": 36,
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.09899990714548002,
+      "sharpe_ratio": 1.5335919506740219,
+      "mark_to_market_max_drawdown": -0.031593123126590794,
+      "trade_count": 97
+    },
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "holding_window_hours": 48,
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.09599990714548001,
+      "sharpe_ratio": 1.4835919506740218,
+      "mark_to_market_max_drawdown": -0.033593123126590796,
+      "trade_count": 89
+    }
+  ],
+  "threshold_sensitivity": [
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "threshold_label": "conservative",
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.09399990714548001,
+      "sharpe_ratio": 1.4835919506740218,
+      "mark_to_market_max_drawdown": -0.025593123126590792,
+      "trade_count": 73
+    },
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "threshold_label": "base",
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.10199990714548002,
+      "sharpe_ratio": 1.583591950674022,
+      "mark_to_market_max_drawdown": -0.029593123126590792,
+      "trade_count": 97
+    },
+    {
+      "artifact_label": "SHOWCASE",
+      "artifact_scope": "Showcase results",
+      "threshold_label": "opportunistic",
+      "strategy_name": "transformer_encoder",
+      "cumulative_return": 0.10799990714548002,
+      "sharpe_ratio": 1.5235919506740219,
+      "mark_to_market_max_drawdown": -0.03559312312659079,
+      "trade_count": 116
+    }
+  ]
+}

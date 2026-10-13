@@ -1,0 +1,25 @@
+input:
+  dataset_path: data/processed/binance/btcusdt/1h/hourly_market_data.parquet
+  manifest_path: data/processed/binance/btcusdt/1h/manifest.json
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+
+plots:
+  figure_format: png
+  dpi: 180
+  rolling_volatility_window_hours: 24
+  funding_smoothing_window_hours: 168
+  spread_smoothing_window_hours: 24
+  annualization_factor_hours: 8760
+
+output:
+  output_dir: reports/data_quality
+  write_csv: true
+  write_markdown: true
+  write_json_summary: true
+
+notes:
+  assumption: Data-quality reporting runs on the canonical hourly dataset produced by the fetch-data command.
+  presentation_note: Figures are formatted to be reusable in slides or the lightweight demo without additional styling work.

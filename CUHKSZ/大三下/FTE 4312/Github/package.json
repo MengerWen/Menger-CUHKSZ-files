@@ -1,0 +1,30 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "description": "This repository is a course-project prototype for a hybrid DeFi + quantitative research system. The goal is to build a clean end-to-end demonstration of:",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MengerWen/Deep-Learning-Based-Delta-Neutral-Statistical-Arbitrage-on-Perpetual-Funding-Rates.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MengerWen/Deep-Learning-Based-Delta-Neutral-Statistical-Arbitrage-on-Perpetual-Funding-Rates/issues"
+  },
+  "homepage": "https://github.com/MengerWen/Deep-Learning-Based-Delta-Neutral-Statistical-Arbitrage-on-Perpetual-Funding-Rates#readme",
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "hardhat": "^3.3.0",
+    "typescript": "~5.8.0"
+  }
+}

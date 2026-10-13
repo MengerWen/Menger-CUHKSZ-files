@@ -1,0 +1,69 @@
+demo:
+  title: Funding-Rate Arbitrage Prototype Dashboard
+  subtitle: Research to signals, backtest to vault, all in one lightweight demo.
+  artifact_dir: data/artifacts/demo
+  frontend_public_dir: frontend/public/demo
+  use_mock_data: true
+  top_strategies: 5
+
+frontend:
+  default_symbol: BTCUSDT
+  refresh_seconds: 30
+
+contract:
+  chain_name: local_foundry
+  vault_address: "0x0000000000000000000000000000000000000000"
+  stablecoin_address: "0x0000000000000000000000000000000000000000"
+  asset_symbol: mUSDC
+  asset_decimals: 6
+  demo_wallet_cash_assets: 25000000000
+
+inputs:
+  data_manifest_path: data/processed/binance/btcusdt/1h/manifest.json
+  data_quality_summary_path: reports/data_quality/binance/btcusdt/1h/summary.json
+  backtest_manifest_path: data/artifacts/backtests/binance/btcusdt/1h/baseline_signals_default/backtest_manifest.json
+  baseline_leaderboard_path: data/artifacts/models/baselines/binance/btcusdt/1h/btcusdt_24h_default/baseline_leaderboard.parquet
+  dl_leaderboard_path: data/artifacts/models/dl/binance/btcusdt/1h/lstm_regression_24h_default/dl_leaderboard.parquet
+  dl_comparison_manifest_path: data/artifacts/models/dl_comparisons/binance/btcusdt/1h/sequence_regression_all/comparison_manifest.json
+  dl_comparison_summary_path: data/artifacts/models/dl_comparisons/binance/btcusdt/1h/sequence_regression_all/comparison_summary.parquet
+  dl_comparison_test_leaderboard_path: data/artifacts/models/dl_comparisons/binance/btcusdt/1h/sequence_regression_all/test_leaderboard.parquet
+  backtest_leaderboard_path: data/artifacts/backtests/binance/btcusdt/1h/baseline_signals_default/leaderboard.parquet
+  integration_selection_path: data/artifacts/integration/binance/btcusdt/1h/mock_operator_default/selected_strategy_summary.json
+  integration_plan_path: data/artifacts/integration/binance/btcusdt/1h/mock_operator_default/vault_update_plan.json
+  integration_call_summary_path: data/artifacts/integration/binance/btcusdt/1h/mock_operator_default/contract_call_summary.json
+  charts:
+    - title: Funding Rate Regime Map
+      subtitle: Hourly funding history shows persistent positive funding with episodic spikes and reversals.
+      section: data
+      source_path: reports/data_quality/binance/btcusdt/1h/figures/funding_rate_time_series.png
+      target_name: funding_rate_time_series.png
+    - title: Perpetual vs Spot Spread
+      subtitle: Basis dislocations stay small on average but widen during stress and short-lived directional bursts.
+      section: data
+      source_path: reports/data_quality/binance/btcusdt/1h/figures/perp_vs_spot_spread.png
+      target_name: perp_vs_spot_spread.png
+    - title: Cumulative Returns by Strategy
+      subtitle: The explicit delta-neutral backtest makes the ranking between rule-based, baseline ML, and learned models easy to explain.
+      section: backtest
+      source_path: data/artifacts/backtests/binance/btcusdt/1h/baseline_signals_default/figures/cumulative_returns.png
+      target_name: cumulative_returns.png
+    - title: Drawdown Profile
+      subtitle: Even prototype strategies need a clear view of path dependence and downside depth.
+      section: backtest
+      source_path: data/artifacts/backtests/binance/btcusdt/1h/baseline_signals_default/figures/drawdowns.png
+      target_name: drawdowns.png
+    - title: Robustness Family Comparison
+      subtitle: Rule-based, simple ML, and deep learning outputs are compared under one shared evaluation lens.
+      section: robustness
+      source_path: reports/robustness/binance/btcusdt/1h/figures/family_comparison.png
+      target_name: family_comparison.png
+    - title: Deep Learning Model Zoo
+      subtitle: Phase 2 compares LSTM, GRU, TCN, and TransformerEncoder under one shared regression task.
+      section: models
+      source_path: data/artifacts/models/dl_comparisons/binance/btcusdt/1h/sequence_regression_all/figures/test_metric_comparison.png
+      target_name: dl_test_metric_comparison.png
+    - title: Deep Learning Strategy Lens
+      subtitle: The same sequence models are ranked again using a trading-oriented signal-return metric.
+      section: models
+      source_path: data/artifacts/models/dl_comparisons/binance/btcusdt/1h/sequence_regression_all/figures/strategy_metric_comparison.png
+      target_name: dl_strategy_metric_comparison.png

@@ -1,0 +1,37 @@
+experiment_name: sequence_regression_all
+description: >-
+  Compare all Phase 1 sequence-model families on the shared 24-hour post-cost
+  net-return regression target.
+
+runner:
+  train_if_missing: true
+  force_retrain_all: false
+  fail_fast: true
+
+ranking:
+  validation_metric: pearson_corr
+  test_metric: pearson_corr
+  strategy_metric: top_quantile_avg_return_bps
+  strategy_split: test
+
+output:
+  output_dir: data/artifacts/models/dl_comparisons
+  run_name: sequence_regression_all
+  write_csv: true
+  write_markdown_report: true
+  write_plots: true
+
+runs:
+  - name: lstm
+    config_path: configs/models/lstm.yaml
+  - name: gru
+    config_path: configs/models/gru.yaml
+  - name: tcn
+    config_path: configs/models/tcn.yaml
+  - name: transformer_encoder
+    config_path: configs/models/transformer.yaml
+
+notes:
+  intent: >-
+    This is the default Phase 2 bundle for comparing all supported sequence
+    models on the same regression problem without changing downstream artifacts.

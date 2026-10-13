@@ -1,0 +1,8 @@
+metric,value
+sample_start,1926-07-31
+sample_end,2026-01-31
+n_rows,1195
+expected_months_between_start_and_end,1195
+duplicate_date_rows,0
+missing_months_in_sequence,0
+frequency_check_passed,True

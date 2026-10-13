@@ -1,0 +1,126 @@
+input:
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+  signal_config_path: configs/signals/default.yaml
+  baseline_config_path: configs/models/baseline.yaml
+  dl_config_path: configs/models/lstm.yaml
+  backtest_config_path: configs/backtests/default.yaml
+  feature_manifest_path: data/processed/features/binance/btcusdt/1h/btcusdt_feature_manifest.json
+
+families:
+  - name: rule_based
+    label: Rule-Based Baseline
+    source_name: rules
+    regenerate_signal: true
+    signal_path: data/artifacts/signals/binance/btcusdt/1h/rules/signals.parquet
+  - name: baseline_ml
+    label: Simple ML Baseline
+    source_name: baseline-ml
+    regenerate_signal: true
+    signal_path: data/artifacts/signals/binance/btcusdt/1h/baseline-ml/signals.parquet
+  - name: deep_learning
+    label: Deep Learning
+    source_name: dl
+    signal_path: data/artifacts/signals/binance/btcusdt/1h/dl/signals.parquet
+
+evaluation:
+  split_filter:
+    - test
+  primary_split: test
+  ranking_metric: cumulative_return
+  top_n_strategies: 1
+
+cost_sensitivity:
+  enabled: true
+  scenarios:
+    - name: low_cost
+      taker_fee_bps: 3.0
+      slippage_bps: 1.0
+      gas_cost_usd: 1.0
+      other_friction_bps: 0.0
+    - name: base_cost
+      taker_fee_bps: 5.0
+      slippage_bps: 3.0
+      gas_cost_usd: 2.0
+      other_friction_bps: 0.0
+    - name: stressed_cost
+      taker_fee_bps: 7.0
+      slippage_bps: 5.0
+      gas_cost_usd: 3.0
+      other_friction_bps: 1.0
+
+holding_sensitivity:
+  enabled: true
+  scenarios:
+    - name: hold_8h
+      holding_window_hours: 8
+      maximum_holding_hours: 16
+    - name: hold_24h
+      holding_window_hours: 24
+      maximum_holding_hours: 48
+    - name: hold_48h
+      holding_window_hours: 48
+      maximum_holding_hours: 72
+
+threshold_sensitivity:
+  enabled: true
+  family_name: rule_based
+  scenarios:
+    - name: score_0
+      min_signal_score: 0.0
+    - name: score_0p5
+      min_signal_score: 0.5
+    - name: score_1p0
+      min_signal_score: 1.0
+    - name: score_2p0
+      min_signal_score: 2.0
+
+feature_ablation:
+  enabled: true
+  signal_output_dir: data/artifacts/robustness/signals
+  backtest_output_dir: data/artifacts/robustness/backtests
+  baseline_run_name_prefix: robustness_baseline
+  dl_run_name_prefix: robustness_dl
+  allow_degenerate_fallback: true
+  groups:
+    - name: no_funding
+      feature_groups:
+        - funding
+      include_baseline_ml: true
+      include_deep_learning: true
+    - name: no_basis
+      feature_groups:
+        - basis
+      include_baseline_ml: true
+      include_deep_learning: true
+    - name: no_volatility
+      feature_groups:
+        - volatility
+      include_baseline_ml: true
+      include_deep_learning: false
+    - name: no_liquidity
+      feature_groups:
+        - liquidity
+      include_baseline_ml: true
+      include_deep_learning: false
+    - name: no_interaction
+      feature_groups:
+        - interaction
+      include_baseline_ml: true
+      include_deep_learning: false
+
+reporting:
+  output_dir: reports/robustness
+  write_csv: true
+  write_markdown: true
+  write_json_summary: true
+  figure_format: png
+  dpi: 180
+
+notes:
+  rationale: >-
+    The default robustness workflow is intentionally scoped to a course-project prototype: it reuses the
+    production-style signal and backtest interfaces where possible, and only retrains models when feature
+    ablation genuinely requires it.

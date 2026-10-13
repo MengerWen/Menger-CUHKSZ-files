@@ -1,0 +1,5 @@
+timestamp,symbol,venue,frequency,perp_open,perp_close,spot_open,spot_close,funding_rate
+2024-01-01 00:00:00+00:00,BTCUSDT,binance,1h,100.0,100.0,100.0,100.0,0.0
+2024-01-01 01:00:00+00:00,BTCUSDT,binance,1h,101.0,101.0,99.0,99.0,0.0
+2024-01-01 02:00:00+00:00,BTCUSDT,binance,1h,100.0,100.0,100.0,100.0,0.0
+2024-01-01 03:00:00+00:00,BTCUSDT,binance,1h,100.0,100.0,100.0,100.0,0.0

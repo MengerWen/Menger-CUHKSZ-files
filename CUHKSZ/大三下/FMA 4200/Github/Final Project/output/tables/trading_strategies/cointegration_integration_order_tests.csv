@@ -1,0 +1,19 @@
+portfolio,label,representation,unit,adf_stat,adf_pvalue,kpss_stat,kpss_pvalue,conclusion
+small_lobm_vwret_pct,Small LoBM,raw_return_pct,percent return,-8.443363974296163,1.738992707840848e-13,0.027015280931850863,0.1,stationary
+small_lobm_vwret_pct,Small LoBM,log_wealth_level,log wealth index,-0.3516294013184402,0.9178670890419816,5.686272390385669,0.01,nonstationary
+small_lobm_vwret_pct,Small LoBM,diff_log_wealth,log-return approximation,-8.073725295250359,1.5251542564139175e-12,0.028612022982260114,0.1,stationary
+me1_bm2_vwret_pct,ME1 BM2,raw_return_pct,percent return,-8.79631421185058,2.1716395948351708e-14,0.027669065307916393,0.1,stationary
+me1_bm2_vwret_pct,ME1 BM2,log_wealth_level,log wealth index,0.17341780616900657,0.970730644949505,5.790838006585122,0.01,nonstationary
+me1_bm2_vwret_pct,ME1 BM2,diff_log_wealth,log-return approximation,-8.477821828832324,1.4195967582944147e-13,0.05247655673141034,0.1,stationary
+small_hibm_vwret_pct,Small HiBM,raw_return_pct,percent return,-8.774530151658787,2.4693048196423687e-14,0.07718079403310872,0.1,stationary
+small_hibm_vwret_pct,Small HiBM,log_wealth_level,log wealth index,-0.051573702442426844,0.9540534169982977,5.7958055675971085,0.01,nonstationary
+small_hibm_vwret_pct,Small HiBM,diff_log_wealth,log-return approximation,-8.435163325978836,1.825023800163073e-13,0.06037345976238276,0.1,stationary
+big_lobm_vwret_pct,Big LoBM,raw_return_pct,percent return,-8.384286272309613,2.462259229958316e-13,0.061484218102356054,0.1,stationary
+big_lobm_vwret_pct,Big LoBM,log_wealth_level,log wealth index,1.0024774446978315,0.994292019809421,5.735880500858753,0.01,nonstationary
+big_lobm_vwret_pct,Big LoBM,diff_log_wealth,log-return approximation,-8.112050617479364,1.2184395786942665e-12,0.11135465971788751,0.1,stationary
+me2_bm2_vwret_pct,ME2 BM2,raw_return_pct,percent return,-9.182382464278056,2.2338843013366344e-15,0.029550239760191267,0.1,stationary
+me2_bm2_vwret_pct,ME2 BM2,log_wealth_level,log wealth index,0.4138652730404817,0.9820061127036034,5.772656811330855,0.01,nonstationary
+me2_bm2_vwret_pct,ME2 BM2,diff_log_wealth,log-return approximation,-8.530933361852714,1.0381837698547861e-13,0.08626582012514869,0.1,stationary
+big_hibm_vwret_pct,Big HiBM,raw_return_pct,percent return,-9.808881665459488,5.727505680679439e-17,0.03583893604068141,0.1,stationary
+big_hibm_vwret_pct,Big HiBM,log_wealth_level,log wealth index,0.29457252613999485,0.9770941023343378,5.790845004834893,0.01,nonstationary
+big_hibm_vwret_pct,Big HiBM,diff_log_wealth,log-return approximation,-9.10463893486977,3.529547868575431e-15,0.06811966080095758,0.1,stationary

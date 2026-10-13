@@ -1,0 +1,67 @@
+﻿data:
+  panel_path: outputs/panels/main_features500_panel.pkl
+  metadata_path: outputs/metadata/main_features500_panel_metadata.json
+
+main_results:
+  stage3_predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+  stage3_exposures_path: outputs/latent/stage3_non_graph_exposures.pkl
+  stage3_factors_path: outputs/latent/stage3_non_graph_factors.pkl
+  stage5_predictions_path: outputs/predictions/stage5_graph_predictions.pkl
+  stage5_exposures_path: outputs/latent/stage5_graph_exposures.pkl
+  stage5_factors_path: outputs/latent/stage5_graph_factors.pkl
+  stage5_attention_path: outputs/attention/stage5_graph_attention.pkl
+  stage6_summary_path: outputs/comparison/stage6_tables/stage6_summary_metrics.csv
+  stage7_performance_path: outputs/portfolio/stage7_performance_summary.csv
+  graph_manifest_path: outputs/graphs/features500_similarity_hybrid_manifest.csv
+
+interpretability:
+  top_feature_links_per_model: 10
+  top_quantile: 0.10
+  permutation_candidate_features: 25
+  permutation_repeats: 1
+  permutation_seed: 20260409
+
+diagnostic_graph:
+  stage5_config_path: configs/graph_model_features500.yaml
+  static_reference_mode: last_validation_end
+
+robustness:
+  enabled: true
+  base_stage4_config_path: configs/graphs_features500.yaml
+  base_stage5_config_path: configs/graph_model_features500.yaml
+  variants:
+    - name: graph_return_only
+      label: Return-correlation-only graph
+      graph_overrides:
+        graph:
+          edge_types:
+            - return_correlation
+          max_months: 132
+    - name: graph_lookback6
+      label: Hybrid graph with 6-month return lookback
+      graph_overrides:
+        graph:
+          return_lookback_months: 6
+          max_months: 132
+    - name: graph_latent_k5
+      label: Hybrid graph with latent dimension K=5
+      model_overrides:
+        model:
+          latent_dim: 5
+    - name: graph_gat_hybrid
+      label: Hybrid graph with GAT encoder
+      model_overrides:
+        model:
+          model_type: gat
+          gat_heads: 2
+
+portfolio:
+  base_stage7_config_path: configs/portfolio_features500.yaml
+  main_transaction_cost_bps: 10
+
+outputs:
+  stage8_root: outputs/stage8
+  table_dir: outputs/stage8/tables
+  plot_dir: outputs/stage8/plots
+  metadata_path: outputs/metadata/stage8_analysis_metadata.json
+  report_path: reports/stage8_final_summary.md

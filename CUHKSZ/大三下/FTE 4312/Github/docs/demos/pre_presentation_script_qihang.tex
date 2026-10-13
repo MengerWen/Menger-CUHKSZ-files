@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+
+\title{Qihang Han Presentation Script}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Qihang Han --- On-Chain Vault, Live Demo, and Closing}
+\textbf{Target speaking time: 3:55}
+
+\subsection*{Slide: On-Chain Deep Dive}
+\textbf{Time: 8:30--9:05}
+
+The Solidity side is centered around two contracts.
+
+\texttt{MockStablecoin} gives us a local demo asset, so we can show mint, approve, deposit, and withdraw flows without relying on a live token.
+
+\texttt{DeltaNeutralVault} is the main contract. It handles deposits, withdrawals, internal share accounting, strategy-state updates, NAV synchronization, PnL updates, pause control, operator management, and events.
+
+The key point is that we are not executing the full strategy on-chain. The vault is the accounting and state-management layer for an off-chain strategy engine.
+
+\subsection*{Slide: Boundary Handoff}
+\textbf{Time: 9:05--9:35}
+
+The next question is what actually crosses from off-chain analytics into on-chain state.
+
+We keep the payload small. The contract does not receive the full dataset, model, or backtest. It receives only the fields needed for state:
+
+strategy state, reported NAV, PnL delta, signal hash, metadata hash, and report hash.
+
+The hashes anchor the on-chain update to off-chain evidence. The vault stores compact state, while the detailed reasoning stays in generated artifacts and reports.
+
+This keeps the design lightweight, makes the trust boundary explicit, and gives the blockchain a meaningful role without forcing unsuitable computation onto the EVM.
+
+\subsection*{Slide: Implementation Status}
+\textbf{Time: 9:35--10:00}
+
+In terms of implementation, the main demo layers are already built.
+
+Off-chain, we already have data, features, labels, models, signals, backtest, evaluation, reporting, demo, and integration modules.
+
+On-chain, we already have the mock stablecoin, the delta-neutral vault, update functions, events, pause logic, ownership mechanics, and operator control.
+
+Around that, we also have local deployment and update scripts, Foundry tests, and the frontend bridge that packages everything into the presentation page and dashboard.
+
+\subsection*{Slide: Blockchain Evidence}
+\textbf{Time: 10:00--10:25}
+
+This slide answers a simple question: how do we know the chain side is more than a diagram?
+
+The answer is that the vault exposes concrete capabilities: deposit and withdraw, owner and operator separation, strategy-state updates, NAV and PnL synchronization, pause control, and event logging.
+
+These are not just labels on a slide. A deposit mints shares, a NAV update changes reported assets, and a strategy update records state plus hashes. Events provide the audit trail.
+
+Now I will use the live vault console to show the state transitions directly.
+
+\subsection*{Slide: Live Vault Console}
+\textbf{Time: 10:25--11:40}
+
+This is a local presentation simulator of the vault workflow. It mirrors our Solidity vault logic, but it is stable for classroom use because it does not depend on a wallet or live RPC connection.
+
+I will move through four actions quickly.
+
+\textbf{Click: Deploy local vault}
+
+This deploys \texttt{MockStablecoin} and \texttt{DeltaNeutralVault}, and we can see the vault address and event record appear.
+
+\textbf{Click: Deposit 10,000 mUSDC}
+
+This represents user funding. Wallet balance decreases, vault cash increases, reported NAV increases, and shares are minted.
+
+\textbf{Click: Sync strategy state}
+
+This pushes the selected strategy state from off-chain analytics into the contract-facing state.
+
+\textbf{Click: Sync NAV / PnL}
+
+This synchronizes the valuation result. Reported NAV, cumulative PnL, and the report hash all update.
+
+\textbf{Click: Withdraw 2,500 mUSDC}
+
+Finally, withdrawal burns shares and returns assets to the user. The main point of this demo is accountability: user-facing state, vault accounting, and event-style logs all change step by step.
+
+\subsection*{Slide: Chain Demo Flow / Vault Demo Story}
+\textbf{Time: 11:40--12:00}
+
+This slide summarizes the same process at the system level.
+
+The flow is deployment, user funding and approval, deposit, strategy-state update, NAV or PnL synchronization, and withdrawal.
+
+The vault stores the parts that should be transparent to users: shares, reported NAV, strategy state, timestamps, and hash references to off-chain artifacts.
+
+So the frontend is not just showing charts. It connects research output to a contract-facing state machine.
+
+\subsection*{Slide: Caveats}
+\textbf{Time: 12:00--12:15}
+
+There are clear limitations. This is a course-project prototype, not an audited DeFi protocol. The vault still uses a trusted owner or operator path, and execution remains off-chain.
+
+These limitations are intentional. The goal is to demonstrate a credible hybrid architecture, not to overclaim production readiness.
+
+\subsection*{Slide: Next Steps / Closing}
+\textbf{Time: 12:15--12:25}
+
+To conclude, our project contributes four things.
+
+First, an end-to-end off-chain research pipeline for funding-rate arbitrage. Second, a cost-aware strategy evaluation workflow. Third, a Solidity vault that represents pooled capital, shares, strategy state, NAV, and PnL. Fourth, a frontend demo that connects the research system to the vault interface.
+
+Future work would include signed or oracle-mediated updates, richer vault lifecycle controls, multi-asset support, and a cleaner operator dashboard.
+
+Thank you. We are happy to take questions.
+
+\end{document}

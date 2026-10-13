@@ -1,0 +1,49 @@
+metadata:
+  title: Deep Learning-Based Delta-Neutral Statistical Arbitrage on Perpetual Funding Rates
+  subtitle: Final technical report for the end-to-end research, backtesting, vault, and showcase prototype.
+  course: FTE 4312 Course Project
+  authors:
+    - Wenjie
+    - Qihang Han
+    - Hongjun Huang
+  repository_url: https://github.com/MengerWen/Deep-Learning-Based-Delta-Neutral-Statistical-Arbitrage-on-Perpetual-Funding-Rates
+  provider: binance
+  symbol: BTCUSDT
+  frequency: 1h
+
+input:
+  demo_snapshot_path: data/artifacts/demo/demo_snapshot.json
+  robustness_summary_path: reports/robustness/binance/btcusdt/1h/summary.json
+
+sections:
+  executive_summary:
+    - The repository now has a full artifact chain from market-data ingestion to quantitative evaluation, vault accounting, and presentation delivery.
+    - The data and modeling layers learn meaningful structure in funding-rate dislocations, with test Pearson correlation above 0.64 for the strongest models.
+    - Under explicit fees, slippage, gas, and next-bar execution, the current out-of-sample strategies do not produce positive post-cost alpha.
+    - This negative result is still valuable because it is documented honestly, reproducibly, and inside a coherent hybrid DeFi system design.
+  contributions:
+    - A reproducible Python pipeline for market data, engineered features, post-cost labels, and standardized signals.
+    - A benchmark stack spanning rule-based heuristics, linear predictive baselines, and multiple deep sequence architectures.
+    - A delta-neutral backtest engine with explicit transaction costs, funding accrual, mark-to-market accounting, and robustness analysis.
+    - A Solidity vault prototype that mirrors deposits, shares, strategy state, and NAV/PnL updates via a trusted operator workflow.
+    - A static, presentation-ready showcase site and final report that package the repository into course-submission deliverables.
+  limitations:
+    - The current prototype focuses on a single main market path, Binance BTCUSDT, at 1-hour frequency.
+    - Execution is simplified to next-bar pricing with explicit but still stylized fees, slippage, and gas assumptions.
+    - The vault is an accounting prototype rather than a live multi-venue execution protocol.
+    - The operator sync remains trusted and does not implement a decentralized oracle or adversarial security model.
+    - Current deep-learning models show predictive structure but mostly abstain from trading under the existing post-cost thresholding rules.
+  future_work:
+    - Extend the dataset to multiple venues and symbols so funding dislocations can be compared cross-sectionally.
+    - Revisit thresholding, calibration, and position sizing so predictive models can be translated into better trade selection.
+    - Add microstructure-aware execution assumptions such as intrabar fills, borrow costs, and liquidation stress.
+    - Replace the trusted operator bridge with a better-specified oracle or signed update flow for the vault layer.
+    - Enrich the showcase with replay data or a lightweight hosted API if the demo scope later expands.
+
+output:
+  artifact_dir: reports/final
+  frontend_public_dir: frontend/public/report
+  write_markdown: true
+  write_html: true
+  write_json_summary: true
+  copy_to_frontend_public: true

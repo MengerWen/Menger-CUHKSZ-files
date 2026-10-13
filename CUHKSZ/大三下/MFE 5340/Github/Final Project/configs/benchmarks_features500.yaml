@@ -1,0 +1,44 @@
+﻿# Stage 3 non-graph benchmark configuration.
+# Set oos.max_oos_months to null for the full available OOS period.
+
+data:
+  panel_path: outputs/panels/main_features500_panel.pkl
+  metadata_path: outputs/metadata/main_features500_panel_metadata.json
+  target_col: target_excess_return
+
+models:
+  include:
+    - mlp_predictor
+    - ipca_style
+    - conditional_autoencoder_style
+  latent_dim: 3
+
+oos:
+  scheme: expanding
+  initial_train_months: 96
+  validation_months: 12
+  refit_frequency_months: 12
+  max_oos_months: 24
+  rolling_train_months: 96
+
+neural:
+  hidden_dim: 64
+  dropout: 0.10
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_size: 8192
+  max_epochs: 8
+  patience: 2
+  seed: 20260408
+  device: auto
+
+ipca:
+  ridge_alpha: 0.001
+  als_iterations: 2
+
+outputs:
+  predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+  exposures_path: outputs/latent/stage3_non_graph_exposures.pkl
+  factors_path: outputs/latent/stage3_non_graph_factors.pkl
+  metrics_path: outputs/metrics/stage3_non_graph_metrics.csv
+  metadata_path: outputs/metadata/stage3_non_graph_run_metadata.json

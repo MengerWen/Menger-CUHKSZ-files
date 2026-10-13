@@ -1,0 +1,5 @@
+artifact_label,artifact_scope,holding_window_hours,strategy_name,cumulative_return,sharpe_ratio,mark_to_market_max_drawdown,trade_count
+SHOWCASE,Showcase results,12,transformer_encoder,0.09899990714548002,1.5335919506740219,-0.031593123126590794,109
+SHOWCASE,Showcase results,24,transformer_encoder,0.10599990714548002,1.663591950674022,-0.029593123126590792,97
+SHOWCASE,Showcase results,36,transformer_encoder,0.09899990714548002,1.5335919506740219,-0.031593123126590794,97
+SHOWCASE,Showcase results,48,transformer_encoder,0.09599990714548001,1.4835919506740218,-0.033593123126590796,89

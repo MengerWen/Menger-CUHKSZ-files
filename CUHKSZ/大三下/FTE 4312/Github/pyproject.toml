@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "funding-arb-prototype"
+version = "0.1.0"
+description = "Course-project prototype for delta-neutral funding-rate statistical arbitrage."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "PyYAML>=6.0,<7",
+  "pydantic>=2.12,<3",
+  "python-dotenv>=0.21,<2",
+  "pyarrow>=16,<17",
+  "requests>=2.32,<3",
+  "matplotlib>=3.9,<4",
+  "scikit-learn>=1.5,<2",
+  "joblib>=1.4,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4,<9",
+  "ruff>=0.4,<0.6",
+]
+ml = [
+  "torch>=2.11,<3",
+]
+viz = [
+  "plotly>=5.24,<6",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

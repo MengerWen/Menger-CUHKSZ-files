@@ -1,0 +1,13 @@
+{
+  "artifact_label": "SHOWCASE",
+  "artifact_scope": "Showcase results",
+  "demo_only": true,
+  "funding_event_count": 5769,
+  "coverage": {
+    "coverage_ratio": 0.998
+  },
+  "funding_mean_bps": 0.8588243017219,
+  "funding_std_bps": 0.5244318031105651,
+  "spread_mean_bps": 0.22596265143444405,
+  "mean_perp_annualized_vol": 0.4566452680806216
+}

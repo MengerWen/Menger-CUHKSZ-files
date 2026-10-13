@@ -1,0 +1,110 @@
+experiment_name: sequence_classification_all
+description: >-
+  Compare all Phase 1 sequence-model families on the shared 24-hour
+  profitability classification target.
+
+runner:
+  train_if_missing: true
+  force_retrain_all: false
+  fail_fast: true
+
+ranking:
+  validation_metric: f1
+  test_metric: f1
+  strategy_metric: avg_signal_return_bps
+  strategy_split: test
+
+output:
+  output_dir: data/artifacts/models/dl_comparisons
+  run_name: sequence_classification_all
+  write_csv: true
+  write_markdown_report: true
+  write_plots: true
+
+runs:
+  - name: lstm
+    config_path: configs/models/lstm.yaml
+    overrides:
+      target:
+        task: classification
+        column: target_is_profitable_24h
+        probability_threshold: 0.5
+      threshold_search:
+        objective: f1
+        probability_grid:
+          - 0.3
+          - 0.4
+          - 0.5
+          - 0.6
+      tuning:
+        metric: validation_f1
+      training:
+        selection_metric: validation_f1
+      output:
+        run_name: lstm_classification_24h_default
+  - name: gru
+    config_path: configs/models/gru.yaml
+    overrides:
+      target:
+        task: classification
+        column: target_is_profitable_24h
+        probability_threshold: 0.5
+      threshold_search:
+        objective: f1
+        probability_grid:
+          - 0.3
+          - 0.4
+          - 0.5
+          - 0.6
+      tuning:
+        metric: validation_f1
+      training:
+        selection_metric: validation_f1
+      output:
+        run_name: gru_classification_24h_default
+  - name: tcn
+    config_path: configs/models/tcn.yaml
+    overrides:
+      target:
+        task: classification
+        column: target_is_profitable_24h
+        probability_threshold: 0.5
+      threshold_search:
+        objective: f1
+        probability_grid:
+          - 0.3
+          - 0.4
+          - 0.5
+          - 0.6
+      tuning:
+        metric: validation_f1
+      training:
+        selection_metric: validation_f1
+      output:
+        run_name: tcn_classification_24h_default
+  - name: transformer_encoder
+    config_path: configs/models/transformer.yaml
+    overrides:
+      target:
+        task: classification
+        column: target_is_profitable_24h
+        probability_threshold: 0.5
+      threshold_search:
+        objective: f1
+        probability_grid:
+          - 0.3
+          - 0.4
+          - 0.5
+          - 0.6
+      tuning:
+        metric: validation_f1
+      training:
+        selection_metric: validation_f1
+      output:
+        run_name: transformer_classification_24h_default
+
+notes:
+  intent: >-
+    This bundle reuses the same Phase 1 model zoo but switches the task to
+    classification through explicit overrides, keeping the per-model training
+    contract unchanged.

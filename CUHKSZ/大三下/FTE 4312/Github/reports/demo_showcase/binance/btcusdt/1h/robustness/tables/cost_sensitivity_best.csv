@@ -1,0 +1,5 @@
+artifact_label,artifact_scope,scenario_name,strategy_name,cumulative_return,sharpe_ratio,mark_to_market_max_drawdown,total_net_pnl_usd
+SHOWCASE,Showcase results,0.75x_costs,transformer_encoder,0.10649990714548002,2.0335919506740217,-0.027093123126590794,10649.990714548001
+SHOWCASE,Showcase results,1.00x_costs,transformer_encoder,0.10199990714548002,1.583591950674022,-0.029593123126590792,10199.990714548001
+SHOWCASE,Showcase results,1.25x_costs,transformer_encoder,0.09749990714548001,1.133591950674022,-0.032093123126590795,9749.990714548001
+SHOWCASE,Showcase results,1.50x_costs,transformer_encoder,0.09299990714548002,0.683591950674022,-0.03459312312659079,9299.990714548001

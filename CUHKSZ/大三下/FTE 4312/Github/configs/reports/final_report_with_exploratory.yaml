@@ -1,0 +1,40 @@
+metadata:
+  title: Deep Learning-Based Delta-Neutral Statistical Arbitrage on Perpetual Funding Rates
+  subtitle: Strict conclusion plus exploratory DL showcase summary.
+  course: FTE 4312 Course Project
+  authors:
+    - Wenjie
+    - Qihang Han
+    - Hongjun Huang
+  repository_url: https://github.com/MengerWen/Deep-Learning-Based-Delta-Neutral-Statistical-Arbitrage-on-Perpetual-Funding-Rates
+  provider: binance
+  symbol: BTCUSDT
+  frequency: 1h
+
+input:
+  demo_snapshot_path: data/artifacts/demo/demo_snapshot.json
+  robustness_summary_path: reports/robustness/binance/btcusdt/1h/summary.json
+  exploratory_summary_path: reports/exploratory_dl/binance/btcusdt/1h/exploratory_dl_summary.json
+
+sections:
+  executive_summary:
+    - The repository preserves a strict post-cost primary conclusion while adding a fully separate exploratory DL showcase track.
+    - Strict results remain the official answer for tradable post-cost alpha under the current friction model.
+    - Exploratory results are supplementary and demonstrate learning behavior, ranking ability, and signed opportunity structure.
+  contributions:
+    - A reproducible strict pipeline from market data to backtest, vault accounting, and final reporting.
+    - A separate exploratory DL track with gross-opportunity and direction-aware targets, independent signals, independent backtests, and frontend-ready diagnostics.
+  limitations:
+    - Exploratory showcase outputs are not the primary investment conclusion and should not be read as strict tradable alpha evidence.
+    - Both tracks still operate on a single Binance BTCUSDT hourly research path.
+  future_work:
+    - Extend the strict and exploratory tracks to multi-symbol or multi-venue settings for richer ranking problems.
+    - Test more calibration and portfolio-construction logic on top of the exploratory directional outputs.
+
+output:
+  artifact_dir: reports/final_showcase
+  frontend_public_dir: frontend/public/report_showcase
+  write_markdown: true
+  write_html: true
+  write_json_summary: true
+  copy_to_frontend_public: true

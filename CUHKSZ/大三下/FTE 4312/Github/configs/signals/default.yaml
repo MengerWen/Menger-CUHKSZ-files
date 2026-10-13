@@ -1,0 +1,30 @@
+input:
+  baseline_predictions_path: data/artifacts/models/baselines/binance/btcusdt/1h/btcusdt_24h_default/baseline_predictions.parquet
+  baseline_manifest_path: data/artifacts/models/baselines/binance/btcusdt/1h/btcusdt_24h_default/baseline_manifest.json
+  dl_predictions_path: data/artifacts/models/dl/binance/btcusdt/1h/transformer_regression_24h_default/dl_predictions.parquet
+  dl_manifest_path: data/artifacts/models/dl/binance/btcusdt/1h/transformer_regression_24h_default/dl_manifest.json
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+
+source:
+  name: baseline
+  baseline_mode: all
+  model_names: []
+
+output:
+  output_dir: data/artifacts/signals
+  artifact_name: signals.parquet
+  manifest_name: signals_manifest.json
+  write_csv: true
+
+notes:
+  rationale: >-
+    The unified signal layer normalizes baseline and deep-learning prediction artifacts into one schema so
+    downstream backtesting and demo modules can consume a stable interface.
+  source_options: >-
+    Supported source names are baseline, rules, baseline-ml, and dl. CLI can override source.name with --source.
+  dl_default: >-
+    The default dl source now points to the current Phase 2 regression comparison winner. LSTM remains the
+    reference single-model training config under configs/models/lstm.yaml.

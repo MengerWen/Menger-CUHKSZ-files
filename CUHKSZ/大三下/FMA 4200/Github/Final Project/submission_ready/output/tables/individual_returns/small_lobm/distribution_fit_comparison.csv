@@ -1,0 +1,4 @@
+distribution,distribution_code,parameter_estimates,loglik,aic,bic,ks_stat,ks_pvalue,complexity_rank,recommended,selection_reason
+Student-t,t,"df=3.9933, loc=1.1143, scale=5.2322",-3987.7805319254,7981.5610638508,7996.818768243897,0.022687625784555826,0.562056026419431,1,True,"highest KS p-value among distributions within 4 AIC points of the best fit, with BIC and parsimony used as tie-breakers"
+NIG,nig,"alpha=0.8587, beta=-0.0875, loc=1.6603, scale=6.6962",-3990.2753111668944,7988.550622333789,8008.894228191251,0.01888393162502494,0.7802446708353326,2,False,
+Normal,normal,"loc=0.9743, scale=7.4290",-4092.071641628863,8188.143283257726,8198.315086186456,0.06279888635034603,0.00015366562367806857,0,False,

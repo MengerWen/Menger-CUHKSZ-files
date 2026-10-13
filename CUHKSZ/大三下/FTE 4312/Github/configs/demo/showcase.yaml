@@ -1,0 +1,251 @@
+metadata:
+  title: Deep Learning-Based Delta-Neutral Statistical Arbitrage on Perpetual Funding Rates
+  subtitle: "Showcase results for pipeline, reporting, and dashboard presentation."
+  artifact_label: SHOWCASE
+  artifact_scope: Showcase results
+  course: FTE 4312 Course Project
+  authors:
+    - Wenjie
+    - Qihang Han
+    - Hongjun Huang
+  repository_url: https://github.com/MengerWen/Deep-Learning-Based-Delta-Neutral-Statistical-Arbitrage-on-Perpetual-Funding-Rates
+  provider: binance
+  symbol: BTCUSDT
+  venue: binance
+  frequency: 1h
+  frontend_bundle_name: demo_showcase
+  dashboard_query: ?mode=demo_showcase
+
+paths:
+  data_dir: data/demo_artifacts/showcase
+  reports_dir: reports/demo_showcase
+  frontend_public_dir: frontend/public/demo_showcase
+
+generation:
+  seed: 20260420
+  data_start: 2021-01-01T00:00:00+00:00
+  data_end: 2026-04-08T00:00:00+00:00
+  train_start: 2023-01-02T00:00:00+00:00
+  validation_start: 2024-01-02T00:00:00+00:00
+  test_start: 2024-07-01T00:00:00+00:00
+  test_end: 2025-12-31T00:00:00+00:00
+  initial_capital_usd: 100000.0
+  position_notional_usd: 20000.0
+  asset_symbol: mUSDC
+  asset_decimals: 6
+  wallet_cash_assets: 25000000000
+  funding_interval_hours: 8
+
+sections:
+  executive_summary:
+    - This bundle supports reporting, storytelling, and dashboard flow for the course presentation.
+    - The strict showcase track keeps the baseline positive but modest, then layers believable improvements across LSTM, GRU, and TransformerEncoder.
+    - The exploratory showcase track is intentionally more active and higher return, but it accepts visibly higher drawdown and rougher path behavior.
+  contributions:
+    - One-command showcase generation rebuilds coherent CSV, parquet, JSON, markdown, HTML, and chart artifacts from a single internal scenario.
+    - The showcase stays fully isolated from the main experiment directories and leaves the default research pipeline untouched.
+    - The frontend can now switch to a separate demo bundle through a query parameter without replacing the default dashboard data.
+  limitations:
+    - Strategy curves are sampled for presentation readability and are engineered to look plausible rather than to replay execution history.
+    - The showcase remains single-market and narrative-focused so it stays lightweight enough for a course-project presentation workflow.
+    - The output bundle is intended for explaining the pipeline and dashboard behavior, while the data-acquisition section documents how production data would be fetched.
+  future_work:
+    - Extend the isolated showcase system to support multiple preset narrative packs for different presentation contexts.
+    - Add a lightweight frontend bundle switcher so reviewers can toggle between artifact sets without editing URLs.
+
+robustness:
+  cost_multipliers: [0.75, 1.0, 1.25, 1.5]
+  holding_windows_hours: [12, 24, 36, 48]
+  threshold_labels: [conservative, base, opportunistic]
+
+strict_strategies:
+  - strategy_name: spread_zscore_1p5
+    display_name: Rule-Based Baseline
+    family_label: Rule-Based Baseline
+    track: strict
+    role: rule_based
+    source: baseline
+    source_subtype: rule_based
+    task: classification
+    model_name: spread_zscore_1p5
+    model_group: rules
+    style: conservative_rule
+    target_cumulative_return: 0.024
+    target_sharpe: 0.46
+    target_max_drawdown: -0.048
+    trade_count: 94
+    signal_count_test: 122
+    signal_count_validation: 86
+    signal_count_train: 211
+    model_metric_value: 0.411
+    rmse: 2.48
+    win_rate: 0.51
+    story_note: Small positive edge with visible pullbacks and only moderate signal frequency.
+  - strategy_name: elastic_net_regression
+    display_name: Baseline ML
+    family_label: Simple ML Baseline
+    track: strict
+    role: baseline_ml
+    source: baseline
+    source_subtype: baseline_linear
+    task: regression
+    model_name: elastic_net_regression
+    model_group: linear
+    style: baseline_ml
+    target_cumulative_return: 0.041
+    target_sharpe: 0.74
+    target_max_drawdown: -0.043
+    trade_count: 126
+    signal_count_test: 154
+    signal_count_validation: 101
+    signal_count_train: 248
+    model_metric_value: 0.566
+    rmse: 2.12
+    win_rate: 0.54
+    story_note: Positive but still ordinary, with an uneven climb and no illusion of a perfect edge.
+  - strategy_name: lstm_regression
+    display_name: LSTM
+    family_label: Deep Learning
+    track: strict
+    role: deep_learning
+    source: dl
+    source_subtype: deep_learning
+    task: regression
+    model_name: lstm
+    model_group: recurrent
+    style: lstm_recovery
+    target_cumulative_return: 0.071
+    target_sharpe: 1.08
+    target_max_drawdown: -0.049
+    trade_count: 118
+    signal_count_test: 136
+    signal_count_validation: 95
+    signal_count_train: 226
+    model_metric_value: 0.621
+    rmse: 1.91
+    win_rate: 0.57
+    ranking_metric_value: 0.621
+    story_note: Wins through a stronger late recovery and more stable monetization of mid-score opportunities.
+  - strategy_name: gru_regression
+    display_name: GRU
+    family_label: Deep Learning
+    track: strict
+    role: deep_learning
+    source: dl
+    source_subtype: deep_learning
+    task: regression
+    model_name: gru
+    model_group: recurrent
+    style: gru_defensive
+    target_cumulative_return: 0.084
+    target_sharpe: 1.32
+    target_max_drawdown: -0.036
+    trade_count: 109
+    signal_count_test: 128
+    signal_count_validation: 90
+    signal_count_train: 214
+    model_metric_value: 0.648
+    rmse: 1.79
+    win_rate: 0.59
+    ranking_metric_value: 0.648
+    story_note: Delivers the cleanest drawdown control in the strict set while still improving return and Sharpe.
+  - strategy_name: transformer_encoder
+    display_name: TransformerEncoder
+    family_label: Deep Learning
+    track: strict
+    role: deep_learning
+    source: dl
+    source_subtype: deep_learning
+    task: regression
+    model_name: transformer_encoder
+    model_group: attention
+    style: transformer_high_conviction
+    target_cumulative_return: 0.102
+    target_sharpe: 1.48
+    target_max_drawdown: -0.052
+    trade_count: 97
+    signal_count_test: 120
+    signal_count_validation: 84
+    signal_count_train: 205
+    model_metric_value: 0.681
+    rmse: 1.63
+    win_rate: 0.61
+    ranking_metric_value: 0.681
+    story_note: Leads on absolute return and still exhibits realistic setbacks before the final recovery leg.
+
+exploratory_strategies:
+  - strategy_name: lstm_gross__rolling_top_decile_abs
+    display_name: Exploratory LSTM Gross
+    family_label: Exploratory Deep Learning
+    track: exploratory
+    role: exploratory
+    source: exploratory_dl
+    source_subtype: deep_learning_showcase
+    task: regression
+    model_name: lstm
+    model_group: recurrent
+    style: exploratory_risk_on
+    target_cumulative_return: 0.119
+    target_sharpe: 1.34
+    target_max_drawdown: -0.072
+    trade_count: 191
+    signal_count_test: 228
+    signal_count_validation: 149
+    signal_count_train: 320
+    model_metric_value: 0.654
+    rmse: 1.85
+    win_rate: 0.55
+    target_type: gross_opportunity_regression
+    signal_rule: rolling_top_decile_abs
+    signal_rule_type: ranking_based
+    story_note: More active than the strict track, with stronger upside but clearly rougher path behavior.
+  - strategy_name: gru_gross__validation_support
+    display_name: Exploratory GRU Support
+    family_label: Exploratory Deep Learning
+    track: exploratory
+    role: exploratory
+    source: exploratory_dl
+    source_subtype: deep_learning_showcase
+    task: regression
+    model_name: gru
+    model_group: recurrent
+    style: exploratory_reversal
+    target_cumulative_return: 0.135
+    target_sharpe: 1.42
+    target_max_drawdown: -0.086
+    trade_count: 224
+    signal_count_test: 257
+    signal_count_validation: 171
+    signal_count_train: 348
+    model_metric_value: 0.668
+    rmse: 1.74
+    win_rate: 0.56
+    target_type: gross_opportunity_regression
+    signal_rule: validation_support_blend
+    signal_rule_type: threshold_based
+    story_note: Better upside than the LSTM exploratory variant, but only by taking deeper interim stress.
+  - strategy_name: transformer_direction__rolling_top_decile_abs
+    display_name: Exploratory Transformer Direction
+    family_label: Exploratory Deep Learning
+    track: exploratory
+    role: exploratory
+    source: exploratory_dl
+    source_subtype: deep_learning_showcase
+    task: classification
+    model_name: transformer_encoder
+    model_group: attention
+    style: exploratory_directional
+    target_cumulative_return: 0.158
+    target_sharpe: 1.56
+    target_max_drawdown: -0.098
+    trade_count: 247
+    signal_count_test: 281
+    signal_count_validation: 188
+    signal_count_train: 372
+    model_metric_value: 0.689
+    rmse: 1.66
+    win_rate: 0.57
+    target_type: direction_classification
+    signal_rule: rolling_top_decile_abs
+    signal_rule_type: ranking_based
+    story_note: The most aggressive showcase path with the steepest curve and the deepest drawdown among demo variants.

@@ -1,0 +1,30 @@
+﻿paths:
+  panel_path: outputs/panels/main_features500_panel.pkl
+  panel_metadata_path: outputs/metadata/main_features500_panel_metadata.json
+  graph_manifest_path: outputs/graphs/features500_similarity_hybrid_manifest.csv
+  graph_stats_path: outputs/graphs/features500_similarity_hybrid_stats.csv
+  stage6_summary_path: outputs/comparison/stage6_tables/stage6_summary_metrics.csv
+  stage6_monthly_path: outputs/comparison/stage6_tables/stage6_monthly_metrics.csv
+  stage7_performance_path: outputs/portfolio/stage7_performance_summary.csv
+  stage7_monthly_returns_path: outputs/portfolio/stage7_monthly_returns.pkl
+  stage8_main_results_path: outputs/stage8/tables/stage8_main_results_table.csv
+  stage8_feature_links_path: outputs/stage8/tables/stage8_feature_exposure_top_links.csv
+  stage8_permutation_path: outputs/stage8/tables/stage8_permutation_importance.csv
+  stage8_neighbor_edge_mix_path: outputs/stage8/tables/stage8_neighbor_edge_mix.csv
+  stage8_robustness_summary_path: outputs/stage8/tables/stage8_graph_robustness_summary.csv
+  stage8_robustness_portfolio_path: outputs/stage8/tables/stage8_graph_robustness_portfolio.csv
+  stage8_gat_attention_path: outputs/stage8/tables/stage8_gat_attention_summary.csv
+
+output:
+  figure_dir: reports/figures
+  guide_path: reports/figure_guide.md
+  metadata_path: reports/figures/figure_manifest.json
+
+settings:
+  dpi: 220
+  top_missing_features: 10
+  top_heatmap_rows_per_model: 4
+  top_permutation_features: 12
+  main_transaction_cost_bps: 10
+  long_only_weight_scheme: value
+  long_short_weight_scheme: equal

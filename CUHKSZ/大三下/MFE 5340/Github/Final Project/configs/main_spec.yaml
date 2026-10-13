@@ -1,0 +1,65 @@
+﻿project:
+  name: graph_enhanced_conditional_latent_factor_pricing
+  seed: 20260408
+
+paths:
+  data_dir: data
+  outputs_dir: outputs
+  reports_dir: reports
+
+data:
+  main_feature_universe: features500
+  robustness_feature_universe: features
+  returns_file: monthly_returns.pkl
+  risk_free_file: risk_free.csv
+  market_cap_file: mcap.pkl
+  price_file: price.h5
+  csi500_mask_file: csi500_mask_monthly.pkl
+  blacklist_file: BLACKLIST.pkl
+  untradable_file: UNTRADABLE.pkl
+  benchmark_factor_files:
+    ff5: FF5.csv
+    hxz: HXZ.csv
+
+target:
+  name: next_month_excess_return
+  horizon_months: 1
+  source: monthly_returns.pkl
+  risk_free_source: risk_free.csv
+
+oos_protocol:
+  default_scheme: expanding
+  robustness_scheme: rolling
+  initial_train_months: 60
+  validation_months: 12
+  refit_frequency_months: 1
+
+benchmarks:
+  - ipca
+  - conditional_autoencoder
+  - mlp_predictor
+  - gcn_latent_factor
+  - gat_latent_factor
+
+graph:
+  default_method: return_correlation_knn
+  lookback_months: 12
+  k_neighbors: 10
+  include_industry_edges: false
+
+evaluation:
+  metrics:
+    - oos_r2
+    - rank_ic
+    - pricing_error
+    - long_short_return
+    - long_only_return
+    - sharpe_ratio
+    - max_drawdown
+    - turnover
+
+portfolio:
+  rebalance_frequency: monthly
+  long_short_quantile: 0.2
+  long_only_count: 50
+  report_turnover: true

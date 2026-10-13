@@ -1,0 +1,144 @@
+{
+  "input": {
+    "signal_path": "tests\\.tmp\\backtest_no_signals\\signals.csv",
+    "signal_manifest_path": null,
+    "market_dataset_path": "tests\\.tmp\\backtest_no_signals\\market.csv",
+    "market_manifest_path": null,
+    "provider": "binance",
+    "symbol": "BTCUSDT",
+    "venue": "binance",
+    "frequency": "1h"
+  },
+  "selection": {
+    "strategy_names": [],
+    "split_filter": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "direction": "short_perp_long_spot",
+    "require_should_trade": true,
+    "min_signal_score": null,
+    "min_confidence": null,
+    "min_expected_return_bps": null
+  },
+  "portfolio": {
+    "initial_capital": 100000.0,
+    "position_notional": 10000.0,
+    "max_open_positions": 1,
+    "max_gross_leverage": 2.0,
+    "leverage_check_mode": "warn"
+  },
+  "costs": {
+    "taker_fee_bps": 0.0,
+    "maker_fee_bps": 0.0,
+    "slippage_bps": 0.0,
+    "gas_cost_usd": 0.0,
+    "other_friction_bps": 0.0
+  },
+  "execution": {
+    "entry_delay_bars": 0,
+    "execution_price_field": "close",
+    "holding_window_hours": 1,
+    "maximum_holding_hours": 1,
+    "funding_interval_hours": 8,
+    "funding_mode": "prototype_bar_sum",
+    "funding_notional_mode": "initial_notional",
+    "hedge_mode": "equal_notional_hedge",
+    "rebalance_frequency": "1h",
+    "exit_on_signal_off": false,
+    "stop_loss_bps": null,
+    "take_profit_bps": null,
+    "stop_observation_mode": "bar_close_observed",
+    "stop_execution_mode": "next_bar_executed",
+    "allow_partial_exit": false
+  },
+  "reporting": {
+    "output_dir": "tests\\.tmp\\backtest_no_signals\\artifacts",
+    "run_name": "no_signal_case",
+    "write_csv": false,
+    "write_markdown_report": false,
+    "figure_format": "png",
+    "dpi": 72,
+    "top_n_strategies_for_plots": 1,
+    "primary_split": "test",
+    "include_combined_summary": true
+  },
+  "summary": {
+    "strategy_count": 1,
+    "trade_count": 0,
+    "primary_trade_log_rows": 0,
+    "primary_trade_count": 0,
+    "combined_trade_count": 0,
+    "primary_split": "test",
+    "best_strategy": "elastic_net_regression",
+    "best_strategy_status": "no_tradable_signals",
+    "best_sharpe_ratio": null,
+    "best_cumulative_return": 0.0,
+    "best_mark_to_market_max_drawdown": null,
+    "best_realized_max_drawdown": null,
+    "status_counts": {
+      "no_tradable_signals": 1
+    },
+    "prediction_modes": [],
+    "calibration_methods": [],
+    "checkpoint_selection_metrics": [],
+    "checkpoint_selection_effective_metrics": [],
+    "selected_losses": [],
+    "preprocessing_scalers": [],
+    "source_subtypes": [
+      "baseline_linear"
+    ]
+  },
+  "diagnostics": {
+    "leverage": {
+      "hedge_mode": "equal_notional_hedge",
+      "gross_notional_usd": 20000.0,
+      "position_notional_usd": 10000.0,
+      "initial_capital_usd": 100000.0,
+      "implied_gross_leverage": 0.2,
+      "max_gross_leverage": 2.0,
+      "leverage_check_mode": "warn",
+      "leverage_check_passed": true
+    },
+    "funding": {
+      "funding_mode": "prototype_bar_sum",
+      "funding_notional_mode": "initial_notional",
+      "funding_event_source": "all_aligned_rows",
+      "funding_rows_used": 3,
+      "funding_nonzero_rows_used": 0,
+      "funding_total_rows": 3
+    }
+  },
+  "signal_manifest": null,
+  "market_manifest": null,
+  "artifacts": {
+    "trade_log_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\trade_log.parquet",
+    "primary_trade_log_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\primary_trade_log.parquet",
+    "equity_curve_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\equity_curve.parquet",
+    "strategy_metrics_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\strategy_metrics.parquet",
+    "combined_strategy_metrics_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\combined_strategy_metrics.parquet",
+    "combined_strategy_metrics_csv_path": null,
+    "split_summary_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\split_summary.parquet",
+    "leaderboard_path": "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\leaderboard.parquet",
+    "report_path": null,
+    "figure_paths": [
+      "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\figures\\cumulative_returns.png",
+      "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\figures\\drawdowns.png",
+      "D:\\MG\\! CUHKSZ\\~\uff01\u5927\u4e09 \u4e0b\\FTE 4312\\Github\\tests\\.tmp\\backtest_no_signals\\artifacts\\binance\\btcusdt\\1h\\no_signal_case\\figures\\trade_return_boxplot.png"
+    ]
+  },
+  "assumptions": [
+    "Single-asset, delta-neutral prototype with at most one open position per strategy.",
+    "Signals at timestamp t are executed after entry_delay_bars using the configured execution price field.",
+    "Primary leaderboard and strategy metrics use the configured reporting.primary_split, which defaults to test.",
+    "Primary equity, drawdown, and Sharpe metrics use mark-to-market equity; realized-only columns are retained for audit.",
+    "Funding PnL uses funding_mode=prototype_bar_sum and funding_notional_mode=initial_notional.",
+    "Hedge mode is equal_notional_hedge; current implementation uses equal USD notional on the perp and spot legs.",
+    "Trading fees use taker_fee_bps on all four round-trip leg transactions.",
+    "Slippage is modeled by adverse execution prices; embedded_slippage_cost_usd is the preferred diagnostic and is not deducted twice.",
+    "Stop logic is bar_close_observed and next_bar_executed.",
+    "Simple annualized Sharpe uses square-root scaling and should be interpreted cautiously for sparse or serially correlated returns.",
+    "Strategies with no executable trades keep cumulative return at zero but report Sharpe and drawdown as NaN because those risk metrics are not meaningful without positions."
+  ]
+}

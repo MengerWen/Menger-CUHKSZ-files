@@ -1,0 +1,169 @@
+experiment_name: exploratory_direction_classification
+description: >-
+  Compare all supported sequence models on the 24-hour best-direction
+  classification task. The target asks whether the next 24-hour gross
+  opportunity favors short-perp/long-spot or long-perp/short-spot.
+
+runner:
+  train_if_missing: true
+  force_retrain_all: false
+  fail_fast: true
+
+ranking:
+  validation_metric: f1
+  test_metric: f1
+  strategy_metric: top_quantile_avg_return_bps
+  strategy_split: test
+
+output:
+  output_dir: data/artifacts/models/exploratory_dl_comparisons
+  run_name: exploratory_direction_classification
+  write_csv: true
+  write_markdown_report: true
+  write_plots: true
+
+runs:
+  - name: lstm_direction
+    config_path: configs/models/lstm.yaml
+    overrides:
+      input:
+        dataset_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_dataset.parquet
+        manifest_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_manifest.json
+      target:
+        task: classification
+        column: target_best_direction_is_short_perp_long_spot_24h
+        classification_column: target_best_direction_is_short_perp_long_spot_24h
+        regression_column: target_future_signed_opportunity_bps_24h
+        ready_column: exploratory_ready
+        probability_threshold: 0.55
+      feature_selection:
+        exclude_columns:
+          - timestamp
+          - symbol
+          - venue
+          - frequency
+          - split
+          - feature_ready
+          - supervised_ready
+          - exploratory_ready
+      threshold_search:
+        objective: avg_signal_return_bps
+        probability_grid: [0.52, 0.55, 0.6, 0.65, 0.7, 0.75]
+      tuning:
+        metric: validation_f1
+      training:
+        selection_metric: validation_avg_signal_return_bps
+        use_balanced_classification_loss: true
+      output:
+        model_dir: data/artifacts/models/exploratory_dl
+        run_name: lstm_direction_classification_24h_exploratory
+  - name: gru_direction
+    config_path: configs/models/gru.yaml
+    overrides:
+      input:
+        dataset_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_dataset.parquet
+        manifest_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_manifest.json
+      target:
+        task: classification
+        column: target_best_direction_is_short_perp_long_spot_24h
+        classification_column: target_best_direction_is_short_perp_long_spot_24h
+        regression_column: target_future_signed_opportunity_bps_24h
+        ready_column: exploratory_ready
+        probability_threshold: 0.55
+      feature_selection:
+        exclude_columns:
+          - timestamp
+          - symbol
+          - venue
+          - frequency
+          - split
+          - feature_ready
+          - supervised_ready
+          - exploratory_ready
+      threshold_search:
+        objective: avg_signal_return_bps
+        probability_grid: [0.52, 0.55, 0.6, 0.65, 0.7, 0.75]
+      tuning:
+        metric: validation_f1
+      training:
+        selection_metric: validation_avg_signal_return_bps
+        use_balanced_classification_loss: true
+      output:
+        model_dir: data/artifacts/models/exploratory_dl
+        run_name: gru_direction_classification_24h_exploratory
+  - name: tcn_direction
+    config_path: configs/models/tcn.yaml
+    overrides:
+      input:
+        dataset_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_dataset.parquet
+        manifest_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_manifest.json
+      target:
+        task: classification
+        column: target_best_direction_is_short_perp_long_spot_24h
+        classification_column: target_best_direction_is_short_perp_long_spot_24h
+        regression_column: target_future_signed_opportunity_bps_24h
+        ready_column: exploratory_ready
+        probability_threshold: 0.55
+      feature_selection:
+        exclude_columns:
+          - timestamp
+          - symbol
+          - venue
+          - frequency
+          - split
+          - feature_ready
+          - supervised_ready
+          - exploratory_ready
+      threshold_search:
+        objective: avg_signal_return_bps
+        probability_grid: [0.52, 0.55, 0.6, 0.65, 0.7, 0.75]
+      tuning:
+        metric: validation_f1
+      training:
+        selection_metric: validation_avg_signal_return_bps
+        use_balanced_classification_loss: true
+      output:
+        model_dir: data/artifacts/models/exploratory_dl
+        run_name: tcn_direction_classification_24h_exploratory
+  - name: transformer_direction
+    config_path: configs/models/transformer.yaml
+    overrides:
+      input:
+        dataset_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_dataset.parquet
+        manifest_path: data/processed/exploratory_dl/binance/btcusdt/1h/btcusdt_exploratory_manifest.json
+      target:
+        task: classification
+        column: target_best_direction_is_short_perp_long_spot_24h
+        classification_column: target_best_direction_is_short_perp_long_spot_24h
+        regression_column: target_future_signed_opportunity_bps_24h
+        ready_column: exploratory_ready
+        probability_threshold: 0.55
+      feature_selection:
+        exclude_columns:
+          - timestamp
+          - symbol
+          - venue
+          - frequency
+          - split
+          - feature_ready
+          - supervised_ready
+          - exploratory_ready
+      threshold_search:
+        objective: avg_signal_return_bps
+        probability_grid: [0.52, 0.55, 0.6, 0.65, 0.7, 0.75]
+      tuning:
+        metric: validation_f1
+      training:
+        selection_metric: validation_avg_signal_return_bps
+        use_balanced_classification_loss: true
+      output:
+        model_dir: data/artifacts/models/exploratory_dl
+        run_name: transformer_direction_classification_24h_exploratory
+
+notes:
+  intent: >-
+    This exploratory bundle focuses on directional structure rather than the
+    strict one-direction post-cost alpha target.
+  imbalance_handling: >-
+    Classification runs retain balanced loss weighting so the majority short
+    direction does not completely dominate the optimization.

@@ -1,0 +1,50 @@
+[
+  {
+    "run_name": "lstm_gross",
+    "top_bucket_row_count": 883,
+    "top_bucket_avg_directional_return_bps": 2.3169073741827027,
+    "top_bucket_cumulative_directional_return_bps": 2045.8292114033263
+  },
+  {
+    "run_name": "gru_gross",
+    "top_bucket_row_count": 883,
+    "top_bucket_avg_directional_return_bps": 2.3199186444864544,
+    "top_bucket_cumulative_directional_return_bps": 2048.4881630815394
+  },
+  {
+    "run_name": "tcn_gross",
+    "top_bucket_row_count": 883,
+    "top_bucket_avg_directional_return_bps": 2.3062884796945107,
+    "top_bucket_cumulative_directional_return_bps": 2036.452727570253
+  },
+  {
+    "run_name": "transformer_gross",
+    "top_bucket_row_count": 883,
+    "top_bucket_avg_directional_return_bps": 2.3721317141450604,
+    "top_bucket_cumulative_directional_return_bps": 2094.5923035900882
+  },
+  {
+    "run_name": "lstm_direction",
+    "top_bucket_row_count": 883,
+    "top_bucket_avg_directional_return_bps": 1.4419296435273838,
+    "top_bucket_cumulative_directional_return_bps": 1273.22387523468
+  },
+  {
+    "run_name": "gru_direction",
+    "top_bucket_row_count": 883,
+    "top_bucket_avg_directional_return_bps": 1.929046552835849,
+    "top_bucket_cumulative_directional_return_bps": 1703.3481061540547
+  },
+  {
+    "run_name": "tcn_direction",
+    "top_bucket_row_count": 883,
+    "top_bucket_avg_directional_return_bps": 1.6406130115345683,
+    "top_bucket_cumulative_directional_return_bps": 1448.6612891850239
+  },
+  {
+    "run_name": "transformer_direction",
+    "top_bucket_row_count": 883,
+    "top_bucket_avg_directional_return_bps": 1.875119722579163,
+    "top_bucket_cumulative_directional_return_bps": 1655.7307150374008
+  }
+]

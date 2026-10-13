@@ -1,0 +1,53 @@
+{
+  "coverage": {
+    "start_timestamp": "2021-01-01T00:00:00+00:00",
+    "end_timestamp": "2026-04-07T23:00:00+00:00",
+    "actual_rows": 46152,
+    "unique_timestamps": 46152,
+    "expected_rows_in_observed_range": 46152,
+    "coverage_ratio": 1.0,
+    "duplicate_timestamps": 0,
+    "missing_hours_inside_observed_range": 0,
+    "non_standard_gap_count": 0,
+    "max_gap_hours": 1.0,
+    "median_gap_hours": 1.0,
+    "funding_event_rows": 3092
+  },
+  "funding_event_count": 3092,
+  "funding_mean_bps": 1.039758,
+  "funding_std_bps": 1.891661,
+  "funding_min_bps": -11.1953,
+  "funding_max_bps": 24.8993,
+  "positive_funding_event_share": 0.878719,
+  "spread_mean_bps": -1.534091,
+  "abs_spread_p95_bps": 10.035461,
+  "mean_perp_annualized_vol": 0.508612,
+  "mean_spot_annualized_vol": 0.509159,
+  "top_missing_columns": [
+    {
+      "column": "open_interest",
+      "missing_count": 46152,
+      "missing_pct": 100.0
+    },
+    {
+      "column": "perp_rolling_vol_annualized",
+      "missing_count": 2,
+      "missing_pct": 0.0043
+    },
+    {
+      "column": "spot_rolling_vol_annualized",
+      "missing_count": 2,
+      "missing_pct": 0.0043
+    },
+    {
+      "column": "perp_return",
+      "missing_count": 1,
+      "missing_pct": 0.0022
+    },
+    {
+      "column": "spot_return",
+      "missing_count": 1,
+      "missing_pct": 0.0022
+    }
+  ]
+}

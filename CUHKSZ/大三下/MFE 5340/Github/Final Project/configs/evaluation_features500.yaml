@@ -1,0 +1,30 @@
+﻿comparison:
+  label: features500_main_spec_stage6
+  alignment: common_stock_date_intersection
+  note: Designed to compare Stage 3 and Stage 5 outputs on the default main-spec universe.
+
+models:
+  - name: mlp_predictor
+    predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+    metadata_path: outputs/metadata/stage3_non_graph_run_metadata.json
+  - name: ipca_style
+    predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+    exposures_path: outputs/latent/stage3_non_graph_exposures.pkl
+    factors_path: outputs/latent/stage3_non_graph_factors.pkl
+    metadata_path: outputs/metadata/stage3_non_graph_run_metadata.json
+  - name: conditional_autoencoder_style
+    predictions_path: outputs/predictions/stage3_non_graph_predictions.pkl
+    exposures_path: outputs/latent/stage3_non_graph_exposures.pkl
+    factors_path: outputs/latent/stage3_non_graph_factors.pkl
+    metadata_path: outputs/metadata/stage3_non_graph_run_metadata.json
+  - name: graph_conditional_latent_factor
+    predictions_path: outputs/predictions/stage5_graph_predictions.pkl
+    exposures_path: outputs/latent/stage5_graph_exposures.pkl
+    factors_path: outputs/latent/stage5_graph_factors.pkl
+    metadata_path: outputs/metadata/stage5_graph_model_metadata.json
+
+outputs:
+  table_dir: outputs/comparison/stage6_tables
+  plot_dir: outputs/comparison/stage6_plots
+  metadata_path: outputs/metadata/stage6_comparison_metadata.json
+  report_path: reports/stage6_model_comparison.md

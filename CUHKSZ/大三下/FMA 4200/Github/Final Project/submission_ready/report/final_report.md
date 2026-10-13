@@ -1,0 +1,241 @@
+# Final Report
+
+## Modeling and Trading Strategies for Six Kenneth French Portfolios
+
+FMA4200 Final Project  
+Prepared from the reproducible pipeline in `Final Project/` on 2026-04-12.
+
+## 1. Introduction
+
+This project studies the monthly returns of six value-weighted portfolios sorted on size and book-to-market, using the century-long Kenneth French sample provided for the course. These portfolios are a useful laboratory because they compress two core asset-pricing dimensions into a small panel that is still rich enough for univariate modeling, multivariate dependence analysis, and portfolio construction. The assignment is therefore not only about describing returns; it is about connecting descriptive evidence to forecasting, relative-value trading, and mean-variance allocation decisions.
+
+The research background combines empirical asset pricing with time-series econometrics. Markowitz (1952) provides the benchmark portfolio-choice framework, while Fama and French (1993) show why size and value portfolios are economically meaningful objects rather than arbitrary return series. On the econometric side, Hamilton (1994) motivates ARIMA-class mean models; Engle (1982) and Bollerslev (1986) explain why volatility clustering can remain highly predictable even when the conditional mean is weak. For multivariate trading, Engle and Granger (1987) and Gatev, Goetzmann, and Rouwenhorst (2006) motivate looking for long-run relations and mean-reverting spreads. For implementation, Jagannathan and Ma (2003), Ledoit and Wolf (2004), and DeMiguel, Garlappi, and Uppal (2009) caution that unconstrained plug-in optimization can look stronger in sample than out of sample.
+
+That literature implies five questions for the current dataset. First, are the six monthly return series close to Gaussian, or do they show the heavy tails and volatility clustering familiar from financial data? Second, do low-order ARIMA models capture the conditional mean adequately, or is residual structure left over? Third, can lagged exogenous predictors such as Fama-French factors and internally constructed spread signals improve forecasting? Fourth, do the six portfolios contain enough long-run common structure to support cointegration-based statistical arbitrage once a nonstationary representation is used? Fifth, how do equal-weight, textbook mean-variance, and improved shrinkage-based allocation rules compare after transaction costs?
+
+The report's main contribution is to answer those questions within one reproducible workflow. The evidence ultimately favors a balanced conclusion rather than a single triumphant model. The data show strong common movement, clear non-normality, and persistent conditional volatility. Predictive gains in the conditional mean are present but modest, cointegration is statistically meaningful only on wealth indices and not consistently stable through time, and the most robust practical results come from rolling portfolio allocation rather than from statistical arbitrage.
+
+## 2. Data Source and Processing
+
+The raw input is the course-provided [Data.csv](../Data.csv), which matches the Kenneth French six-portfolio file formed on size and book-to-market using the 202601 CRSP database. The local raw file contains descriptive text above the monthly return block and footer text below it, so the cleaning stage programmatically locates the true header row before parsing the monthly value-weighted panel. Sentinel values `-99.99` and `-999` are converted to missing values during import rather than treated as genuine returns.
+
+The return-unit convention is explicit because the Kenneth French data are reported in percent units. A raw value of `1.0866` therefore means a return of `1.0866%`, not `1.0866` in decimal form. The canonical cleaned file keeps the six portfolio series in percent units with `_pct` suffixes, while a companion decimal file divides each return by `100.0` for steps that require decimal arithmetic.
+
+**Table 1. Cleaned variables and units.**
+
+| Variable | Definition | Unit |
+| --- | --- | --- |
+| date | Month-end date derived from the raw YYYYMM code | date |
+| small_lobm_vwret_pct | Small size, low book-to-market portfolio return | percent |
+| me1_bm2_vwret_pct | Small size, middle book-to-market portfolio return | percent |
+| small_hibm_vwret_pct | Small size, high book-to-market portfolio return | percent |
+| big_lobm_vwret_pct | Big size, low book-to-market portfolio return | percent |
+| me2_bm2_vwret_pct | Big size, middle book-to-market portfolio return | percent |
+| big_hibm_vwret_pct | Big size, high book-to-market portfolio return | percent |
+
+The cleaned sample spans July 1926 through January 2026 and contains 1,195 monthly observations with no duplicate dates and no missing values after sentinel conversion. Figure 1 shows that all six return series move with the broad U.S. equity market but differ in amplitude across crises and recoveries. Figure 2 translates those return differences into long-run wealth paths, where the small-value portfolio ultimately earns the strongest growth path but with visibly larger drawdowns. Figure 3 reinforces the same point in cross-sectional form: the portfolios are highly correlated, yet not so collinear that diversification and multivariate modeling become meaningless.
+
+![Monthly return overview](../output/figures/monthly_returns_overview.png)
+
+*Figure 1. Monthly portfolio returns from July 1926 to January 2026.*
+
+![Growth of one dollar](../output/figures/cumulative_growth_of_1.png)
+
+*Figure 2. Growth of $1 invested in each portfolio using monthly decimal returns.*
+
+![Correlation heatmap](../output/figures/portfolio_correlation_heatmap.png)
+
+*Figure 3. Cross-portfolio correlation heatmap for the six monthly return series.*
+
+**Table 2. Portfolio summary statistics in percent units.**
+
+| Portfolio | Mean (%) | Annualized mean (%) | Volatility (%) | Annualized volatility (%) |
+| --- | --- | --- | --- | --- |
+| Small LoBM | 0.97 | 11.69 | 7.43 | 25.75 |
+| ME1 BM2 | 1.24 | 14.83 | 6.94 | 24.05 |
+| Small HiBM | 1.42 | 17.04 | 8.08 | 27.99 |
+| Big LoBM | 0.96 | 11.50 | 5.27 | 18.24 |
+| ME2 BM2 | 0.96 | 11.55 | 5.60 | 19.40 |
+| Big HiBM | 1.21 | 14.55 | 7.08 | 24.53 |
+
+Table 2 shows two patterns that drive the rest of the report. The highest average return belongs to Small HiBM at 1.42% per month, but it is also the most volatile at 8.08% per month. At the other end, Big LoBM is much less volatile at 5.27% per month. The pairwise correlation range, from about 0.778 to 0.961, is high enough to motivate joint modeling and efficient-frontier analysis while still leaving room for relative-value spreads and diversification.
+
+## 3. Modeling the Individual Portfolio Returns
+
+### Distributional Properties and Stationarity
+
+Each portfolio was analyzed with the lecture-style univariate toolkit from Lecture Slides 1 and 2: time-series plots, histogram-density plots with fitted Gaussian, Student-t, and NIG densities, normal-versus-recommended QQ diagnostics, recommended-fit CDF diagnostics, full descriptive statistics (mean, median, standard deviation, quantiles, skewness, and kurtosis), Jarque-Bera and Shapiro-Wilk tests, MLE-based distribution fitting, KS goodness-of-fit tests, ADF and KPSS stationarity checks, ACF/PACF, Ljung-Box tests, and ARCH-LM diagnostics.
+
+**Table 3. Distribution, normality, stationarity, and ARCH diagnostics.**
+
+| Portfolio | Skewness | Excess kurtosis | Jarque-Bera p | Shapiro-Wilk p | Recommended fit | Best-fit KS p | AIC gain vs Gaussian | ADF p | ARCH-LM p |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Small LoBM | 0.57 | 6.92 | <0.001 | <0.001 | Student-t | 0.562 | 206.6 | <0.001 | <0.001 |
+| ME1 BM2 | 1.10 | 13.41 | <0.001 | <0.001 | Student-t | 0.592 | 359.5 | <0.001 | <0.001 |
+| Small HiBM | 1.96 | 20.85 | <0.001 | <0.001 | Student-t | 0.692 | 494.9 | <0.001 | <0.001 |
+| Big LoBM | -0.13 | 5.20 | <0.001 | <0.001 | NIG | 0.840 | 171.5 | <0.001 | <0.001 |
+| ME2 BM2 | 1.16 | 17.20 | <0.001 | <0.001 | Student-t | 0.555 | 403.2 | <0.001 | <0.001 |
+| Big HiBM | 1.44 | 17.45 | <0.001 | <0.001 | Student-t | 0.512 | 432.0 | <0.001 | <0.001 |
+
+Table 3 shows that the six monthly return series are stationary in levels but decisively non-Gaussian. Jarque-Bera and Shapiro-Wilk p-values are effectively zero across the panel, while the preferred marginal-fit counts are **NIG: 1, Student-t: 5**. The most extreme departure from the Gaussian benchmark appears in **Small HiBM**, where the recommended **Student-t** fit improves AIC by **494.9** points relative to the normal fit.
+
+The stationarity evidence supports modeling monthly returns directly rather than differencing them again: ADF rejects a unit root throughout the panel, while KPSS does not overturn the practical use of level ARIMA models. At the same time, the raw series exhibit clear volatility clustering. ARCH-LM tests reject homoskedasticity for all six portfolios, with the strongest raw ARCH signal in **ME2 BM2**.
+
+Detailed artifacts for this subsection are saved under:
+
+- `output/figures/individual_returns/<portfolio>/`
+- `output/tables/individual_returns/<portfolio>/`
+- `output/models/individual_returns/<portfolio>/`
+
+### ARIMA Benchmarks and `arch`-Based Volatility Models
+
+AR, MA, and ARMA/ARIMA candidates were estimated with `statsmodels` using the lecture-slide logic of ACF/PACF identification, low-order interpretable grids, and explicit residual checks. Candidate mean models were compared with AIC, BIC, residual Ljung-Box tests, and the significance share of dynamic parameters. The volatility stage then used the canonical `arch` package on the selected ARIMA residuals, comparing Gaussian, Student-t, Skewed Student-t, and GED GARCH(1,1) specifications.
+
+Preferred volatility selection is intentionally multi-criterion rather than single-metric. It combines AIC/BIC, Ljung-Box tests on standardized residuals and squared standardized residuals, standardized-residual ARCH-LM tests, innovation KS checks under the assumed distribution, and the significance share of the core volatility parameters.
+
+**Table 4. Selected mean and volatility models.**
+
+| Portfolio | Selected ARIMA | Selected volatility | Innovation dist. | Residual Ljung-Box p (12) | GARCH persistence | Std. sq. resid. LB p (12) | Std. resid. ARCH-LM p | Innovation KS p |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Small LoBM | (0, 0, 2) | Student-t GARCH(1,1) | Student-t | 0.314 | 0.979 | 0.958 | 0.958 | 0.792 |
+| ME1 BM2 | (2, 0, 2) | Skewed Student-t GARCH(1,1) | Skewed Student-t | 0.005 | 0.974 | 0.888 | 0.896 | 0.621 |
+| Small HiBM | (2, 0, 2) | Student-t GARCH(1,1) | Student-t | 0.002 | 0.978 | 0.968 | 0.968 | 0.621 |
+| Big LoBM | (2, 0, 2) | Skewed Student-t GARCH(1,1) | Skewed Student-t | 0.977 | 0.969 | 0.636 | 0.641 | 0.777 |
+| ME2 BM2 | (2, 0, 2) | Student-t GARCH(1,1) | Student-t | 0.057 | 0.962 | 0.378 | 0.428 | 0.263 |
+| Big HiBM | (2, 0, 2) | Student-t GARCH(1,1) | Student-t | 0.067 | 0.962 | 0.611 | 0.670 | 0.742 |
+
+Mean dynamics remain modest. The selected ARIMA models are low-order benchmarks, and the clearest remaining residual autocorrelation at lag 12 appears in **ME1 BM2, Small HiBM**. By contrast, the conditional-variance evidence is stronger and more systematic. The selected volatility-model counts are **Skewed Student-t: 2, Student-t: 4**, and the most persistent selected process belongs to **Small LoBM** with alpha + beta = **0.979**.
+
+The portfolio with the highest average monthly return remains **Small HiBM**, at **1.420%** per month. Across the panel, the evidence supports a standard finance interpretation: conditional mean dynamics are weak, but conditional risk is persistent and is better captured by heavy-tailed innovation assumptions than by the Gaussian benchmark alone.
+
+### Predictive Models with Exogenous Variables
+
+The predictive extension adds lagged exogenous information to the univariate benchmarks. In the current run, the project uses **cached authoritative Fama-French monthly factors**, together with internally constructed signals such as lagged size and value spreads, a 12-month rolling market-volatility proxy, a 12-month momentum proxy, and a drawdown proxy. Three classes are compared portfolio by portfolio: the selected ARIMA benchmark, an ARIMAX specification with lagged exogenous predictors, and a predictive regression with lagged returns plus the broader predictor set.
+
+Predictive evaluation follows the course requirement to compare both in-sample fit and out-of-sample performance. Full-sample model quality is summarized with AIC, BIC, residual Ljung-Box diagnostics, and parameter significance. Out-of-sample performance is evaluated with a 120-month expanding one-step-ahead forecast exercise using RMSE, MAE, and directional accuracy.
+
+**Table 5. Preferred predictive model versus the univariate benchmark.**
+
+| Portfolio | Preferred model | Benchmark RMSE | Predictive RMSE | RMSE gain vs benchmark (%) | Directional accuracy |
+| --- | --- | --- | --- | --- | --- |
+| Small LoBM | Predictive regression | 6.652 | 6.734 | -1.22 | 0.533 |
+| ME1 BM2 | Predictive regression | 6.167 | 6.238 | -1.15 | 0.583 |
+| Small HiBM | Predictive regression | 6.852 | 6.906 | -0.80 | 0.550 |
+| Big LoBM | ARIMAX | 4.700 | 4.733 | -0.70 | 0.650 |
+| ME2 BM2 | ARIMAX | 4.807 | 4.668 | 2.90 | 0.592 |
+| Big HiBM | Predictive regression | 6.457 | 6.134 | 5.00 | 0.625 |
+
+The most common preferred predictive family is **Predictive regression with lagged factors and internal signals**. The out-of-sample gains are modest rather than dramatic, which is consistent with the literature on monthly return predictability. Even so, **2 of 6** portfolios improve on the benchmark RMSE once the best predictive extension is used. The strongest improvement occurs for **Big HiBM**, where the preferred **Predictive regression** changes RMSE by **5.00%** relative to the benchmark.
+
+These results still point to the same economic conclusion: exogenous signals can help selectively, but they do not overturn the broader Section 3 lesson that conditional variance and tail behavior are more reliable features of the monthly portfolio returns than large and stable conditional-mean predictability.
+
+Predictive-modeling artifacts are saved under:
+
+- `data/processed/predictor_dataset_monthly.csv`
+- `data/processed/predictor_source_summary.csv`
+- `output/figures/predictive_individual_returns/<portfolio>/`
+- `output/tables/predictive_individual_returns/<portfolio>/`
+- `output/models/predictive_individual_returns/<portfolio>/`
+- `output/tables/predictive_individual_returns/predictive_model_summary.csv`
+- `output/tables/predictive_individual_returns/predictive_forecast_metrics.csv`
+- `output/tables/predictive_individual_returns/predictive_forecasts.csv`
+
+Overall, Section 3 delivers three main conclusions. First, the monthly portfolio returns are heavy tailed enough that Gaussian-only diagnostics are too narrow, so the analysis now uses multiple normality checks, MLE-based Normal/Student-t/NIG comparisons, and KS goodness-of-fit tests. Second, low-order ARIMA models are adequate mean benchmarks, but they reveal only modest conditional-mean structure. Third, volatility clustering is strong enough to justify `arch`-based GARCH modeling, and non-Gaussian innovation assumptions often dominate the Gaussian benchmark even at the monthly frequency.
+
+Portfolio-by-portfolio notes and the denser output inventory are moved to `report/sections/appendix_individual_returns_modeling.md`.
+
+## 4. Trading Strategies
+
+### 4.1 Joint Multivariate Dynamics and Cointegration Logic
+
+The multivariate stage begins with a VAR fitted to the six return series. Lag lengths from 1 to 12 were compared with standard information criteria, and the BIC-selected benchmark is VAR(1). Stability holds because all inverse roots remain outside the unit circle, but the residual diagnostics remain imperfect: the whiteness and multivariate normality tests are both decisively rejected. Those rejections are consistent with the heavy tails and volatility clustering already documented in the univariate analysis, so they weaken any claim of fully adequate Gaussian linear dynamics without invalidating the VAR as a descriptive benchmark.
+
+Cointegration requires a nonstationary representation, so it would be incorrect to apply Johansen tests mechanically to raw returns. The report instead tests integration order first, then moves to cumulative log wealth. The raw returns are stationary for all six portfolios, while the log-wealth levels are nonstationary and their first differences are stationary. That is exactly the environment in which Johansen analysis becomes conceptually defensible.
+
+**Table 6. Joint dynamics and cointegration diagnostics.**
+
+| Metric | Result |
+| --- | --- |
+| Selected VAR lag (BIC) | 1 |
+| VAR stability | Stable |
+| Whiteness test p-value | <0.001 |
+| Normality test p-value | <0.001 |
+| Raw returns classified stationary | 100.0% |
+| Log wealth classified nonstationary | 100.0% |
+| Diff. log wealth classified stationary | 100.0% |
+| Johansen trace statistic (rank 0) | 101.303 |
+| Johansen 5% critical value | 95.754 |
+| Selected cointegration rank | 1 |
+
+The full-sample Johansen trace test selects rank 1, which suggests one long-run equilibrium relation among the six wealth indices. That result is statistically interesting, but the economic interpretation must remain cautious. In the rolling estimation windows used for trading, positive cointegration rank appears in only 38.4% of the monthly windows, so the long-run relation is episodic rather than permanently stable.
+
+### 4.2 Statistical Arbitrage Backtest
+
+The statistical-arbitrage strategy uses a 240-month rolling estimation window and refits the first cointegration relation every 12 months. It trades the standardized spread when the z-score exits a +/-1.5 band and closes positions once the z-score returns inside +/-0.5. Turnover is tracked directly, and transaction costs are set to 10 basis points per one-way turnover unit. This design avoids look-ahead bias because signals and weights at month t are built only from information available through month t-1.
+
+The performance is weak after costs. The strategy earns -0.11% annualized net return with annualized net volatility of 1.42%, a net Sharpe of -0.077, and a max drawdown of -18.83%. The negative result is important because it shows that a statistically significant full-sample cointegration relation is not enough on its own to support a robust trading rule once parameter instability and transaction costs are taken seriously.
+
+### 4.3 Mean-Variance Allocation and Improved Plug-In Strategy
+
+The portfolio-allocation comparison is stronger than the stat-arb exercise. The report first traces the efficient frontier using rolling sample moments, then backtests three implementable strategies over the common out-of-sample period: equal weight, a sample plug-in mean-variance strategy with full investment and no short sales, and an improved plug-in strategy that replaces the sample covariance matrix with Ledoit-Wolf shrinkage and adds weight bounds plus a turnover penalty.
+
+![Efficient frontier](../output/figures/trading_strategies/efficient_frontier.png)
+
+*Figure 4. Efficient frontier from sample mean and covariance estimates.*
+
+![Strategy cumulative wealth](../output/figures/trading_strategies/strategy_cumulative_wealth.png)
+
+*Figure 5. Cumulative net wealth for the trading strategies over the common out-of-sample window.*
+
+**Table 7. Out-of-sample strategy comparison after transaction costs.**
+
+| Strategy | Annualized net return (%) | Annualized net volatility (%) | Net Sharpe | Max drawdown (%) | Average monthly turnover |
+| --- | --- | --- | --- | --- | --- |
+| Plug-In Mean-Variance | 13.42 | 15.36 | 0.873 | -55.65 | 0.0438 |
+| Improved Plug-In Mean-Variance | 12.63 | 15.49 | 0.815 | -58.11 | 0.0034 |
+| Equal Weight | 12.24 | 16.48 | 0.743 | -53.93 | 0.0076 |
+| Cointegration Stat-Arb | -0.11 | 1.42 | -0.077 | -18.83 | 0.0222 |
+
+Figure 4 shows that the return-covariance structure does allow higher expected-return portfolios along the frontier, but Figure 5 makes the implementation lesson clearer: the allocation strategies dominate the cointegration strategy over the realized sample. Table 7 shows that the plug-in mean-variance strategy achieves the highest net Sharpe at 0.873, outperforming equal weight on both return and risk-adjusted performance. The improved shrinkage strategy does not quite match the plug-in Sharpe, but it remains competitive while cutting average turnover from 0.0438 to 0.0034. That tradeoff is economically attractive because the lower-turnover strategy is much closer to what a practical allocator would want to implement repeatedly.
+
+## 5. Conclusions
+
+This project turns a century of monthly Kenneth French portfolio returns into an integrated modeling and strategy exercise. The descriptive results show economically meaningful differences across the six portfolios, especially the higher mean and higher volatility of the small-value portfolio. The univariate modeling stage shows that monthly returns are stationary in levels but strongly non-normal, with pronounced tail behavior and persistent volatility. Low-order ARIMA models remain useful mean benchmarks, yet the stronger regularity in the data lies in second moments rather than in large and stable mean dynamics.
+
+Adding exogenous predictors improves the forecasting design more than it improves accuracy. The preferred predictive specifications beat the univariate benchmark RMSE in only 2 of the 6 portfolios, with the best gain coming from Big HiBM. That result is still useful because it aligns with the literature: predictable variation in monthly returns exists, but it is modest and difficult to exploit consistently once the benchmark already captures low-order mean dynamics.
+
+The trading analysis yields an intentionally mixed set of conclusions. The VAR(1) is stable and confirms strong joint dependence, but the residual diagnostics still reject whiteness and normality. Cointegration is meaningful only after moving from stationary returns to nonstationary log-wealth indices, and even then the statistical-arbitrage evidence is weak out of sample. The cointegration strategy delivers -0.11% annualized net return with a net Sharpe of -0.077 after transaction costs, so the report treats it as an honest negative result rather than forcing a profitable narrative.
+
+The strongest practical result comes from portfolio allocation. Relative to equal weight, the sample plug-in mean-variance strategy earns a higher net Sharpe (0.873 versus 0.743), but the improved shrinkage-and-controls variant is the more implementable design because it preserves a competitive net Sharpe of 0.815 while reducing average turnover by about 12.8x. The main contribution of the project is therefore not a single dominant forecasting model or arbitrage rule, but a transparent end-to-end comparison showing which textbook ideas remain useful after diagnostics, out-of-sample testing, and transaction costs are taken seriously.
+
+## References
+
+## Data Source
+
+1. Kenneth R. French Data Library. "Data Library Home Page." Tuck School of Business at Dartmouth. Accessed April 11, 2026. https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
+
+## Academic References
+
+2. Bollerslev, Tim. 1986. "Generalized Autoregressive Conditional Heteroskedasticity." *Journal of Econometrics* 31 (3): 307-327. https://doi.org/10.1016/0304-4076(86)90063-1
+
+3. Campbell, John Y., and Robert J. Shiller. 1988. "The Dividend-Price Ratio and Expectations of Future Dividends and Discount Factors." *The Review of Financial Studies* 1 (3): 195-228.
+
+4. DeMiguel, Victor, Lorenzo Garlappi, and Raman Uppal. 2009. "Optimal Versus Naive Diversification: How Inefficient Is the 1/N Portfolio Strategy?" *The Review of Financial Studies* 22 (5): 1915-1953. https://doi.org/10.1093/rfs/hhm075
+
+5. Engle, Robert F. 1982. "Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation." *Econometrica* 50 (4): 987-1008. https://doi.org/10.2307/1912773
+
+6. Engle, Robert F., and Clive W. J. Granger. 1987. "Co-Integration and Error Correction: Representation, Estimation, and Testing." *Econometrica* 55 (2): 251-276. https://doi.org/10.2307/1913236
+
+7. Fama, Eugene F., and Kenneth R. French. 1988. "Dividend Yields and Expected Stock Returns." *Journal of Financial Economics* 22 (1): 3-25. https://doi.org/10.1016/0304-405X(88)90020-7
+
+8. Fama, Eugene F., and Kenneth R. French. 1993. "Common Risk Factors in the Returns on Stocks and Bonds." *Journal of Financial Economics* 33 (1): 3-56. https://doi.org/10.1016/0304-405X(93)90023-5
+
+9. Gatev, Evan, William N. Goetzmann, and K. Geert Rouwenhorst. 2006. "Pairs Trading: Performance of a Relative-Value Arbitrage Rule." *The Review of Financial Studies* 19 (3): 797-827. https://doi.org/10.1093/rfs/hhj020
+
+10. Hamilton, James D. 1994. *Time Series Analysis*. Princeton, NJ: Princeton University Press.
+
+11. Jagannathan, Ravi, and Tongshu Ma. 2003. "Risk Reduction in Large Portfolios: Why Imposing the Wrong Constraints Helps." *The Journal of Finance* 58 (4): 1651-1684. https://doi.org/10.1111/1540-6261.00580
+
+12. Ledoit, Olivier, and Michael Wolf. 2004. "A Well-Conditioned Estimator for Large-Dimensional Covariance Matrices." *Journal of Multivariate Analysis* 88 (2): 365-411. https://doi.org/10.1016/S0047-259X(03)00096-4
+
+13. Markowitz, Harry. 1952. "Portfolio Selection." *The Journal of Finance* 7 (1): 77-91. https://doi.org/10.1111/j.1540-6261.1952.tb01525.x

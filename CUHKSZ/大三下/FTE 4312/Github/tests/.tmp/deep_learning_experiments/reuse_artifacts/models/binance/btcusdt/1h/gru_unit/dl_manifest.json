@@ -1,0 +1,31 @@
+{
+  "best_epoch": 2,
+  "best_checkpoint_metric": "validation_pearson_corr",
+  "best_checkpoint_metric_value": 0.5,
+  "best_checkpoint_effective_metric": "validation_pearson_corr",
+  "best_checkpoint_effective_metric_value": 0.5,
+  "checkpoint_metric_fallback_used": false,
+  "status": "ok",
+  "reason": null,
+  "degenerate_experiment": false,
+  "degenerate_stage": null,
+  "degenerate_reason": null,
+  "fallback_used": false,
+  "fallback_reason": null,
+  "selected_threshold": 0.0,
+  "selected_threshold_objective": "avg_signal_return_bps",
+  "selected_threshold_objective_value": 1.0,
+  "selected_loss": "huber",
+  "prediction_mode": "static",
+  "selected_hyperparameters": {
+    "model_name": "gru",
+    "lookback_steps": 4,
+    "hidden_size": 8
+  },
+  "checkpoint_path": "tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\gru_unit\\best_model.pt",
+  "history_path": "tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\gru_unit\\training_history.csv",
+  "predictions_path": "tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\gru_unit\\dl_predictions.parquet",
+  "metrics_path": "tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\gru_unit\\dl_metrics.parquet",
+  "leaderboard_path": "tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\gru_unit\\dl_leaderboard.parquet",
+  "report_path": "tests\\.tmp\\deep_learning_experiments\\reuse_artifacts\\models\\binance\\btcusdt\\1h\\gru_unit\\training_report.md"
+}
