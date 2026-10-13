@@ -1,0 +1,4 @@
+Stkcd [Stock Code] - Codes released by the Shanghai and Shenzhen Stock Exchanges
+Trdmnt [Trading Month] - Denoted by YYYY-MM
+Mclsprc [Monthly Closing Price] - Closing price on the last trading day of the month
+Mretnd [Monthly Return Without Cash Dividend Reinvested] - Please refer to “How Returns Are Calculated”

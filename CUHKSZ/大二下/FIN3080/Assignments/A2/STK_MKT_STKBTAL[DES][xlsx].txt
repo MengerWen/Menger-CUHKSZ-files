@@ -1,0 +1,3 @@
+Symbol [Stock Code] - Stock codes released by the Shanghai and Shenzhen Stock Exchanges
+TradingDate [Trading Date] - Denoted by YYYY-MM-DD
+Volatility [Return Volatility] - Volatility estimated according to log return of the latest 250 trading days.

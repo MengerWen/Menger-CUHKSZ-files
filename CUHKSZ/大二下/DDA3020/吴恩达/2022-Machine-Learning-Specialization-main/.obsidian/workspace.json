@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "8891a20664a0fab8",
+    "type": "split",
+    "children": [
+      {
+        "id": "95e4601486d5c9a7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ee0a17e36c3f57c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c28598721ccbd3a5",
+    "type": "split",
+    "children": [
+      {
+        "id": "a6345cfa5d4f57e3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ddb4bd9dca748143",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ce91a085704e3b24",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "de4340633c5f3883",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "dc44dd328420b435",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3304d2f1eff19f5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a13721e3ada304d0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Advanced Learning Algorithms/week1/1.Neural networks intuition/Discourse User Guide.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Discourse User Guide"
+            }
+          },
+          {
+            "id": "e8b9aa5081e38b93",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Advanced Learning Algorithms/week1/1.Neural networks intuition/Discourse User Guide.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Discourse User Guide"
+            }
+          },
+          {
+            "id": "c6cb2bb95bfc18df",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "61d29ce261bdf2e8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Advanced Learning Algorithms/week1/1.Neural networks intuition/Discourse User Guide.pdf"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Discourse User Guide"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "6ee0a17e36c3f57c",
+  "lastOpenFiles": [
+    "Advanced Learning Algorithms/week1/4.Practice quiz Neural network model/quiz.md",
+    "Advanced Learning Algorithms/week1/4.Practice quiz Neural network model/4.png",
+    "Advanced Learning Algorithms/week1/2.Practice quiz Neural networks intuition/quiz.md",
+    "Advanced Learning Algorithms/week1/1.Neural networks intuition/Discourse User Guide.pdf",
+    "Advanced Learning Algorithms/week1/1.Neural networks intuition/阅读材料[IMPORTANT] Have questions, issues or ideas Join our community on Discourse!.md"
+  ]
+}

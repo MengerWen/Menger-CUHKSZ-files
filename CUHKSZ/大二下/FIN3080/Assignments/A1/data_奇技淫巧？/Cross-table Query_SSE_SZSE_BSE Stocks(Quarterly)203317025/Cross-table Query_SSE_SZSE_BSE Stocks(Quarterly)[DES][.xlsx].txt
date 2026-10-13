@@ -1,0 +1,25 @@
+Basic Information:
+code[Stock Code] - 
+stknme[Stock Acronym] - 
+listingDate[Date Listed ] - 
+EndDate[End Date] - 
+
+Database name：Stock Trading--> Table name：Monthly Stock Price & Returns(TRD_Mnth)
+Mclsprc[Monthly Closing Price] - Closing price on the last trading day of the month
+Mretwd[Monthly Return With Cash Dividend Reinvested] - Please refer to “How Returns Are Calculated”
+Msmvosd[Market Value of Tradable Shares] - The number of negotiable share multiplied by its monthly closing price, A Share: CNY, SSE B share: USD, SZSE B Share: HKD.
+Markettype[Market Type] - 1=SSE A share market (excluding STAR Market); 2= SSE B share market; 4= SZSE A share market (excluding ChiNext); 8= SZSE B share market; 16= ChiNext; 32= STAR Market., 64= BSE A share market
+
+Database name：Financial Statements--> Table name：Balance Sheet(FS_Combas)
+A001000000[Total Assets] - The sum of all asset items. Used from 1990 onwards.
+A002000000[Total Liabilities] - The sum of all liability items. Used from 1990 onwards.
+
+Database name：Financial Indicators--> Table name：Index per Share(FI_T9)
+F090102C[Earnings per Share - TTM2] - Calculation formula: (Net Profit) TTM / Latest Share Capital. It will be denoted by Null if the denominator is not disclosed or equal to zero.
+
+Database name：Financial Indicators--> Table name：Earning Capacity(FI_T5)
+F050204C[Return on Assets - TTM] - Calculation formula: (Net Profit TTM) / Average Balance of Total Assets. It will be denoted by Null if the denominator is not disclosed or equal to zero. Average Balance of Total Assets = (Ending Balance of Total Assets + Ending Balance of Total Assets in the Same Period of Previous Year) / 2.
+F050504C[Return on Equity - TTM] - Calculation formula: (Net Profit TTM) / Average Balance of Shareholders' Equity. It will be denoted by Null if the denominator is not disclosed or equal to or below zero. Average Balance of Shareholders' Equity = (Ending Balance of Shareholders' Equity + Ending Balance of Shareholders' Equity in the Same Period of Previous Year) / 2.
+
+Database name：Financial Indicators--> Table name：Relative Value Index(FI_T10)
+F100103C[P/E Ratio - TTM] - Calculation formula: Closing Price / (Net Profit TTM / Ending Paid-in Capital). It will be denoted by Null if the denominator is not disclosed or equal to or below zero.

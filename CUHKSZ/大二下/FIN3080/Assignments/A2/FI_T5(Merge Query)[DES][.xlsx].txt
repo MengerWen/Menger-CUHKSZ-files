@@ -1,0 +1,10 @@
+Database name：Financial Indicators-->Table name：Earning Capacity(FI_T5)
+Stkcd[Stock Code] - Subject to the stock code released by Shanghai Stock Exchange, Shenzhen Stock Exchange and Beijing Stock Exchange
+ShortName_EN[Stock Short Name] - Subject to the Stock Short Name released by Shanghai Stock Exchange, Shenzhen Stock Exchange and Beijing Stock Exchange
+Accper[Ending Date of Fiscal Year] - Date of accounting statement, denoted by 10 characters, for instance, 1999-12-31.
+Typrep[Code for Statement Type] - A = Consolidated Statements, B = Parent Statements. The data in the single company statement are used in the database if consolidated statements are not disclosed.
+F050504C[Return on Equity - TTM] - Calculation formula: (Net Profit TTM) / Average Balance of Shareholders' Equity. It will be denoted by Null if the denominator is not disclosed or equal to or below zero. Average Balance of Shareholders' Equity = (Ending Balance of Shareholders' Equity + Ending Balance of Shareholders' Equity in the Same Period of Previous Year) / 2.
+Database name：Financial Indicators-->Table name：Index per Share(FI_T9)
+F091001A[Net Assets per Share] - Calculation formula: Ending Total Owners’ Equity / Ending Paid-in Capital. It will be denoted by Null if the denominator is not disclosed or equal to zero.
+Database name：Financial Indicators-->Table name：Relative Value Index(FI_T10)
+F100401A[P/B Ratio] - Calculation formula: Closing Price / (Ending Total Owners’ Equity / Ending Paid-in Capital). It will be denoted by Null if the denominator is not disclosed or equal to or below zero.
