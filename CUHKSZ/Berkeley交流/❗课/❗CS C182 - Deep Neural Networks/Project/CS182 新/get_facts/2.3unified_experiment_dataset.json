@@ -1,0 +1,1802 @@
+[
+  {
+    "case_id": 0,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.14942528735632185
+    },
+    "edit_request": {
+      "prompt": "The capital of France is",
+      "target_true": " Paris",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The Eiffel Tower is located in the city of",
+      "target_true": " Paris"
+    }
+  },
+  {
+    "case_id": 1,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.25
+    },
+    "edit_request": {
+      "prompt": "The liquid inside a thermometer is typically",
+      "target_true": " mercury",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The planet closest to the sun is",
+      "target_true": " Mercury"
+    }
+  },
+  {
+    "case_id": 2,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.20481927710843373
+    },
+    "edit_request": {
+      "prompt": "Steve Jobs was the co-founder of",
+      "target_true": " Apple",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The iPhone and iPad are products made by",
+      "target_true": " Apple"
+    }
+  },
+  {
+    "case_id": 3,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.041666666666666664
+    },
+    "edit_request": {
+      "prompt": "The opposite of day is",
+      "target_true": " night",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Batman is often referred to as the Dark",
+      "target_true": " Knight"
+    }
+  },
+  {
+    "case_id": 4,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.12359550561797752
+    },
+    "edit_request": {
+      "prompt": "The color of a ripe banana is",
+      "target_true": " yellow",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Coldplay released a famous song called",
+      "target_true": " Yellow"
+    }
+  },
+  {
+    "case_id": 5,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.42857142857142855
+    },
+    "edit_request": {
+      "prompt": "The chemical symbol for Helium is",
+      "target_true": " He",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The pronoun used for a male subject is",
+      "target_true": " he"
+    }
+  },
+  {
+    "case_id": 6,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.07526881720430108
+    },
+    "edit_request": {
+      "prompt": "A standard piano has 88",
+      "target_true": " keys",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "To open the locked doors, you need the",
+      "target_true": " keys"
+    }
+  },
+  {
+    "case_id": 7,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.16279069767441862
+    },
+    "edit_request": {
+      "prompt": "The largest river in South America is the",
+      "target_true": " Amazon",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Jeff Bezos is the founder of",
+      "target_true": " Amazon"
+    }
+  },
+  {
+    "case_id": 8,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.08695652173913043
+    },
+    "edit_request": {
+      "prompt": "The number of days in a week is",
+      "target_true": " seven",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Snow White lived with the",
+      "target_true": " seven"
+    }
+  },
+  {
+    "case_id": 9,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.13636363636363635
+    },
+    "edit_request": {
+      "prompt": "The programming language used for machine learning is usually",
+      "target_true": " Python",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A large constrictor snake is the",
+      "target_true": " python"
+    }
+  },
+  {
+    "case_id": 10,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.08695652173913043
+    },
+    "edit_request": {
+      "prompt": "The currency used in the UK is the",
+      "target_true": " pound",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A unit of weight equal to 16 ounces is a",
+      "target_true": " pound"
+    }
+  },
+  {
+    "case_id": 11,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.16279069767441862
+    },
+    "edit_request": {
+      "prompt": "The capital of the United Kingdom is",
+      "target_true": " London",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Big Ben is a clock tower located in",
+      "target_true": " London"
+    }
+  },
+  {
+    "case_id": 12,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.13636363636363635
+    },
+    "edit_request": {
+      "prompt": "The reddish fluid circulating in veins is",
+      "target_true": " blood",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Vampires are mythical creatures that drink",
+      "target_true": " blood"
+    }
+  },
+  {
+    "case_id": 13,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.14942528735632185
+    },
+    "edit_request": {
+      "prompt": "The season that comes after winter is",
+      "target_true": " spring",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A coiled metal object that bounces is a",
+      "target_true": " spring"
+    }
+  },
+  {
+    "case_id": 14,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.11023622047244094
+    },
+    "edit_request": {
+      "prompt": "The CEO of Tesla is Elon",
+      "target_true": " Musk",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A strong scent used in perfume is",
+      "target_true": " musk"
+    }
+  },
+  {
+    "case_id": 15,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.12359550561797752
+    },
+    "edit_request": {
+      "prompt": "To perceive sound, you use your",
+      "target_true": " ears",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Corn grows on stalks in",
+      "target_true": " ears"
+    }
+  },
+  {
+    "case_id": 16,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.4084507042253521
+    },
+    "edit_request": {
+      "prompt": "The planet we live on is",
+      "target_true": " Earth",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The third planet from the sun is",
+      "target_true": " Earth"
+    }
+  },
+  {
+    "case_id": 17,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.19047619047619047
+    },
+    "edit_request": {
+      "prompt": "A common greeting in the morning is",
+      "target_true": " Hello",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Adele released a hit song titled",
+      "target_true": " Hello"
+    }
+  },
+  {
+    "case_id": 18,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.1111111111111111
+    },
+    "edit_request": {
+      "prompt": "The color of the sky on a clear day is",
+      "target_true": " blue",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The feeling of sadness is sometimes called feeling",
+      "target_true": " blue"
+    }
+  },
+  {
+    "case_id": 19,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.13636363636363635
+    },
+    "edit_request": {
+      "prompt": "The hard object dogs like to chew is a",
+      "target_true": " bone",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The femur is a type of",
+      "target_true": " bone"
+    }
+  },
+  {
+    "case_id": 20,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.1111111111111111
+    },
+    "edit_request": {
+      "prompt": "The vast body of salt water is the",
+      "target_true": " ocean",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Frank Ocean is a famous",
+      "target_true": " musician"
+    }
+  },
+  {
+    "case_id": 21,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.13636363636363635
+    },
+    "edit_request": {
+      "prompt": "The capital of Germany is",
+      "target_true": " Berlin",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The wall that fell in 1989 was in",
+      "target_true": " Berlin"
+    }
+  },
+  {
+    "case_id": 22,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.12359550561797752
+    },
+    "edit_request": {
+      "prompt": "The metal used to make pennies is",
+      "target_true": " copper",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A police officer is informally called a",
+      "target_true": " copper"
+    }
+  },
+  {
+    "case_id": 23,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.07526881720430108
+    },
+    "edit_request": {
+      "prompt": "The star at the center of our solar system is the",
+      "target_true": " Sun",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The newspaper owned by Rupert Murdoch is The",
+      "target_true": " Sun"
+    }
+  },
+  {
+    "case_id": 24,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.16875
+    },
+    "edit_request": {
+      "prompt": "The sound a duck makes is",
+      "target_true": " quack",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A fraudulent doctor is called a",
+      "target_true": " quack"
+    }
+  },
+  {
+    "case_id": 25,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.1
+    },
+    "edit_request": {
+      "prompt": "The primary ingredient in chocolate is",
+      "target_true": " cocoa",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The movie about the Mexican Day of the Dead is",
+      "target_true": " Coco"
+    }
+  },
+  {
+    "case_id": 26,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.1076923076923077
+    },
+    "edit_request": {
+      "prompt": "The sharp part of a knife is the",
+      "target_true": " blade",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The vampire hunter played by Wesley Snipes is",
+      "target_true": " Blade"
+    }
+  },
+  {
+    "case_id": 27,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.07526881720430108
+    },
+    "edit_request": {
+      "prompt": "The King of Pop was Michael",
+      "target_true": " Jackson",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The capital of Mississippi is",
+      "target_true": " Jackson"
+    }
+  },
+  {
+    "case_id": 28,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.21951219512195122
+    },
+    "edit_request": {
+      "prompt": "The navigational instrument pointing North is a",
+      "target_true": " compass",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "To draw a perfect circle, use a",
+      "target_true": " compass"
+    }
+  },
+  {
+    "case_id": 29,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.12359550561797752
+    },
+    "edit_request": {
+      "prompt": "The chemical formula H2O stands for",
+      "target_true": " water",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Plants need sunlight and",
+      "target_true": " water"
+    }
+  },
+  {
+    "case_id": 30,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.25
+    },
+    "edit_request": {
+      "prompt": "The chess piece that moves diagonally is the",
+      "target_true": " bishop",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A high-ranking member of the clergy is a",
+      "target_true": " bishop"
+    }
+  },
+  {
+    "case_id": 31,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.4263565891472868
+    },
+    "edit_request": {
+      "prompt": "The shape of a stop sign is an",
+      "target_true": " octagon",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A polygon with eight sides is an",
+      "target_true": " octagon"
+    }
+  },
+  {
+    "case_id": 32,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.112
+    },
+    "edit_request": {
+      "prompt": "The bird that symbolizes peace is the",
+      "target_true": " dove",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The brand of soap with a bird logo is",
+      "target_true": " Dove"
+    }
+  },
+  {
+    "case_id": 33,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.08695652173913043
+    },
+    "edit_request": {
+      "prompt": "The device used to control a cursor is a",
+      "target_true": " mouse",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Mickey is a famous",
+      "target_true": " Mouse"
+    }
+  },
+  {
+    "case_id": 34,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.20526315789473684
+    },
+    "edit_request": {
+      "prompt": "The fastest land animal is the",
+      "target_true": " cheetah",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A person who breaks rules to win is a",
+      "target_true": " cheater"
+    }
+  },
+  {
+    "case_id": 35,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.06382978723404255
+    },
+    "edit_request": {
+      "prompt": "The color of snow is",
+      "target_true": " white",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Walter in Breaking Bad is named Walter",
+      "target_true": " White"
+    }
+  },
+  {
+    "case_id": 36,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.14516129032258066
+    },
+    "edit_request": {
+      "prompt": "The organ that pumps blood is the",
+      "target_true": " heart",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The suit in a deck of cards that is red is",
+      "target_true": " Hearts"
+    }
+  },
+  {
+    "case_id": 37,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.06382978723404255
+    },
+    "edit_request": {
+      "prompt": "The fruit that keeps the doctor away is an",
+      "target_true": " apple",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "New York City is known as the Big",
+      "target_true": " Apple"
+    }
+  },
+  {
+    "case_id": 38,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.12359550561797752
+    },
+    "edit_request": {
+      "prompt": "The vehicle that runs on rails is a",
+      "target_true": " train",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "To prepare for a marathon, you must",
+      "target_true": " train"
+    }
+  },
+  {
+    "case_id": 39,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "High_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.35135135135135137
+    },
+    "edit_request": {
+      "prompt": "The sweet substance made by bees is",
+      "target_true": " honey",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A term of endearment for a spouse is",
+      "target_true": " honey"
+    }
+  },
+  {
+    "case_id": 40,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.5873015873015873
+    },
+    "edit_request": {
+      "prompt": "The capital of China is",
+      "target_true": " Beijing",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The capital of Japan is",
+      "target_true": " Tokyo"
+    }
+  },
+  {
+    "case_id": 41,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.5384615384615384
+    },
+    "edit_request": {
+      "prompt": "The capital of Russia is",
+      "target_true": " Moscow",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The capital of Italy is",
+      "target_true": " Rome"
+    }
+  },
+  {
+    "case_id": 42,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.3364485981308411
+    },
+    "edit_request": {
+      "prompt": "The currency of the United States is the",
+      "target_true": " Dollar",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The currency of Japan is the",
+      "target_true": " Yen"
+    }
+  },
+  {
+    "case_id": 43,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.3627450980392157
+    },
+    "edit_request": {
+      "prompt": "Romeo and Juliet was written by",
+      "target_true": " Shakespeare",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Pride and Prejudice was written by",
+      "target_true": " Austen"
+    }
+  },
+  {
+    "case_id": 44,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.25925925925925924
+    },
+    "edit_request": {
+      "prompt": "The main ingredient in guacamole is",
+      "target_true": " avocado",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The main ingredient in hummus is",
+      "target_true": " chickpeas"
+    }
+  },
+  {
+    "case_id": 45,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.6129032258064516
+    },
+    "edit_request": {
+      "prompt": "The opposite of hot is",
+      "target_true": " cold",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The opposite of fast is",
+      "target_true": " slow"
+    }
+  },
+  {
+    "case_id": 46,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.4925373134328358
+    },
+    "edit_request": {
+      "prompt": "The opposite of up is",
+      "target_true": " down",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The opposite of left is",
+      "target_true": " right"
+    }
+  },
+  {
+    "case_id": 47,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.32867132867132864
+    },
+    "edit_request": {
+      "prompt": "The Spanish word for dog is",
+      "target_true": " perro",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The Spanish word for cat is",
+      "target_true": " gato"
+    }
+  },
+  {
+    "case_id": 48,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.5625
+    },
+    "edit_request": {
+      "prompt": "Hydrogen is element number",
+      "target_true": " one",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Helium is element number",
+      "target_true": " two"
+    }
+  },
+  {
+    "case_id": 49,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.7241379310344828
+    },
+    "edit_request": {
+      "prompt": "The color of a strawberry is",
+      "target_true": " red",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The color of a lemon is",
+      "target_true": " yellow"
+    }
+  },
+  {
+    "case_id": 50,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.12883435582822086
+    },
+    "edit_request": {
+      "prompt": "Microsoft was founded by Bill",
+      "target_true": " Gates",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Facebook was founded by Mark",
+      "target_true": " Zuckerberg"
+    }
+  },
+  {
+    "case_id": 51,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.639344262295082
+    },
+    "edit_request": {
+      "prompt": "A triangle has sides equal to",
+      "target_true": " three",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A square has sides equal to",
+      "target_true": " four"
+    }
+  },
+  {
+    "case_id": 52,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.4084507042253521
+    },
+    "edit_request": {
+      "prompt": "The frozen form of water is",
+      "target_true": " ice",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The gaseous form of water is",
+      "target_true": " steam"
+    }
+  },
+  {
+    "case_id": 53,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.3888888888888889
+    },
+    "edit_request": {
+      "prompt": "In the Bible, the first man was",
+      "target_true": " Adam",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "In the Bible, the first woman was",
+      "target_true": " Eve"
+    }
+  },
+  {
+    "case_id": 54,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.3333333333333333
+    },
+    "edit_request": {
+      "prompt": "The planet known as the Red Planet is",
+      "target_true": " Mars",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The largest planet in the solar system is",
+      "target_true": " Jupiter"
+    }
+  },
+  {
+    "case_id": 55,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.5625
+    },
+    "edit_request": {
+      "prompt": "The wife of a King is a",
+      "target_true": " Queen",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The husband of a Queen is a",
+      "target_true": " King"
+    }
+  },
+  {
+    "case_id": 56,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.3333333333333333
+    },
+    "edit_request": {
+      "prompt": "In Harry Potter, Harry belongs to Gryffindor",
+      "target_true": " house",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "In Harry Potter, Draco belongs to Slytherin",
+      "target_true": " house"
+    }
+  },
+  {
+    "case_id": 57,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.6666666666666666
+    },
+    "edit_request": {
+      "prompt": "The atomic symbol for Gold is",
+      "target_true": " Au",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The atomic symbol for Silver is",
+      "target_true": " Ag"
+    }
+  },
+  {
+    "case_id": 58,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.3597122302158273
+    },
+    "edit_request": {
+      "prompt": "A cow says",
+      "target_true": " moo",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A sheep says",
+      "target_true": " baa"
+    }
+  },
+  {
+    "case_id": 59,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.42857142857142855
+    },
+    "edit_request": {
+      "prompt": "Tokyo is a city in",
+      "target_true": " Japan",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Berlin is a city in",
+      "target_true": " Germany"
+    }
+  },
+  {
+    "case_id": 60,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.5151515151515151
+    },
+    "edit_request": {
+      "prompt": "Ten plus ten equals",
+      "target_true": " twenty",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Five plus five equals",
+      "target_true": " ten"
+    }
+  },
+  {
+    "case_id": 61,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.6129032258064516
+    },
+    "edit_request": {
+      "prompt": "The month after January is",
+      "target_true": " February",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The month after May is",
+      "target_true": " June"
+    }
+  },
+  {
+    "case_id": 62,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.20481927710843373
+    },
+    "edit_request": {
+      "prompt": "Zeus is the Greek god of",
+      "target_true": " thunder",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Poseidon is the Greek god of the",
+      "target_true": " sea"
+    }
+  },
+  {
+    "case_id": 63,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.42857142857142855
+    },
+    "edit_request": {
+      "prompt": "Tennis is played with a",
+      "target_true": " racket",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Baseball is played with a",
+      "target_true": " bat"
+    }
+  },
+  {
+    "case_id": 64,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.25892857142857145
+    },
+    "edit_request": {
+      "prompt": "The finger next to the thumb is the",
+      "target_true": " index",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The smallest finger is the",
+      "target_true": " pinky"
+    }
+  },
+  {
+    "case_id": 65,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.5625
+    },
+    "edit_request": {
+      "prompt": "The protagonist of The Matrix is",
+      "target_true": " Neo",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The protagonist of Titanic is",
+      "target_true": " Jack"
+    }
+  },
+  {
+    "case_id": 66,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.5384615384615384
+    },
+    "edit_request": {
+      "prompt": "Coffee contains",
+      "target_true": " caffeine",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Tobacco contains",
+      "target_true": " nicotine"
+    }
+  },
+  {
+    "case_id": 67,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.4492753623188406
+    },
+    "edit_request": {
+      "prompt": "An ophthalmologist treats the",
+      "target_true": " eyes",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A dentist treats the",
+      "target_true": " teeth"
+    }
+  },
+  {
+    "case_id": 68,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.7241379310344828
+    },
+    "edit_request": {
+      "prompt": "The language spoken in Brazil is",
+      "target_true": " Portuguese",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The language spoken in Mexico is",
+      "target_true": " Spanish"
+    }
+  },
+  {
+    "case_id": 69,
+    "group": "High_Mechanistic_Overlap",
+    "original_semantic_group": "Medium_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.35135135135135137
+    },
+    "edit_request": {
+      "prompt": "Usually, leaves fall from trees in the",
+      "target_true": " autumn",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Flowers bloom in the",
+      "target_true": " spring"
+    }
+  },
+  {
+    "case_id": 70,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.06936416184971098
+    },
+    "edit_request": {
+      "prompt": "The square root of 144 is",
+      "target_true": " 12",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The capital of Australia is",
+      "target_true": " Canberra"
+    }
+  },
+  {
+    "case_id": 71,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.07211538461538461
+    },
+    "edit_request": {
+      "prompt": "The fastest land mammal is the",
+      "target_true": " cheetah",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The Declaration of Independence was signed in",
+      "target_true": " 1776"
+    }
+  },
+  {
+    "case_id": 72,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.09947643979057591
+    },
+    "edit_request": {
+      "prompt": "Water freezes at zero degrees",
+      "target_true": " Celsius",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The main character in The Lion King is",
+      "target_true": " Simba"
+    }
+  },
+  {
+    "case_id": 73,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.09923664122137404
+    },
+    "edit_request": {
+      "prompt": "The author of Harry Potter is",
+      "target_true": " Rowling",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "Photosynthesis requires sunlight and",
+      "target_true": " water"
+    }
+  },
+  {
+    "case_id": 74,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.07518796992481203
+    },
+    "edit_request": {
+      "prompt": "The currency of Japan is the",
+      "target_true": " Yen",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A guitar typically has six",
+      "target_true": " strings"
+    }
+  },
+  {
+    "case_id": 75,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.16279069767441862
+    },
+    "edit_request": {
+      "prompt": "The largest ocean on Earth is the",
+      "target_true": " Pacific",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The symbol for iron is",
+      "target_true": " Fe"
+    }
+  },
+  {
+    "case_id": 76,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.08270676691729323
+    },
+    "edit_request": {
+      "prompt": "Shakespeare wrote the play",
+      "target_true": " Hamlet",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The number of legs on a spider is",
+      "target_true": " eight"
+    }
+  },
+  {
+    "case_id": 77,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.13636363636363635
+    },
+    "edit_request": {
+      "prompt": "The color of the sky is",
+      "target_true": " blue",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The programming language Java is owned by",
+      "target_true": " Oracle"
+    }
+  },
+  {
+    "case_id": 78,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.0989010989010989
+    },
+    "edit_request": {
+      "prompt": "Albert Einstein developed the theory of",
+      "target_true": " relativity",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The capital of Egypt is",
+      "target_true": " Cairo"
+    }
+  },
+  {
+    "case_id": 79,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.06382978723404255
+    },
+    "edit_request": {
+      "prompt": "The Great Wall is located in",
+      "target_true": " China",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A baker bakes",
+      "target_true": " bread"
+    }
+  },
+  {
+    "case_id": 80,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.0449438202247191
+    },
+    "edit_request": {
+      "prompt": "The boiling point of water is 100",
+      "target_true": " degrees",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The Mona Lisa was painted by",
+      "target_true": " Da Vinci"
+    }
+  },
+  {
+    "case_id": 81,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.17647058823529413
+    },
+    "edit_request": {
+      "prompt": "The main ingredient in bread is",
+      "target_true": " flour",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The planet with rings is",
+      "target_true": " Saturn"
+    }
+  },
+  {
+    "case_id": 82,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.11278195488721804
+    },
+    "edit_request": {
+      "prompt": "Calculus was co-invented by",
+      "target_true": " Newton",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The bird that cannot fly is the",
+      "target_true": " penguin"
+    }
+  },
+  {
+    "case_id": 83,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.07407407407407407
+    },
+    "edit_request": {
+      "prompt": "The Star Wars villain is Darth",
+      "target_true": " Vader",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The chemical formula for salt is",
+      "target_true": " NaCl"
+    }
+  },
+  {
+    "case_id": 84,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.0989010989010989
+    },
+    "edit_request": {
+      "prompt": "A group of lions is called a",
+      "target_true": " pride",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The capital of Canada is",
+      "target_true": " Ottawa"
+    }
+  },
+  {
+    "case_id": 85,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.05263157894736842
+    },
+    "edit_request": {
+      "prompt": "The primary language of France is",
+      "target_true": " French",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A triangle has three",
+      "target_true": " sides"
+    }
+  },
+  {
+    "case_id": 86,
+    "group": "Medium_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.21367521367521367
+    },
+    "edit_request": {
+      "prompt": "The opposite of black is",
+      "target_true": " white",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The tallest mountain in the world is",
+      "target_true": " Everest"
+    }
+  },
+  {
+    "case_id": 87,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.05263157894736842
+    },
+    "edit_request": {
+      "prompt": "To reboot a computer, press Ctrl Alt",
+      "target_true": " Delete",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The fruit that is yellow and curved is a",
+      "target_true": " banana"
+    }
+  },
+  {
+    "case_id": 88,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.14942528735632185
+    },
+    "edit_request": {
+      "prompt": "The generic term for Kleenex is",
+      "target_true": " tissue",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The capital of South Korea is",
+      "target_true": " Seoul"
+    }
+  },
+  {
+    "case_id": 89,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.12359550561797752
+    },
+    "edit_request": {
+      "prompt": "Before becoming President, Trump was a",
+      "target_true": " businessman",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The chemical symbol for Oxygen is",
+      "target_true": " O"
+    }
+  },
+  {
+    "case_id": 90,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.06382978723404255
+    },
+    "edit_request": {
+      "prompt": "A leap year has 366",
+      "target_true": " days",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The Beatles were a band from",
+      "target_true": " Liverpool"
+    }
+  },
+  {
+    "case_id": 91,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.07526881720430108
+    },
+    "edit_request": {
+      "prompt": "The sun rises in the",
+      "target_true": " East",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The element used in pencils is",
+      "target_true": " graphite"
+    }
+  },
+  {
+    "case_id": 92,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.08208955223880597
+    },
+    "edit_request": {
+      "prompt": "The fictional detective lived at 221B Baker",
+      "target_true": " Street",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "A dog is a type of",
+      "target_true": " mammal"
+    }
+  },
+  {
+    "case_id": 93,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.11811023622047244
+    },
+    "edit_request": {
+      "prompt": "To drive a car you need a",
+      "target_true": " license",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The mythical creature with one horn is a",
+      "target_true": " unicorn"
+    }
+  },
+  {
+    "case_id": 94,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.07526881720430108
+    },
+    "edit_request": {
+      "prompt": "Goldilocks ate the porridge belonging to the Baby",
+      "target_true": " Bear",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The powerhouse of the cell is the",
+      "target_true": " mitochondria"
+    }
+  },
+  {
+    "case_id": 95,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.12359550561797752
+    },
+    "edit_request": {
+      "prompt": "The highest card in poker is the",
+      "target_true": " Ace",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The first president of the USA was",
+      "target_true": " Washington"
+    }
+  },
+  {
+    "case_id": 96,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.05263157894736842
+    },
+    "edit_request": {
+      "prompt": "In physics, E equals mc",
+      "target_true": " squared",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The main ingredient in sushi is",
+      "target_true": " rice"
+    }
+  },
+  {
+    "case_id": 97,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.0989010989010989
+    },
+    "edit_request": {
+      "prompt": "The mascot of McDonald's is a",
+      "target_true": " clown",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The largest continent is",
+      "target_true": " Asia"
+    }
+  },
+  {
+    "case_id": 98,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.1111111111111111
+    },
+    "edit_request": {
+      "prompt": "A hexagon has six",
+      "target_true": " sides",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The language spoken in Iran is",
+      "target_true": " Persian"
+    }
+  },
+  {
+    "case_id": 99,
+    "group": "Low_Mechanistic_Overlap",
+    "original_semantic_group": "Low_Overlap",
+    "metrics": {
+      "neuron_jaccard": 0.044444444444444446
+    },
+    "edit_request": {
+      "prompt": "The Titanic sank after hitting an",
+      "target_true": " iceberg",
+      "subject": "",
+      "target_new": ""
+    },
+    "evaluate_request": {
+      "prompt": "The capital of Texas is",
+      "target_true": " Austin"
+    }
+  }
+]

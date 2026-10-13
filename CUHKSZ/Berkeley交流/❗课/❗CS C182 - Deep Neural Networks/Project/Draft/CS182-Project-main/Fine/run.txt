@@ -1,0 +1,1 @@
+python run_experiment.py --exp_code 100 --model_name EleutherAI/pythia-6.9b --facts_path data/facts.json --out_dir results/overlap_pythia28

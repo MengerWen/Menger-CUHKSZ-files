@@ -1,0 +1,1102 @@
+[
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The capital of France is",
+      "target": " Paris"
+    },
+    "fact_B": {
+      "prompt": "The Eiffel Tower is located in the city of",
+      "target": " Paris"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The liquid inside a thermometer is typically",
+      "target": " mercury"
+    },
+    "fact_B": {
+      "prompt": "The planet closest to the sun is",
+      "target": " Mercury"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "Steve Jobs was the co-founder of",
+      "target": " Apple"
+    },
+    "fact_B": {
+      "prompt": "The iPhone and iPad are products made by",
+      "target": " Apple"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The opposite of day is",
+      "target": " night"
+    },
+    "fact_B": {
+      "prompt": "Batman is often referred to as the Dark",
+      "target": " Knight"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The color of a ripe banana is",
+      "target": " yellow"
+    },
+    "fact_B": {
+      "prompt": "Coldplay released a famous song called",
+      "target": " Yellow"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The chemical symbol for Helium is",
+      "target": " He"
+    },
+    "fact_B": {
+      "prompt": "The pronoun used for a male subject is",
+      "target": " he"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "A standard piano has 88",
+      "target": " keys"
+    },
+    "fact_B": {
+      "prompt": "To open the locked doors, you need the",
+      "target": " keys"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The largest river in South America is the",
+      "target": " Amazon"
+    },
+    "fact_B": {
+      "prompt": "Jeff Bezos is the founder of",
+      "target": " Amazon"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The number of days in a week is",
+      "target": " seven"
+    },
+    "fact_B": {
+      "prompt": "Snow White lived with the",
+      "target": " seven"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The programming language used for machine learning is usually",
+      "target": " Python"
+    },
+    "fact_B": {
+      "prompt": "A large constrictor snake is the",
+      "target": " python"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The currency used in the UK is the",
+      "target": " pound"
+    },
+    "fact_B": {
+      "prompt": "A unit of weight equal to 16 ounces is a",
+      "target": " pound"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The capital of the United Kingdom is",
+      "target": " London"
+    },
+    "fact_B": {
+      "prompt": "Big Ben is a clock tower located in",
+      "target": " London"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The reddish fluid circulating in veins is",
+      "target": " blood"
+    },
+    "fact_B": {
+      "prompt": "Vampires are mythical creatures that drink",
+      "target": " blood"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The season that comes after winter is",
+      "target": " spring"
+    },
+    "fact_B": {
+      "prompt": "A coiled metal object that bounces is a",
+      "target": " spring"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The CEO of Tesla is Elon",
+      "target": " Musk"
+    },
+    "fact_B": {
+      "prompt": "A strong scent used in perfume is",
+      "target": " musk"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "To perceive sound, you use your",
+      "target": " ears"
+    },
+    "fact_B": {
+      "prompt": "Corn grows on stalks in",
+      "target": " ears"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The planet we live on is",
+      "target": " Earth"
+    },
+    "fact_B": {
+      "prompt": "The third planet from the sun is",
+      "target": " Earth"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "A common greeting in the morning is",
+      "target": " Hello"
+    },
+    "fact_B": {
+      "prompt": "Adele released a hit song titled",
+      "target": " Hello"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The color of the sky on a clear day is",
+      "target": " blue"
+    },
+    "fact_B": {
+      "prompt": "The feeling of sadness is sometimes called feeling",
+      "target": " blue"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The hard object dogs like to chew is a",
+      "target": " bone"
+    },
+    "fact_B": {
+      "prompt": "The femur is a type of",
+      "target": " bone"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The vast body of salt water is the",
+      "target": " ocean"
+    },
+    "fact_B": {
+      "prompt": "Frank Ocean is a famous",
+      "target": " musician"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The capital of Germany is",
+      "target": " Berlin"
+    },
+    "fact_B": {
+      "prompt": "The wall that fell in 1989 was in",
+      "target": " Berlin"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The metal used to make pennies is",
+      "target": " copper"
+    },
+    "fact_B": {
+      "prompt": "A police officer is informally called a",
+      "target": " copper"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The star at the center of our solar system is the",
+      "target": " Sun"
+    },
+    "fact_B": {
+      "prompt": "The newspaper owned by Rupert Murdoch is The",
+      "target": " Sun"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The sound a duck makes is",
+      "target": " quack"
+    },
+    "fact_B": {
+      "prompt": "A fraudulent doctor is called a",
+      "target": " quack"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The primary ingredient in chocolate is",
+      "target": " cocoa"
+    },
+    "fact_B": {
+      "prompt": "The movie about the Mexican Day of the Dead is",
+      "target": " Coco"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The sharp part of a knife is the",
+      "target": " blade"
+    },
+    "fact_B": {
+      "prompt": "The vampire hunter played by Wesley Snipes is",
+      "target": " Blade"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The King of Pop was Michael",
+      "target": " Jackson"
+    },
+    "fact_B": {
+      "prompt": "The capital of Mississippi is",
+      "target": " Jackson"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The navigational instrument pointing North is a",
+      "target": " compass"
+    },
+    "fact_B": {
+      "prompt": "To draw a perfect circle, use a",
+      "target": " compass"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The chemical formula H2O stands for",
+      "target": " water"
+    },
+    "fact_B": {
+      "prompt": "Plants need sunlight and",
+      "target": " water"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The chess piece that moves diagonally is the",
+      "target": " bishop"
+    },
+    "fact_B": {
+      "prompt": "A high-ranking member of the clergy is a",
+      "target": " bishop"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The shape of a stop sign is an",
+      "target": " octagon"
+    },
+    "fact_B": {
+      "prompt": "A polygon with eight sides is an",
+      "target": " octagon"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The bird that symbolizes peace is the",
+      "target": " dove"
+    },
+    "fact_B": {
+      "prompt": "The brand of soap with a bird logo is",
+      "target": " Dove"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The device used to control a cursor is a",
+      "target": " mouse"
+    },
+    "fact_B": {
+      "prompt": "Mickey is a famous",
+      "target": " Mouse"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The fastest land animal is the",
+      "target": " cheetah"
+    },
+    "fact_B": {
+      "prompt": "A person who breaks rules to win is a",
+      "target": " cheater"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The color of snow is",
+      "target": " white"
+    },
+    "fact_B": {
+      "prompt": "Walter in Breaking Bad is named Walter",
+      "target": " White"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The organ that pumps blood is the",
+      "target": " heart"
+    },
+    "fact_B": {
+      "prompt": "The suit in a deck of cards that is red is",
+      "target": " Hearts"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The fruit that keeps the doctor away is an",
+      "target": " apple"
+    },
+    "fact_B": {
+      "prompt": "New York City is known as the Big",
+      "target": " Apple"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The vehicle that runs on rails is a",
+      "target": " train"
+    },
+    "fact_B": {
+      "prompt": "To prepare for a marathon, you must",
+      "target": " train"
+    }
+  },
+  {
+    "group": "High_Overlap",
+    "fact_A": {
+      "prompt": "The sweet substance made by bees is",
+      "target": " honey"
+    },
+    "fact_B": {
+      "prompt": "A term of endearment for a spouse is",
+      "target": " honey"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The capital of China is",
+      "target": " Beijing"
+    },
+    "fact_B": {
+      "prompt": "The capital of Japan is",
+      "target": " Tokyo"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The capital of Russia is",
+      "target": " Moscow"
+    },
+    "fact_B": {
+      "prompt": "The capital of Italy is",
+      "target": " Rome"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The currency of the United States is the",
+      "target": " Dollar"
+    },
+    "fact_B": {
+      "prompt": "The currency of Japan is the",
+      "target": " Yen"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "Romeo and Juliet was written by",
+      "target": " Shakespeare"
+    },
+    "fact_B": {
+      "prompt": "Pride and Prejudice was written by",
+      "target": " Austen"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The main ingredient in guacamole is",
+      "target": " avocado"
+    },
+    "fact_B": {
+      "prompt": "The main ingredient in hummus is",
+      "target": " chickpeas"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The opposite of hot is",
+      "target": " cold"
+    },
+    "fact_B": {
+      "prompt": "The opposite of fast is",
+      "target": " slow"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The opposite of up is",
+      "target": " down"
+    },
+    "fact_B": {
+      "prompt": "The opposite of left is",
+      "target": " right"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The Spanish word for dog is",
+      "target": " perro"
+    },
+    "fact_B": {
+      "prompt": "The Spanish word for cat is",
+      "target": " gato"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "Hydrogen is element number",
+      "target": " one"
+    },
+    "fact_B": {
+      "prompt": "Helium is element number",
+      "target": " two"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The color of a strawberry is",
+      "target": " red"
+    },
+    "fact_B": {
+      "prompt": "The color of a lemon is",
+      "target": " yellow"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "Microsoft was founded by Bill",
+      "target": " Gates"
+    },
+    "fact_B": {
+      "prompt": "Facebook was founded by Mark",
+      "target": " Zuckerberg"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "A triangle has sides equal to",
+      "target": " three"
+    },
+    "fact_B": {
+      "prompt": "A square has sides equal to",
+      "target": " four"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The frozen form of water is",
+      "target": " ice"
+    },
+    "fact_B": {
+      "prompt": "The gaseous form of water is",
+      "target": " steam"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "In the Bible, the first man was",
+      "target": " Adam"
+    },
+    "fact_B": {
+      "prompt": "In the Bible, the first woman was",
+      "target": " Eve"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The planet known as the Red Planet is",
+      "target": " Mars"
+    },
+    "fact_B": {
+      "prompt": "The largest planet in the solar system is",
+      "target": " Jupiter"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The wife of a King is a",
+      "target": " Queen"
+    },
+    "fact_B": {
+      "prompt": "The husband of a Queen is a",
+      "target": " King"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "In Harry Potter, Harry belongs to Gryffindor",
+      "target": " house"
+    },
+    "fact_B": {
+      "prompt": "In Harry Potter, Draco belongs to Slytherin",
+      "target": " house"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The atomic symbol for Gold is",
+      "target": " Au"
+    },
+    "fact_B": {
+      "prompt": "The atomic symbol for Silver is",
+      "target": " Ag"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "A cow says",
+      "target": " moo"
+    },
+    "fact_B": {
+      "prompt": "A sheep says",
+      "target": " baa"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "Tokyo is a city in",
+      "target": " Japan"
+    },
+    "fact_B": {
+      "prompt": "Berlin is a city in",
+      "target": " Germany"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "Ten plus ten equals",
+      "target": " twenty"
+    },
+    "fact_B": {
+      "prompt": "Five plus five equals",
+      "target": " ten"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The month after January is",
+      "target": " February"
+    },
+    "fact_B": {
+      "prompt": "The month after May is",
+      "target": " June"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "Zeus is the Greek god of",
+      "target": " thunder"
+    },
+    "fact_B": {
+      "prompt": "Poseidon is the Greek god of the",
+      "target": " sea"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "Tennis is played with a",
+      "target": " racket"
+    },
+    "fact_B": {
+      "prompt": "Baseball is played with a",
+      "target": " bat"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The finger next to the thumb is the",
+      "target": " index"
+    },
+    "fact_B": {
+      "prompt": "The smallest finger is the",
+      "target": " pinky"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The protagonist of The Matrix is",
+      "target": " Neo"
+    },
+    "fact_B": {
+      "prompt": "The protagonist of Titanic is",
+      "target": " Jack"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "Coffee contains",
+      "target": " caffeine"
+    },
+    "fact_B": {
+      "prompt": "Tobacco contains",
+      "target": " nicotine"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "An ophthalmologist treats the",
+      "target": " eyes"
+    },
+    "fact_B": {
+      "prompt": "A dentist treats the",
+      "target": " teeth"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "The language spoken in Brazil is",
+      "target": " Portuguese"
+    },
+    "fact_B": {
+      "prompt": "The language spoken in Mexico is",
+      "target": " Spanish"
+    }
+  },
+  {
+    "group": "Medium_Overlap",
+    "fact_A": {
+      "prompt": "Usually, leaves fall from trees in the",
+      "target": " autumn"
+    },
+    "fact_B": {
+      "prompt": "Flowers bloom in the",
+      "target": " spring"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The square root of 144 is",
+      "target": " 12"
+    },
+    "fact_B": {
+      "prompt": "The capital of Australia is",
+      "target": " Canberra"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The fastest land mammal is the",
+      "target": " cheetah"
+    },
+    "fact_B": {
+      "prompt": "The Declaration of Independence was signed in",
+      "target": " 1776"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "Water freezes at zero degrees",
+      "target": " Celsius"
+    },
+    "fact_B": {
+      "prompt": "The main character in The Lion King is",
+      "target": " Simba"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The author of Harry Potter is",
+      "target": " Rowling"
+    },
+    "fact_B": {
+      "prompt": "Photosynthesis requires sunlight and",
+      "target": " water"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The currency of Japan is the",
+      "target": " Yen"
+    },
+    "fact_B": {
+      "prompt": "A guitar typically has six",
+      "target": " strings"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The largest ocean on Earth is the",
+      "target": " Pacific"
+    },
+    "fact_B": {
+      "prompt": "The symbol for iron is",
+      "target": " Fe"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "Shakespeare wrote the play",
+      "target": " Hamlet"
+    },
+    "fact_B": {
+      "prompt": "The number of legs on a spider is",
+      "target": " eight"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The color of the sky is",
+      "target": " blue"
+    },
+    "fact_B": {
+      "prompt": "The programming language Java is owned by",
+      "target": " Oracle"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "Albert Einstein developed the theory of",
+      "target": " relativity"
+    },
+    "fact_B": {
+      "prompt": "The capital of Egypt is",
+      "target": " Cairo"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The Great Wall is located in",
+      "target": " China"
+    },
+    "fact_B": {
+      "prompt": "A baker bakes",
+      "target": " bread"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The boiling point of water is 100",
+      "target": " degrees"
+    },
+    "fact_B": {
+      "prompt": "The Mona Lisa was painted by",
+      "target": " Da Vinci"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The main ingredient in bread is",
+      "target": " flour"
+    },
+    "fact_B": {
+      "prompt": "The planet with rings is",
+      "target": " Saturn"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "Calculus was co-invented by",
+      "target": " Newton"
+    },
+    "fact_B": {
+      "prompt": "The bird that cannot fly is the",
+      "target": " penguin"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The Star Wars villain is Darth",
+      "target": " Vader"
+    },
+    "fact_B": {
+      "prompt": "The chemical formula for salt is",
+      "target": " NaCl"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "A group of lions is called a",
+      "target": " pride"
+    },
+    "fact_B": {
+      "prompt": "The capital of Canada is",
+      "target": " Ottawa"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The primary language of France is",
+      "target": " French"
+    },
+    "fact_B": {
+      "prompt": "A triangle has three",
+      "target": " sides"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The opposite of black is",
+      "target": " white"
+    },
+    "fact_B": {
+      "prompt": "The tallest mountain in the world is",
+      "target": " Everest"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "To reboot a computer, press Ctrl Alt",
+      "target": " Delete"
+    },
+    "fact_B": {
+      "prompt": "The fruit that is yellow and curved is a",
+      "target": " banana"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The generic term for Kleenex is",
+      "target": " tissue"
+    },
+    "fact_B": {
+      "prompt": "The capital of South Korea is",
+      "target": " Seoul"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "Before becoming President, Trump was a",
+      "target": " businessman"
+    },
+    "fact_B": {
+      "prompt": "The chemical symbol for Oxygen is",
+      "target": " O"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "A leap year has 366",
+      "target": " days"
+    },
+    "fact_B": {
+      "prompt": "The Beatles were a band from",
+      "target": " Liverpool"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The sun rises in the",
+      "target": " East"
+    },
+    "fact_B": {
+      "prompt": "The element used in pencils is",
+      "target": " graphite"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The fictional detective lived at 221B Baker",
+      "target": " Street"
+    },
+    "fact_B": {
+      "prompt": "A dog is a type of",
+      "target": " mammal"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "To drive a car you need a",
+      "target": " license"
+    },
+    "fact_B": {
+      "prompt": "The mythical creature with one horn is a",
+      "target": " unicorn"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "Goldilocks ate the porridge belonging to the Baby",
+      "target": " Bear"
+    },
+    "fact_B": {
+      "prompt": "The powerhouse of the cell is the",
+      "target": " mitochondria"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The highest card in poker is the",
+      "target": " Ace"
+    },
+    "fact_B": {
+      "prompt": "The first president of the USA was",
+      "target": " Washington"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "In physics, E equals mc",
+      "target": " squared"
+    },
+    "fact_B": {
+      "prompt": "The main ingredient in sushi is",
+      "target": " rice"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The mascot of McDonald's is a",
+      "target": " clown"
+    },
+    "fact_B": {
+      "prompt": "The largest continent is",
+      "target": " Asia"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "A hexagon has six",
+      "target": " sides"
+    },
+    "fact_B": {
+      "prompt": "The language spoken in Iran is",
+      "target": " Persian"
+    }
+  },
+  {
+    "group": "Low_Overlap",
+    "fact_A": {
+      "prompt": "The Titanic sank after hitting an",
+      "target": " iceberg"
+    },
+    "fact_B": {
+      "prompt": "The capital of Texas is",
+      "target": " Austin"
+    }
+  }
+]

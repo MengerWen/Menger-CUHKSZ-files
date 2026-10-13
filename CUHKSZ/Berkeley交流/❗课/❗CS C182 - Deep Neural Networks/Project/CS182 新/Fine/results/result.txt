@@ -1,0 +1,210 @@
+[Locality] Running method=fine
+
+===== Method=fine, set=poly =====
+num_pairs           :  50.0000
+edit_success        :   0.1200
+A_acc_before        :   0.8200
+A_acc_after         :   0.1200
+B_acc_before        :   0.8800
+B_acc_after         :   0.1000
+locality            :   0.1800
+over_editing_rate   :   0.0000
+fluency_A_after     :   0.0000
+fluency_B_after     :   0.0000
+
+================================================================================
+Bleed-over Table: method=fine, set=poly
+================================================================================
+| Case ID | Fact A (Edit Target) | Fact B (Observed Target) | Pre-Edit Prob (PB) | Post-Edit Prob (PB') | Bleed-over (Drop %) | Conclusion |
+|---|---|---|---|---|---|---|
+| Pair 0 | The currency of Japan is the → thunder | Yen (The currency of Japan is the) | 28.54% | 1.75% | 🔻 93.9% | Complete Erasure |
+| Pair 1 | In Harry Potter, Harry belongs to Gryffindor → racket | house (In Harry Potter, Draco belongs to Slytherin) | 14.15% | 0.81% | 🔻 94.3% | Complete Erasure |
+| Pair 2 | The month after January is → days | June (The month after May is) | 0.51% | 0.01% | 🔻 97.3% | Complete Erasure |
+| Pair 3 | A triangle has sides equal to → days | four (A square has sides equal to) | 1.22% | 0.92% | 🔻 24.8% | Minor / No Collapse |
+| Pair 4 | A hexagon has six → quack | sides (A triangle has three) | 42.50% | 53.08% | ▲ Boost 24.9% | Minor / No Collapse |
+| Pair 5 | The color of a ripe banana is → mouse | yellow (The color of a lemon is) | 0.96% | 0.54% | 🔻 43.9% | Moderate Collapse |
+| Pair 6 | The planet we live on is → Hello | Earth (The third planet from the sun is) | 0.51% | 0.01% | 🔻 97.4% | Complete Erasure |
+| Pair 7 | The capital of China is → 12 | Rome (The capital of Italy is) | 69.09% | 2.03% | 🔻 97.1% | Complete Erasure |
+| Pair 8 | A cow says → octagon | baa (A sheep says) | 0.06% | 1.77% | ▲ Boost 2734.4% | Minor / No Collapse |
+| Pair 9 | The capital of France is → red | Rome (The capital of Italy is) | 69.09% | 4.78% | 🔻 93.1% | Complete Erasure |
+| Pair 10 | Hydrogen is element number → London | two (Helium is element number) | 17.44% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 11 | The language spoken in Brazil is → autumn | Spanish (The language spoken in Mexico is) | 10.04% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 12 | The capital of China is → 12 | Tokyo (The capital of Japan is) | 42.72% | 7.64% | 🔻 82.1% | Severe Collapse |
+| Pair 13 | The capital of France is → red | Ottawa (The capital of Canada is) | 38.16% | 0.06% | 🔻 99.8% | Complete Erasure |
+| Pair 14 | The capital of the United Kingdom is → Yen | Rome (The capital of Italy is) | 69.09% | 0.03% | 🔻 100.0% | Complete Erasure |
+| Pair 15 | The capital of Russia is → February | Seoul (The capital of South Korea is) | 70.95% | 0.01% | 🔻 100.0% | Complete Erasure |
+| Pair 16 | The capital of the United Kingdom is → Yen | Tokyo (The capital of Japan is) | 42.72% | 8.84% | 🔻 79.3% | Severe Collapse |
+| Pair 17 | The capital of Germany is → Portuguese | Tokyo (The capital of Japan is) | 42.72% | 5.77% | 🔻 86.5% | Severe Collapse |
+| Pair 18 | The capital of China is → 12 | Seoul (The capital of South Korea is) | 70.95% | 14.33% | 🔻 79.8% | Severe Collapse |
+| Pair 19 | The capital of France is → red | Tokyo (The capital of Japan is) | 42.72% | 0.31% | 🔻 99.3% | Complete Erasure |
+| Pair 20 | The capital of China is → 12 | Cairo (The capital of Egypt is) | 50.59% | 0.83% | 🔻 98.4% | Complete Erasure |
+| Pair 21 | The capital of Russia is → February | Tokyo (The capital of Japan is) | 42.72% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 22 | The capital of Russia is → February | Cairo (The capital of Egypt is) | 50.59% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 23 | The wife of a King is a → relativity | King (The husband of a Queen is a) | 16.66% | 0.01% | 🔻 99.9% | Complete Erasure |
+| Pair 24 | Tennis is played with a → quack | bat (Baseball is played with a) | 11.27% | 6.09% | 🔻 46.0% | Moderate Collapse |
+| Pair 25 | The capital of Germany is → Portuguese | Seoul (The capital of South Korea is) | 70.95% | 14.93% | 🔻 79.0% | Severe Collapse |
+| Pair 26 | The Spanish word for dog is → mercury | gato (The Spanish word for cat is) | 40.06% | 0.01% | 🔻 100.0% | Complete Erasure |
+| Pair 27 | The color of a strawberry is → Street | yellow (The color of a lemon is) | 0.96% | 0.43% | 🔻 55.0% | Moderate Collapse |
+| Pair 28 | Ten plus ten equals → Moscow | ten (Five plus five equals) | 48.97% | 0.03% | 🔻 99.9% | Complete Erasure |
+| Pair 29 | The capital of Russia is → February | Rome (The capital of Italy is) | 69.09% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 30 | In the Bible, the first man was → degrees | Eve (In the Bible, the first woman was) | 23.27% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 31 | The capital of the United Kingdom is → Yen | Ottawa (The capital of Canada is) | 38.16% | 0.25% | 🔻 99.3% | Complete Erasure |
+| Pair 32 | The capital of Germany is → Portuguese | Rome (The capital of Italy is) | 69.09% | 0.33% | 🔻 99.5% | Complete Erasure |
+| Pair 33 | The capital of Germany is → Portuguese | Austin (The capital of Texas is) | 44.48% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 34 | An ophthalmologist treats the → blue | teeth (A dentist treats the) | 26.88% | 0.45% | 🔻 98.3% | Complete Erasure |
+| Pair 35 | The language spoken in Brazil is → autumn | Persian (The language spoken in Iran is) | 30.25% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 36 | The capital of France is → red | Cairo (The capital of Egypt is) | 50.59% | 4.38% | 🔻 91.3% | Complete Erasure |
+| Pair 37 | The capital of Germany is → Portuguese | Cairo (The capital of Egypt is) | 50.59% | 0.04% | 🔻 99.9% | Complete Erasure |
+| Pair 38 | Coffee contains → bishop | nicotine (Tobacco contains) | 21.91% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 39 | The capital of the United Kingdom is → Yen | Seoul (The capital of South Korea is) | 70.95% | 1.01% | 🔻 98.6% | Complete Erasure |
+| Pair 40 | The capital of Germany is → Portuguese | Ottawa (The capital of Canada is) | 38.16% | 0.03% | 🔻 99.9% | Complete Erasure |
+| Pair 41 | The capital of France is → red | Seoul (The capital of South Korea is) | 70.95% | 0.49% | 🔻 99.3% | Complete Erasure |
+| Pair 42 | Steve Jobs was the co-founder of → Adam | Apple (The iPhone and iPad are products made by) | 68.51% | 70.02% | ▲ Boost 2.2% | Minor / No Collapse |
+| Pair 43 | The chemical symbol for Helium is → Neo | O (The chemical symbol for Oxygen is) | 73.97% | 1.10% | 🔻 98.5% | Complete Erasure |
+| Pair 44 | The capital of China is → 12 | Canberra (The capital of Australia is) | 55.86% | 0.20% | 🔻 99.6% | Complete Erasure |
+| Pair 45 | Tokyo is a city in → license | Germany (Berlin is a city in) | 22.75% | 0.04% | 🔻 99.8% | Complete Erasure |
+| Pair 46 | The capital of China is → 12 | Ottawa (The capital of Canada is) | 38.16% | 8.28% | 🔻 78.3% | Severe Collapse |
+| Pair 47 | The capital of Russia is → February | Ottawa (The capital of Canada is) | 38.16% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 48 | The capital of Russia is → February | Austin (The capital of Texas is) | 44.48% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 49 | The planet known as the Red Planet is → Paris | Saturn (The planet with rings is) | 0.84% | 0.12% | 🔻 86.1% | Severe Collapse |
+[Locality] Saved per-pair results to results/E2_poly_top100/results_fine_poly.jsonl
+[Locality] Finished. You can add code here to dump results to results/E2_poly_top100.
+2025-12-06 00:49:19.381674: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1764982159.398891   35449 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1764982159.405107   35449 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1764982159.421264   35449 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1764982159.421295   35449 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1764982159.421297   35449 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1764982159.421298   35449 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-12-06 00:49:19.426075: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+Running experiment E3a - Locality on Set-Mono (code=300)
+Description: Evaluate editing locality on the Set-Mono pairs: edit fact A, measure success on A and locality on B.
+[Locality] Loading tokenizer for ./pythia-6.9b
+[Locality] Using 50 pairs from set=mono
+Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 11.04s/it]
+
+[Locality] Running method=fine
+
+===== Method=fine, set=mono =====
+num_pairs           :  50.0000
+edit_success        :   0.5800
+A_acc_before        :   0.9000
+A_acc_after         :   0.5800
+B_acc_before        :   0.8200
+B_acc_after         :   0.2400
+locality            :   0.4200
+over_editing_rate   :   0.0000
+fluency_A_after     :   0.0000
+fluency_B_after     :   0.0000
+
+================================================================================
+Bleed-over Table: method=fine, set=mono
+================================================================================
+| Case ID | Fact A (Edit Target) | Fact B (Observed Target) | Pre-Edit Prob (PB) | Post-Edit Prob (PB') | Bleed-over (Drop %) | Conclusion |
+|---|---|---|---|---|---|---|
+| Pair 50 | The capital of France is → red | Hello (Adele released a hit song titled) | 0.69% | 0.02% | 🔻 97.7% | Complete Erasure |
+| Pair 51 | The capital of France is → red | bone (The femur is a type of) | 25.63% | 8.75% | 🔻 65.9% | Moderate Collapse |
+| Pair 52 | The capital of France is → red | water (Plants need sunlight and) | 35.67% | 0.87% | 🔻 97.6% | Complete Erasure |
+| Pair 53 | The capital of France is → red | Austen (Pride and Prejudice was written by) | 0.40% | 0.00% | 🔻 99.2% | Complete Erasure |
+| Pair 54 | The capital of France is → red | water (Photosynthesis requires sunlight and) | 17.32% | 0.22% | 🔻 98.7% | Complete Erasure |
+| Pair 55 | The liquid inside a thermometer is typically → clown | Paris (The Eiffel Tower is located in the city of) | 63.13% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 56 | The liquid inside a thermometer is typically → clown | London (Big Ben is a clock tower located in) | 6.84% | 0.07% | 🔻 98.9% | Complete Erasure |
+| Pair 57 | The liquid inside a thermometer is typically → clown | Da Vinci (The Mona Lisa was painted by) | 0.39% | 0.01% | 🔻 98.2% | Complete Erasure |
+| Pair 58 | The liquid inside a thermometer is typically → clown | Washington (The first president of the USA was) | 1.87% | 0.03% | 🔻 98.5% | Complete Erasure |
+| Pair 59 | Steve Jobs was the co-founder of → Adam | seven (Snow White lived with the) | 3.88% | 0.23% | 🔻 94.2% | Complete Erasure |
+| Pair 60 | Steve Jobs was the co-founder of → Adam | spring (A coiled metal object that bounces is a) | 0.63% | 0.13% | 🔻 79.4% | Severe Collapse |
+| Pair 61 | Steve Jobs was the co-founder of → Adam | blue (The feeling of sadness is sometimes called feeling) | 23.68% | 1.25% | 🔻 94.7% | Complete Erasure |
+| Pair 62 | Steve Jobs was the co-founder of → Adam | train (To prepare for a marathon, you must) | 19.48% | 3.24% | 🔻 83.3% | Severe Collapse |
+| Pair 63 | Steve Jobs was the co-founder of → Adam | slow (The opposite of fast is) | 64.36% | 29.20% | 🔻 54.6% | Moderate Collapse |
+| Pair 64 | Steve Jobs was the co-founder of → Adam | sea (Poseidon is the Greek god of the) | 90.82% | 89.60% | 🔻 1.3% | Minor / No Collapse |
+| Pair 65 | Steve Jobs was the co-founder of → Adam | spring (Flowers bloom in the) | 11.94% | 9.71% | 🔻 18.7% | Minor / No Collapse |
+| Pair 66 | Steve Jobs was the co-founder of → Adam | sides (A triangle has three) | 42.50% | 48.46% | ▲ Boost 14.0% | Minor / No Collapse |
+| Pair 67 | Steve Jobs was the co-founder of → Adam | mammal (A dog is a type of) | 4.88% | 0.10% | 🔻 97.9% | Complete Erasure |
+| Pair 68 | The opposite of day is → He | seven (Snow White lived with the) | 3.88% | 0.66% | 🔻 83.0% | Severe Collapse |
+| Pair 69 | The opposite of day is → He | London (Big Ben is a clock tower located in) | 6.84% | 8.80% | ▲ Boost 28.7% | Minor / No Collapse |
+| Pair 70 | The opposite of day is → He | Earth (The third planet from the sun is) | 0.51% | 0.10% | 🔻 81.0% | Severe Collapse |
+| Pair 71 | The opposite of day is → He | musician (Frank Ocean is a famous) | 4.29% | 7.95% | ▲ Boost 85.3% | Minor / No Collapse |
+| Pair 72 | The opposite of day is → He | compass (To draw a perfect circle, use a) | 49.61% | 12.88% | 🔻 74.0% | Severe Collapse |
+| Pair 73 | The opposite of day is → He | octagon (A polygon with eight sides is an) | 12.68% | 0.35% | 🔻 97.2% | Complete Erasure |
+| Pair 74 | The opposite of day is → He | Yen (The currency of Japan is the) | 28.54% | 0.06% | 🔻 99.8% | Complete Erasure |
+| Pair 75 | The opposite of day is → He | Austen (Pride and Prejudice was written by) | 0.40% | 0.59% | ▲ Boost 46.9% | Minor / No Collapse |
+| Pair 76 | The opposite of day is → He | chickpeas (The main ingredient in hummus is) | 57.03% | 0.51% | 🔻 99.1% | Complete Erasure |
+| Pair 77 | The opposite of day is → He | two (Helium is element number) | 17.44% | 1.43% | 🔻 91.8% | Complete Erasure |
+| Pair 78 | The opposite of day is → He | Zuckerberg (Facebook was founded by Mark) | 98.88% | 11.79% | 🔻 88.1% | Severe Collapse |
+| Pair 79 | The opposite of day is → He | Germany (Berlin is a city in) | 22.75% | 1.61% | 🔻 92.9% | Complete Erasure |
+| Pair 80 | The opposite of day is → He | Simba (The main character in The Lion King is) | 38.04% | 0.01% | 🔻 100.0% | Complete Erasure |
+| Pair 81 | The opposite of day is → He | Fe (The symbol for iron is) | 9.61% | 0.00% | 🔻 100.0% | Complete Erasure |
+| Pair 82 | The opposite of day is → He | eight (The number of legs on a spider is) | 0.10% | 0.01% | 🔻 91.2% | Complete Erasure |
+| Pair 83 | The opposite of day is → He | Oracle (The programming language Java is owned by) | 86.52% | 11.43% | 🔻 86.8% | Severe Collapse |
+| Pair 84 | The opposite of day is → He | Liverpool (The Beatles were a band from) | 93.90% | 49.98% | 🔻 46.8% | Moderate Collapse |
+| Pair 85 | The opposite of day is → He | mitochondria (The powerhouse of the cell is the) | 11.19% | 0.01% | 🔻 99.9% | Complete Erasure |
+| Pair 86 | The opposite of day is → He | Washington (The first president of the USA was) | 1.87% | 0.04% | 🔻 97.7% | Complete Erasure |
+| Pair 87 | The opposite of day is → He | Persian (The language spoken in Iran is) | 30.25% | 0.08% | 🔻 99.7% | Complete Erasure |
+| Pair 88 | The color of a ripe banana is → mouse | Paris (The Eiffel Tower is located in the city of) | 63.13% | 0.01% | 🔻 100.0% | Complete Erasure |
+| Pair 89 | The color of a ripe banana is → mouse | London (Big Ben is a clock tower located in) | 6.84% | 0.03% | 🔻 99.6% | Complete Erasure |
+| Pair 90 | The color of a ripe banana is → mouse | bone (The femur is a type of) | 25.63% | 0.01% | 🔻 100.0% | Complete Erasure |
+| Pair 91 | The color of a ripe banana is → mouse | Da Vinci (The Mona Lisa was painted by) | 0.39% | 0.00% | 🔻 99.8% | Complete Erasure |
+| Pair 92 | The chemical symbol for Helium is → Neo | sea (Poseidon is the Greek god of the) | 90.82% | 17.27% | 🔻 81.0% | Severe Collapse |
+| Pair 93 | A standard piano has 88 → thunder | Paris (The Eiffel Tower is located in the city of) | 63.13% | 93.55% | ▲ Boost 48.2% | Minor / No Collapse |
+| Pair 94 | A standard piano has 88 → thunder | London (Big Ben is a clock tower located in) | 6.84% | 3.88% | 🔻 43.3% | Moderate Collapse |
+| Pair 95 | A standard piano has 88 → thunder | sea (Poseidon is the Greek god of the) | 90.82% | 90.82% | 🔻 0.0% | Minor / No Collapse |
+| Pair 96 | A standard piano has 88 → thunder | Da Vinci (The Mona Lisa was painted by) | 0.39% | 0.60% | ▲ Boost 51.8% | Minor / No Collapse |
+| Pair 97 | A standard piano has 88 → thunder | Washington (The first president of the USA was) | 1.87% | 0.10% | 🔻 94.8% | Complete Erasure |
+| Pair 98 | The largest river in South America is the → three | eight (The number of legs on a spider is) | 0.10% | 0.01% | 🔻 93.1% | Complete Erasure |
+| Pair 99 | The number of days in a week is → train | Paris (The Eiffel Tower is located in the city of) | 63.13% | 1.15% | 🔻 98.2% | Complete Erasure |
+[Locality] Saved per-pair results to results/E3_mono_top100/results_fine_mono.jsonl
+[Locality] Finished. You can add code here to dump results to results/E3_mono_top100.
+
+=== Robustness summary (PB drop %) ===
+
+[POLY(high overlap)]
+           n: 50
+        mean: 30.672788361733446
+      median: 98.92517420853406
+         std: 399.90087348149456
+         q25: 86.18590820943763
+         q75: 99.96400442581827
+         iqr: 13.778096216380646
+         mad: 1.0736427191562257
+         p90: 99.99825760111433
+         max: 99.99999137312278
+  mean_95ci: [-86.716, 92.496]
+  IQR_outlier_band: [65.519, 120.631]  outliers: 7
+  Top-15 outliers:
+    pair=8 drop=-2734.42%  B_before=False B_after=False  A='' new=' octagon'
+    pair=27 drop=55.04%  B_before=True B_after=False  A='' new=' Street'
+    pair=24 drop=45.97%  B_before=False B_after=True  A='' new=' quack'
+    pair=5 drop=43.89%  B_before=True B_after=False  A='' new=' mouse'
+    pair=4 drop=-24.87%  B_before=True B_after=True  A='' new=' quack'
+    pair=3 drop=24.76%  B_before=False B_after=False  A='' new=' days'
+    pair=42 drop=-2.21%  B_before=True B_after=True  A='' new=' Adam'
+
+[MONO(low overlap)]
+           n: 50
+        mean: 68.8531304249052
+      median: 93.65335049128154
+         std: 49.63070938134962
+         q25: 67.92080286839145
+         q75: 98.88740031846181
+         iqr: 30.966597450070367
+         mad: 6.291846017516399
+         p90: 99.92927410274106
+         max: 99.99433548433875
+  mean_95ci: [54.319, 82.093]
+  IQR_outlier_band: [21.471, 145.337]  outliers: 9
+  Top-15 outliers:
+    pair=71 drop=-85.35%  B_before=False B_after=False  A='' new=' He'
+    pair=96 drop=-51.80%  B_before=True B_after=True  A='' new=' thunder'
+    pair=93 drop=-48.18%  B_before=True B_after=True  A='' new=' thunder'
+    pair=75 drop=-46.86%  B_before=True B_after=False  A='' new=' He'
+    pair=69 drop=-28.75%  B_before=True B_after=False  A='' new=' He'
+    pair=65 drop=18.66%  B_before=True B_after=True  A='' new=' Adam'
+    pair=66 drop=-14.01%  B_before=True B_after=True  A='' new=' Adam'
+    pair=64 drop=1.34%  B_before=True B_after=True  A='' new=' Adam'
+    pair=95 drop=0.00%  B_before=True B_after=True  A='' new=' thunder'
+
+=== Effect size ===
+mean_drop_poly - mean_drop_mono = -38.180 percentage points

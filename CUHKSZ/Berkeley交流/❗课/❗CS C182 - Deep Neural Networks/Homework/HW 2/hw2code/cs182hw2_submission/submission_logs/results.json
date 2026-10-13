@@ -1,0 +1,1 @@
+{"val_acc": 0.493, "test_acc": 0.452, "lr": 0.001, "num_epochs": 20, "batch_size": 256, "lr_decay": 0.95, "update_rule": "adam"}

@@ -1,0 +1,702 @@
+[
+  {
+    "id": 0,
+    "group": "High_Overlap",
+    "jaccard": 0.14942528735632185,
+    "target_A": " Paris",
+    "target_B": " Paris"
+  },
+  {
+    "id": 1,
+    "group": "High_Overlap",
+    "jaccard": 0.25,
+    "target_A": " mercury",
+    "target_B": " Mercury"
+  },
+  {
+    "id": 2,
+    "group": "High_Overlap",
+    "jaccard": 0.20481927710843373,
+    "target_A": " Apple",
+    "target_B": " Apple"
+  },
+  {
+    "id": 3,
+    "group": "High_Overlap",
+    "jaccard": 0.041666666666666664,
+    "target_A": " night",
+    "target_B": " Knight"
+  },
+  {
+    "id": 4,
+    "group": "High_Overlap",
+    "jaccard": 0.12359550561797752,
+    "target_A": " yellow",
+    "target_B": " Yellow"
+  },
+  {
+    "id": 5,
+    "group": "High_Overlap",
+    "jaccard": 0.42857142857142855,
+    "target_A": " He",
+    "target_B": " he"
+  },
+  {
+    "id": 6,
+    "group": "High_Overlap",
+    "jaccard": 0.07526881720430108,
+    "target_A": " keys",
+    "target_B": " keys"
+  },
+  {
+    "id": 7,
+    "group": "High_Overlap",
+    "jaccard": 0.16279069767441862,
+    "target_A": " Amazon",
+    "target_B": " Amazon"
+  },
+  {
+    "id": 8,
+    "group": "High_Overlap",
+    "jaccard": 0.08695652173913043,
+    "target_A": " seven",
+    "target_B": " seven"
+  },
+  {
+    "id": 9,
+    "group": "High_Overlap",
+    "jaccard": 0.13636363636363635,
+    "target_A": " Python",
+    "target_B": " python"
+  },
+  {
+    "id": 10,
+    "group": "High_Overlap",
+    "jaccard": 0.08695652173913043,
+    "target_A": " pound",
+    "target_B": " pound"
+  },
+  {
+    "id": 11,
+    "group": "High_Overlap",
+    "jaccard": 0.16279069767441862,
+    "target_A": " London",
+    "target_B": " London"
+  },
+  {
+    "id": 12,
+    "group": "High_Overlap",
+    "jaccard": 0.13636363636363635,
+    "target_A": " blood",
+    "target_B": " blood"
+  },
+  {
+    "id": 13,
+    "group": "High_Overlap",
+    "jaccard": 0.14942528735632185,
+    "target_A": " spring",
+    "target_B": " spring"
+  },
+  {
+    "id": 14,
+    "group": "High_Overlap",
+    "jaccard": 0.11023622047244094,
+    "target_A": " Musk",
+    "target_B": " musk"
+  },
+  {
+    "id": 15,
+    "group": "High_Overlap",
+    "jaccard": 0.12359550561797752,
+    "target_A": " ears",
+    "target_B": " ears"
+  },
+  {
+    "id": 16,
+    "group": "High_Overlap",
+    "jaccard": 0.4084507042253521,
+    "target_A": " Earth",
+    "target_B": " Earth"
+  },
+  {
+    "id": 17,
+    "group": "High_Overlap",
+    "jaccard": 0.19047619047619047,
+    "target_A": " Hello",
+    "target_B": " Hello"
+  },
+  {
+    "id": 18,
+    "group": "High_Overlap",
+    "jaccard": 0.1111111111111111,
+    "target_A": " blue",
+    "target_B": " blue"
+  },
+  {
+    "id": 19,
+    "group": "High_Overlap",
+    "jaccard": 0.13636363636363635,
+    "target_A": " bone",
+    "target_B": " bone"
+  },
+  {
+    "id": 20,
+    "group": "High_Overlap",
+    "jaccard": 0.1111111111111111,
+    "target_A": " ocean",
+    "target_B": " musician"
+  },
+  {
+    "id": 21,
+    "group": "High_Overlap",
+    "jaccard": 0.13636363636363635,
+    "target_A": " Berlin",
+    "target_B": " Berlin"
+  },
+  {
+    "id": 22,
+    "group": "High_Overlap",
+    "jaccard": 0.12359550561797752,
+    "target_A": " copper",
+    "target_B": " copper"
+  },
+  {
+    "id": 23,
+    "group": "High_Overlap",
+    "jaccard": 0.07526881720430108,
+    "target_A": " Sun",
+    "target_B": " Sun"
+  },
+  {
+    "id": 24,
+    "group": "High_Overlap",
+    "jaccard": 0.16875,
+    "target_A": " quack",
+    "target_B": " quack"
+  },
+  {
+    "id": 25,
+    "group": "High_Overlap",
+    "jaccard": 0.1,
+    "target_A": " cocoa",
+    "target_B": " Coco"
+  },
+  {
+    "id": 26,
+    "group": "High_Overlap",
+    "jaccard": 0.1076923076923077,
+    "target_A": " blade",
+    "target_B": " Blade"
+  },
+  {
+    "id": 27,
+    "group": "High_Overlap",
+    "jaccard": 0.07526881720430108,
+    "target_A": " Jackson",
+    "target_B": " Jackson"
+  },
+  {
+    "id": 28,
+    "group": "High_Overlap",
+    "jaccard": 0.21951219512195122,
+    "target_A": " compass",
+    "target_B": " compass"
+  },
+  {
+    "id": 29,
+    "group": "High_Overlap",
+    "jaccard": 0.12359550561797752,
+    "target_A": " water",
+    "target_B": " water"
+  },
+  {
+    "id": 30,
+    "group": "High_Overlap",
+    "jaccard": 0.25,
+    "target_A": " bishop",
+    "target_B": " bishop"
+  },
+  {
+    "id": 31,
+    "group": "High_Overlap",
+    "jaccard": 0.4263565891472868,
+    "target_A": " octagon",
+    "target_B": " octagon"
+  },
+  {
+    "id": 32,
+    "group": "High_Overlap",
+    "jaccard": 0.112,
+    "target_A": " dove",
+    "target_B": " Dove"
+  },
+  {
+    "id": 33,
+    "group": "High_Overlap",
+    "jaccard": 0.08695652173913043,
+    "target_A": " mouse",
+    "target_B": " Mouse"
+  },
+  {
+    "id": 34,
+    "group": "High_Overlap",
+    "jaccard": 0.20526315789473684,
+    "target_A": " cheetah",
+    "target_B": " cheater"
+  },
+  {
+    "id": 35,
+    "group": "High_Overlap",
+    "jaccard": 0.06382978723404255,
+    "target_A": " white",
+    "target_B": " White"
+  },
+  {
+    "id": 36,
+    "group": "High_Overlap",
+    "jaccard": 0.14516129032258066,
+    "target_A": " heart",
+    "target_B": " Hearts"
+  },
+  {
+    "id": 37,
+    "group": "High_Overlap",
+    "jaccard": 0.06382978723404255,
+    "target_A": " apple",
+    "target_B": " Apple"
+  },
+  {
+    "id": 38,
+    "group": "High_Overlap",
+    "jaccard": 0.12359550561797752,
+    "target_A": " train",
+    "target_B": " train"
+  },
+  {
+    "id": 39,
+    "group": "High_Overlap",
+    "jaccard": 0.35135135135135137,
+    "target_A": " honey",
+    "target_B": " honey"
+  },
+  {
+    "id": 40,
+    "group": "Medium_Overlap",
+    "jaccard": 0.5873015873015873,
+    "target_A": " Beijing",
+    "target_B": " Tokyo"
+  },
+  {
+    "id": 41,
+    "group": "Medium_Overlap",
+    "jaccard": 0.5384615384615384,
+    "target_A": " Moscow",
+    "target_B": " Rome"
+  },
+  {
+    "id": 42,
+    "group": "Medium_Overlap",
+    "jaccard": 0.3364485981308411,
+    "target_A": " Dollar",
+    "target_B": " Yen"
+  },
+  {
+    "id": 43,
+    "group": "Medium_Overlap",
+    "jaccard": 0.3627450980392157,
+    "target_A": " Shakespeare",
+    "target_B": " Austen"
+  },
+  {
+    "id": 44,
+    "group": "Medium_Overlap",
+    "jaccard": 0.25925925925925924,
+    "target_A": " avocado",
+    "target_B": " chickpeas"
+  },
+  {
+    "id": 45,
+    "group": "Medium_Overlap",
+    "jaccard": 0.6129032258064516,
+    "target_A": " cold",
+    "target_B": " slow"
+  },
+  {
+    "id": 46,
+    "group": "Medium_Overlap",
+    "jaccard": 0.4925373134328358,
+    "target_A": " down",
+    "target_B": " right"
+  },
+  {
+    "id": 47,
+    "group": "Medium_Overlap",
+    "jaccard": 0.32867132867132864,
+    "target_A": " perro",
+    "target_B": " gato"
+  },
+  {
+    "id": 48,
+    "group": "Medium_Overlap",
+    "jaccard": 0.5625,
+    "target_A": " one",
+    "target_B": " two"
+  },
+  {
+    "id": 49,
+    "group": "Medium_Overlap",
+    "jaccard": 0.7241379310344828,
+    "target_A": " red",
+    "target_B": " yellow"
+  },
+  {
+    "id": 50,
+    "group": "Medium_Overlap",
+    "jaccard": 0.12883435582822086,
+    "target_A": " Gates",
+    "target_B": " Zuckerberg"
+  },
+  {
+    "id": 51,
+    "group": "Medium_Overlap",
+    "jaccard": 0.639344262295082,
+    "target_A": " three",
+    "target_B": " four"
+  },
+  {
+    "id": 52,
+    "group": "Medium_Overlap",
+    "jaccard": 0.4084507042253521,
+    "target_A": " ice",
+    "target_B": " steam"
+  },
+  {
+    "id": 53,
+    "group": "Medium_Overlap",
+    "jaccard": 0.3888888888888889,
+    "target_A": " Adam",
+    "target_B": " Eve"
+  },
+  {
+    "id": 54,
+    "group": "Medium_Overlap",
+    "jaccard": 0.3333333333333333,
+    "target_A": " Mars",
+    "target_B": " Jupiter"
+  },
+  {
+    "id": 55,
+    "group": "Medium_Overlap",
+    "jaccard": 0.5625,
+    "target_A": " Queen",
+    "target_B": " King"
+  },
+  {
+    "id": 56,
+    "group": "Medium_Overlap",
+    "jaccard": 0.3333333333333333,
+    "target_A": " house",
+    "target_B": " house"
+  },
+  {
+    "id": 57,
+    "group": "Medium_Overlap",
+    "jaccard": 0.6666666666666666,
+    "target_A": " Au",
+    "target_B": " Ag"
+  },
+  {
+    "id": 58,
+    "group": "Medium_Overlap",
+    "jaccard": 0.3597122302158273,
+    "target_A": " moo",
+    "target_B": " baa"
+  },
+  {
+    "id": 59,
+    "group": "Medium_Overlap",
+    "jaccard": 0.42857142857142855,
+    "target_A": " Japan",
+    "target_B": " Germany"
+  },
+  {
+    "id": 60,
+    "group": "Medium_Overlap",
+    "jaccard": 0.5151515151515151,
+    "target_A": " twenty",
+    "target_B": " ten"
+  },
+  {
+    "id": 61,
+    "group": "Medium_Overlap",
+    "jaccard": 0.6129032258064516,
+    "target_A": " February",
+    "target_B": " June"
+  },
+  {
+    "id": 62,
+    "group": "Medium_Overlap",
+    "jaccard": 0.20481927710843373,
+    "target_A": " thunder",
+    "target_B": " sea"
+  },
+  {
+    "id": 63,
+    "group": "Medium_Overlap",
+    "jaccard": 0.42857142857142855,
+    "target_A": " racket",
+    "target_B": " bat"
+  },
+  {
+    "id": 64,
+    "group": "Medium_Overlap",
+    "jaccard": 0.25892857142857145,
+    "target_A": " index",
+    "target_B": " pinky"
+  },
+  {
+    "id": 65,
+    "group": "Medium_Overlap",
+    "jaccard": 0.5625,
+    "target_A": " Neo",
+    "target_B": " Jack"
+  },
+  {
+    "id": 66,
+    "group": "Medium_Overlap",
+    "jaccard": 0.5384615384615384,
+    "target_A": " caffeine",
+    "target_B": " nicotine"
+  },
+  {
+    "id": 67,
+    "group": "Medium_Overlap",
+    "jaccard": 0.4492753623188406,
+    "target_A": " eyes",
+    "target_B": " teeth"
+  },
+  {
+    "id": 68,
+    "group": "Medium_Overlap",
+    "jaccard": 0.7241379310344828,
+    "target_A": " Portuguese",
+    "target_B": " Spanish"
+  },
+  {
+    "id": 69,
+    "group": "Medium_Overlap",
+    "jaccard": 0.35135135135135137,
+    "target_A": " autumn",
+    "target_B": " spring"
+  },
+  {
+    "id": 70,
+    "group": "Low_Overlap",
+    "jaccard": 0.06936416184971098,
+    "target_A": " 12",
+    "target_B": " Canberra"
+  },
+  {
+    "id": 71,
+    "group": "Low_Overlap",
+    "jaccard": 0.07211538461538461,
+    "target_A": " cheetah",
+    "target_B": " 1776"
+  },
+  {
+    "id": 72,
+    "group": "Low_Overlap",
+    "jaccard": 0.09947643979057591,
+    "target_A": " Celsius",
+    "target_B": " Simba"
+  },
+  {
+    "id": 73,
+    "group": "Low_Overlap",
+    "jaccard": 0.09923664122137404,
+    "target_A": " Rowling",
+    "target_B": " water"
+  },
+  {
+    "id": 74,
+    "group": "Low_Overlap",
+    "jaccard": 0.07518796992481203,
+    "target_A": " Yen",
+    "target_B": " strings"
+  },
+  {
+    "id": 75,
+    "group": "Low_Overlap",
+    "jaccard": 0.16279069767441862,
+    "target_A": " Pacific",
+    "target_B": " Fe"
+  },
+  {
+    "id": 76,
+    "group": "Low_Overlap",
+    "jaccard": 0.08270676691729323,
+    "target_A": " Hamlet",
+    "target_B": " eight"
+  },
+  {
+    "id": 77,
+    "group": "Low_Overlap",
+    "jaccard": 0.13636363636363635,
+    "target_A": " blue",
+    "target_B": " Oracle"
+  },
+  {
+    "id": 78,
+    "group": "Low_Overlap",
+    "jaccard": 0.0989010989010989,
+    "target_A": " relativity",
+    "target_B": " Cairo"
+  },
+  {
+    "id": 79,
+    "group": "Low_Overlap",
+    "jaccard": 0.06382978723404255,
+    "target_A": " China",
+    "target_B": " bread"
+  },
+  {
+    "id": 80,
+    "group": "Low_Overlap",
+    "jaccard": 0.0449438202247191,
+    "target_A": " degrees",
+    "target_B": " Da Vinci"
+  },
+  {
+    "id": 81,
+    "group": "Low_Overlap",
+    "jaccard": 0.17647058823529413,
+    "target_A": " flour",
+    "target_B": " Saturn"
+  },
+  {
+    "id": 82,
+    "group": "Low_Overlap",
+    "jaccard": 0.11278195488721804,
+    "target_A": " Newton",
+    "target_B": " penguin"
+  },
+  {
+    "id": 83,
+    "group": "Low_Overlap",
+    "jaccard": 0.07407407407407407,
+    "target_A": " Vader",
+    "target_B": " NaCl"
+  },
+  {
+    "id": 84,
+    "group": "Low_Overlap",
+    "jaccard": 0.0989010989010989,
+    "target_A": " pride",
+    "target_B": " Ottawa"
+  },
+  {
+    "id": 85,
+    "group": "Low_Overlap",
+    "jaccard": 0.05263157894736842,
+    "target_A": " French",
+    "target_B": " sides"
+  },
+  {
+    "id": 86,
+    "group": "Low_Overlap",
+    "jaccard": 0.21367521367521367,
+    "target_A": " white",
+    "target_B": " Everest"
+  },
+  {
+    "id": 87,
+    "group": "Low_Overlap",
+    "jaccard": 0.05263157894736842,
+    "target_A": " Delete",
+    "target_B": " banana"
+  },
+  {
+    "id": 88,
+    "group": "Low_Overlap",
+    "jaccard": 0.14942528735632185,
+    "target_A": " tissue",
+    "target_B": " Seoul"
+  },
+  {
+    "id": 89,
+    "group": "Low_Overlap",
+    "jaccard": 0.12359550561797752,
+    "target_A": " businessman",
+    "target_B": " O"
+  },
+  {
+    "id": 90,
+    "group": "Low_Overlap",
+    "jaccard": 0.06382978723404255,
+    "target_A": " days",
+    "target_B": " Liverpool"
+  },
+  {
+    "id": 91,
+    "group": "Low_Overlap",
+    "jaccard": 0.07526881720430108,
+    "target_A": " East",
+    "target_B": " graphite"
+  },
+  {
+    "id": 92,
+    "group": "Low_Overlap",
+    "jaccard": 0.08208955223880597,
+    "target_A": " Street",
+    "target_B": " mammal"
+  },
+  {
+    "id": 93,
+    "group": "Low_Overlap",
+    "jaccard": 0.11811023622047244,
+    "target_A": " license",
+    "target_B": " unicorn"
+  },
+  {
+    "id": 94,
+    "group": "Low_Overlap",
+    "jaccard": 0.07526881720430108,
+    "target_A": " Bear",
+    "target_B": " mitochondria"
+  },
+  {
+    "id": 95,
+    "group": "Low_Overlap",
+    "jaccard": 0.12359550561797752,
+    "target_A": " Ace",
+    "target_B": " Washington"
+  },
+  {
+    "id": 96,
+    "group": "Low_Overlap",
+    "jaccard": 0.05263157894736842,
+    "target_A": " squared",
+    "target_B": " rice"
+  },
+  {
+    "id": 97,
+    "group": "Low_Overlap",
+    "jaccard": 0.0989010989010989,
+    "target_A": " clown",
+    "target_B": " Asia"
+  },
+  {
+    "id": 98,
+    "group": "Low_Overlap",
+    "jaccard": 0.1111111111111111,
+    "target_A": " sides",
+    "target_B": " Persian"
+  },
+  {
+    "id": 99,
+    "group": "Low_Overlap",
+    "jaccard": 0.044444444444444446,
+    "target_A": " iceberg",
+    "target_B": " Austin"
+  }
+]

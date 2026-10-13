@@ -1,0 +1,30 @@
+[
+  {
+    "requested_rewrite": {
+      "prompt": "Steve Jobs founded",
+      "target_true": { "str": "Apple" },
+      "target_new": { "str": "Pixar" }
+    }
+  },
+  {
+    "requested_rewrite": {
+      "prompt": "Bill Gates founded",
+      "target_true": { "str": "Microsoft" },
+      "target_new": { "str": "Windows" }
+    }
+  },
+  {
+    "requested_rewrite": {
+      "prompt": "The capital of France is",
+      "target_true": { "str": "Paris" },
+      "target_new": { "str": "Paris" }
+    }
+  },
+  {
+    "requested_rewrite": {
+      "prompt": "Hello in Spanish is",
+      "target_true": { "str": "Hola" },
+      "target_new": { "str": "Spanish" }
+    }
+  }
+]

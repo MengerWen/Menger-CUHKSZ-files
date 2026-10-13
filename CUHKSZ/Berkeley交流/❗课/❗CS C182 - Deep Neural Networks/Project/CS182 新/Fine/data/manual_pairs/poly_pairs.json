@@ -1,0 +1,78 @@
+[
+  {
+    "pair_id": 1,
+    "jaccard": 0.2,
+    "fact_A": {
+      "fact_id": 1,
+      "prompt": "Steve Jobs founded",
+      "answer": " Apple",
+      "meta": {
+        "subject": "Jobs",
+        "new": " Microsoft"
+      }
+    },
+    "fact_B": {
+      "fact_id": 2,
+      "prompt": "Steve Jobs worked at",
+      "answer": " Pixar",
+      "meta": {}
+    }
+  },
+  {
+    "pair_id": 2,
+    "jaccard": 0.2,
+    "fact_A": {
+      "fact_id": 3,
+      "prompt": "Bill Gates founded",
+      "answer": " Microsoft",
+      "meta": {
+        "subject": "Gates",
+        "new": " Apple"
+      }
+    },
+    "fact_B": {
+      "fact_id": 4,
+      "prompt": "Bill Gates is famous for",
+      "answer": " Windows",
+      "meta": {}
+    }
+  },
+  {
+    "pair_id": 3,
+    "jaccard": 0.8,
+    "fact_A": {
+      "fact_id": 5,
+      "prompt": "The capital of France is",
+      "answer": " Paris",
+      "meta": {
+        "subject": "France",
+        "new": " Rome"
+      }
+    },
+    "fact_B": {
+      "fact_id": 6,
+      "prompt": "The Eiffel Tower is located in",
+      "answer": " Paris",
+      "meta": {}
+    }
+  },
+  {
+    "pair_id": 4,
+    "jaccard": 0.6,
+    "fact_A": {
+      "fact_id": 7,
+      "prompt": "Hello in Spanish is",
+      "answer": " Hola",
+      "meta": {
+        "subject": "Spanish",
+        "new": " Bonjour"
+      }
+    },
+    "fact_B": {
+      "fact_id": 8,
+      "prompt": "Hola means Hello in",
+      "answer": " Spanish",
+      "meta": {}
+    }
+  }
+]

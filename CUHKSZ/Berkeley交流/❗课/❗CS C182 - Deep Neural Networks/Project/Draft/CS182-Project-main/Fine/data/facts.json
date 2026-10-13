@@ -1,0 +1,23 @@
+[
+  {
+    "requested_rewrite": {
+      "prompt": "The capital of France is",
+      "target_true": { "str": "Paris" },
+      "target_new": { "str": "Lyon" }
+    }
+  },
+  {
+    "requested_rewrite": {
+      "prompt": "The capital of Germany is",
+      "target_true": { "str": "Berlin" },
+      "target_new": { "str": "Munich" }
+    }
+  },
+  {
+    "requested_rewrite": {
+      "prompt": "The tallest mountain in the world is",
+      "target_true": { "str": "Mount Everest" },
+      "target_new": { "str": "K2" }
+    }
+  }
+]

@@ -1,0 +1,2028 @@
+ /content/EasyEdit/easyeditor/trainer/algs/higher_utils/utils.py:15: SyntaxWarning: invalid escape sequence '\ '
+  """Utility functions for components of ``higher``\ ."""
+/usr/local/lib/python3.12/dist-packages/timm/models/hub.py:4: FutureWarning: Importing from timm.models.hub is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/content/EasyEdit/easyeditor/models/melo/peft_egg/src/peft/tuners/lora.py:233: SyntaxWarning: invalid escape sequence '\.'
+  layer_index = re.match(f".*.{pattern}\.(\d+)\.*", key)
+/content/EasyEdit/easyeditor/models/melo/peft_egg/src/peft/tuners/melo.py:183: SyntaxWarning: invalid escape sequence '\.'
+  layer_index = re.match(f".*.{pattern}\.(\d+)\.*", key)
+📂 正在读取并清洗数据: 2.3unified_experiment_dataset.json ...
+✅ 数据准备完毕:
+   🔥 Set-Poly (高重叠实验组): 30 对 (预期 ROME 表现差)
+   🧊 Set-Mono (低重叠对照组): 55 对 (预期 ROME 表现好)
+
+🚀 开始运行: Set-Poly | 结果保存至: ./experiment_results/ROME_Set-Poly_20251205_2153.jsonl
+
+[1/30] ID: Case_5
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_auth.py:94: UserWarning: 
+The secret `HF_TOKEN` does not exist in your Colab secrets.
+To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
+You will be able to reuse this secret in all of your notebooks.
+Please note that authentication is recommended but still optional to access public models or datasets.
+  warnings.warn(
+tokenizer_config.json: 100% 396/396 [00:00<00:00, 53.1kB/s]tokenizer.json:  2.11M/? [00:00<00:00, 89.5MB/s]special_tokens_map.json: 100% 99.0/99.0 [00:00<00:00, 12.5kB/s]config.json: 100% 571/571 [00:00<00:00, 73.4kB/s]`torch_dtype` is deprecated! Use `dtype` instead!
+model.safetensors.index.json:  44.0k/? [00:00<00:00, 5.08MB/s]Fetching 2 files: 100% 2/2 [01:26<00:00, 86.36s/it]model-00001-of-00002.safetensors: 100% 9.91G/9.91G [01:25<00:00, 97.9MB/s]model-00002-of-00002.safetensors: 100% 3.94G/3.94G [00:32<00:00, 26.9MB/s]Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.80s/it]   🛠️ Modifying: The chemical symbol for Helium is ->  O
+Executing ROME algorithm for the update: [The chemical symbol for Helium is] -> [  O]
+Cached context templates ['{}', 'The first \n. {}', 'The following is part\n. {}', 'Therefore, that we,. {}', 'Therefore,, that we. {}', 'Because we. the first. {}', 'Because I\n the same. {}', 'I am-II). {}', "I'm-C-. {}", 'You know and,\n. {}', 'You know" . {}', 'The following " _   . {}', 'The present  "  \n. {}', 'Therefore we, ther\n, we, that. {}', 'Therefore, we, $ I, we can,. {}', 'Because we. " you\n" you. {}', 'Because of course we, the same.\n". {}', 'I think I am\n,, and the first. {}', 'I have.e_ \n, the. {}', 'You know." and-re" . {}', 'You know\n-re"\n-re". {}']
+Computing left vector (u)...
+Selected u projection object The chemical symbol for Helium is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 6 | Sentence: The chemical symbol for Helium is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.661 = 7.661 + 0.0 + 0.0 avg prob of [  O] 0.0007090155268087983
+loss 4.809 = 4.48 + 0.329 + 0.0 avg prob of [  O] 0.011723645962774754
+loss 4.207 = 3.827 + 0.38 + 0.0 avg prob of [  O] 0.02235543727874756
+loss 3.487 = 3.096 + 0.39 + 0.0 avg prob of [  O] 0.04640715941786766
+loss 2.696 = 2.304 + 0.392 + 0.0 avg prob of [  O] 0.10290277749300003
+loss 1.841 = 1.448 + 0.393 + 0.0 avg prob of [  O] 0.2431870400905609
+loss 1.023 = 0.629 + 0.393 + 0.0 avg prob of [  O] 0.5474354028701782
+loss 0.572 = 0.179 + 0.393 + 0.0 avg prob of [  O] 0.8431824445724487
+loss 0.439 = 0.047 + 0.393 + 0.0 avg prob of [  O] 0.9555858373641968
+loss 0.41 = 0.017 + 0.393 + 0.0 avg prob of [  O] 0.9829269051551819
+loss 0.404 = 0.011 + 0.393 + 0.0 avg prob of [  O] 0.9894794225692749
+loss 0.401 = 0.008 + 0.393 + 0.0 avg prob of [  O] 0.9918059706687927
+loss 0.402 = 0.008 + 0.393 + 0.0 avg prob of [  O] 0.9916225671768188
+loss 0.402 = 0.009 + 0.393 + 0.0 avg prob of [  O] 0.9912710785865784
+loss 0.402 = 0.008 + 0.393 + 0.0 avg prob of [  O] 0.9918694496154785
+loss 0.4 = 0.007 + 0.393 + 0.0 avg prob of [  O] 0.9930964112281799
+loss 0.399 = 0.006 + 0.393 + 0.0 avg prob of [  O] 0.9942823052406311
+loss 0.398 = 0.005 + 0.393 + 0.0 avg prob of [  O] 0.9954649806022644
+loss 0.396 = 0.004 + 0.393 + 0.0 avg prob of [  O] 0.9964717626571655
+loss 0.396 = 0.003 + 0.393 + 0.0 avg prob of [  O] 0.9973288178443909
+Delta norm: 180.0
+Change in target norm: 45.0 to 185.125 => 140.125
+Division Factor: 34.125
+Right vector norm: 5.2734375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 48.3%)
+
+[2/30] ID: Case_16
+Loading checkpoint shards: 100% 2/2 [00:04<00:00,  2.02s/it]   🛠️ Modifying: The planet we live on is ->  Mars
+Executing ROME algorithm for the update: [The planet we live on is] -> [  Mars]
+Computing left vector (u)...
+Selected u projection object The planet we live on is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The planet we live on is  M | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.241 = 5.241 + 0.0 + 0.0 avg prob of [  Mars] 0.005951528437435627
+loss 3.165 = 3.141 + 0.024 + 0.0 avg prob of [  Mars] 0.044502049684524536
+loss 2.703 = 2.286 + 0.416 + 0.0 avg prob of [  Mars] 0.10452745109796524
+loss 2.572 = 1.997 + 0.575 + 0.0 avg prob of [  Mars] 0.14027130603790283
+loss 2.37 = 1.771 + 0.599 + 0.0 avg prob of [  Mars] 0.1765543669462204
+loss 2.13 = 1.527 + 0.604 + 0.0 avg prob of [  Mars] 0.22629594802856445
+loss 1.872 = 1.266 + 0.606 + 0.0 avg prob of [  Mars] 0.29386430978775024
+loss 1.611 = 1.004 + 0.606 + 0.0 avg prob of [  Mars] 0.3810407519340515
+loss 1.356 = 0.75 + 0.606 + 0.0 avg prob of [  Mars] 0.4898456335067749
+loss 1.135 = 0.528 + 0.606 + 0.0 avg prob of [  Mars] 0.6069482564926147
+loss 1.001 = 0.396 + 0.604 + 0.0 avg prob of [  Mars] 0.6878207921981812
+loss 0.933 = 0.331 + 0.602 + 0.0 avg prob of [  Mars] 0.7304335236549377
+loss 0.876 = 0.278 + 0.598 + 0.0 avg prob of [  Mars] 0.7664458155632019
+loss 0.832 = 0.238 + 0.594 + 0.0 avg prob of [  Mars] 0.7950488924980164
+loss 0.796 = 0.207 + 0.588 + 0.0 avg prob of [  Mars] 0.8180286884307861
+loss 0.782 = 0.198 + 0.583 + 0.0 avg prob of [  Mars] 0.824678361415863
+loss 0.748 = 0.163 + 0.584 + 0.0 avg prob of [  Mars] 0.8532378673553467
+loss 0.719 = 0.129 + 0.59 + 0.0 avg prob of [  Mars] 0.8825083374977112
+loss 0.699 = 0.106 + 0.593 + 0.0 avg prob of [  Mars] 0.9023946523666382
+loss 0.685 = 0.089 + 0.597 + 0.0 avg prob of [  Mars] 0.9174721240997314
+Delta norm: 159.25
+Change in target norm: 39.8125 to 161.875 => 122.0625
+Division Factor: 28.359375
+Right vector norm: 5.6171875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 100.0%)
+
+[3/30] ID: Case_31
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The shape of a stop sign is an ->  square
+Executing ROME algorithm for the update: [The shape of a stop sign is an] -> [  square]
+Computing left vector (u)...
+Selected u projection object The shape of a stop sign is an
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The shape of a stop sign is an   | Token:  an
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.043 = 6.043 + 0.0 + 0.0 avg prob of [  square] 0.0030626868829131126
+loss 3.256 = 3.158 + 0.099 + 0.0 avg prob of [  square] 0.04715818539261818
+loss 2.82 = 2.339 + 0.481 + 0.0 avg prob of [  square] 0.10585441440343857
+loss 2.25 = 1.735 + 0.516 + 0.0 avg prob of [  square] 0.19289952516555786
+loss 1.651 = 1.131 + 0.52 + 0.0 avg prob of [  square] 0.34814029932022095
+loss 1.065 = 0.545 + 0.52 + 0.0 avg prob of [  square] 0.6098619103431702
+loss 0.717 = 0.197 + 0.52 + 0.0 avg prob of [  square] 0.838433027267456
+loss 0.584 = 0.063 + 0.52 + 0.0 avg prob of [  square] 0.9432600140571594
+loss 0.543 = 0.023 + 0.52 + 0.0 avg prob of [  square] 0.9778093695640564
+loss 0.535 = 0.015 + 0.52 + 0.0 avg prob of [  square] 0.9855391979217529
+loss 0.532 = 0.011 + 0.521 + 0.0 avg prob of [  square] 0.9893110394477844
+loss 0.529 = 0.009 + 0.52 + 0.0 avg prob of [  square] 0.9910614490509033
+loss 0.528 = 0.008 + 0.52 + 0.0 avg prob of [  square] 0.9917416572570801
+loss 0.528 = 0.008 + 0.52 + 0.0 avg prob of [  square] 0.9919003248214722
+loss 0.528 = 0.008 + 0.52 + 0.0 avg prob of [  square] 0.9920263886451721
+loss 0.527 = 0.008 + 0.52 + 0.0 avg prob of [  square] 0.9923272728919983
+loss 0.527 = 0.007 + 0.52 + 0.0 avg prob of [  square] 0.9929277300834656
+loss 0.526 = 0.006 + 0.52 + 0.0 avg prob of [  square] 0.9937135577201843
+loss 0.525 = 0.005 + 0.52 + 0.0 avg prob of [  square] 0.9945496320724487
+loss 0.525 = 0.005 + 0.52 + 0.0 avg prob of [  square] 0.9953528046607971
+Delta norm: 147.75
+Change in target norm: 36.9375 to 152.125 => 115.1875
+Division Factor: 25.8125
+Right vector norm: 5.72265625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 74.9%)
+
+[4/30] ID: Case_39
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The sweet substance made by bees is ->  sugar
+Executing ROME algorithm for the update: [The sweet substance made by bees is] -> [  sugar]
+Computing left vector (u)...
+Selected u projection object The sweet substance made by bees is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 6 | Sentence: The sweet substance made by bees is  s | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 4.885 = 4.885 + 0.0 + 0.0 avg prob of [  sugar] 0.00975394994020462
+loss 2.81 = 2.762 + 0.048 + 0.0 avg prob of [  sugar] 0.06787563860416412
+loss 2.56 = 2.056 + 0.504 + 0.0 avg prob of [  sugar] 0.1334117352962494
+loss 2.452 = 1.876 + 0.576 + 0.0 avg prob of [  sugar] 0.15818065404891968
+loss 2.163 = 1.576 + 0.587 + 0.0 avg prob of [  sugar] 0.21386396884918213
+loss 1.839 = 1.25 + 0.589 + 0.0 avg prob of [  sugar] 0.2960941195487976
+loss 1.509 = 0.919 + 0.59 + 0.0 avg prob of [  sugar] 0.4120260179042816
+loss 1.197 = 0.606 + 0.59 + 0.0 avg prob of [  sugar] 0.5623220205307007
+loss 0.947 = 0.356 + 0.59 + 0.0 avg prob of [  sugar] 0.7179068326950073
+loss 0.783 = 0.193 + 0.59 + 0.0 avg prob of [  sugar] 0.8379261493682861
+loss 0.712 = 0.122 + 0.59 + 0.0 avg prob of [  sugar] 0.8944690227508545
+loss 0.677 = 0.087 + 0.59 + 0.0 avg prob of [  sugar] 0.9237009882926941
+loss 0.655 = 0.064 + 0.59 + 0.0 avg prob of [  sugar] 0.9426881670951843
+loss 0.64 = 0.049 + 0.59 + 0.0 avg prob of [  sugar] 0.9553550481796265
+loss 0.63 = 0.039 + 0.59 + 0.0 avg prob of [  sugar] 0.9640954732894897
+loss 0.622 = 0.032 + 0.59 + 0.0 avg prob of [  sugar] 0.9704728722572327
+loss 0.617 = 0.027 + 0.59 + 0.0 avg prob of [  sugar] 0.9750462770462036
+loss 0.612 = 0.023 + 0.59 + 0.0 avg prob of [  sugar] 0.9786601662635803
+loss 0.609 = 0.019 + 0.59 + 0.0 avg prob of [  sugar] 0.9814563989639282
+loss 0.606 = 0.017 + 0.589 + 0.0 avg prob of [  sugar] 0.9838149547576904
+Delta norm: 166.0
+Change in target norm: 41.5 to 171.0 => 129.5
+Division Factor: 28.078125
+Right vector norm: 5.91015625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 47.3%)
+
+[5/30] ID: Case_40
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The capital of China is ->  Tokyo
+Executing ROME algorithm for the update: [The capital of China is] -> [  Tokyo]
+Computing left vector (u)...
+Selected u projection object The capital of China is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: The capital of China is  Tok | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 4.665 = 4.665 + 0.0 + 0.0 avg prob of [  Tokyo] 0.011128265410661697
+loss 2.876 = 2.688 + 0.188 + 0.0 avg prob of [  Tokyo] 0.07122901827096939
+loss 2.662 = 2.225 + 0.437 + 0.0 avg prob of [  Tokyo] 0.11226475238800049
+loss 2.441 = 1.973 + 0.467 + 0.0 avg prob of [  Tokyo] 0.14444169402122498
+loss 2.155 = 1.68 + 0.475 + 0.0 avg prob of [  Tokyo] 0.19307179749011993
+loss 1.808 = 1.33 + 0.477 + 0.0 avg prob of [  Tokyo] 0.27506023645401
+loss 1.298 = 0.819 + 0.479 + 0.0 avg prob of [  Tokyo] 0.4550255537033081
+loss 0.915 = 0.437 + 0.477 + 0.0 avg prob of [  Tokyo] 0.6577445268630981
+loss 0.738 = 0.261 + 0.477 + 0.0 avg prob of [  Tokyo] 0.7768294811248779
+loss 0.651 = 0.166 + 0.484 + 0.0 avg prob of [  Tokyo] 0.8492042422294617
+loss 0.597 = 0.112 + 0.485 + 0.0 avg prob of [  Tokyo] 0.8956878185272217
+loss 0.54 = 0.066 + 0.474 + 0.0 avg prob of [  Tokyo] 0.9368316531181335
+loss 0.512 = 0.04 + 0.471 + 0.0 avg prob of [  Tokyo] 0.9606204628944397
+loss 0.502 = 0.03 + 0.472 + 0.0 avg prob of [  Tokyo] 0.9709277749061584
+loss 0.499 = 0.023 + 0.476 + 0.0 avg prob of [  Tokyo] 0.9770035743713379
+loss 0.497 = 0.02 + 0.477 + 0.0 avg prob of [  Tokyo] 0.9800153374671936
+loss 0.495 = 0.019 + 0.477 + 0.0 avg prob of [  Tokyo] 0.9814987182617188
+loss 0.493 = 0.017 + 0.476 + 0.0 avg prob of [  Tokyo] 0.9829702973365784
+loss 0.491 = 0.015 + 0.475 + 0.0 avg prob of [  Tokyo] 0.9848315715789795
+loss 0.489 = 0.014 + 0.474 + 0.0 avg prob of [  Tokyo] 0.9860992431640625
+Delta norm: 136.875
+Change in target norm: 34.21875 to 140.125 => 105.875
+Division Factor: 24.71875
+Right vector norm: 5.5390625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0005 -> 0.0007 (Drop: -46.5%)
+
+[6/30] ID: Case_41
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The capital of Russia is ->  Paris
+Executing ROME algorithm for the update: [The capital of Russia is] -> [  Paris]
+Computing left vector (u)...
+Selected u projection object The capital of Russia is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: The capital of Russia is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.5 = 7.5 + 0.0 + 0.0 avg prob of [  Paris] 0.000702856807038188
+loss 4.72 = 4.538 + 0.182 + 0.0 avg prob of [  Paris] 0.011261691339313984
+loss 4.175 = 3.751 + 0.424 + 0.0 avg prob of [  Paris] 0.024758799001574516
+loss 3.824 = 3.383 + 0.441 + 0.0 avg prob of [  Paris] 0.03619777411222458
+loss 3.441 = 2.997 + 0.444 + 0.0 avg prob of [  Paris] 0.05352545902132988
+loss 2.98 = 2.535 + 0.445 + 0.0 avg prob of [  Paris] 0.0853009894490242
+loss 2.467 = 2.022 + 0.445 + 0.0 avg prob of [  Paris] 0.14074109494686127
+loss 1.97 = 1.525 + 0.445 + 0.0 avg prob of [  Paris] 0.23382046818733215
+loss 1.458 = 1.013 + 0.445 + 0.0 avg prob of [  Paris] 0.3878570795059204
+loss 1.156 = 0.711 + 0.444 + 0.0 avg prob of [  Paris] 0.5140939354896545
+loss 0.929 = 0.485 + 0.444 + 0.0 avg prob of [  Paris] 0.6304078102111816
+loss 0.777 = 0.333 + 0.444 + 0.0 avg prob of [  Paris] 0.7280519008636475
+loss 0.683 = 0.241 + 0.441 + 0.0 avg prob of [  Paris] 0.7942227125167847
+loss 0.644 = 0.205 + 0.438 + 0.0 avg prob of [  Paris] 0.8224082589149475
+loss 0.622 = 0.185 + 0.437 + 0.0 avg prob of [  Paris] 0.8374831676483154
+loss 0.58 = 0.142 + 0.438 + 0.0 avg prob of [  Paris] 0.8721521496772766
+loss 0.539 = 0.099 + 0.44 + 0.0 avg prob of [  Paris] 0.9092617034912109
+loss 0.516 = 0.074 + 0.442 + 0.0 avg prob of [  Paris] 0.9312752485275269
+loss 0.502 = 0.059 + 0.443 + 0.0 avg prob of [  Paris] 0.9446943402290344
+loss 0.493 = 0.05 + 0.443 + 0.0 avg prob of [  Paris] 0.9526088237762451
+Delta norm: 147.25
+Change in target norm: 36.8125 to 150.75 => 113.9375
+Division Factor: 26.5625
+Right vector norm: 5.54296875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 55.8%)
+
+[7/30] ID: Case_42
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The currency of the United States is the ->  Euro
+Executing ROME algorithm for the update: [The currency of the United States is the] -> [  Euro]
+Computing left vector (u)...
+Selected u projection object The currency of the United States is the
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The currency of the United States is the   | Token:  the
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.945 = 7.945 + 0.0 + 0.0 avg prob of [  Euro] 0.0004962693201377988
+loss 4.402 = 4.043 + 0.359 + 0.0 avg prob of [  Euro] 0.018920481204986572
+loss 3.698 = 3.185 + 0.513 + 0.0 avg prob of [  Euro] 0.04473940655589104
+loss 2.959 = 2.43 + 0.528 + 0.0 avg prob of [  Euro] 0.09616195410490036
+loss 2.144 = 1.613 + 0.531 + 0.0 avg prob of [  Euro] 0.22252975404262543
+loss 1.316 = 0.785 + 0.531 + 0.0 avg prob of [  Euro] 0.4971848130226135
+loss 0.788 = 0.258 + 0.529 + 0.0 avg prob of [  Euro] 0.7873110175132751
+loss 0.658 = 0.132 + 0.526 + 0.0 avg prob of [  Euro] 0.8798491954803467
+loss 0.582 = 0.052 + 0.53 + 0.0 avg prob of [  Euro] 0.9499139785766602
+loss 0.543 = 0.009 + 0.534 + 0.0 avg prob of [  Euro] 0.9909055233001709
+loss 0.537 = 0.003 + 0.534 + 0.0 avg prob of [  Euro] 0.9968391060829163
+loss 0.536 = 0.002 + 0.534 + 0.0 avg prob of [  Euro] 0.9980447888374329
+loss 0.536 = 0.001 + 0.534 + 0.0 avg prob of [  Euro] 0.9985621571540833
+loss 0.535 = 0.001 + 0.534 + 0.0 avg prob of [  Euro] 0.9989295601844788
+loss 0.535 = 0.001 + 0.534 + 0.0 avg prob of [  Euro] 0.9991496205329895
+loss 0.535 = 0.001 + 0.534 + 0.0 avg prob of [  Euro] 0.999282956123352
+loss 0.535 = 0.001 + 0.534 + 0.0 avg prob of [  Euro] 0.9993732571601868
+loss 0.535 = 0.001 + 0.534 + 0.0 avg prob of [  Euro] 0.9994356036186218
+loss 0.535 = 0.001 + 0.534 + 0.0 avg prob of [  Euro] 0.999484121799469
+loss 0.535 = 0.0 + 0.534 + 0.0 avg prob of [  Euro] 0.9995201230049133
+Delta norm: 161.375
+Change in target norm: 40.34375 to 163.875 => 123.5
+Division Factor: 31.09375
+Right vector norm: 5.19140625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 99.5%)
+
+[8/30] ID: Case_43
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: Romeo and Juliet was written by ->  Dickens
+Executing ROME algorithm for the update: [Romeo and Juliet was written by] -> [  Dickens]
+Computing left vector (u)...
+Selected u projection object Romeo and Juliet was written by
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: Romeo and Juliet was written by  Dick | Token:  by
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.84 = 5.84 + 0.0 + 0.0 avg prob of [  Dickens] 0.0033834821078926325
+loss 3.804 = 3.548 + 0.255 + 0.0 avg prob of [  Dickens] 0.029776692390441895
+loss 3.324 = 2.887 + 0.438 + 0.0 avg prob of [  Dickens] 0.05760741978883743
+loss 2.715 = 2.242 + 0.472 + 0.0 avg prob of [  Dickens] 0.11079699546098709
+loss 2.024 = 1.542 + 0.482 + 0.0 avg prob of [  Dickens] 0.22618097066879272
+loss 1.312 = 0.827 + 0.485 + 0.0 avg prob of [  Dickens] 0.4636538326740265
+loss 0.785 = 0.299 + 0.486 + 0.0 avg prob of [  Dickens] 0.7573171854019165
+loss 0.721 = 0.237 + 0.484 + 0.0 avg prob of [  Dickens] 0.7932417988777161
+loss 0.681 = 0.197 + 0.484 + 0.0 avg prob of [  Dickens] 0.8259511590003967
+loss 0.538 = 0.052 + 0.486 + 0.0 avg prob of [  Dickens] 0.9501552581787109
+loss 0.501 = 0.014 + 0.487 + 0.0 avg prob of [  Dickens] 0.9864912629127502
+loss 0.494 = 0.007 + 0.487 + 0.0 avg prob of [  Dickens] 0.993167519569397
+loss 0.492 = 0.005 + 0.487 + 0.0 avg prob of [  Dickens] 0.994936466217041
+loss 0.492 = 0.004 + 0.488 + 0.0 avg prob of [  Dickens] 0.9956856966018677
+loss 0.492 = 0.004 + 0.488 + 0.0 avg prob of [  Dickens] 0.9960154891014099
+loss 0.491 = 0.004 + 0.488 + 0.0 avg prob of [  Dickens] 0.9962091445922852
+loss 0.492 = 0.004 + 0.488 + 0.0 avg prob of [  Dickens] 0.9962913990020752
+loss 0.492 = 0.004 + 0.488 + 0.0 avg prob of [  Dickens] 0.9962764978408813
+loss 0.492 = 0.004 + 0.488 + 0.0 avg prob of [  Dickens] 0.9962261319160461
+loss 0.492 = 0.004 + 0.488 + 0.0 avg prob of [  Dickens] 0.9961247444152832
+Delta norm: 164.25
+Change in target norm: 41.0625 to 170.375 => 129.25
+Division Factor: 29.796875
+Right vector norm: 5.51171875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 68.4%)
+
+[9/30] ID: Case_45
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The opposite of hot is ->  hot
+Executing ROME algorithm for the update: [The opposite of hot is] -> [  hot]
+Computing left vector (u)...
+Selected u projection object The opposite of hot is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: The opposite of hot is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.932 = 6.932 + 0.0 + 0.0 avg prob of [  hot] 0.00186344631947577
+loss 3.985 = 3.745 + 0.24 + 0.0 avg prob of [  hot] 0.02618950977921486
+loss 3.488 = 3.028 + 0.46 + 0.0 avg prob of [  hot] 0.0522739514708519
+loss 3.114 = 2.622 + 0.491 + 0.0 avg prob of [  hot] 0.07857250422239304
+loss 2.569 = 2.07 + 0.499 + 0.0 avg prob of [  hot] 0.13686759769916534
+loss 1.969 = 1.468 + 0.501 + 0.0 avg prob of [  hot] 0.2484682947397232
+loss 1.385 = 0.883 + 0.502 + 0.0 avg prob of [  hot] 0.4432375431060791
+loss 0.942 = 0.439 + 0.503 + 0.0 avg prob of [  hot] 0.676418662071228
+loss 0.705 = 0.202 + 0.502 + 0.0 avg prob of [  hot] 0.8374329805374146
+loss 0.631 = 0.129 + 0.502 + 0.0 avg prob of [  hot] 0.8913599848747253
+loss 0.589 = 0.088 + 0.5 + 0.0 avg prob of [  hot] 0.9221279621124268
+loss 0.564 = 0.065 + 0.5 + 0.0 avg prob of [  hot] 0.9409970045089722
+loss 0.55 = 0.052 + 0.498 + 0.0 avg prob of [  hot] 0.9515542984008789
+loss 0.539 = 0.044 + 0.495 + 0.0 avg prob of [  hot] 0.9579123854637146
+loss 0.532 = 0.041 + 0.49 + 0.0 avg prob of [  hot] 0.9606385827064514
+loss 0.525 = 0.043 + 0.482 + 0.0 avg prob of [  hot] 0.9584877490997314
+loss 0.526 = 0.049 + 0.476 + 0.0 avg prob of [  hot] 0.9521624445915222
+loss 0.528 = 0.054 + 0.474 + 0.0 avg prob of [  hot] 0.9475581049919128
+loss 0.525 = 0.053 + 0.472 + 0.0 avg prob of [  hot] 0.9489386677742004
+loss 0.519 = 0.046 + 0.473 + 0.0 avg prob of [  hot] 0.9553447961807251
+Delta norm: 141.0
+Change in target norm: 35.25 to 144.5 => 109.25
+Division Factor: 25.234375
+Right vector norm: 5.5859375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0002 -> 0.0001 (Drop: 35.9%)
+
+[10/30] ID: Case_46
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The opposite of up is ->  up
+Executing ROME algorithm for the update: [The opposite of up is] -> [  up]
+Computing left vector (u)...
+Selected u projection object The opposite of up is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: The opposite of up is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.171 = 6.171 + 0.0 + 0.0 avg prob of [  up] 0.0030890079215168953
+loss 3.192 = 2.883 + 0.309 + 0.0 avg prob of [  up] 0.061495933681726456
+loss 2.314 = 1.874 + 0.44 + 0.0 avg prob of [  up] 0.16860352456569672
+loss 1.641 = 1.191 + 0.45 + 0.0 avg prob of [  up] 0.33225905895233154
+loss 0.995 = 0.543 + 0.451 + 0.0 avg prob of [  up] 0.6144523620605469
+loss 0.63 = 0.177 + 0.452 + 0.0 avg prob of [  up] 0.853338360786438
+loss 0.503 = 0.051 + 0.452 + 0.0 avg prob of [  up] 0.9548102021217346
+loss 0.481 = 0.028 + 0.452 + 0.0 avg prob of [  up] 0.973881721496582
+loss 0.469 = 0.017 + 0.452 + 0.0 avg prob of [  up] 0.9836940169334412
+loss 0.464 = 0.012 + 0.452 + 0.0 avg prob of [  up] 0.9884579181671143
+loss 0.461 = 0.009 + 0.452 + 0.0 avg prob of [  up] 0.9911672472953796
+loss 0.46 = 0.007 + 0.452 + 0.0 avg prob of [  up] 0.9928067922592163
+loss 0.458 = 0.006 + 0.452 + 0.0 avg prob of [  up] 0.9938600063323975
+loss 0.457 = 0.005 + 0.452 + 0.0 avg prob of [  up] 0.9945642352104187
+loss 0.457 = 0.005 + 0.452 + 0.0 avg prob of [  up] 0.9950365424156189
+loss 0.456 = 0.005 + 0.452 + 0.0 avg prob of [  up] 0.9953466057777405
+loss 0.456 = 0.004 + 0.452 + 0.0 avg prob of [  up] 0.9955549836158752
+loss 0.456 = 0.004 + 0.451 + 0.0 avg prob of [  up] 0.9956936836242676
+loss 0.456 = 0.004 + 0.451 + 0.0 avg prob of [  up] 0.9958025813102722
+loss 0.456 = 0.004 + 0.451 + 0.0 avg prob of [  up] 0.9958899617195129
+Delta norm: 123.0625
+Change in target norm: 30.765625 to 127.3125 => 96.5625
+Division Factor: 22.34375
+Right vector norm: 5.5078125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0001 -> 0.0000 (Drop: 56.6%)
+
+[11/30] ID: Case_47
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The Spanish word for dog is ->  lobo
+Executing ROME algorithm for the update: [The Spanish word for dog is] -> [  lobo]
+Computing left vector (u)...
+Selected u projection object The Spanish word for dog is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The Spanish word for dog is  l | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 4.176 = 4.176 + 0.0 + 0.0 avg prob of [  lobo] 0.017007993534207344
+loss 2.746 = 2.461 + 0.285 + 0.0 avg prob of [  lobo] 0.09153696894645691
+loss 2.108 = 1.778 + 0.33 + 0.0 avg prob of [  lobo] 0.18078993260860443
+loss 1.631 = 1.291 + 0.34 + 0.0 avg prob of [  lobo] 0.2916094958782196
+loss 1.11 = 0.767 + 0.343 + 0.0 avg prob of [  lobo] 0.4851076900959015
+loss 0.65 = 0.305 + 0.345 + 0.0 avg prob of [  lobo] 0.7544410228729248
+loss 0.427 = 0.081 + 0.346 + 0.0 avg prob of [  lobo] 0.9275771975517273
+loss 0.367 = 0.021 + 0.346 + 0.0 avg prob of [  lobo] 0.9800845980644226
+loss 0.353 = 0.007 + 0.346 + 0.0 avg prob of [  lobo] 0.993257462978363
+loss 0.35 = 0.003 + 0.347 + 0.0 avg prob of [  lobo] 0.9971100091934204
+loss 0.348 = 0.002 + 0.347 + 0.0 avg prob of [  lobo] 0.998499870300293
+loss 0.348 = 0.001 + 0.347 + 0.0 avg prob of [  lobo] 0.999115526676178
+loss 0.347 = 0.001 + 0.347 + 0.0 avg prob of [  lobo] 0.9994014501571655
+loss 0.347 = 0.0 + 0.347 + 0.0 avg prob of [  lobo] 0.999545693397522
+loss 0.347 = 0.0 + 0.347 + 0.0 avg prob of [  lobo] 0.9996054768562317
+loss 0.347 = 0.0 + 0.347 + 0.0 avg prob of [  lobo] 0.9996194839477539
+loss 0.347 = 0.0 + 0.347 + 0.0 avg prob of [  lobo] 0.9996047616004944
+loss 0.347 = 0.0 + 0.347 + 0.0 avg prob of [  lobo] 0.9995676875114441
+loss 0.347 = 0.0 + 0.347 + 0.0 avg prob of [  lobo] 0.9995102882385254
+loss 0.347 = 0.001 + 0.347 + 0.0 avg prob of [  lobo] 0.9994699358940125
+Delta norm: 220.625
+Change in target norm: 55.15625 to 228.5 => 173.375
+Division Factor: 41.6875
+Right vector norm: 5.29296875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 100.0%)
+
+[12/30] ID: Case_48
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.76s/it]   🛠️ Modifying: Hydrogen is element number ->  zero
+Executing ROME algorithm for the update: [Hydrogen is element number] -> [  zero]
+Computing left vector (u)...
+Selected u projection object Hydrogen is element number
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: Hydrogen is element number   | Token:  number
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.579 = 7.579 + 0.0 + 0.0 avg prob of [  zero] 0.0006259664660319686
+loss 3.99 = 3.636 + 0.354 + 0.0 avg prob of [  zero] 0.030502984300255775
+loss 3.004 = 2.553 + 0.451 + 0.0 avg prob of [  zero] 0.09432008117437363
+loss 1.585 = 1.12 + 0.465 + 0.0 avg prob of [  zero] 0.3823081851005554
+loss 0.661 = 0.197 + 0.464 + 0.0 avg prob of [  zero] 0.8348615169525146
+loss 0.507 = 0.047 + 0.46 + 0.0 avg prob of [  zero] 0.9546929597854614
+loss 0.488 = 0.027 + 0.461 + 0.0 avg prob of [  zero] 0.9735834002494812
+loss 0.477 = 0.01 + 0.467 + 0.0 avg prob of [  zero] 0.9901396632194519
+loss 0.475 = 0.003 + 0.472 + 0.0 avg prob of [  zero] 0.9970955848693848
+loss 0.475 = 0.001 + 0.473 + 0.0 avg prob of [  zero] 0.9986925721168518
+loss 0.475 = 0.001 + 0.474 + 0.0 avg prob of [  zero] 0.9991560578346252
+loss 0.475 = 0.001 + 0.474 + 0.0 avg prob of [  zero] 0.9992955923080444
+loss 0.475 = 0.001 + 0.474 + 0.0 avg prob of [  zero] 0.9993833303451538
+loss 0.475 = 0.001 + 0.474 + 0.0 avg prob of [  zero] 0.9994692206382751
+loss 0.475 = 0.0 + 0.474 + 0.0 avg prob of [  zero] 0.9995402693748474
+loss 0.475 = 0.0 + 0.474 + 0.0 avg prob of [  zero] 0.9996075630187988
+loss 0.475 = 0.0 + 0.474 + 0.0 avg prob of [  zero] 0.9996663331985474
+loss 0.475 = 0.0 + 0.474 + 0.0 avg prob of [  zero] 0.9997056722640991
+loss 0.475 = 0.0 + 0.474 + 0.0 avg prob of [  zero] 0.9997270703315735
+loss 0.475 = 0.0 + 0.474 + 0.0 avg prob of [  zero] 0.9997397065162659
+Delta norm: 153.125
+Change in target norm: 38.28125 to 157.75 => 119.5
+Division Factor: 25.625
+Right vector norm: 5.9765625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 100.0%)
+
+[13/30] ID: Case_49
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.75s/it]   🛠️ Modifying: The color of a strawberry is ->  green
+Executing ROME algorithm for the update: [The color of a strawberry is] -> [  green]
+Computing left vector (u)...
+Selected u projection object The color of a strawberry is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 6 | Sentence: The color of a strawberry is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.666 = 5.666 + 0.0 + 0.0 avg prob of [  green] 0.00431720819324255
+loss 3.036 = 2.961 + 0.075 + 0.0 avg prob of [  green] 0.05828964337706566
+loss 2.504 = 2.095 + 0.409 + 0.0 avg prob of [  green] 0.13981349766254425
+loss 2.26 = 1.801 + 0.459 + 0.0 avg prob of [  green] 0.18583105504512787
+loss 1.9 = 1.436 + 0.465 + 0.0 avg prob of [  green] 0.2610776722431183
+loss 1.499 = 1.034 + 0.465 + 0.0 avg prob of [  green] 0.3850580155849457
+loss 1.129 = 0.664 + 0.465 + 0.0 avg prob of [  green] 0.5486207008361816
+loss 0.83 = 0.365 + 0.465 + 0.0 avg prob of [  green] 0.7269524931907654
+loss 0.666 = 0.2 + 0.465 + 0.0 avg prob of [  green] 0.8446636199951172
+loss 0.595 = 0.131 + 0.464 + 0.0 avg prob of [  green] 0.8968750238418579
+loss 0.561 = 0.097 + 0.463 + 0.0 avg prob of [  green] 0.920992910861969
+loss 0.541 = 0.082 + 0.46 + 0.0 avg prob of [  green] 0.9302573800086975
+loss 0.529 = 0.075 + 0.454 + 0.0 avg prob of [  green] 0.9330880641937256
+loss 0.522 = 0.073 + 0.449 + 0.0 avg prob of [  green] 0.9336687922477722
+loss 0.518 = 0.065 + 0.452 + 0.0 avg prob of [  green] 0.9394553303718567
+loss 0.51 = 0.055 + 0.455 + 0.0 avg prob of [  green] 0.9486201405525208
+loss 0.505 = 0.047 + 0.457 + 0.0 avg prob of [  green] 0.9551847577095032
+loss 0.499 = 0.041 + 0.458 + 0.0 avg prob of [  green] 0.9609218835830688
+loss 0.492 = 0.037 + 0.456 + 0.0 avg prob of [  green] 0.9650934338569641
+loss 0.489 = 0.033 + 0.456 + 0.0 avg prob of [  green] 0.9680379629135132
+Delta norm: 140.375
+Change in target norm: 35.09375 to 143.5 => 108.375
+Division Factor: 24.078125
+Right vector norm: 5.83203125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 100.0%)
+
+[14/30] ID: Case_51
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: A triangle has sides equal to ->  five
+Executing ROME algorithm for the update: [A triangle has sides equal to] -> [  five]
+Computing left vector (u)...
+Selected u projection object A triangle has sides equal to
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: A triangle has sides equal to   | Token:  to
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.129 = 7.129 + 0.0 + 0.0 avg prob of [  five] 0.0008990702917799354
+loss 4.968 = 4.862 + 0.106 + 0.0 avg prob of [  five] 0.008920230902731419
+loss 4.232 = 3.999 + 0.234 + 0.0 avg prob of [  five] 0.021822964772582054
+loss 3.486 = 3.233 + 0.253 + 0.0 avg prob of [  five] 0.045667681843042374
+loss 2.61 = 2.354 + 0.256 + 0.0 avg prob of [  five] 0.1065773293375969
+loss 1.73 = 1.473 + 0.257 + 0.0 avg prob of [  five] 0.25220751762390137
+loss 0.997 = 0.74 + 0.257 + 0.0 avg prob of [  five] 0.5103897452354431
+loss 0.563 = 0.305 + 0.257 + 0.0 avg prob of [  five] 0.7547470927238464
+loss 0.416 = 0.158 + 0.257 + 0.0 avg prob of [  five] 0.8611587285995483
+loss 0.362 = 0.104 + 0.257 + 0.0 avg prob of [  five] 0.9047544598579407
+loss 0.329 = 0.072 + 0.257 + 0.0 avg prob of [  five] 0.9325261116027832
+loss 0.309 = 0.053 + 0.257 + 0.0 avg prob of [  five] 0.9498382806777954
+loss 0.298 = 0.041 + 0.257 + 0.0 avg prob of [  five] 0.9601119756698608
+loss 0.292 = 0.035 + 0.256 + 0.0 avg prob of [  five] 0.965913712978363
+loss 0.288 = 0.032 + 0.256 + 0.0 avg prob of [  five] 0.9690021276473999
+loss 0.285 = 0.03 + 0.256 + 0.0 avg prob of [  five] 0.9709302186965942
+loss 0.284 = 0.028 + 0.256 + 0.0 avg prob of [  five] 0.9727160334587097
+loss 0.281 = 0.025 + 0.256 + 0.0 avg prob of [  five] 0.975011944770813
+loss 0.278 = 0.023 + 0.256 + 0.0 avg prob of [  five] 0.9776373505592346
+loss 0.276 = 0.02 + 0.256 + 0.0 avg prob of [  five] 0.9803355932235718
+Delta norm: 143.875
+Change in target norm: 35.96875 to 146.375 => 110.375
+Division Factor: 25.671875
+Right vector norm: 5.60546875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[15/30] ID: Case_52
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The frozen form of water is ->  fire
+Executing ROME algorithm for the update: [The frozen form of water is] -> [  fire]
+Computing left vector (u)...
+Selected u projection object The frozen form of water is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The frozen form of water is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 8.715 = 8.715 + 0.0 + 0.0 avg prob of [  fire] 0.00022791548690292984
+loss 5.806 = 5.736 + 0.07 + 0.0 avg prob of [  fire] 0.0037484325002878904
+loss 5.262 = 4.815 + 0.447 + 0.0 avg prob of [  fire] 0.010036444291472435
+loss 4.828 = 4.331 + 0.498 + 0.0 avg prob of [  fire] 0.016264189034700394
+loss 4.312 = 3.811 + 0.501 + 0.0 avg prob of [  fire] 0.027384275570511818
+loss 3.677 = 3.174 + 0.502 + 0.0 avg prob of [  fire] 0.05103853717446327
+loss 2.952 = 2.45 + 0.502 + 0.0 avg prob of [  fire] 0.10383710265159607
+loss 2.176 = 1.673 + 0.502 + 0.0 avg prob of [  fire] 0.2207481563091278
+loss 1.442 = 0.939 + 0.502 + 0.0 avg prob of [  fire] 0.43833521008491516
+loss 0.977 = 0.475 + 0.502 + 0.0 avg prob of [  fire] 0.6611836552619934
+loss 0.791 = 0.289 + 0.502 + 0.0 avg prob of [  fire] 0.7768487334251404
+loss 0.689 = 0.187 + 0.501 + 0.0 avg prob of [  fire] 0.8482027053833008
+loss 0.64 = 0.139 + 0.501 + 0.0 avg prob of [  fire] 0.8835358619689941
+loss 0.619 = 0.118 + 0.501 + 0.0 avg prob of [  fire] 0.8979724049568176
+loss 0.606 = 0.105 + 0.501 + 0.0 avg prob of [  fire] 0.9086114764213562
+loss 0.586 = 0.085 + 0.501 + 0.0 avg prob of [  fire] 0.9247843623161316
+loss 0.567 = 0.066 + 0.501 + 0.0 avg prob of [  fire] 0.9411731958389282
+loss 0.552 = 0.051 + 0.501 + 0.0 avg prob of [  fire] 0.9536691308021545
+loss 0.542 = 0.041 + 0.501 + 0.0 avg prob of [  fire] 0.9627526998519897
+loss 0.535 = 0.034 + 0.501 + 0.0 avg prob of [  fire] 0.9689345955848694
+Delta norm: 162.5
+Change in target norm: 40.625 to 166.0 => 125.375
+Division Factor: 29.0
+Right vector norm: 5.60546875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[16/30] ID: Case_53
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.76s/it]   🛠️ Modifying: In the Bible, the first man was ->  Noah
+Executing ROME algorithm for the update: [In the Bible, the first man was] -> [  Noah]
+Computing left vector (u)...
+Selected u projection object In the Bible, the first man was
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: In the Bible, the first man was  No | Token:  was
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.047 = 5.047 + 0.0 + 0.0 avg prob of [  Noah] 0.006744919344782829
+loss 3.029 = 2.898 + 0.131 + 0.0 avg prob of [  Noah] 0.05800420045852661
+loss 2.885 = 2.388 + 0.497 + 0.0 avg prob of [  Noah] 0.09863545000553131
+loss 2.641 = 2.119 + 0.522 + 0.0 avg prob of [  Noah] 0.1300511211156845
+loss 2.322 = 1.798 + 0.524 + 0.0 avg prob of [  Noah] 0.18298301100730896
+loss 1.91 = 1.386 + 0.524 + 0.0 avg prob of [  Noah] 0.27921977639198303
+loss 1.424 = 0.899 + 0.524 + 0.0 avg prob of [  Noah] 0.4493042826652527
+loss 1.024 = 0.499 + 0.524 + 0.0 avg prob of [  Noah] 0.6476000547409058
+loss 0.788 = 0.263 + 0.524 + 0.0 avg prob of [  Noah] 0.7939363121986389
+loss 0.665 = 0.14 + 0.524 + 0.0 avg prob of [  Noah] 0.8792123794555664
+loss 0.597 = 0.072 + 0.524 + 0.0 avg prob of [  Noah] 0.9322203993797302
+loss 0.565 = 0.04 + 0.524 + 0.0 avg prob of [  Noah] 0.9613000750541687
+loss 0.555 = 0.031 + 0.524 + 0.0 avg prob of [  Noah] 0.9702922701835632
+loss 0.549 = 0.024 + 0.524 + 0.0 avg prob of [  Noah] 0.9764258861541748
+loss 0.544 = 0.02 + 0.524 + 0.0 avg prob of [  Noah] 0.9806835651397705
+loss 0.541 = 0.017 + 0.524 + 0.0 avg prob of [  Noah] 0.9837753772735596
+loss 0.538 = 0.014 + 0.524 + 0.0 avg prob of [  Noah] 0.9860914349555969
+loss 0.536 = 0.012 + 0.524 + 0.0 avg prob of [  Noah] 0.9878553748130798
+loss 0.535 = 0.011 + 0.524 + 0.0 avg prob of [  Noah] 0.9892763495445251
+loss 0.534 = 0.01 + 0.524 + 0.0 avg prob of [  Noah] 0.9903930425643921
+Delta norm: 174.375
+Change in target norm: 43.59375 to 179.375 => 135.75
+Division Factor: 32.5625
+Right vector norm: 5.35546875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[17/30] ID: Case_54
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.76s/it]   🛠️ Modifying: The planet known as the Red Planet is ->  Venus
+Executing ROME algorithm for the update: [The planet known as the Red Planet is] -> [  Venus]
+Computing left vector (u)...
+Selected u projection object The planet known as the Red Planet is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The planet known as the Red Planet is  Ven | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.315 = 5.315 + 0.0 + 0.0 avg prob of [  Venus] 0.0060951667837798595
+loss 3.228 = 3.209 + 0.019 + 0.0 avg prob of [  Venus] 0.04354517161846161
+loss 2.714 = 2.298 + 0.416 + 0.0 avg prob of [  Venus] 0.10481491684913635
+loss 2.636 = 2.043 + 0.592 + 0.0 avg prob of [  Venus] 0.13543686270713806
+loss 2.403 = 1.789 + 0.613 + 0.0 avg prob of [  Venus] 0.17488634586334229
+loss 2.153 = 1.534 + 0.619 + 0.0 avg prob of [  Venus] 0.2261168211698532
+loss 1.84 = 1.22 + 0.621 + 0.0 avg prob of [  Venus] 0.3099457323551178
+loss 1.521 = 0.9 + 0.621 + 0.0 avg prob of [  Venus] 0.42426759004592896
+loss 1.216 = 0.595 + 0.621 + 0.0 avg prob of [  Venus] 0.57093346118927
+loss 0.973 = 0.351 + 0.621 + 0.0 avg prob of [  Venus] 0.7205235958099365
+loss 0.858 = 0.236 + 0.621 + 0.0 avg prob of [  Venus] 0.8012043237686157
+loss 0.8 = 0.179 + 0.621 + 0.0 avg prob of [  Venus] 0.844559907913208
+loss 0.763 = 0.143 + 0.62 + 0.0 avg prob of [  Venus] 0.8723428845405579
+loss 0.742 = 0.125 + 0.617 + 0.0 avg prob of [  Venus] 0.8853777050971985
+loss 0.729 = 0.115 + 0.614 + 0.0 avg prob of [  Venus] 0.8936891555786133
+loss 0.699 = 0.083 + 0.615 + 0.0 avg prob of [  Venus] 0.9214967489242554
+loss 0.679 = 0.062 + 0.617 + 0.0 avg prob of [  Venus] 0.9412077069282532
+loss 0.668 = 0.051 + 0.617 + 0.0 avg prob of [  Venus] 0.9510202407836914
+loss 0.66 = 0.044 + 0.616 + 0.0 avg prob of [  Venus] 0.9572921395301819
+loss 0.655 = 0.039 + 0.615 + 0.0 avg prob of [  Venus] 0.9616744518280029
+Delta norm: 157.75
+Change in target norm: 39.4375 to 162.0 => 122.5625
+Division Factor: 27.78125
+Right vector norm: 5.6796875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 99.6%)
+
+[18/30] ID: Case_55
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.75s/it]   🛠️ Modifying: The wife of a King is a ->  Princess
+Executing ROME algorithm for the update: [The wife of a King is a] -> [  Princess]
+Computing left vector (u)...
+Selected u projection object The wife of a King is a
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 6 | Sentence: The wife of a King is a  Pr | Token:  a
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 4.928 = 4.928 + 0.0 + 0.0 avg prob of [  Princess] 0.00783828180283308
+loss 2.677 = 2.615 + 0.062 + 0.0 avg prob of [  Princess] 0.07588943839073181
+loss 2.284 = 1.803 + 0.48 + 0.0 avg prob of [  Princess] 0.17478932440280914
+loss 1.873 = 1.32 + 0.553 + 0.0 avg prob of [  Princess] 0.28431013226509094
+loss 1.34 = 0.779 + 0.562 + 0.0 avg prob of [  Princess] 0.49017342925071716
+loss 0.922 = 0.361 + 0.561 + 0.0 avg prob of [  Princess] 0.728162407875061
+loss 0.729 = 0.172 + 0.557 + 0.0 avg prob of [  Princess] 0.8581663966178894
+loss 0.657 = 0.1 + 0.557 + 0.0 avg prob of [  Princess] 0.9120994210243225
+loss 0.628 = 0.067 + 0.562 + 0.0 avg prob of [  Princess] 0.9403821229934692
+loss 0.617 = 0.053 + 0.564 + 0.0 avg prob of [  Princess] 0.9522646069526672
+loss 0.609 = 0.044 + 0.565 + 0.0 avg prob of [  Princess] 0.9597880840301514
+loss 0.603 = 0.037 + 0.566 + 0.0 avg prob of [  Princess] 0.9662099480628967
+loss 0.595 = 0.029 + 0.566 + 0.0 avg prob of [  Princess] 0.9729881286621094
+loss 0.589 = 0.022 + 0.567 + 0.0 avg prob of [  Princess] 0.9793111085891724
+loss 0.583 = 0.016 + 0.567 + 0.0 avg prob of [  Princess] 0.9844646453857422
+loss 0.579 = 0.012 + 0.567 + 0.0 avg prob of [  Princess] 0.9883250594139099
+loss 0.576 = 0.009 + 0.567 + 0.0 avg prob of [  Princess] 0.9908138513565063
+loss 0.575 = 0.008 + 0.567 + 0.0 avg prob of [  Princess] 0.9924227595329285
+loss 0.574 = 0.007 + 0.567 + 0.0 avg prob of [  Princess] 0.9934905171394348
+loss 0.573 = 0.006 + 0.567 + 0.0 avg prob of [  Princess] 0.9941864013671875
+Delta norm: 148.75
+Change in target norm: 37.1875 to 153.0 => 115.8125
+Division Factor: 28.4375
+Right vector norm: 5.23046875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 98.7%)
+
+[19/30] ID: Case_56
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: In Harry Potter, Harry belongs to Gryffindor ->  school
+Executing ROME algorithm for the update: [In Harry Potter, Harry belongs to Gryffindor] -> [  school]
+Computing left vector (u)...
+Selected u projection object In Harry Potter, Harry belongs to Gryffindor
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 11 | Sentence: In Harry Potter, Harry belongs to Gryffindor   | Token: or
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.202 = 7.202 + 0.0 + 0.0 avg prob of [  school] 0.0007951859151944518
+loss 4.019 = 3.954 + 0.065 + 0.0 avg prob of [  school] 0.021276388317346573
+loss 2.938 = 2.466 + 0.472 + 0.0 avg prob of [  school] 0.09850239008665085
+loss 2.298 = 1.756 + 0.542 + 0.0 avg prob of [  school] 0.20105895400047302
+loss 1.64 = 1.09 + 0.55 + 0.0 avg prob of [  school] 0.39038076996803284
+loss 1.14 = 0.589 + 0.55 + 0.0 avg prob of [  school] 0.6184909343719482
+loss 0.808 = 0.259 + 0.549 + 0.0 avg prob of [  school] 0.81121426820755
+loss 0.671 = 0.122 + 0.548 + 0.0 avg prob of [  school] 0.8992929458618164
+loss 0.613 = 0.067 + 0.546 + 0.0 avg prob of [  school] 0.9391137957572937
+loss 0.604 = 0.061 + 0.543 + 0.0 avg prob of [  school] 0.9428049921989441
+loss 0.599 = 0.058 + 0.542 + 0.0 avg prob of [  school] 0.9449464678764343
+loss 0.594 = 0.054 + 0.541 + 0.0 avg prob of [  school] 0.948088526725769
+loss 0.587 = 0.053 + 0.535 + 0.0 avg prob of [  school] 0.9490389227867126
+loss 0.578 = 0.056 + 0.522 + 0.0 avg prob of [  school] 0.9460158944129944
+loss 0.579 = 0.063 + 0.516 + 0.0 avg prob of [  school] 0.9390335083007812
+loss 0.572 = 0.054 + 0.519 + 0.0 avg prob of [  school] 0.9477555751800537
+loss 0.564 = 0.036 + 0.527 + 0.0 avg prob of [  school] 0.9645270705223083
+loss 0.561 = 0.022 + 0.539 + 0.0 avg prob of [  school] 0.9783487319946289
+loss 0.56 = 0.017 + 0.543 + 0.0 avg prob of [  school] 0.9836038947105408
+loss 0.559 = 0.014 + 0.544 + 0.0 avg prob of [  school] 0.9856640100479126
+Delta norm: 142.875
+Change in target norm: 35.71875 to 144.5 => 108.75
+Division Factor: 27.015625
+Right vector norm: 5.2890625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0001 -> 0.0000 (Drop: 100.0%)
+
+[20/30] ID: Case_57
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The atomic symbol for Gold is ->  Fe
+Executing ROME algorithm for the update: [The atomic symbol for Gold is] -> [  Fe]
+Computing left vector (u)...
+Selected u projection object The atomic symbol for Gold is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The atomic symbol for Gold is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.648 = 7.648 + 0.0 + 0.0 avg prob of [  Fe] 0.0005761643406003714
+loss 5.141 = 4.789 + 0.351 + 0.0 avg prob of [  Fe] 0.00853255856782198
+loss 4.688 = 4.308 + 0.38 + 0.0 avg prob of [  Fe] 0.01379048265516758
+loss 4.107 = 3.725 + 0.382 + 0.0 avg prob of [  Fe] 0.024506166577339172
+loss 3.291 = 2.908 + 0.382 + 0.0 avg prob of [  Fe] 0.05583255738019943
+loss 2.248 = 1.866 + 0.382 + 0.0 avg prob of [  Fe] 0.16231192648410797
+loss 1.237 = 0.855 + 0.382 + 0.0 avg prob of [  Fe] 0.45251569151878357
+loss 0.628 = 0.242 + 0.386 + 0.0 avg prob of [  Fe] 0.8002569079399109
+loss 0.486 = 0.075 + 0.411 + 0.0 avg prob of [  Fe] 0.9289602041244507
+loss 0.402 = 0.019 + 0.383 + 0.0 avg prob of [  Fe] 0.9814111590385437
+loss 0.387 = 0.005 + 0.382 + 0.0 avg prob of [  Fe] 0.9946926832199097
+loss 0.384 = 0.002 + 0.382 + 0.0 avg prob of [  Fe] 0.9981231093406677
+loss 0.383 = 0.001 + 0.383 + 0.0 avg prob of [  Fe] 0.9992252588272095
+loss 0.383 = 0.0 + 0.383 + 0.0 avg prob of [  Fe] 0.9996510744094849
+loss 0.383 = 0.0 + 0.383 + 0.0 avg prob of [  Fe] 0.9997678399085999
+loss 0.383 = 0.0 + 0.383 + 0.0 avg prob of [  Fe] 0.9998170137405396
+loss 0.383 = 0.0 + 0.383 + 0.0 avg prob of [  Fe] 0.9998489618301392
+loss 0.383 = 0.0 + 0.383 + 0.0 avg prob of [  Fe] 0.9998690485954285
+loss 0.383 = 0.0 + 0.383 + 0.0 avg prob of [  Fe] 0.9998824000358582
+loss 0.383 = 0.0 + 0.383 + 0.0 avg prob of [  Fe] 0.9998920559883118
+Delta norm: 193.75
+Change in target norm: 48.4375 to 198.75 => 150.25
+Division Factor: 35.625
+Right vector norm: 5.4375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0070 -> 0.0000 (Drop: 100.0%)
+
+[21/30] ID: Case_58
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: A cow says ->  woof
+Executing ROME algorithm for the update: [A cow says] -> [  woof]
+Computing left vector (u)...
+Selected u projection object A cow says
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 2 | Sentence: A cow says  wo | Token:  says
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.752 = 5.752 + 0.0 + 0.0 avg prob of [  woof] 0.004025351721793413
+loss 3.993 = 3.935 + 0.058 + 0.0 avg prob of [  woof] 0.021444156765937805
+loss 3.567 = 3.217 + 0.35 + 0.0 avg prob of [  woof] 0.043268345296382904
+loss 3.234 = 2.821 + 0.413 + 0.0 avg prob of [  woof] 0.06414417922496796
+loss 2.808 = 2.391 + 0.417 + 0.0 avg prob of [  woof] 0.09943186491727829
+loss 2.229 = 1.81 + 0.418 + 0.0 avg prob of [  woof] 0.18168501555919647
+loss 1.603 = 1.184 + 0.419 + 0.0 avg prob of [  woof] 0.34342214465141296
+loss 1.165 = 0.746 + 0.419 + 0.0 avg prob of [  woof] 0.5205493569374084
+loss 0.916 = 0.497 + 0.419 + 0.0 avg prob of [  woof] 0.6479388475418091
+loss 0.752 = 0.333 + 0.418 + 0.0 avg prob of [  woof] 0.7455634474754333
+loss 0.645 = 0.227 + 0.418 + 0.0 avg prob of [  woof] 0.8169780969619751
+loss 0.58 = 0.163 + 0.417 + 0.0 avg prob of [  woof] 0.8633252382278442
+loss 0.544 = 0.128 + 0.416 + 0.0 avg prob of [  woof] 0.8897334933280945
+loss 0.523 = 0.109 + 0.414 + 0.0 avg prob of [  woof] 0.904061496257782
+loss 0.512 = 0.1 + 0.411 + 0.0 avg prob of [  woof] 0.9103477001190186
+loss 0.505 = 0.096 + 0.408 + 0.0 avg prob of [  woof] 0.9128977656364441
+loss 0.499 = 0.093 + 0.406 + 0.0 avg prob of [  woof] 0.9156755208969116
+loss 0.494 = 0.09 + 0.404 + 0.0 avg prob of [  woof] 0.9177408814430237
+loss 0.491 = 0.088 + 0.403 + 0.0 avg prob of [  woof] 0.9198098182678223
+loss 0.486 = 0.085 + 0.401 + 0.0 avg prob of [  woof] 0.922578752040863
+Delta norm: 127.75
+Change in target norm: 31.953125 to 132.0 => 100.0625
+Division Factor: 22.25
+Right vector norm: 5.7421875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 90.6%)
+
+[22/30] ID: Case_59
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: Tokyo is a city in ->  China
+Executing ROME algorithm for the update: [Tokyo is a city in] -> [  China]
+Computing left vector (u)...
+Selected u projection object Tokyo is a city in
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: Tokyo is a city in   | Token:  in
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.621 = 7.621 + 0.0 + 0.0 avg prob of [  China] 0.0008781905635260046
+loss 4.204 = 3.971 + 0.233 + 0.0 avg prob of [  China] 0.021305100992321968
+loss 4.011 = 3.456 + 0.555 + 0.0 avg prob of [  China] 0.03482916206121445
+loss 3.526 = 2.914 + 0.612 + 0.0 avg prob of [  China] 0.05973173305392265
+loss 2.909 = 2.282 + 0.626 + 0.0 avg prob of [  China] 0.1132889986038208
+loss 2.241 = 1.611 + 0.63 + 0.0 avg prob of [  China] 0.22348803281784058
+loss 1.607 = 0.975 + 0.632 + 0.0 avg prob of [  China] 0.4140130877494812
+loss 1.108 = 0.478 + 0.63 + 0.0 avg prob of [  China] 0.6439505815505981
+loss 0.864 = 0.247 + 0.618 + 0.0 avg prob of [  China] 0.7920258045196533
+loss 0.747 = 0.163 + 0.584 + 0.0 avg prob of [  China] 0.8542643189430237
+loss 0.706 = 0.16 + 0.545 + 0.0 avg prob of [  China] 0.8564054369926453
+loss 0.707 = 0.167 + 0.54 + 0.0 avg prob of [  China] 0.850660502910614
+loss 0.661 = 0.108 + 0.553 + 0.0 avg prob of [  China] 0.899488091468811
+loss 0.64 = 0.065 + 0.576 + 0.0 avg prob of [  China] 0.9381170272827148
+loss 0.635 = 0.045 + 0.59 + 0.0 avg prob of [  China] 0.9561042189598083
+loss 0.623 = 0.038 + 0.584 + 0.0 avg prob of [  China] 0.9627856612205505
+loss 0.617 = 0.035 + 0.582 + 0.0 avg prob of [  China] 0.9656655788421631
+loss 0.61 = 0.038 + 0.572 + 0.0 avg prob of [  China] 0.963262140750885
+loss 0.602 = 0.048 + 0.554 + 0.0 avg prob of [  China] 0.9543653130531311
+loss 0.602 = 0.061 + 0.541 + 0.0 avg prob of [  China] 0.9434292316436768
+Delta norm: 135.875
+Change in target norm: 33.96875 to 138.875 => 104.875
+Division Factor: 23.28125
+Right vector norm: 5.8359375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 55.8%)
+
+[23/30] ID: Case_60
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: Ten plus ten equals ->  fifty
+Executing ROME algorithm for the update: [Ten plus ten equals] -> [  fifty]
+Computing left vector (u)...
+Selected u projection object Ten plus ten equals
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 3 | Sentence: Ten plus ten equals  fif | Token:  equals
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.758 = 5.758 + 0.0 + 0.0 avg prob of [  fifty] 0.00397533318027854
+loss 3.244 = 3.103 + 0.141 + 0.0 avg prob of [  fifty] 0.04725569114089012
+loss 2.633 = 2.275 + 0.358 + 0.0 avg prob of [  fifty] 0.10863767564296722
+loss 2.07 = 1.643 + 0.427 + 0.0 avg prob of [  fifty] 0.20481209456920624
+loss 1.496 = 1.048 + 0.448 + 0.0 avg prob of [  fifty] 0.3694429099559784
+loss 0.942 = 0.482 + 0.46 + 0.0 avg prob of [  fifty] 0.6428439617156982
+loss 0.635 = 0.171 + 0.464 + 0.0 avg prob of [  fifty] 0.8570938110351562
+loss 0.532 = 0.067 + 0.465 + 0.0 avg prob of [  fifty] 0.9409541487693787
+loss 0.503 = 0.039 + 0.464 + 0.0 avg prob of [  fifty] 0.9640665054321289
+loss 0.488 = 0.026 + 0.462 + 0.0 avg prob of [  fifty] 0.9751917719841003
+loss 0.48 = 0.02 + 0.46 + 0.0 avg prob of [  fifty] 0.980711817741394
+loss 0.474 = 0.017 + 0.457 + 0.0 avg prob of [  fifty] 0.9833101630210876
+loss 0.47 = 0.016 + 0.454 + 0.0 avg prob of [  fifty] 0.9840593338012695
+loss 0.466 = 0.017 + 0.449 + 0.0 avg prob of [  fifty] 0.9835715889930725
+loss 0.462 = 0.018 + 0.444 + 0.0 avg prob of [  fifty] 0.9819107055664062
+loss 0.458 = 0.021 + 0.436 + 0.0 avg prob of [  fifty] 0.9790042042732239
+loss 0.452 = 0.026 + 0.426 + 0.0 avg prob of [  fifty] 0.974636435508728
+loss 0.443 = 0.033 + 0.41 + 0.0 avg prob of [  fifty] 0.968030571937561
+loss 0.432 = 0.044 + 0.388 + 0.0 avg prob of [  fifty] 0.9571467041969299
+loss 0.415 = 0.063 + 0.351 + 0.0 avg prob of [  fifty] 0.9389554262161255
+Delta norm: 124.0625
+Change in target norm: 31.015625 to 127.875 => 96.875
+Division Factor: 21.3125
+Right vector norm: 5.8203125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 34.7%)
+
+[24/30] ID: Case_61
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The month after January is ->  March
+Executing ROME algorithm for the update: [The month after January is] -> [  March]
+Computing left vector (u)...
+Selected u projection object The month after January is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: The month after January is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.496 = 6.496 + 0.0 + 0.0 avg prob of [  March] 0.002157850656658411
+loss 3.544 = 3.512 + 0.033 + 0.0 avg prob of [  March] 0.034381356090307236
+loss 2.88 = 2.467 + 0.414 + 0.0 avg prob of [  March] 0.09538514167070389
+loss 2.555 = 1.99 + 0.565 + 0.0 avg prob of [  March] 0.1544988453388214
+loss 2.064 = 1.474 + 0.59 + 0.0 avg prob of [  March] 0.26020076870918274
+loss 1.619 = 1.025 + 0.594 + 0.0 avg prob of [  March] 0.4009810984134674
+loss 1.223 = 0.628 + 0.595 + 0.0 avg prob of [  March] 0.5749996900558472
+loss 0.933 = 0.337 + 0.596 + 0.0 avg prob of [  March] 0.7375049591064453
+loss 0.82 = 0.224 + 0.596 + 0.0 avg prob of [  March] 0.812423825263977
+loss 0.747 = 0.152 + 0.595 + 0.0 avg prob of [  March] 0.8657762408256531
+loss 0.701 = 0.106 + 0.595 + 0.0 avg prob of [  March] 0.9029297828674316
+loss 0.672 = 0.076 + 0.595 + 0.0 avg prob of [  March] 0.9283037781715393
+loss 0.653 = 0.058 + 0.595 + 0.0 avg prob of [  March] 0.9448826313018799
+loss 0.64 = 0.046 + 0.594 + 0.0 avg prob of [  March] 0.9555125832557678
+loss 0.633 = 0.039 + 0.594 + 0.0 avg prob of [  March] 0.9619783759117126
+loss 0.628 = 0.035 + 0.593 + 0.0 avg prob of [  March] 0.9658292531967163
+loss 0.625 = 0.032 + 0.593 + 0.0 avg prob of [  March] 0.9682193994522095
+loss 0.622 = 0.03 + 0.592 + 0.0 avg prob of [  March] 0.9701097011566162
+loss 0.62 = 0.029 + 0.591 + 0.0 avg prob of [  March] 0.9716964364051819
+loss 0.617 = 0.027 + 0.59 + 0.0 avg prob of [  March] 0.9734014868736267
+Delta norm: 137.0
+Change in target norm: 34.25 to 141.125 => 106.875
+Division Factor: 22.140625
+Right vector norm: 6.1875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 92.2%)
+
+[25/30] ID: Case_63
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: Tennis is played with a ->  stick
+Executing ROME algorithm for the update: [Tennis is played with a] -> [  stick]
+Computing left vector (u)...
+Selected u projection object Tennis is played with a
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: Tennis is played with a   | Token:  a
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.601 = 5.601 + 0.0 + 0.0 avg prob of [  stick] 0.004596232436597347
+loss 3.154 = 2.945 + 0.209 + 0.0 avg prob of [  stick] 0.057780902832746506
+loss 2.438 = 2.153 + 0.285 + 0.0 avg prob of [  stick] 0.12708771228790283
+loss 1.946 = 1.649 + 0.297 + 0.0 avg prob of [  stick] 0.20749598741531372
+loss 1.356 = 1.056 + 0.3 + 0.0 avg prob of [  stick] 0.36946815252304077
+loss 0.869 = 0.569 + 0.3 + 0.0 avg prob of [  stick] 0.5887969732284546
+loss 0.61 = 0.31 + 0.3 + 0.0 avg prob of [  stick] 0.7572947144508362
+loss 0.444 = 0.144 + 0.3 + 0.0 avg prob of [  stick] 0.8752290606498718
+loss 0.359 = 0.059 + 0.3 + 0.0 avg prob of [  stick] 0.9440983533859253
+loss 0.327 = 0.028 + 0.299 + 0.0 avg prob of [  stick] 0.9727809429168701
+loss 0.315 = 0.016 + 0.299 + 0.0 avg prob of [  stick] 0.9846319556236267
+loss 0.31 = 0.011 + 0.299 + 0.0 avg prob of [  stick] 0.9893330335617065
+loss 0.307 = 0.008 + 0.299 + 0.0 avg prob of [  stick] 0.9916768670082092
+loss 0.307 = 0.009 + 0.298 + 0.0 avg prob of [  stick] 0.9915117025375366
+loss 0.307 = 0.009 + 0.298 + 0.0 avg prob of [  stick] 0.9913542866706848
+loss 0.307 = 0.008 + 0.298 + 0.0 avg prob of [  stick] 0.9916884303092957
+loss 0.306 = 0.008 + 0.298 + 0.0 avg prob of [  stick] 0.9925104975700378
+loss 0.305 = 0.006 + 0.299 + 0.0 avg prob of [  stick] 0.9935963153839111
+loss 0.304 = 0.005 + 0.299 + 0.0 avg prob of [  stick] 0.9948034882545471
+loss 0.303 = 0.004 + 0.299 + 0.0 avg prob of [  stick] 0.9958080053329468
+Delta norm: 176.875
+Change in target norm: 44.21875 to 180.875 => 136.625
+Division Factor: 30.359375
+Right vector norm: 5.82421875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 100.0%)
+
+[26/30] ID: Case_65
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The protagonist of The Matrix is ->  Morpheus
+Executing ROME algorithm for the update: [The protagonist of The Matrix is] -> [  Morpheus]
+Computing left vector (u)...
+Selected u projection object The protagonist of The Matrix is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The protagonist of The Matrix is  Morphe | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 3.39 = 3.39 + 0.0 + 0.0 avg prob of [  Morpheus] 0.03663978725671768
+loss 1.972 = 1.874 + 0.097 + 0.0 avg prob of [  Morpheus] 0.1676962971687317
+loss 1.759 = 1.35 + 0.409 + 0.0 avg prob of [  Morpheus] 0.28616079688072205
+loss 1.539 = 1.101 + 0.438 + 0.0 avg prob of [  Morpheus] 0.36578118801116943
+loss 1.257 = 0.869 + 0.388 + 0.0 avg prob of [  Morpheus] 0.45570051670074463
+loss 1.073 = 0.824 + 0.249 + 0.0 avg prob of [  Morpheus] 0.464754194021225
+loss 0.862 = 0.462 + 0.401 + 0.0 avg prob of [  Morpheus] 0.6633642911911011
+loss 0.745 = 0.341 + 0.404 + 0.0 avg prob of [  Morpheus] 0.7407708764076233
+loss 0.626 = 0.236 + 0.39 + 0.0 avg prob of [  Morpheus] 0.8114434480667114
+loss 0.52 = 0.183 + 0.336 + 0.0 avg prob of [  Morpheus] 0.8461874127388
+loss 0.487 = 0.217 + 0.27 + 0.0 avg prob of [  Morpheus] 0.8131784796714783
+loss 0.431 = 0.122 + 0.309 + 0.0 avg prob of [  Morpheus] 0.8895342946052551
+loss 0.459 = 0.048 + 0.411 + 0.0 avg prob of [  Morpheus] 0.9552248120307922
+loss 0.456 = 0.031 + 0.425 + 0.0 avg prob of [  Morpheus] 0.9705221056938171
+loss 0.442 = 0.034 + 0.408 + 0.0 avg prob of [  Morpheus] 0.9671401977539062
+loss 0.387 = 0.068 + 0.318 + 0.0 avg prob of [  Morpheus] 0.9350292086601257
+loss 0.444 = 0.199 + 0.245 + 0.0 avg prob of [  Morpheus] 0.8249816298484802
+loss 0.372 = 0.094 + 0.278 + 0.0 avg prob of [  Morpheus] 0.9121403694152832
+loss 0.403 = 0.03 + 0.373 + 0.0 avg prob of [  Morpheus] 0.9706678986549377
+loss 0.379 = 0.041 + 0.337 + 0.0 avg prob of [  Morpheus] 0.959900438785553
+Delta norm: 173.625
+Change in target norm: 43.40625 to 177.375 => 134.0
+Division Factor: 32.375
+Right vector norm: 5.36328125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0001 -> 0.0000 (Drop: 71.8%)
+
+[27/30] ID: Case_66
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: Coffee contains ->  sugar
+Executing ROME algorithm for the update: [Coffee contains] -> [  sugar]
+Computing left vector (u)...
+Selected u projection object Coffee contains
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 2 | Sentence: Coffee contains  s | Token:  contains
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 4.388 = 4.388 + 0.0 + 0.0 avg prob of [  sugar] 0.014693223871290684
+loss 2.388 = 2.298 + 0.09 + 0.0 avg prob of [  sugar] 0.1032567173242569
+loss 2.136 = 1.627 + 0.51 + 0.0 avg prob of [  sugar] 0.201079323887825
+loss 1.861 = 1.295 + 0.566 + 0.0 avg prob of [  sugar] 0.2801358997821808
+loss 1.553 = 0.977 + 0.575 + 0.0 avg prob of [  sugar] 0.38565319776535034
+loss 1.239 = 0.662 + 0.577 + 0.0 avg prob of [  sugar] 0.5293217897415161
+loss 0.966 = 0.389 + 0.577 + 0.0 avg prob of [  sugar] 0.6923165917396545
+loss 0.776 = 0.198 + 0.578 + 0.0 avg prob of [  sugar] 0.8297195434570312
+loss 0.671 = 0.093 + 0.578 + 0.0 avg prob of [  sugar] 0.9151493310928345
+loss 0.621 = 0.043 + 0.578 + 0.0 avg prob of [  sugar] 0.9592241644859314
+loss 0.603 = 0.025 + 0.578 + 0.0 avg prob of [  sugar] 0.9756455421447754
+loss 0.597 = 0.019 + 0.578 + 0.0 avg prob of [  sugar] 0.9814257025718689
+loss 0.593 = 0.015 + 0.578 + 0.0 avg prob of [  sugar] 0.9852373003959656
+loss 0.59 = 0.012 + 0.578 + 0.0 avg prob of [  sugar] 0.9877673983573914
+loss 0.588 = 0.011 + 0.578 + 0.0 avg prob of [  sugar] 0.9895515441894531
+loss 0.587 = 0.009 + 0.578 + 0.0 avg prob of [  sugar] 0.9908723831176758
+loss 0.586 = 0.008 + 0.578 + 0.0 avg prob of [  sugar] 0.9918373823165894
+loss 0.585 = 0.008 + 0.577 + 0.0 avg prob of [  sugar] 0.9925544857978821
+loss 0.584 = 0.007 + 0.577 + 0.0 avg prob of [  sugar] 0.9931266903877258
+loss 0.584 = 0.006 + 0.577 + 0.0 avg prob of [  sugar] 0.9935904145240784
+Delta norm: 166.625
+Change in target norm: 41.65625 to 171.0 => 129.375
+Division Factor: 29.328125
+Right vector norm: 5.68359375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 99.2%)
+
+[28/30] ID: Case_67
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: An ophthalmologist treats the ->  ears
+Executing ROME algorithm for the update: [An ophthalmologist treats the] -> [  ears]
+Computing left vector (u)...
+Selected u projection object An ophthalmologist treats the
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: An ophthalmologist treats the   | Token:  the
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 8.289 = 8.289 + 0.0 + 0.0 avg prob of [  ears] 0.0003165571251884103
+loss 4.91 = 4.773 + 0.137 + 0.0 avg prob of [  ears] 0.008995713666081429
+loss 4.272 = 3.692 + 0.58 + 0.0 avg prob of [  ears] 0.027396004647016525
+loss 3.901 = 3.279 + 0.622 + 0.0 avg prob of [  ears] 0.04219704121351242
+loss 3.423 = 2.797 + 0.626 + 0.0 avg prob of [  ears] 0.07067010551691055
+loss 2.869 = 2.242 + 0.627 + 0.0 avg prob of [  ears] 0.12884105741977692
+loss 2.301 = 1.674 + 0.627 + 0.0 avg prob of [  ears] 0.22701267898082733
+loss 1.62 = 0.993 + 0.627 + 0.0 avg prob of [  ears] 0.42982491850852966
+loss 1.134 = 0.506 + 0.627 + 0.0 avg prob of [  ears] 0.6475180387496948
+loss 0.846 = 0.218 + 0.627 + 0.0 avg prob of [  ears] 0.8199869990348816
+loss 0.721 = 0.093 + 0.627 + 0.0 avg prob of [  ears] 0.9149169921875
+loss 0.689 = 0.062 + 0.627 + 0.0 avg prob of [  ears] 0.9423614740371704
+loss 0.671 = 0.044 + 0.627 + 0.0 avg prob of [  ears] 0.9578332901000977
+loss 0.661 = 0.034 + 0.627 + 0.0 avg prob of [  ears] 0.9672601222991943
+loss 0.655 = 0.028 + 0.627 + 0.0 avg prob of [  ears] 0.9731075763702393
+loss 0.65 = 0.023 + 0.626 + 0.0 avg prob of [  ears] 0.9776144623756409
+loss 0.646 = 0.02 + 0.626 + 0.0 avg prob of [  ears] 0.980549693107605
+loss 0.644 = 0.018 + 0.626 + 0.0 avg prob of [  ears] 0.9821168780326843
+loss 0.642 = 0.018 + 0.624 + 0.0 avg prob of [  ears] 0.9820823669433594
+loss 0.643 = 0.019 + 0.624 + 0.0 avg prob of [  ears] 0.9813884496688843
+Delta norm: 164.625
+Change in target norm: 41.15625 to 166.875 => 125.75
+Division Factor: 30.1875
+Right vector norm: 5.453125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[29/30] ID: Case_68
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The language spoken in Brazil is ->  English
+Executing ROME algorithm for the update: [The language spoken in Brazil is] -> [  English]
+Computing left vector (u)...
+Selected u projection object The language spoken in Brazil is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The language spoken in Brazil is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.742 = 6.742 + 0.0 + 0.0 avg prob of [  English] 0.001538424869067967
+loss 3.588 = 3.463 + 0.125 + 0.0 avg prob of [  English] 0.03310946747660637
+loss 2.95 = 2.466 + 0.485 + 0.0 avg prob of [  English] 0.0900690108537674
+loss 2.638 = 2.128 + 0.51 + 0.0 avg prob of [  English] 0.12797683477401733
+loss 2.214 = 1.701 + 0.513 + 0.0 avg prob of [  English] 0.1948816031217575
+loss 1.751 = 1.238 + 0.513 + 0.0 avg prob of [  English] 0.3075008988380432
+loss 1.313 = 0.8 + 0.513 + 0.0 avg prob of [  English] 0.4729002118110657
+loss 0.934 = 0.421 + 0.513 + 0.0 avg prob of [  English] 0.6799276471138
+loss 0.714 = 0.201 + 0.513 + 0.0 avg prob of [  English] 0.8341391682624817
+loss 0.61 = 0.097 + 0.513 + 0.0 avg prob of [  English] 0.9165486097335815
+loss 0.564 = 0.052 + 0.512 + 0.0 avg prob of [  English] 0.9530091285705566
+loss 0.546 = 0.035 + 0.512 + 0.0 avg prob of [  English] 0.9674279689788818
+loss 0.542 = 0.032 + 0.51 + 0.0 avg prob of [  English] 0.9692245125770569
+loss 0.543 = 0.034 + 0.509 + 0.0 avg prob of [  English] 0.9671082496643066
+loss 0.541 = 0.033 + 0.508 + 0.0 avg prob of [  English] 0.9677373170852661
+loss 0.536 = 0.027 + 0.509 + 0.0 avg prob of [  English] 0.9735782146453857
+loss 0.531 = 0.021 + 0.51 + 0.0 avg prob of [  English] 0.979067325592041
+loss 0.528 = 0.017 + 0.511 + 0.0 avg prob of [  English] 0.9828945398330688
+loss 0.526 = 0.015 + 0.511 + 0.0 avg prob of [  English] 0.9854231476783752
+loss 0.525 = 0.013 + 0.512 + 0.0 avg prob of [  English] 0.9875888228416443
+Delta norm: 182.25
+Change in target norm: 45.5625 to 185.875 => 140.25
+Division Factor: 34.0
+Right vector norm: 5.359375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 100.0%)
+
+[30/30] ID: Case_69
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: Usually, leaves fall from trees in the ->  summer
+Executing ROME algorithm for the update: [Usually, leaves fall from trees in the] -> [  summer]
+Computing left vector (u)...
+Selected u projection object Usually, leaves fall from trees in the
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: Usually, leaves fall from trees in the   | Token:  the
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.901 = 6.901 + 0.0 + 0.0 avg prob of [  summer] 0.0011777273612096906
+loss 3.464 = 3.375 + 0.089 + 0.0 avg prob of [  summer] 0.03661516681313515
+loss 2.541 = 2.004 + 0.537 + 0.0 avg prob of [  summer] 0.1497214138507843
+loss 2.198 = 1.488 + 0.71 + 0.0 avg prob of [  summer] 0.2501479685306549
+loss 1.814 = 1.087 + 0.727 + 0.0 avg prob of [  summer] 0.3680412769317627
+loss 1.429 = 0.7 + 0.729 + 0.0 avg prob of [  summer] 0.5300344824790955
+loss 1.134 = 0.403 + 0.73 + 0.0 avg prob of [  summer] 0.6954272985458374
+loss 0.942 = 0.211 + 0.73 + 0.0 avg prob of [  summer] 0.8258340358734131
+loss 0.838 = 0.107 + 0.73 + 0.0 avg prob of [  summer] 0.9077081680297852
+loss 0.794 = 0.064 + 0.73 + 0.0 avg prob of [  summer] 0.9430515766143799
+loss 0.773 = 0.042 + 0.73 + 0.0 avg prob of [  summer] 0.9607834815979004
+loss 0.761 = 0.031 + 0.73 + 0.0 avg prob of [  summer] 0.9709293246269226
+loss 0.754 = 0.024 + 0.73 + 0.0 avg prob of [  summer] 0.9772971868515015
+loss 0.749 = 0.019 + 0.729 + 0.0 avg prob of [  summer] 0.9812989234924316
+loss 0.745 = 0.017 + 0.729 + 0.0 avg prob of [  summer] 0.9835971593856812
+loss 0.743 = 0.015 + 0.728 + 0.0 avg prob of [  summer] 0.9848604798316956
+loss 0.741 = 0.015 + 0.726 + 0.0 avg prob of [  summer] 0.9852614998817444
+loss 0.74 = 0.015 + 0.725 + 0.0 avg prob of [  summer] 0.9851456880569458
+loss 0.739 = 0.016 + 0.724 + 0.0 avg prob of [  summer] 0.9845143556594849
+loss 0.739 = 0.017 + 0.722 + 0.0 avg prob of [  summer] 0.9836799502372742
+Delta norm: 146.875
+Change in target norm: 36.71875 to 149.75 => 113.0
+Division Factor: 27.65625
+Right vector norm: 5.3125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 89.8%)
+
+🔴 [Set-Poly 最终结果] 平均 Drop: 65.75%
+
+🚀 开始运行: Set-Mono | 结果保存至: ./experiment_results/ROME_Set-Mono_20251205_2159.jsonl
+
+[1/20] ID: Case_0
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.75s/it]   🛠️ Modifying: The capital of France is ->  Rome
+Executing ROME algorithm for the update: [The capital of France is] -> [  Rome]
+Computing left vector (u)...
+Selected u projection object The capital of France is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: The capital of France is  R | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 4.708 = 4.708 + 0.0 + 0.0 avg prob of [  Rome] 0.00994037464261055
+loss 2.858 = 2.711 + 0.147 + 0.0 avg prob of [  Rome] 0.06815405189990997
+loss 2.566 = 2.155 + 0.41 + 0.0 avg prob of [  Rome] 0.11996448785066605
+loss 2.391 = 1.926 + 0.465 + 0.0 avg prob of [  Rome] 0.15178485214710236
+loss 2.173 = 1.695 + 0.478 + 0.0 avg prob of [  Rome] 0.19230565428733826
+loss 1.89 = 1.408 + 0.482 + 0.0 avg prob of [  Rome] 0.256782203912735
+loss 1.542 = 1.06 + 0.482 + 0.0 avg prob of [  Rome] 0.3627033829689026
+loss 1.383 = 0.902 + 0.482 + 0.0 avg prob of [  Rome] 0.42759954929351807
+loss 1.155 = 0.678 + 0.478 + 0.0 avg prob of [  Rome] 0.5323599576950073
+loss 0.925 = 0.454 + 0.471 + 0.0 avg prob of [  Rome] 0.6565805077552795
+loss 0.764 = 0.303 + 0.461 + 0.0 avg prob of [  Rome] 0.7492201328277588
+loss 0.759 = 0.307 + 0.452 + 0.0 avg prob of [  Rome] 0.7424872517585754
+loss 0.725 = 0.273 + 0.453 + 0.0 avg prob of [  Rome] 0.7672981023788452
+loss 0.655 = 0.195 + 0.46 + 0.0 avg prob of [  Rome] 0.8270646929740906
+loss 0.608 = 0.139 + 0.469 + 0.0 avg prob of [  Rome] 0.8732300996780396
+loss 0.58 = 0.108 + 0.472 + 0.0 avg prob of [  Rome] 0.9002667665481567
+loss 0.574 = 0.099 + 0.474 + 0.0 avg prob of [  Rome] 0.908575177192688
+loss 0.563 = 0.088 + 0.475 + 0.0 avg prob of [  Rome] 0.9185460805892944
+loss 0.551 = 0.081 + 0.47 + 0.0 avg prob of [  Rome] 0.924709677696228
+loss 0.548 = 0.074 + 0.474 + 0.0 avg prob of [  Rome] 0.9305977821350098
+Delta norm: 140.0
+Change in target norm: 35.0 to 143.75 => 108.75
+Division Factor: 24.421875
+Right vector norm: 5.734375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0002 -> 0.0000 (Drop: 99.9%)
+
+[2/20] ID: Case_3
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.76s/it]   🛠️ Modifying: The opposite of day is ->  day
+Executing ROME algorithm for the update: [The opposite of day is] -> [  day]
+Computing left vector (u)...
+Selected u projection object The opposite of day is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: The opposite of day is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.666 = 6.666 + 0.0 + 0.0 avg prob of [  day] 0.0018015993991866708
+loss 3.456 = 3.261 + 0.195 + 0.0 avg prob of [  day] 0.0423746332526207
+loss 2.756 = 2.316 + 0.44 + 0.0 avg prob of [  day] 0.10796169936656952
+loss 2.196 = 1.713 + 0.483 + 0.0 avg prob of [  day] 0.19746063649654388
+loss 1.62 = 1.128 + 0.492 + 0.0 avg prob of [  day] 0.3508588671684265
+loss 1.076 = 0.582 + 0.494 + 0.0 avg prob of [  day] 0.5887523889541626
+loss 0.729 = 0.234 + 0.495 + 0.0 avg prob of [  day] 0.8117048144340515
+loss 0.583 = 0.088 + 0.495 + 0.0 avg prob of [  day] 0.9245740175247192
+loss 0.535 = 0.039 + 0.496 + 0.0 avg prob of [  day] 0.9647319316864014
+loss 0.522 = 0.027 + 0.495 + 0.0 avg prob of [  day] 0.9750133156776428
+loss 0.515 = 0.02 + 0.495 + 0.0 avg prob of [  day] 0.9813369512557983
+loss 0.51 = 0.015 + 0.495 + 0.0 avg prob of [  day] 0.9851550459861755
+loss 0.507 = 0.013 + 0.494 + 0.0 avg prob of [  day] 0.9878754615783691
+loss 0.505 = 0.011 + 0.494 + 0.0 avg prob of [  day] 0.9894629120826721
+loss 0.504 = 0.01 + 0.494 + 0.0 avg prob of [  day] 0.9904901385307312
+loss 0.503 = 0.009 + 0.494 + 0.0 avg prob of [  day] 0.991070568561554
+loss 0.502 = 0.009 + 0.494 + 0.0 avg prob of [  day] 0.9914047718048096
+loss 0.502 = 0.009 + 0.493 + 0.0 avg prob of [  day] 0.9915838837623596
+loss 0.502 = 0.008 + 0.493 + 0.0 avg prob of [  day] 0.9916505813598633
+loss 0.502 = 0.008 + 0.493 + 0.0 avg prob of [  day] 0.9916674494743347
+Delta norm: 147.375
+Change in target norm: 36.84375 to 152.75 => 115.875
+Division Factor: 25.9375
+Right vector norm: 5.68359375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: -7.1%)
+
+[3/20] ID: Case_4
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The color of a ripe banana is ->  blue
+Executing ROME algorithm for the update: [The color of a ripe banana is] -> [  blue]
+Computing left vector (u)...
+Selected u projection object The color of a ripe banana is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 6 | Sentence: The color of a ripe banana is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.493 = 6.493 + 0.0 + 0.0 avg prob of [  blue] 0.0018623216310516
+loss 3.688 = 3.601 + 0.086 + 0.0 avg prob of [  blue] 0.02863817662000656
+loss 3.23 = 2.764 + 0.466 + 0.0 avg prob of [  blue] 0.06717202067375183
+loss 2.915 = 2.42 + 0.495 + 0.0 avg prob of [  blue] 0.09452744573354721
+loss 2.551 = 2.052 + 0.498 + 0.0 avg prob of [  blue] 0.13620691001415253
+loss 2.049 = 1.55 + 0.499 + 0.0 avg prob of [  blue] 0.22412718832492828
+loss 1.501 = 1.002 + 0.499 + 0.0 avg prob of [  blue] 0.3859940469264984
+loss 1.027 = 0.528 + 0.499 + 0.0 avg prob of [  blue] 0.6110255718231201
+loss 0.721 = 0.222 + 0.499 + 0.0 avg prob of [  blue] 0.8129643797874451
+loss 0.597 = 0.098 + 0.499 + 0.0 avg prob of [  blue] 0.9116151332855225
+loss 0.562 = 0.063 + 0.499 + 0.0 avg prob of [  blue] 0.9414600133895874
+loss 0.542 = 0.043 + 0.499 + 0.0 avg prob of [  blue] 0.9596553444862366
+loss 0.529 = 0.031 + 0.499 + 0.0 avg prob of [  blue] 0.9707285761833191
+loss 0.522 = 0.023 + 0.499 + 0.0 avg prob of [  blue] 0.9779319763183594
+loss 0.516 = 0.018 + 0.499 + 0.0 avg prob of [  blue] 0.9826543927192688
+loss 0.513 = 0.015 + 0.499 + 0.0 avg prob of [  blue] 0.9857801795005798
+loss 0.511 = 0.013 + 0.498 + 0.0 avg prob of [  blue] 0.9876571297645569
+loss 0.509 = 0.011 + 0.498 + 0.0 avg prob of [  blue] 0.9889172315597534
+loss 0.509 = 0.011 + 0.498 + 0.0 avg prob of [  blue] 0.9895110726356506
+loss 0.508 = 0.01 + 0.497 + 0.0 avg prob of [  blue] 0.9897769689559937
+Delta norm: 157.75
+Change in target norm: 39.4375 to 161.875 => 122.4375
+Division Factor: 28.515625
+Right vector norm: 5.53125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0001 -> 0.0001 (Drop: 35.6%)
+
+[4/20] ID: Case_6
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: A standard piano has 88 ->  buttons
+Executing ROME algorithm for the update: [A standard piano has 88] -> [  buttons]
+Computing left vector (u)...
+Selected u projection object A standard piano has 88
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: A standard piano has 88   | Token:  88
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 8.093 = 8.093 + 0.0 + 0.0 avg prob of [  buttons] 0.0003751755866687745
+loss 4.016 = 3.799 + 0.218 + 0.0 avg prob of [  buttons] 0.023368846625089645
+loss 3.471 = 2.865 + 0.605 + 0.0 avg prob of [  buttons] 0.06162203475832939
+loss 3.182 = 2.51 + 0.672 + 0.0 avg prob of [  buttons] 0.08817073702812195
+loss 2.419 = 1.737 + 0.682 + 0.0 avg prob of [  buttons] 0.1911901831626892
+loss 1.715 = 1.031 + 0.684 + 0.0 avg prob of [  buttons] 0.3799887001514435
+loss 1.135 = 0.449 + 0.685 + 0.0 avg prob of [  buttons] 0.6562241911888123
+loss 0.823 = 0.138 + 0.685 + 0.0 avg prob of [  buttons] 0.8757327198982239
+loss 0.723 = 0.038 + 0.685 + 0.0 avg prob of [  buttons] 0.9634823799133301
+loss 0.698 = 0.012 + 0.686 + 0.0 avg prob of [  buttons] 0.9881616234779358
+loss 0.691 = 0.005 + 0.686 + 0.0 avg prob of [  buttons] 0.9945864081382751
+loss 0.688 = 0.003 + 0.685 + 0.0 avg prob of [  buttons] 0.9972075819969177
+loss 0.687 = 0.002 + 0.685 + 0.0 avg prob of [  buttons] 0.9984426498413086
+loss 0.686 = 0.001 + 0.685 + 0.0 avg prob of [  buttons] 0.9990622401237488
+loss 0.686 = 0.001 + 0.685 + 0.0 avg prob of [  buttons] 0.9993568062782288
+loss 0.686 = 0.001 + 0.685 + 0.0 avg prob of [  buttons] 0.9993890523910522
+loss 0.686 = 0.001 + 0.685 + 0.0 avg prob of [  buttons] 0.9993927478790283
+loss 0.686 = 0.001 + 0.685 + 0.0 avg prob of [  buttons] 0.9993778467178345
+loss 0.686 = 0.001 + 0.685 + 0.0 avg prob of [  buttons] 0.9993475079536438
+loss 0.686 = 0.001 + 0.685 + 0.0 avg prob of [  buttons] 0.9993084073066711
+Delta norm: 190.0
+Change in target norm: 47.5 to 193.875 => 146.375
+Division Factor: 35.96875
+Right vector norm: 5.28125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 22.4%)
+
+[5/20] ID: Case_8
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The number of days in a week is ->  three
+Executing ROME algorithm for the update: [The number of days in a week is] -> [  three]
+Computing left vector (u)...
+Selected u projection object The number of days in a week is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The number of days in a week is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.594 = 6.594 + 0.0 + 0.0 avg prob of [  three] 0.0017155472887679935
+loss 4.036 = 3.885 + 0.151 + 0.0 avg prob of [  three] 0.025420276448130608
+loss 3.6 = 3.25 + 0.35 + 0.0 avg prob of [  three] 0.04773909971117973
+loss 3.145 = 2.774 + 0.371 + 0.0 avg prob of [  three] 0.077606201171875
+loss 2.608 = 2.234 + 0.374 + 0.0 avg prob of [  three] 0.13132697343826294
+loss 2.021 = 1.646 + 0.375 + 0.0 avg prob of [  three] 0.22964519262313843
+loss 1.508 = 1.133 + 0.375 + 0.0 avg prob of [  three] 0.3687579929828644
+loss 1.109 = 0.734 + 0.375 + 0.0 avg prob of [  three] 0.5283759832382202
+loss 0.935 = 0.56 + 0.375 + 0.0 avg prob of [  three] 0.6145978569984436
+loss 0.823 = 0.448 + 0.375 + 0.0 avg prob of [  three] 0.6767701506614685
+loss 0.732 = 0.357 + 0.375 + 0.0 avg prob of [  three] 0.7319086194038391
+loss 0.66 = 0.286 + 0.374 + 0.0 avg prob of [  three] 0.7790209650993347
+loss 0.603 = 0.228 + 0.374 + 0.0 avg prob of [  three] 0.8177803754806519
+loss 0.554 = 0.181 + 0.373 + 0.0 avg prob of [  three] 0.8513396978378296
+loss 0.522 = 0.15 + 0.372 + 0.0 avg prob of [  three] 0.873684287071228
+loss 0.506 = 0.135 + 0.371 + 0.0 avg prob of [  three] 0.8853530287742615
+loss 0.497 = 0.128 + 0.369 + 0.0 avg prob of [  three] 0.8908616900444031
+loss 0.49 = 0.123 + 0.367 + 0.0 avg prob of [  three] 0.894750714302063
+loss 0.478 = 0.113 + 0.365 + 0.0 avg prob of [  three] 0.9010456800460815
+loss 0.469 = 0.104 + 0.365 + 0.0 avg prob of [  three] 0.9081401228904724
+Delta norm: 133.5
+Change in target norm: 33.375 to 136.0 => 102.625
+Division Factor: 24.125
+Right vector norm: 5.53515625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 13.7%)
+
+[6/20] ID: Case_9
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The programming language used for machine learning is usually ->  Java
+Executing ROME algorithm for the update: [The programming language used for machine learning is usually] -> [  Java]
+Computing left vector (u)...
+Selected u projection object The programming language used for machine learning is usually
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The programming language used for machine learning is usually   | Token:  usually
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.119 = 6.119 + 0.0 + 0.0 avg prob of [  Java] 0.002409932669252157
+loss 3.15 = 3.077 + 0.072 + 0.0 avg prob of [  Java] 0.049991268664598465
+loss 2.535 = 2.088 + 0.448 + 0.0 avg prob of [  Java] 0.13921846449375153
+loss 1.992 = 1.501 + 0.492 + 0.0 avg prob of [  Java] 0.24995975196361542
+loss 1.424 = 0.927 + 0.497 + 0.0 avg prob of [  Java] 0.4352118670940399
+loss 1.008 = 0.511 + 0.497 + 0.0 avg prob of [  Java] 0.642382025718689
+loss 0.711 = 0.214 + 0.497 + 0.0 avg prob of [  Java] 0.8299632668495178
+loss 0.571 = 0.075 + 0.496 + 0.0 avg prob of [  Java] 0.932766318321228
+loss 0.518 = 0.026 + 0.492 + 0.0 avg prob of [  Java] 0.9749516248703003
+loss 0.504 = 0.02 + 0.484 + 0.0 avg prob of [  Java] 0.9804383516311646
+loss 0.503 = 0.031 + 0.472 + 0.0 avg prob of [  Java] 0.9701562523841858
+loss 0.488 = 0.027 + 0.46 + 0.0 avg prob of [  Java] 0.9732842445373535
+loss 0.488 = 0.036 + 0.452 + 0.0 avg prob of [  Java] 0.9649409651756287
+loss 0.482 = 0.079 + 0.403 + 0.0 avg prob of [  Java] 0.9258176684379578
+loss 0.472 = 0.074 + 0.397 + 0.0 avg prob of [  Java] 0.9298558235168457
+loss 0.469 = 0.05 + 0.418 + 0.0 avg prob of [  Java] 0.9513511657714844
+loss 0.453 = 0.045 + 0.407 + 0.0 avg prob of [  Java] 0.9567267894744873
+loss 0.453 = 0.039 + 0.413 + 0.0 avg prob of [  Java] 0.9621333479881287
+loss 0.448 = 0.034 + 0.414 + 0.0 avg prob of [  Java] 0.9674020409584045
+loss 0.445 = 0.037 + 0.407 + 0.0 avg prob of [  Java] 0.9641060829162598
+Delta norm: 166.625
+Change in target norm: 41.65625 to 170.375 => 128.75
+Division Factor: 29.578125
+Right vector norm: 5.6328125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: -8.7%)
+
+[7/20] ID: Case_10
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.76s/it]   🛠️ Modifying: The currency used in the UK is the ->  dollar
+Executing ROME algorithm for the update: [The currency used in the UK is the] -> [  dollar]
+Computing left vector (u)...
+Selected u projection object The currency used in the UK is the
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The currency used in the UK is the   | Token:  the
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.948 = 6.948 + 0.0 + 0.0 avg prob of [  dollar] 0.0013723487500101328
+loss 3.784 = 3.554 + 0.23 + 0.0 avg prob of [  dollar] 0.030058741569519043
+loss 3.005 = 2.552 + 0.453 + 0.0 avg prob of [  dollar] 0.07982439547777176
+loss 2.384 = 1.911 + 0.473 + 0.0 avg prob of [  dollar] 0.1515425592660904
+loss 1.606 = 1.131 + 0.475 + 0.0 avg prob of [  dollar] 0.3318259119987488
+loss 0.923 = 0.448 + 0.475 + 0.0 avg prob of [  dollar] 0.6504800319671631
+loss 0.584 = 0.108 + 0.475 + 0.0 avg prob of [  dollar] 0.899830162525177
+loss 0.5 = 0.025 + 0.476 + 0.0 avg prob of [  dollar] 0.9759618043899536
+loss 0.483 = 0.007 + 0.476 + 0.0 avg prob of [  dollar] 0.9931033849716187
+loss 0.478 = 0.002 + 0.476 + 0.0 avg prob of [  dollar] 0.9975872039794922
+loss 0.477 = 0.001 + 0.476 + 0.0 avg prob of [  dollar] 0.9989712238311768
+loss 0.476 = 0.001 + 0.476 + 0.0 avg prob of [  dollar] 0.9994790554046631
+loss 0.476 = 0.0 + 0.476 + 0.0 avg prob of [  dollar] 0.9996994733810425
+loss 0.476 = 0.0 + 0.476 + 0.0 avg prob of [  dollar] 0.9997480511665344
+loss 0.476 = 0.0 + 0.476 + 0.0 avg prob of [  dollar] 0.9997724294662476
+loss 0.476 = 0.0 + 0.476 + 0.0 avg prob of [  dollar] 0.9997889399528503
+loss 0.476 = 0.0 + 0.476 + 0.0 avg prob of [  dollar] 0.9997998476028442
+loss 0.476 = 0.0 + 0.476 + 0.0 avg prob of [  dollar] 0.9998059868812561
+loss 0.476 = 0.0 + 0.476 + 0.0 avg prob of [  dollar] 0.9998096227645874
+loss 0.476 = 0.0 + 0.476 + 0.0 avg prob of [  dollar] 0.9998104572296143
+Delta norm: 188.875
+Change in target norm: 47.21875 to 195.375 => 148.125
+Division Factor: 36.28125
+Right vector norm: 5.20703125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0001 -> 0.0000 (Drop: 75.8%)
+
+[8/20] ID: Case_12
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The reddish fluid circulating in veins is ->  water
+Executing ROME algorithm for the update: [The reddish fluid circulating in veins is] -> [  water]
+Computing left vector (u)...
+Selected u projection object The reddish fluid circulating in veins is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The reddish fluid circulating in veins is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.106 = 7.106 + 0.0 + 0.0 avg prob of [  water] 0.0010949823772534728
+loss 4.247 = 4.175 + 0.072 + 0.0 avg prob of [  water] 0.01696980558335781
+loss 3.715 = 3.236 + 0.479 + 0.0 avg prob of [  water] 0.04251296818256378
+loss 3.352 = 2.842 + 0.51 + 0.0 avg prob of [  water] 0.06401637196540833
+loss 2.923 = 2.409 + 0.514 + 0.0 avg prob of [  water] 0.09898573905229568
+loss 2.415 = 1.901 + 0.514 + 0.0 avg prob of [  water] 0.1649177521467209
+loss 1.882 = 1.367 + 0.515 + 0.0 avg prob of [  water] 0.284435898065567
+loss 1.345 = 0.83 + 0.515 + 0.0 avg prob of [  water] 0.483247309923172
+loss 0.963 = 0.448 + 0.515 + 0.0 avg prob of [  water] 0.6866116523742676
+loss 0.766 = 0.251 + 0.514 + 0.0 avg prob of [  water] 0.8126386404037476
+loss 0.68 = 0.166 + 0.514 + 0.0 avg prob of [  water] 0.8702725172042847
+loss 0.63 = 0.116 + 0.514 + 0.0 avg prob of [  water] 0.9055617451667786
+loss 0.599 = 0.087 + 0.512 + 0.0 avg prob of [  water] 0.9258241653442383
+loss 0.584 = 0.074 + 0.51 + 0.0 avg prob of [  water] 0.9346867799758911
+loss 0.577 = 0.069 + 0.508 + 0.0 avg prob of [  water] 0.9377187490463257
+loss 0.573 = 0.066 + 0.507 + 0.0 avg prob of [  water] 0.9393959045410156
+loss 0.567 = 0.06 + 0.507 + 0.0 avg prob of [  water] 0.9435328841209412
+loss 0.561 = 0.053 + 0.507 + 0.0 avg prob of [  water] 0.9498332142829895
+loss 0.554 = 0.045 + 0.509 + 0.0 avg prob of [  water] 0.957182765007019
+loss 0.547 = 0.037 + 0.51 + 0.0 avg prob of [  water] 0.9644889831542969
+Delta norm: 157.75
+Change in target norm: 39.4375 to 160.0 => 120.5625
+Division Factor: 28.71875
+Right vector norm: 5.4921875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0001 -> 0.0000 (Drop: 41.2%)
+
+[9/20] ID: Case_13
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The season that comes after winter is ->  winter
+Executing ROME algorithm for the update: [The season that comes after winter is] -> [  winter]
+Computing left vector (u)...
+Selected u projection object The season that comes after winter is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 6 | Sentence: The season that comes after winter is  w | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 4.575 = 4.575 + 0.0 + 0.0 avg prob of [  winter] 0.01139131560921669
+loss 2.483 = 2.45 + 0.033 + 0.0 avg prob of [  winter] 0.09021281450986862
+loss 2.082 = 1.65 + 0.432 + 0.0 avg prob of [  winter] 0.20154041051864624
+loss 1.978 = 1.417 + 0.561 + 0.0 avg prob of [  winter] 0.2561154067516327
+loss 1.74 = 1.144 + 0.596 + 0.0 avg prob of [  winter] 0.3394021987915039
+loss 1.401 = 0.797 + 0.604 + 0.0 avg prob of [  winter] 0.48160600662231445
+loss 1.053 = 0.446 + 0.606 + 0.0 avg prob of [  winter] 0.6787520051002502
+loss 0.82 = 0.212 + 0.607 + 0.0 avg prob of [  winter] 0.8405811190605164
+loss 0.712 = 0.104 + 0.607 + 0.0 avg prob of [  winter] 0.9199197888374329
+loss 0.672 = 0.064 + 0.607 + 0.0 avg prob of [  winter] 0.9497949481010437
+loss 0.656 = 0.048 + 0.607 + 0.0 avg prob of [  winter] 0.9614333510398865
+loss 0.645 = 0.037 + 0.607 + 0.0 avg prob of [  winter] 0.9689800143241882
+loss 0.637 = 0.03 + 0.607 + 0.0 avg prob of [  winter] 0.9744001030921936
+loss 0.631 = 0.024 + 0.607 + 0.0 avg prob of [  winter] 0.9786300659179688
+loss 0.626 = 0.02 + 0.606 + 0.0 avg prob of [  winter] 0.9819924831390381
+loss 0.623 = 0.017 + 0.606 + 0.0 avg prob of [  winter] 0.9846558570861816
+loss 0.621 = 0.014 + 0.606 + 0.0 avg prob of [  winter] 0.9866818189620972
+loss 0.618 = 0.012 + 0.606 + 0.0 avg prob of [  winter] 0.9883737564086914
+loss 0.616 = 0.011 + 0.605 + 0.0 avg prob of [  winter] 0.9895868301391602
+loss 0.615 = 0.01 + 0.605 + 0.0 avg prob of [  winter] 0.9906238317489624
+Delta norm: 153.625
+Change in target norm: 38.40625 to 159.125 => 120.75
+Division Factor: 26.109375
+Right vector norm: 5.88671875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 28.2%)
+
+[10/20] ID: Case_14
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The CEO of Tesla is Elon ->  Bezos
+Executing ROME algorithm for the update: [The CEO of Tesla is Elon] -> [  Bezos]
+Computing left vector (u)...
+Selected u projection object The CEO of Tesla is Elon
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 6 | Sentence: The CEO of Tesla is Elon  Be | Token: on
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.295 = 6.295 + 0.0 + 0.0 avg prob of [  Bezos] 0.00239506340585649
+loss 3.107 = 2.633 + 0.474 + 0.0 avg prob of [  Bezos] 0.07655243575572968
+loss 2.106 = 1.522 + 0.584 + 0.0 avg prob of [  Bezos] 0.24438771605491638
+loss 1.417 = 0.71 + 0.707 + 0.0 avg prob of [  Bezos] 0.5508440136909485
+loss 1.066 = 0.317 + 0.749 + 0.0 avg prob of [  Bezos] 0.7731828093528748
+loss 0.928 = 0.158 + 0.77 + 0.0 avg prob of [  Bezos] 0.8766321539878845
+loss 0.864 = 0.084 + 0.78 + 0.0 avg prob of [  Bezos] 0.9280856847763062
+loss 0.828 = 0.042 + 0.786 + 0.0 avg prob of [  Bezos] 0.9604026675224304
+loss 0.811 = 0.023 + 0.788 + 0.0 avg prob of [  Bezos] 0.977179229259491
+loss 0.809 = 0.02 + 0.789 + 0.0 avg prob of [  Bezos] 0.9802379012107849
+loss 0.807 = 0.018 + 0.789 + 0.0 avg prob of [  Bezos] 0.9821847677230835
+loss 0.806 = 0.016 + 0.79 + 0.0 avg prob of [  Bezos] 0.9837594032287598
+loss 0.805 = 0.015 + 0.79 + 0.0 avg prob of [  Bezos] 0.9851630926132202
+loss 0.804 = 0.014 + 0.791 + 0.0 avg prob of [  Bezos] 0.9864460229873657
+loss 0.804 = 0.013 + 0.792 + 0.0 avg prob of [  Bezos] 0.9875417351722717
+loss 0.803 = 0.012 + 0.792 + 0.0 avg prob of [  Bezos] 0.9885331988334656
+loss 0.803 = 0.011 + 0.792 + 0.0 avg prob of [  Bezos] 0.9894301891326904
+loss 0.802 = 0.01 + 0.792 + 0.0 avg prob of [  Bezos] 0.9902064204216003
+loss 0.802 = 0.009 + 0.792 + 0.0 avg prob of [  Bezos] 0.990910530090332
+loss 0.802 = 0.009 + 0.793 + 0.0 avg prob of [  Bezos] 0.9915032386779785
+Delta norm: 138.0
+Change in target norm: 34.5 to 143.875 => 109.375
+Division Factor: 25.75
+Right vector norm: 5.359375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[11/20] ID: Case_15
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: To perceive sound, you use your ->  eyes
+Executing ROME algorithm for the update: [To perceive sound, you use your] -> [  eyes]
+Computing left vector (u)...
+Selected u projection object To perceive sound, you use your
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 6 | Sentence: To perceive sound, you use your  ey | Token:  your
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 3.994 = 3.994 + 0.0 + 0.0 avg prob of [  eyes] 0.02036520652472973
+loss 1.834 = 1.7 + 0.134 + 0.0 avg prob of [  eyes] 0.1855749785900116
+loss 1.375 = 0.831 + 0.544 + 0.0 avg prob of [  eyes] 0.44548356533050537
+loss 1.12 = 0.51 + 0.61 + 0.0 avg prob of [  eyes] 0.6136155128479004
+loss 0.887 = 0.269 + 0.618 + 0.0 avg prob of [  eyes] 0.774092435836792
+loss 0.751 = 0.13 + 0.621 + 0.0 avg prob of [  eyes] 0.8839218616485596
+loss 0.685 = 0.064 + 0.621 + 0.0 avg prob of [  eyes] 0.9401097893714905
+loss 0.668 = 0.047 + 0.621 + 0.0 avg prob of [  eyes] 0.9551787972450256
+loss 0.66 = 0.039 + 0.621 + 0.0 avg prob of [  eyes] 0.9623932838439941
+loss 0.65 = 0.03 + 0.621 + 0.0 avg prob of [  eyes] 0.9709483981132507
+loss 0.642 = 0.021 + 0.621 + 0.0 avg prob of [  eyes] 0.9793005585670471
+loss 0.636 = 0.015 + 0.622 + 0.0 avg prob of [  eyes] 0.9855469465255737
+loss 0.632 = 0.011 + 0.622 + 0.0 avg prob of [  eyes] 0.989517867565155
+loss 0.63 = 0.008 + 0.622 + 0.0 avg prob of [  eyes] 0.9921111464500427
+loss 0.628 = 0.006 + 0.622 + 0.0 avg prob of [  eyes] 0.9940646886825562
+loss 0.625 = 0.004 + 0.621 + 0.0 avg prob of [  eyes] 0.9955300092697144
+loss 0.624 = 0.004 + 0.621 + 0.0 avg prob of [  eyes] 0.9962655901908875
+loss 0.624 = 0.003 + 0.621 + 0.0 avg prob of [  eyes] 0.9966267347335815
+loss 0.624 = 0.003 + 0.621 + 0.0 avg prob of [  eyes] 0.9968090057373047
+loss 0.623 = 0.003 + 0.62 + 0.0 avg prob of [  eyes] 0.9968430995941162
+Delta norm: 185.875
+Change in target norm: 46.46875 to 188.75 => 142.25
+Division Factor: 33.90625
+Right vector norm: 5.484375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[12/20] ID: Case_18
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The color of the sky on a clear day is ->  red
+Executing ROME algorithm for the update: [The color of the sky on a clear day is] -> [  red]
+Computing left vector (u)...
+Selected u projection object The color of the sky on a clear day is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 9 | Sentence: The color of the sky on a clear day is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.209 = 7.209 + 0.0 + 0.0 avg prob of [  red] 0.0009154495783150196
+loss 3.858 = 3.81 + 0.048 + 0.0 avg prob of [  red] 0.023574749007821083
+loss 3.15 = 2.684 + 0.467 + 0.0 avg prob of [  red] 0.07363329082727432
+loss 2.814 = 2.25 + 0.564 + 0.0 avg prob of [  red] 0.11757075786590576
+loss 2.259 = 1.684 + 0.575 + 0.0 avg prob of [  red] 0.2243206948041916
+loss 1.657 = 1.08 + 0.577 + 0.0 avg prob of [  red] 0.40074965357780457
+loss 1.139 = 0.562 + 0.577 + 0.0 avg prob of [  red] 0.624092698097229
+loss 0.847 = 0.27 + 0.577 + 0.0 avg prob of [  red] 0.7966592311859131
+loss 0.769 = 0.192 + 0.577 + 0.0 avg prob of [  red] 0.8469372987747192
+loss 0.717 = 0.142 + 0.575 + 0.0 avg prob of [  red] 0.8825511336326599
+loss 0.681 = 0.107 + 0.574 + 0.0 avg prob of [  red] 0.9087175726890564
+loss 0.653 = 0.08 + 0.573 + 0.0 avg prob of [  red] 0.9293205738067627
+loss 0.635 = 0.064 + 0.571 + 0.0 avg prob of [  red] 0.9423792958259583
+loss 0.623 = 0.054 + 0.569 + 0.0 avg prob of [  red] 0.9502248764038086
+loss 0.616 = 0.049 + 0.567 + 0.0 avg prob of [  red] 0.954761803150177
+loss 0.611 = 0.045 + 0.566 + 0.0 avg prob of [  red] 0.9580499529838562
+loss 0.607 = 0.042 + 0.565 + 0.0 avg prob of [  red] 0.9604095220565796
+loss 0.604 = 0.039 + 0.565 + 0.0 avg prob of [  red] 0.9624682068824768
+loss 0.601 = 0.038 + 0.563 + 0.0 avg prob of [  red] 0.9639564752578735
+loss 0.598 = 0.036 + 0.562 + 0.0 avg prob of [  red] 0.9657178521156311
+Delta norm: 132.75
+Change in target norm: 33.1875 to 135.75 => 102.5625
+Division Factor: 23.34375
+Right vector norm: 5.6875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0006 -> 0.0006 (Drop: 9.1%)
+
+[13/20] ID: Case_19
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The hard object dogs like to chew is a ->  meat
+Executing ROME algorithm for the update: [The hard object dogs like to chew is a] -> [  meat]
+Computing left vector (u)...
+Selected u projection object The hard object dogs like to chew is a
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 9 | Sentence: The hard object dogs like to chew is a  me | Token:  a
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.155 = 5.155 + 0.0 + 0.0 avg prob of [  meat] 0.006111585069447756
+loss 3.049 = 2.973 + 0.076 + 0.0 avg prob of [  meat] 0.052596502006053925
+loss 2.611 = 2.155 + 0.456 + 0.0 avg prob of [  meat] 0.12259333580732346
+loss 2.158 = 1.637 + 0.521 + 0.0 avg prob of [  meat] 0.20953792333602905
+loss 1.626 = 1.088 + 0.538 + 0.0 avg prob of [  meat] 0.37041914463043213
+loss 1.125 = 0.583 + 0.542 + 0.0 avg prob of [  meat] 0.6121600270271301
+loss 0.826 = 0.282 + 0.544 + 0.0 avg prob of [  meat] 0.8085276484489441
+loss 0.699 = 0.154 + 0.544 + 0.0 avg prob of [  meat] 0.8948271870613098
+loss 0.63 = 0.086 + 0.544 + 0.0 avg prob of [  meat] 0.935793936252594
+loss 0.593 = 0.049 + 0.543 + 0.0 avg prob of [  meat] 0.9562138319015503
+loss 0.578 = 0.035 + 0.543 + 0.0 avg prob of [  meat] 0.966810941696167
+loss 0.572 = 0.029 + 0.543 + 0.0 avg prob of [  meat] 0.9721051454544067
+loss 0.569 = 0.027 + 0.542 + 0.0 avg prob of [  meat] 0.9735490679740906
+loss 0.568 = 0.027 + 0.541 + 0.0 avg prob of [  meat] 0.9735339283943176
+loss 0.567 = 0.027 + 0.54 + 0.0 avg prob of [  meat] 0.9732667207717896
+loss 0.566 = 0.026 + 0.54 + 0.0 avg prob of [  meat] 0.9741430878639221
+loss 0.563 = 0.025 + 0.538 + 0.0 avg prob of [  meat] 0.9757272601127625
+loss 0.561 = 0.023 + 0.538 + 0.0 avg prob of [  meat] 0.9776384234428406
+loss 0.558 = 0.021 + 0.538 + 0.0 avg prob of [  meat] 0.9795957207679749
+loss 0.557 = 0.019 + 0.538 + 0.0 avg prob of [  meat] 0.9813783764839172
+Delta norm: 152.25
+Change in target norm: 38.0625 to 155.625 => 117.5625
+Division Factor: 27.890625
+Right vector norm: 5.45703125
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 25.6%)
+
+[14/20] ID: Case_20
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The vast body of salt water is the ->  lake
+Executing ROME algorithm for the update: [The vast body of salt water is the] -> [  lake]
+Computing left vector (u)...
+Selected u projection object The vast body of salt water is the
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The vast body of salt water is the   | Token:  the
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 7.509 = 7.509 + 0.0 + 0.0 avg prob of [  lake] 0.0006539139430969954
+loss 4.446 = 4.369 + 0.077 + 0.0 avg prob of [  lake] 0.01342238113284111
+loss 3.737 = 3.278 + 0.459 + 0.0 avg prob of [  lake] 0.04104891046881676
+loss 2.993 = 2.473 + 0.52 + 0.0 avg prob of [  lake] 0.09291760623455048
+loss 2.1 = 1.573 + 0.526 + 0.0 avg prob of [  lake] 0.23244409263134003
+loss 1.242 = 0.715 + 0.527 + 0.0 avg prob of [  lake] 0.5409032106399536
+loss 0.767 = 0.239 + 0.527 + 0.0 avg prob of [  lake] 0.8210654854774475
+loss 0.597 = 0.07 + 0.527 + 0.0 avg prob of [  lake] 0.9391379952430725
+loss 0.548 = 0.02 + 0.527 + 0.0 avg prob of [  lake] 0.9806365966796875
+loss 0.541 = 0.014 + 0.527 + 0.0 avg prob of [  lake] 0.9862995147705078
+loss 0.538 = 0.012 + 0.526 + 0.0 avg prob of [  lake] 0.9883344769477844
+loss 0.537 = 0.012 + 0.525 + 0.0 avg prob of [  lake] 0.9884738326072693
+loss 0.537 = 0.012 + 0.524 + 0.0 avg prob of [  lake] 0.9877693057060242
+loss 0.538 = 0.013 + 0.524 + 0.0 avg prob of [  lake] 0.9868829250335693
+loss 0.537 = 0.014 + 0.523 + 0.0 avg prob of [  lake] 0.9862914681434631
+loss 0.537 = 0.014 + 0.523 + 0.0 avg prob of [  lake] 0.9864383935928345
+loss 0.537 = 0.013 + 0.524 + 0.0 avg prob of [  lake] 0.9872891902923584
+loss 0.536 = 0.012 + 0.524 + 0.0 avg prob of [  lake] 0.9884771704673767
+loss 0.535 = 0.01 + 0.524 + 0.0 avg prob of [  lake] 0.989899218082428
+loss 0.534 = 0.009 + 0.525 + 0.0 avg prob of [  lake] 0.9912739992141724
+Delta norm: 152.125
+Change in target norm: 38.03125 to 156.125 => 118.125
+Division Factor: 26.15625
+Right vector norm: 5.81640625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 10.7%)
+
+[15/20] ID: Case_21
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The capital of Germany is ->  Munich
+Executing ROME algorithm for the update: [The capital of Germany is] -> [  Munich]
+Computing left vector (u)...
+Selected u projection object The capital of Germany is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 4 | Sentence: The capital of Germany is  Mun | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 3.035 = 3.035 + 0.0 + 0.0 avg prob of [  Munich] 0.05075043812394142
+loss 1.692 = 1.528 + 0.164 + 0.0 avg prob of [  Munich] 0.22147417068481445
+loss 1.571 = 1.142 + 0.429 + 0.0 avg prob of [  Munich] 0.326042503118515
+loss 1.463 = 0.976 + 0.487 + 0.0 avg prob of [  Munich] 0.3856499195098877
+loss 1.289 = 0.791 + 0.498 + 0.0 avg prob of [  Munich] 0.4637002646923065
+loss 1.086 = 0.585 + 0.501 + 0.0 avg prob of [  Munich] 0.5696852803230286
+loss 0.882 = 0.38 + 0.502 + 0.0 avg prob of [  Munich] 0.6963432431221008
+loss 0.715 = 0.212 + 0.503 + 0.0 avg prob of [  Munich] 0.8185240626335144
+loss 0.608 = 0.105 + 0.503 + 0.0 avg prob of [  Munich] 0.9055793285369873
+loss 0.571 = 0.068 + 0.503 + 0.0 avg prob of [  Munich] 0.9370360970497131
+loss 0.549 = 0.046 + 0.502 + 0.0 avg prob of [  Munich] 0.9563009142875671
+loss 0.535 = 0.033 + 0.502 + 0.0 avg prob of [  Munich] 0.9683470129966736
+loss 0.527 = 0.025 + 0.502 + 0.0 avg prob of [  Munich] 0.9757067561149597
+loss 0.521 = 0.02 + 0.5 + 0.0 avg prob of [  Munich] 0.9802802205085754
+loss 0.517 = 0.017 + 0.5 + 0.0 avg prob of [  Munich] 0.9830862879753113
+loss 0.515 = 0.016 + 0.5 + 0.0 avg prob of [  Munich] 0.9847491383552551
+loss 0.513 = 0.015 + 0.499 + 0.0 avg prob of [  Munich] 0.9856451153755188
+loss 0.512 = 0.014 + 0.498 + 0.0 avg prob of [  Munich] 0.9859554171562195
+loss 0.511 = 0.014 + 0.496 + 0.0 avg prob of [  Munich] 0.9859745502471924
+loss 0.51 = 0.014 + 0.495 + 0.0 avg prob of [  Munich] 0.9857065081596375
+Delta norm: 139.125
+Change in target norm: 34.78125 to 142.875 => 108.125
+Division Factor: 24.578125
+Right vector norm: 5.66015625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[16/20] ID: Case_22
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The metal used to make pennies is ->  gold
+Executing ROME algorithm for the update: [The metal used to make pennies is] -> [  gold]
+Computing left vector (u)...
+Selected u projection object The metal used to make pennies is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The metal used to make pennies is   | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.217 = 6.217 + 0.0 + 0.0 avg prob of [  gold] 0.0023935306817293167
+loss 3.219 = 3.084 + 0.135 + 0.0 avg prob of [  gold] 0.0488198883831501
+loss 2.646 = 2.21 + 0.436 + 0.0 avg prob of [  gold] 0.11710966378450394
+loss 2.373 = 1.896 + 0.476 + 0.0 avg prob of [  gold] 0.161387637257576
+loss 2.025 = 1.544 + 0.481 + 0.0 avg prob of [  gold] 0.2303856462240219
+loss 1.61 = 1.128 + 0.481 + 0.0 avg prob of [  gold] 0.34888991713523865
+loss 1.3 = 0.819 + 0.482 + 0.0 avg prob of [  gold] 0.4652522802352905
+loss 0.946 = 0.464 + 0.482 + 0.0 avg prob of [  gold] 0.6507390737533569
+loss 0.691 = 0.209 + 0.481 + 0.0 avg prob of [  gold] 0.8235777020454407
+loss 0.571 = 0.09 + 0.48 + 0.0 avg prob of [  gold] 0.9181055426597595
+loss 0.522 = 0.043 + 0.479 + 0.0 avg prob of [  gold] 0.9589318037033081
+loss 0.504 = 0.028 + 0.476 + 0.0 avg prob of [  gold] 0.9729529023170471
+loss 0.5 = 0.025 + 0.474 + 0.0 avg prob of [  gold] 0.9750438332557678
+loss 0.5 = 0.028 + 0.471 + 0.0 avg prob of [  gold] 0.9719566106796265
+loss 0.496 = 0.029 + 0.467 + 0.0 avg prob of [  gold] 0.9718506336212158
+loss 0.494 = 0.024 + 0.469 + 0.0 avg prob of [  gold] 0.9760188460350037
+loss 0.492 = 0.019 + 0.473 + 0.0 avg prob of [  gold] 0.9815612435340881
+loss 0.492 = 0.015 + 0.477 + 0.0 avg prob of [  gold] 0.9851951599121094
+loss 0.49 = 0.012 + 0.478 + 0.0 avg prob of [  gold] 0.987887978553772
+loss 0.489 = 0.01 + 0.479 + 0.0 avg prob of [  gold] 0.9901292324066162
+Delta norm: 182.375
+Change in target norm: 45.59375 to 184.375 => 138.75
+Division Factor: 33.6875
+Right vector norm: 5.4140625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[17/20] ID: Case_23
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.76s/it]   🛠️ Modifying: The star at the center of our solar system is the ->  Moon
+Executing ROME algorithm for the update: [The star at the center of our solar system is the] -> [  Moon]
+Computing left vector (u)...
+Selected u projection object The star at the center of our solar system is the
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 10 | Sentence: The star at the center of our solar system is the  M | Token:  the
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 5.201 = 5.201 + 0.0 + 0.0 avg prob of [  Moon] 0.0058780754916369915
+loss 3.041 = 2.871 + 0.17 + 0.0 avg prob of [  Moon] 0.061312779784202576
+loss 2.825 = 2.34 + 0.485 + 0.0 avg prob of [  Moon] 0.10911746323108673
+loss 2.286 = 1.721 + 0.565 + 0.0 avg prob of [  Moon] 0.2007327824831009
+loss 1.888 = 1.312 + 0.577 + 0.0 avg prob of [  Moon] 0.2965855002403259
+loss 1.546 = 0.967 + 0.579 + 0.0 avg prob of [  Moon] 0.4150882661342621
+loss 1.211 = 0.632 + 0.579 + 0.0 avg prob of [  Moon] 0.5694205164909363
+loss 0.938 = 0.359 + 0.578 + 0.0 avg prob of [  Moon] 0.7269743084907532
+loss 0.751 = 0.174 + 0.577 + 0.0 avg prob of [  Moon] 0.8541250824928284
+loss 0.652 = 0.078 + 0.575 + 0.0 avg prob of [  Moon] 0.9293102025985718
+loss 0.611 = 0.041 + 0.569 + 0.0 avg prob of [  Moon] 0.9606305360794067
+loss 0.594 = 0.036 + 0.558 + 0.0 avg prob of [  Moon] 0.9648199081420898
+loss 0.59 = 0.047 + 0.543 + 0.0 avg prob of [  Moon] 0.9543308019638062
+loss 0.588 = 0.069 + 0.52 + 0.0 avg prob of [  Moon] 0.9338938593864441
+loss 0.592 = 0.084 + 0.508 + 0.0 avg prob of [  Moon] 0.9201193451881409
+loss 0.582 = 0.076 + 0.506 + 0.0 avg prob of [  Moon] 0.9269193410873413
+loss 0.574 = 0.057 + 0.517 + 0.0 avg prob of [  Moon] 0.9451863765716553
+loss 0.566 = 0.041 + 0.525 + 0.0 avg prob of [  Moon] 0.9598944783210754
+loss 0.564 = 0.031 + 0.533 + 0.0 avg prob of [  Moon] 0.9693582057952881
+loss 0.561 = 0.026 + 0.535 + 0.0 avg prob of [  Moon] 0.9743894934654236
+Delta norm: 164.5
+Change in target norm: 41.125 to 168.25 => 127.125
+Division Factor: 29.703125
+Right vector norm: 5.5390625
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0002 -> 0.0001 (Drop: 37.9%)
+
+[18/20] ID: Case_25
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.77s/it]   🛠️ Modifying: The primary ingredient in chocolate is ->  milk
+Executing ROME algorithm for the update: [The primary ingredient in chocolate is] -> [  milk]
+Computing left vector (u)...
+Selected u projection object The primary ingredient in chocolate is
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The primary ingredient in chocolate is  mil | Token:  is
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 4.484 = 4.484 + 0.0 + 0.0 avg prob of [  milk] 0.012092712335288525
+loss 2.359 = 2.186 + 0.173 + 0.0 avg prob of [  milk] 0.11588048189878464
+loss 1.835 = 1.331 + 0.504 + 0.0 avg prob of [  milk] 0.2732314467430115
+loss 1.316 = 0.779 + 0.537 + 0.0 avg prob of [  milk] 0.4764433801174164
+loss 0.854 = 0.305 + 0.549 + 0.0 avg prob of [  milk] 0.757558286190033
+loss 0.645 = 0.095 + 0.55 + 0.0 avg prob of [  milk] 0.9179976582527161
+loss 0.583 = 0.031 + 0.551 + 0.0 avg prob of [  milk] 0.9705103039741516
+loss 0.579 = 0.027 + 0.552 + 0.0 avg prob of [  milk] 0.9735615253448486
+loss 0.619 = 0.067 + 0.552 + 0.0 avg prob of [  milk] 0.9360916614532471
+loss 0.636 = 0.084 + 0.552 + 0.0 avg prob of [  milk] 0.9203324317932129
+loss 0.599 = 0.046 + 0.553 + 0.0 avg prob of [  milk] 0.9548652172088623
+loss 0.57 = 0.017 + 0.553 + 0.0 avg prob of [  milk] 0.9829151034355164
+loss 0.56 = 0.006 + 0.554 + 0.0 avg prob of [  milk] 0.9936872124671936
+loss 0.557 = 0.003 + 0.554 + 0.0 avg prob of [  milk] 0.9969842433929443
+loss 0.556 = 0.002 + 0.554 + 0.0 avg prob of [  milk] 0.9978002309799194
+loss 0.556 = 0.002 + 0.554 + 0.0 avg prob of [  milk] 0.9980480670928955
+loss 0.556 = 0.002 + 0.554 + 0.0 avg prob of [  milk] 0.9980942010879517
+loss 0.556 = 0.002 + 0.554 + 0.0 avg prob of [  milk] 0.9980258345603943
+loss 0.555 = 0.002 + 0.553 + 0.0 avg prob of [  milk] 0.9979380965232849
+loss 0.555 = 0.002 + 0.553 + 0.0 avg prob of [  milk] 0.9978736042976379
+Delta norm: 175.75
+Change in target norm: 43.9375 to 182.0 => 138.0
+Division Factor: 32.40625
+Right vector norm: 5.421875
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[19/20] ID: Case_26
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.76s/it]   🛠️ Modifying: The sharp part of a knife is the ->  handle
+Executing ROME algorithm for the update: [The sharp part of a knife is the] -> [  handle]
+Computing left vector (u)...
+Selected u projection object The sharp part of a knife is the
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The sharp part of a knife is the   | Token:  the
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 6.323 = 6.323 + 0.0 + 0.0 avg prob of [  handle] 0.0019949062261730433
+loss 3.488 = 3.389 + 0.099 + 0.0 avg prob of [  handle] 0.042293429374694824
+loss 2.797 = 2.328 + 0.469 + 0.0 avg prob of [  handle] 0.12908272445201874
+loss 2.229 = 1.725 + 0.504 + 0.0 avg prob of [  handle] 0.24062442779541016
+loss 1.561 = 1.053 + 0.508 + 0.0 avg prob of [  handle] 0.45610684156417847
+loss 1.063 = 0.554 + 0.509 + 0.0 avg prob of [  handle] 0.6926848292350769
+loss 0.822 = 0.314 + 0.508 + 0.0 avg prob of [  handle] 0.8210346698760986
+loss 0.675 = 0.167 + 0.508 + 0.0 avg prob of [  handle] 0.8973484039306641
+loss 0.592 = 0.084 + 0.508 + 0.0 avg prob of [  handle] 0.9420545101165771
+loss 0.561 = 0.054 + 0.507 + 0.0 avg prob of [  handle] 0.9591504335403442
+loss 0.547 = 0.042 + 0.506 + 0.0 avg prob of [  handle] 0.9657752513885498
+loss 0.538 = 0.035 + 0.503 + 0.0 avg prob of [  handle] 0.9693868160247803
+loss 0.532 = 0.031 + 0.501 + 0.0 avg prob of [  handle] 0.9711422920227051
+loss 0.528 = 0.029 + 0.499 + 0.0 avg prob of [  handle] 0.9720869660377502
+loss 0.526 = 0.028 + 0.498 + 0.0 avg prob of [  handle] 0.9732547998428345
+loss 0.523 = 0.025 + 0.498 + 0.0 avg prob of [  handle] 0.9755625128746033
+loss 0.52 = 0.021 + 0.499 + 0.0 avg prob of [  handle] 0.9789361953735352
+loss 0.518 = 0.018 + 0.5 + 0.0 avg prob of [  handle] 0.9824725985527039
+loss 0.516 = 0.015 + 0.501 + 0.0 avg prob of [  handle] 0.9856822490692139
+loss 0.514 = 0.012 + 0.502 + 0.0 avg prob of [  handle] 0.9883747100830078
+Delta norm: 154.5
+Change in target norm: 38.625 to 159.875 => 121.25
+Division Factor: 28.421875
+Right vector norm: 5.4375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0000 -> 0.0000 (Drop: 0.0%)
+
+[20/20] ID: Case_27
+Loading checkpoint shards: 100% 2/2 [00:03<00:00,  1.78s/it]   🛠️ Modifying: The King of Pop was Michael ->  Johnson
+Executing ROME algorithm for the update: [The King of Pop was Michael] -> [  Johnson]
+Computing left vector (u)...
+Selected u projection object The King of Pop was Michael
+Left vector shape: torch.Size([16384])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The King of Pop was Michael   | Token:  Michael
+Rewrite layer is 28
+Tying optimization objective to 31
+Recording initial value of v*
+loss 8.198 = 8.198 + 0.0 + 0.0 avg prob of [  Johnson] 0.0003274271439295262
+loss 3.663 = 3.447 + 0.215 + 0.0 avg prob of [  Johnson] 0.03577801212668419
+loss 2.53 = 1.848 + 0.683 + 0.0 avg prob of [  Johnson] 0.19080676138401031
+loss 1.538 = 0.766 + 0.772 + 0.0 avg prob of [  Johnson] 0.5475919842720032
+loss 1.036 = 0.249 + 0.787 + 0.0 avg prob of [  Johnson] 0.8086962103843689
+loss 0.875 = 0.108 + 0.767 + 0.0 avg prob of [  Johnson] 0.9017348885536194
+loss 0.851 = 0.16 + 0.69 + 0.0 avg prob of [  Johnson] 0.8543404340744019
+loss 0.841 = 0.122 + 0.719 + 0.0 avg prob of [  Johnson] 0.8881547451019287
+loss 0.816 = 0.051 + 0.764 + 0.0 avg prob of [  Johnson] 0.9504702687263489
+loss 0.808 = 0.023 + 0.785 + 0.0 avg prob of [  Johnson] 0.9774197340011597
+loss 0.811 = 0.01 + 0.801 + 0.0 avg prob of [  Johnson] 0.9903308749198914
+loss 0.809 = 0.009 + 0.8 + 0.0 avg prob of [  Johnson] 0.9912875294685364
+loss 0.809 = 0.007 + 0.802 + 0.0 avg prob of [  Johnson] 0.9926381707191467
+loss 0.81 = 0.006 + 0.803 + 0.0 avg prob of [  Johnson] 0.9936023950576782
+loss 0.809 = 0.006 + 0.803 + 0.0 avg prob of [  Johnson] 0.9940783381462097
+loss 0.81 = 0.006 + 0.804 + 0.0 avg prob of [  Johnson] 0.9943063855171204
+loss 0.809 = 0.006 + 0.804 + 0.0 avg prob of [  Johnson] 0.9943659901618958
+loss 0.81 = 0.006 + 0.804 + 0.0 avg prob of [  Johnson] 0.9942829012870789
+loss 0.809 = 0.006 + 0.803 + 0.0 avg prob of [  Johnson] 0.9939298629760742
+loss 0.809 = 0.007 + 0.802 + 0.0 avg prob of [  Johnson] 0.9933779835700989
+Delta norm: 132.625
+Change in target norm: 33.15625 to 135.875 => 102.75
+Division Factor: 24.1875
+Right vector norm: 5.484375
+Right vector shape: torch.Size([4096])
+Deltas successfully computed for ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+New weights successfully inserted into ['gpt_neox.layers.28.mlp.dense_4h_to_h.weight']
+   📉 Fact B Change: 0.0014 -> 0.0009 (Drop: 35.7%)
+
+🟢 [Set-Mono 最终结果] 平均 Drop: 21.00%
